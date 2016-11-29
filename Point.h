@@ -8,6 +8,8 @@ private:
     int x;
     int y;
 public:
+    Point();
+
     Point(int x, int y);
     //return the x coordinate of this Point
     int getX();

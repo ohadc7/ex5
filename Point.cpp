@@ -1,5 +1,7 @@
 #include "Point.h"
 
+Point::Point() {}
+
 Point::Point(int x, int y) : x(x),y(y) { }
 
 int Point::getX() {
@@ -29,3 +31,4 @@ bool Point::operator<(const Point &other) const {
 ostream& operator <<(ostream& os, Point &point) {
     return os << "(" << point.getX() << "," << point.getY() << ")";
 }
+

@@ -1,4 +1,5 @@
 #include "Point.h"
+#include "Grid.h"
 #include <vector>
 
 
@@ -12,7 +13,7 @@ public:
     void createTaxiCenter();
     void createDriver(int id, int age, Status_of_Marriage status, int yearsOfExperience);
     void createCab(int id);
-    void createMap(int width, int height, vector<Point> listOfObstacles);
+    Grid createMap(int width, int height, vector<Point> listOfObstacles);
 };
 
 

@@ -11,6 +11,22 @@ private:
     Model_Of_Car carModel;
     Color_Of_Car color;
     double rate;   //tariff
+
+public:
+    Cab(int id, Model_Of_Car carModel, Color_Of_Car color);
+
+    int getId() const;
+
+    int getPassedKilometers() const;
+
+    Model_Of_Car getCarModel() const;
+
+    Color_Of_Car getColor() const;
+
+    virtual double getSpeed() const = 0;
+
+    virtual double getRate() const = 0;
+
 };
 
 

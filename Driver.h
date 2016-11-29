@@ -13,10 +13,10 @@ private:
     Status_Of_Marriage status;
     int yearsOfExperience;
     int satisfactions;
-    Cab infoCab;
+    Cab* infoCab;
     Trip currentTrip;
 public:
-    Driver(int id, int age, Status_Of_Marriage status, int yearsOfExperience, const Cab &infoCab);
+    Driver(int id, int age, Status_Of_Marriage status, int yearsOfExperience, Cab* infoCab);
 
     int getId() const;
 
@@ -28,7 +28,7 @@ public:
 
     int getSatisfactions() const;
 
-    const Cab &getInfoCab() const;
+    const Cab* getInfoCab();
 
     bool isAvailable();
 
