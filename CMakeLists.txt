@@ -9,6 +9,6 @@ set(SOURCE_FILES main.cpp BfsAlgorithm.h
         Grid.cpp
         Grid.h
         Node.h Graph.h Point.cpp Point.h InputParsing.cpp InputParsing.h ProgramFlow.cpp
-        ProgramFlow.h TaxiCenter.cpp TaxiCenter.h Passenger.cpp Passenger.h Driver.cpp Driver.h Tests/test.cpp)
+        ProgramFlow.h TaxiCenter.cpp TaxiCenter.h Passenger.cpp Passenger.h Driver.cpp Driver.h Tests/test.cpp BaseCab.cpp BaseCab.h Trip.cpp Trip.h)
 add_executable(ex2 ${SOURCE_FILES} Tests/test.cpp)
 target_link_libraries(ex2 gtest gtest_main)
