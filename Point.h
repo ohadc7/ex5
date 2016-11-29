@@ -26,6 +26,8 @@ public:
     bool operator<(const Point &other) const;
     //points comparison according to their coordinates
     bool operator==(const Point &other) const;
+    //TBD
+    bool operator!=(const Point &other) const;
 };
 
 #endif //EX1_VERSION_1_1_POINT_H

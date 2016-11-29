@@ -8,9 +8,9 @@
 using namespace std;
 
 int main(int argc, char* argv[]) {
-
     //scan input string (gridWidth_gridHeight,startX_startY,endX_endY) and parse it
     string inputString;
+    //inputString = "3_3,0_0,1_1"; //for debugging (instead of the next line)
     getline(cin, inputString);
     InputParsing ip = InputParsing(inputString);
     Node<Point> startPoint(Point(ip.getsourcePointX(), ip.getsourcePointY()));
@@ -28,5 +28,5 @@ int main(int argc, char* argv[]) {
         cout << pointOfIdealPath << endl;
     }
     delete g;
-return 0;
+    return 0;
 }

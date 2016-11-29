@@ -1,7 +1,10 @@
 #include "gtest/gtest.h"
 using namespace std;
+
+// 3 examples of tests:
 TEST(BasicTests, TestThatWillWork){
- vector<int> x(2),y(2);
+ cout <<"TestThatWillWork is running";
+    vector<int> x(2),y(2);
  x[0] = 1; x[1] = 2; y[0] = 1; y[1] = 2;
  ASSERT_EQ(x.size(), y.size()) << "Vectors x and y are of unequal length";
  for (unsigned i = 0; i < x.size(); ++i) {
@@ -26,3 +29,4 @@ TEST(BasicTests, TestThatWillFailAndStop){
  EXPECT_EQ(x[i], y[i]) << "Vectors x and y differ at index " << i;
  }
 }
+
