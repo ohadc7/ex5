@@ -1,0 +1,9 @@
+203443601 Ohad Cohen
+203392964 Ido Klein
+
+Credits:
+- thanks to Or Sofer for the idea of Templates.
+_ thanks to my brother for devoting some minutes to help me to debug and fix the code
+  (Of course, I did myself the main part of the debugging. My brother helped me with 2 issues:
+  a. to pass my implementation of the template classes to the header file (instead of the source file).
+  b. to pass the initialization of classes' members to be before the curly brackets of the constructors.)
