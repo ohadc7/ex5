@@ -11,7 +11,7 @@
 #ifndef EX1_BFS_H
 #define EX1_BFS_H
 
-using  namespace std;
+using namespace std;
 
 #include <map>
 #include <queue>

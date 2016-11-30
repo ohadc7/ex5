@@ -21,11 +21,8 @@ bool Point::operator==(const Point &other) const {
 }
 
 bool Point::operator<(const Point &other) const {
-    if ((x < other.x) ||
-        (x == other.x && (y < other.y)))
-        return true;
-    else
-        return false;
+    return (x < other.x) ||
+           (x == other.x && (y < other.y));
 }
 
 ostream& operator <<(ostream& os, Point &point) {

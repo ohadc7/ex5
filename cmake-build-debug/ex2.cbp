@@ -366,6 +366,12 @@
 		<Unit filename="/home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/InputParsing.h">
 			<Option target="ex2"/>
 		</Unit>
+		<Unit filename="/home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/LuxuryCab.cpp">
+			<Option target="ex2"/>
+		</Unit>
+		<Unit filename="/home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/LuxuryCab.h">
+			<Option target="ex2"/>
+		</Unit>
 		<Unit filename="/home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/Node.h">
 			<Option target="ex2"/>
 		</Unit>
@@ -387,6 +393,12 @@
 		<Unit filename="/home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/ProgramFlow.h">
 			<Option target="ex2"/>
 		</Unit>
+		<Unit filename="/home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/StandardCab.cpp">
+			<Option target="ex2"/>
+		</Unit>
+		<Unit filename="/home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/StandardCab.h">
+			<Option target="ex2"/>
+		</Unit>
 		<Unit filename="/home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/TaxiCenter.cpp">
 			<Option target="ex2"/>
 		</Unit>
@@ -396,10 +408,13 @@
 		<Unit filename="/home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/Tests/CabTest.cpp">
 			<Option target="ex2"/>
 		</Unit>
-		<Unit filename="/home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/Tests/TestPoint.cpp">
+		<Unit filename="/home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/Tests/DriverTest.cpp">
 			<Option target="ex2"/>
 		</Unit>
-		<Unit filename="/home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/Tests/test.cpp">
+		<Unit filename="/home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/Tests/ProgramFlowTest.cpp">
+			<Option target="ex2"/>
+		</Unit>
+		<Unit filename="/home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/Tests/TestPoint.cpp">
 			<Option target="ex2"/>
 		</Unit>
 		<Unit filename="/home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/Trip.cpp">

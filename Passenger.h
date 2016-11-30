@@ -1,13 +1,20 @@
-//
-// Created by ido on 29/11/16.
-//
 
 #ifndef EX1_VERSION_1_1_PASSENGER_H
 #define EX1_VERSION_1_1_PASSENGER_H
 
 
-class Passenger {
+#include "Point.h"
 
+class Passenger {
+private:
+    Point source;
+    Point destination;
+    bool isLuxury;
+    int satisfactionNum;
+public:
+    Passenger(Point source, Point destination, bool isLuxury);
+    int getSatisfaction();
+    bool getIsLuxury();
 };
 
 

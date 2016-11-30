@@ -21,8 +21,14 @@ CMakeFiles/ex2.dir/Grid.cpp.o: ../Point.h
 CMakeFiles/ex2.dir/InputParsing.cpp.o: ../InputParsing.cpp
 CMakeFiles/ex2.dir/InputParsing.cpp.o: ../InputParsing.h
 
+CMakeFiles/ex2.dir/LuxuryCab.cpp.o: ../Cab.h
+CMakeFiles/ex2.dir/LuxuryCab.cpp.o: ../LuxuryCab.cpp
+CMakeFiles/ex2.dir/LuxuryCab.cpp.o: ../LuxuryCab.h
+
+CMakeFiles/ex2.dir/Passenger.cpp.o: ../Node.h
 CMakeFiles/ex2.dir/Passenger.cpp.o: ../Passenger.cpp
 CMakeFiles/ex2.dir/Passenger.cpp.o: ../Passenger.h
+CMakeFiles/ex2.dir/Passenger.cpp.o: ../Point.h
 
 CMakeFiles/ex2.dir/Point.cpp.o: ../Node.h
 CMakeFiles/ex2.dir/Point.cpp.o: ../Point.cpp
@@ -34,6 +40,10 @@ CMakeFiles/ex2.dir/ProgramFlow.cpp.o: ../Node.h
 CMakeFiles/ex2.dir/ProgramFlow.cpp.o: ../Point.h
 CMakeFiles/ex2.dir/ProgramFlow.cpp.o: ../ProgramFlow.cpp
 CMakeFiles/ex2.dir/ProgramFlow.cpp.o: ../ProgramFlow.h
+
+CMakeFiles/ex2.dir/StandardCab.cpp.o: ../Cab.h
+CMakeFiles/ex2.dir/StandardCab.cpp.o: ../StandardCab.cpp
+CMakeFiles/ex2.dir/StandardCab.cpp.o: ../StandardCab.h
 
 CMakeFiles/ex2.dir/TaxiCenter.cpp.o: ../BfsAlgorithm.h
 CMakeFiles/ex2.dir/TaxiCenter.cpp.o: ../Cab.h
@@ -72,6 +82,66 @@ CMakeFiles/ex2.dir/Tests/CabTest.cpp.o: ../lib/googletest-master/googletest/incl
 CMakeFiles/ex2.dir/Tests/CabTest.cpp.o: ../Cab.h
 CMakeFiles/ex2.dir/Tests/CabTest.cpp.o: ../Tests/CabTest.cpp
 
+CMakeFiles/ex2.dir/Tests/DriverTest.cpp.o: ../lib/googletest-master/googletest/include/gtest/gtest-death-test.h
+CMakeFiles/ex2.dir/Tests/DriverTest.cpp.o: ../lib/googletest-master/googletest/include/gtest/gtest-message.h
+CMakeFiles/ex2.dir/Tests/DriverTest.cpp.o: ../lib/googletest-master/googletest/include/gtest/gtest-param-test.h
+CMakeFiles/ex2.dir/Tests/DriverTest.cpp.o: ../lib/googletest-master/googletest/include/gtest/gtest-printers.h
+CMakeFiles/ex2.dir/Tests/DriverTest.cpp.o: ../lib/googletest-master/googletest/include/gtest/gtest-test-part.h
+CMakeFiles/ex2.dir/Tests/DriverTest.cpp.o: ../lib/googletest-master/googletest/include/gtest/gtest-typed-test.h
+CMakeFiles/ex2.dir/Tests/DriverTest.cpp.o: ../lib/googletest-master/googletest/include/gtest/gtest.h
+CMakeFiles/ex2.dir/Tests/DriverTest.cpp.o: ../lib/googletest-master/googletest/include/gtest/gtest_pred_impl.h
+CMakeFiles/ex2.dir/Tests/DriverTest.cpp.o: ../lib/googletest-master/googletest/include/gtest/gtest_prod.h
+CMakeFiles/ex2.dir/Tests/DriverTest.cpp.o: ../lib/googletest-master/googletest/include/gtest/internal/custom/gtest-port.h
+CMakeFiles/ex2.dir/Tests/DriverTest.cpp.o: ../lib/googletest-master/googletest/include/gtest/internal/custom/gtest-printers.h
+CMakeFiles/ex2.dir/Tests/DriverTest.cpp.o: ../lib/googletest-master/googletest/include/gtest/internal/gtest-death-test-internal.h
+CMakeFiles/ex2.dir/Tests/DriverTest.cpp.o: ../lib/googletest-master/googletest/include/gtest/internal/gtest-filepath.h
+CMakeFiles/ex2.dir/Tests/DriverTest.cpp.o: ../lib/googletest-master/googletest/include/gtest/internal/gtest-internal.h
+CMakeFiles/ex2.dir/Tests/DriverTest.cpp.o: ../lib/googletest-master/googletest/include/gtest/internal/gtest-linked_ptr.h
+CMakeFiles/ex2.dir/Tests/DriverTest.cpp.o: ../lib/googletest-master/googletest/include/gtest/internal/gtest-param-util-generated.h
+CMakeFiles/ex2.dir/Tests/DriverTest.cpp.o: ../lib/googletest-master/googletest/include/gtest/internal/gtest-param-util.h
+CMakeFiles/ex2.dir/Tests/DriverTest.cpp.o: ../lib/googletest-master/googletest/include/gtest/internal/gtest-port-arch.h
+CMakeFiles/ex2.dir/Tests/DriverTest.cpp.o: ../lib/googletest-master/googletest/include/gtest/internal/gtest-port.h
+CMakeFiles/ex2.dir/Tests/DriverTest.cpp.o: ../lib/googletest-master/googletest/include/gtest/internal/gtest-string.h
+CMakeFiles/ex2.dir/Tests/DriverTest.cpp.o: ../lib/googletest-master/googletest/include/gtest/internal/gtest-tuple.h
+CMakeFiles/ex2.dir/Tests/DriverTest.cpp.o: ../lib/googletest-master/googletest/include/gtest/internal/gtest-type-util.h
+CMakeFiles/ex2.dir/Tests/DriverTest.cpp.o: ../Cab.h
+CMakeFiles/ex2.dir/Tests/DriverTest.cpp.o: ../Driver.h
+CMakeFiles/ex2.dir/Tests/DriverTest.cpp.o: ../LuxuryCab.h
+CMakeFiles/ex2.dir/Tests/DriverTest.cpp.o: ../Node.h
+CMakeFiles/ex2.dir/Tests/DriverTest.cpp.o: ../Passenger.h
+CMakeFiles/ex2.dir/Tests/DriverTest.cpp.o: ../Point.h
+CMakeFiles/ex2.dir/Tests/DriverTest.cpp.o: ../Tests/DriverTest.cpp
+CMakeFiles/ex2.dir/Tests/DriverTest.cpp.o: ../Trip.h
+
+CMakeFiles/ex2.dir/Tests/ProgramFlowTest.cpp.o: ../lib/googletest-master/googletest/include/gtest/gtest-death-test.h
+CMakeFiles/ex2.dir/Tests/ProgramFlowTest.cpp.o: ../lib/googletest-master/googletest/include/gtest/gtest-message.h
+CMakeFiles/ex2.dir/Tests/ProgramFlowTest.cpp.o: ../lib/googletest-master/googletest/include/gtest/gtest-param-test.h
+CMakeFiles/ex2.dir/Tests/ProgramFlowTest.cpp.o: ../lib/googletest-master/googletest/include/gtest/gtest-printers.h
+CMakeFiles/ex2.dir/Tests/ProgramFlowTest.cpp.o: ../lib/googletest-master/googletest/include/gtest/gtest-test-part.h
+CMakeFiles/ex2.dir/Tests/ProgramFlowTest.cpp.o: ../lib/googletest-master/googletest/include/gtest/gtest-typed-test.h
+CMakeFiles/ex2.dir/Tests/ProgramFlowTest.cpp.o: ../lib/googletest-master/googletest/include/gtest/gtest.h
+CMakeFiles/ex2.dir/Tests/ProgramFlowTest.cpp.o: ../lib/googletest-master/googletest/include/gtest/gtest_pred_impl.h
+CMakeFiles/ex2.dir/Tests/ProgramFlowTest.cpp.o: ../lib/googletest-master/googletest/include/gtest/gtest_prod.h
+CMakeFiles/ex2.dir/Tests/ProgramFlowTest.cpp.o: ../lib/googletest-master/googletest/include/gtest/internal/custom/gtest-port.h
+CMakeFiles/ex2.dir/Tests/ProgramFlowTest.cpp.o: ../lib/googletest-master/googletest/include/gtest/internal/custom/gtest-printers.h
+CMakeFiles/ex2.dir/Tests/ProgramFlowTest.cpp.o: ../lib/googletest-master/googletest/include/gtest/internal/gtest-death-test-internal.h
+CMakeFiles/ex2.dir/Tests/ProgramFlowTest.cpp.o: ../lib/googletest-master/googletest/include/gtest/internal/gtest-filepath.h
+CMakeFiles/ex2.dir/Tests/ProgramFlowTest.cpp.o: ../lib/googletest-master/googletest/include/gtest/internal/gtest-internal.h
+CMakeFiles/ex2.dir/Tests/ProgramFlowTest.cpp.o: ../lib/googletest-master/googletest/include/gtest/internal/gtest-linked_ptr.h
+CMakeFiles/ex2.dir/Tests/ProgramFlowTest.cpp.o: ../lib/googletest-master/googletest/include/gtest/internal/gtest-param-util-generated.h
+CMakeFiles/ex2.dir/Tests/ProgramFlowTest.cpp.o: ../lib/googletest-master/googletest/include/gtest/internal/gtest-param-util.h
+CMakeFiles/ex2.dir/Tests/ProgramFlowTest.cpp.o: ../lib/googletest-master/googletest/include/gtest/internal/gtest-port-arch.h
+CMakeFiles/ex2.dir/Tests/ProgramFlowTest.cpp.o: ../lib/googletest-master/googletest/include/gtest/internal/gtest-port.h
+CMakeFiles/ex2.dir/Tests/ProgramFlowTest.cpp.o: ../lib/googletest-master/googletest/include/gtest/internal/gtest-string.h
+CMakeFiles/ex2.dir/Tests/ProgramFlowTest.cpp.o: ../lib/googletest-master/googletest/include/gtest/internal/gtest-tuple.h
+CMakeFiles/ex2.dir/Tests/ProgramFlowTest.cpp.o: ../lib/googletest-master/googletest/include/gtest/internal/gtest-type-util.h
+CMakeFiles/ex2.dir/Tests/ProgramFlowTest.cpp.o: ../Graph.h
+CMakeFiles/ex2.dir/Tests/ProgramFlowTest.cpp.o: ../Grid.h
+CMakeFiles/ex2.dir/Tests/ProgramFlowTest.cpp.o: ../Node.h
+CMakeFiles/ex2.dir/Tests/ProgramFlowTest.cpp.o: ../Point.h
+CMakeFiles/ex2.dir/Tests/ProgramFlowTest.cpp.o: ../ProgramFlow.h
+CMakeFiles/ex2.dir/Tests/ProgramFlowTest.cpp.o: ../Tests/ProgramFlowTest.cpp
+
 CMakeFiles/ex2.dir/Tests/TestPoint.cpp.o: ../lib/googletest-master/googletest/include/gtest/gtest-death-test.h
 CMakeFiles/ex2.dir/Tests/TestPoint.cpp.o: ../lib/googletest-master/googletest/include/gtest/gtest-message.h
 CMakeFiles/ex2.dir/Tests/TestPoint.cpp.o: ../lib/googletest-master/googletest/include/gtest/gtest-param-test.h
@@ -97,30 +167,6 @@ CMakeFiles/ex2.dir/Tests/TestPoint.cpp.o: ../lib/googletest-master/googletest/in
 CMakeFiles/ex2.dir/Tests/TestPoint.cpp.o: ../Node.h
 CMakeFiles/ex2.dir/Tests/TestPoint.cpp.o: ../Point.h
 CMakeFiles/ex2.dir/Tests/TestPoint.cpp.o: ../Tests/TestPoint.cpp
-
-CMakeFiles/ex2.dir/Tests/test.cpp.o: ../lib/googletest-master/googletest/include/gtest/gtest-death-test.h
-CMakeFiles/ex2.dir/Tests/test.cpp.o: ../lib/googletest-master/googletest/include/gtest/gtest-message.h
-CMakeFiles/ex2.dir/Tests/test.cpp.o: ../lib/googletest-master/googletest/include/gtest/gtest-param-test.h
-CMakeFiles/ex2.dir/Tests/test.cpp.o: ../lib/googletest-master/googletest/include/gtest/gtest-printers.h
-CMakeFiles/ex2.dir/Tests/test.cpp.o: ../lib/googletest-master/googletest/include/gtest/gtest-test-part.h
-CMakeFiles/ex2.dir/Tests/test.cpp.o: ../lib/googletest-master/googletest/include/gtest/gtest-typed-test.h
-CMakeFiles/ex2.dir/Tests/test.cpp.o: ../lib/googletest-master/googletest/include/gtest/gtest.h
-CMakeFiles/ex2.dir/Tests/test.cpp.o: ../lib/googletest-master/googletest/include/gtest/gtest_pred_impl.h
-CMakeFiles/ex2.dir/Tests/test.cpp.o: ../lib/googletest-master/googletest/include/gtest/gtest_prod.h
-CMakeFiles/ex2.dir/Tests/test.cpp.o: ../lib/googletest-master/googletest/include/gtest/internal/custom/gtest-port.h
-CMakeFiles/ex2.dir/Tests/test.cpp.o: ../lib/googletest-master/googletest/include/gtest/internal/custom/gtest-printers.h
-CMakeFiles/ex2.dir/Tests/test.cpp.o: ../lib/googletest-master/googletest/include/gtest/internal/gtest-death-test-internal.h
-CMakeFiles/ex2.dir/Tests/test.cpp.o: ../lib/googletest-master/googletest/include/gtest/internal/gtest-filepath.h
-CMakeFiles/ex2.dir/Tests/test.cpp.o: ../lib/googletest-master/googletest/include/gtest/internal/gtest-internal.h
-CMakeFiles/ex2.dir/Tests/test.cpp.o: ../lib/googletest-master/googletest/include/gtest/internal/gtest-linked_ptr.h
-CMakeFiles/ex2.dir/Tests/test.cpp.o: ../lib/googletest-master/googletest/include/gtest/internal/gtest-param-util-generated.h
-CMakeFiles/ex2.dir/Tests/test.cpp.o: ../lib/googletest-master/googletest/include/gtest/internal/gtest-param-util.h
-CMakeFiles/ex2.dir/Tests/test.cpp.o: ../lib/googletest-master/googletest/include/gtest/internal/gtest-port-arch.h
-CMakeFiles/ex2.dir/Tests/test.cpp.o: ../lib/googletest-master/googletest/include/gtest/internal/gtest-port.h
-CMakeFiles/ex2.dir/Tests/test.cpp.o: ../lib/googletest-master/googletest/include/gtest/internal/gtest-string.h
-CMakeFiles/ex2.dir/Tests/test.cpp.o: ../lib/googletest-master/googletest/include/gtest/internal/gtest-tuple.h
-CMakeFiles/ex2.dir/Tests/test.cpp.o: ../lib/googletest-master/googletest/include/gtest/internal/gtest-type-util.h
-CMakeFiles/ex2.dir/Tests/test.cpp.o: ../Tests/test.cpp
 
 CMakeFiles/ex2.dir/Trip.cpp.o: ../Node.h
 CMakeFiles/ex2.dir/Trip.cpp.o: ../Passenger.h

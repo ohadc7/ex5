@@ -18,7 +18,3 @@ Model_Of_Car Cab::getCarModel() const {
 Color_Of_Car Cab::getColor() const {
     return color;
 }
-
-Cab::Cab() {
-
-}

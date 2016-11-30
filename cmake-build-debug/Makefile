@@ -327,6 +327,33 @@ InputParsing.cpp.s:
 	$(MAKE) -f CMakeFiles/ex2.dir/build.make CMakeFiles/ex2.dir/InputParsing.cpp.s
 .PHONY : InputParsing.cpp.s
 
+LuxuryCab.o: LuxuryCab.cpp.o
+
+.PHONY : LuxuryCab.o
+
+# target to build an object file
+LuxuryCab.cpp.o:
+	$(MAKE) -f CMakeFiles/ex2.dir/build.make CMakeFiles/ex2.dir/LuxuryCab.cpp.o
+.PHONY : LuxuryCab.cpp.o
+
+LuxuryCab.i: LuxuryCab.cpp.i
+
+.PHONY : LuxuryCab.i
+
+# target to preprocess a source file
+LuxuryCab.cpp.i:
+	$(MAKE) -f CMakeFiles/ex2.dir/build.make CMakeFiles/ex2.dir/LuxuryCab.cpp.i
+.PHONY : LuxuryCab.cpp.i
+
+LuxuryCab.s: LuxuryCab.cpp.s
+
+.PHONY : LuxuryCab.s
+
+# target to generate assembly for a file
+LuxuryCab.cpp.s:
+	$(MAKE) -f CMakeFiles/ex2.dir/build.make CMakeFiles/ex2.dir/LuxuryCab.cpp.s
+.PHONY : LuxuryCab.cpp.s
+
 Passenger.o: Passenger.cpp.o
 
 .PHONY : Passenger.o
@@ -408,6 +435,33 @@ ProgramFlow.cpp.s:
 	$(MAKE) -f CMakeFiles/ex2.dir/build.make CMakeFiles/ex2.dir/ProgramFlow.cpp.s
 .PHONY : ProgramFlow.cpp.s
 
+StandardCab.o: StandardCab.cpp.o
+
+.PHONY : StandardCab.o
+
+# target to build an object file
+StandardCab.cpp.o:
+	$(MAKE) -f CMakeFiles/ex2.dir/build.make CMakeFiles/ex2.dir/StandardCab.cpp.o
+.PHONY : StandardCab.cpp.o
+
+StandardCab.i: StandardCab.cpp.i
+
+.PHONY : StandardCab.i
+
+# target to preprocess a source file
+StandardCab.cpp.i:
+	$(MAKE) -f CMakeFiles/ex2.dir/build.make CMakeFiles/ex2.dir/StandardCab.cpp.i
+.PHONY : StandardCab.cpp.i
+
+StandardCab.s: StandardCab.cpp.s
+
+.PHONY : StandardCab.s
+
+# target to generate assembly for a file
+StandardCab.cpp.s:
+	$(MAKE) -f CMakeFiles/ex2.dir/build.make CMakeFiles/ex2.dir/StandardCab.cpp.s
+.PHONY : StandardCab.cpp.s
+
 TaxiCenter.o: TaxiCenter.cpp.o
 
 .PHONY : TaxiCenter.o
@@ -462,6 +516,60 @@ Tests/CabTest.cpp.s:
 	$(MAKE) -f CMakeFiles/ex2.dir/build.make CMakeFiles/ex2.dir/Tests/CabTest.cpp.s
 .PHONY : Tests/CabTest.cpp.s
 
+Tests/DriverTest.o: Tests/DriverTest.cpp.o
+
+.PHONY : Tests/DriverTest.o
+
+# target to build an object file
+Tests/DriverTest.cpp.o:
+	$(MAKE) -f CMakeFiles/ex2.dir/build.make CMakeFiles/ex2.dir/Tests/DriverTest.cpp.o
+.PHONY : Tests/DriverTest.cpp.o
+
+Tests/DriverTest.i: Tests/DriverTest.cpp.i
+
+.PHONY : Tests/DriverTest.i
+
+# target to preprocess a source file
+Tests/DriverTest.cpp.i:
+	$(MAKE) -f CMakeFiles/ex2.dir/build.make CMakeFiles/ex2.dir/Tests/DriverTest.cpp.i
+.PHONY : Tests/DriverTest.cpp.i
+
+Tests/DriverTest.s: Tests/DriverTest.cpp.s
+
+.PHONY : Tests/DriverTest.s
+
+# target to generate assembly for a file
+Tests/DriverTest.cpp.s:
+	$(MAKE) -f CMakeFiles/ex2.dir/build.make CMakeFiles/ex2.dir/Tests/DriverTest.cpp.s
+.PHONY : Tests/DriverTest.cpp.s
+
+Tests/ProgramFlowTest.o: Tests/ProgramFlowTest.cpp.o
+
+.PHONY : Tests/ProgramFlowTest.o
+
+# target to build an object file
+Tests/ProgramFlowTest.cpp.o:
+	$(MAKE) -f CMakeFiles/ex2.dir/build.make CMakeFiles/ex2.dir/Tests/ProgramFlowTest.cpp.o
+.PHONY : Tests/ProgramFlowTest.cpp.o
+
+Tests/ProgramFlowTest.i: Tests/ProgramFlowTest.cpp.i
+
+.PHONY : Tests/ProgramFlowTest.i
+
+# target to preprocess a source file
+Tests/ProgramFlowTest.cpp.i:
+	$(MAKE) -f CMakeFiles/ex2.dir/build.make CMakeFiles/ex2.dir/Tests/ProgramFlowTest.cpp.i
+.PHONY : Tests/ProgramFlowTest.cpp.i
+
+Tests/ProgramFlowTest.s: Tests/ProgramFlowTest.cpp.s
+
+.PHONY : Tests/ProgramFlowTest.s
+
+# target to generate assembly for a file
+Tests/ProgramFlowTest.cpp.s:
+	$(MAKE) -f CMakeFiles/ex2.dir/build.make CMakeFiles/ex2.dir/Tests/ProgramFlowTest.cpp.s
+.PHONY : Tests/ProgramFlowTest.cpp.s
+
 Tests/TestPoint.o: Tests/TestPoint.cpp.o
 
 .PHONY : Tests/TestPoint.o
@@ -488,33 +596,6 @@ Tests/TestPoint.s: Tests/TestPoint.cpp.s
 Tests/TestPoint.cpp.s:
 	$(MAKE) -f CMakeFiles/ex2.dir/build.make CMakeFiles/ex2.dir/Tests/TestPoint.cpp.s
 .PHONY : Tests/TestPoint.cpp.s
-
-Tests/test.o: Tests/test.cpp.o
-
-.PHONY : Tests/test.o
-
-# target to build an object file
-Tests/test.cpp.o:
-	$(MAKE) -f CMakeFiles/ex2.dir/build.make CMakeFiles/ex2.dir/Tests/test.cpp.o
-.PHONY : Tests/test.cpp.o
-
-Tests/test.i: Tests/test.cpp.i
-
-.PHONY : Tests/test.i
-
-# target to preprocess a source file
-Tests/test.cpp.i:
-	$(MAKE) -f CMakeFiles/ex2.dir/build.make CMakeFiles/ex2.dir/Tests/test.cpp.i
-.PHONY : Tests/test.cpp.i
-
-Tests/test.s: Tests/test.cpp.s
-
-.PHONY : Tests/test.s
-
-# target to generate assembly for a file
-Tests/test.cpp.s:
-	$(MAKE) -f CMakeFiles/ex2.dir/build.make CMakeFiles/ex2.dir/Tests/test.cpp.s
-.PHONY : Tests/test.cpp.s
 
 Trip.o: Trip.cpp.o
 
@@ -599,6 +680,9 @@ help:
 	@echo "... InputParsing.o"
 	@echo "... InputParsing.i"
 	@echo "... InputParsing.s"
+	@echo "... LuxuryCab.o"
+	@echo "... LuxuryCab.i"
+	@echo "... LuxuryCab.s"
 	@echo "... Passenger.o"
 	@echo "... Passenger.i"
 	@echo "... Passenger.s"
@@ -608,18 +692,24 @@ help:
 	@echo "... ProgramFlow.o"
 	@echo "... ProgramFlow.i"
 	@echo "... ProgramFlow.s"
+	@echo "... StandardCab.o"
+	@echo "... StandardCab.i"
+	@echo "... StandardCab.s"
 	@echo "... TaxiCenter.o"
 	@echo "... TaxiCenter.i"
 	@echo "... TaxiCenter.s"
 	@echo "... Tests/CabTest.o"
 	@echo "... Tests/CabTest.i"
 	@echo "... Tests/CabTest.s"
+	@echo "... Tests/DriverTest.o"
+	@echo "... Tests/DriverTest.i"
+	@echo "... Tests/DriverTest.s"
+	@echo "... Tests/ProgramFlowTest.o"
+	@echo "... Tests/ProgramFlowTest.i"
+	@echo "... Tests/ProgramFlowTest.s"
 	@echo "... Tests/TestPoint.o"
 	@echo "... Tests/TestPoint.i"
 	@echo "... Tests/TestPoint.s"
-	@echo "... Tests/test.o"
-	@echo "... Tests/test.i"
-	@echo "... Tests/test.s"
 	@echo "... Trip.o"
 	@echo "... Trip.i"
 	@echo "... Trip.s"
