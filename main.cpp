@@ -1,5 +1,6 @@
 #include <string>
 #include <iostream>
+#include <gtest/gtest.h>
 #include "Node.h"
 #include "Grid.h"
 #include "BfsAlgorithm.h"
@@ -8,6 +9,9 @@
 using namespace std;
 
 int main(int argc, char* argv[]) {
+
+    ::testing::InitGoogleTest(&argc, argv);
+
     //scan input string (gridWidth_gridHeight,startX_startY,endX_endY) and parse it
     string inputString;
     //inputString = "3_3,0_0,1_1"; //for debugging (instead of the next line)
@@ -28,5 +32,5 @@ int main(int argc, char* argv[]) {
         cout << pointOfIdealPath << endl;
     }
     delete g;
-    return 0;
+    return RUN_ALL_TESTS();
 }

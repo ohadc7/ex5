@@ -339,6 +339,12 @@
 		<Unit filename="/home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/BfsAlgorithm.h">
 			<Option target="ex2"/>
 		</Unit>
+		<Unit filename="/home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/Cab.cpp">
+			<Option target="ex2"/>
+		</Unit>
+		<Unit filename="/home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/Cab.h">
+			<Option target="ex2"/>
+		</Unit>
 		<Unit filename="/home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/Driver.cpp">
 			<Option target="ex2"/>
 		</Unit>
@@ -387,7 +393,19 @@
 		<Unit filename="/home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/TaxiCenter.h">
 			<Option target="ex2"/>
 		</Unit>
+		<Unit filename="/home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/Tests/CabTest.cpp">
+			<Option target="ex2"/>
+		</Unit>
+		<Unit filename="/home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/Tests/TestPoint.cpp">
+			<Option target="ex2"/>
+		</Unit>
 		<Unit filename="/home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/Tests/test.cpp">
+			<Option target="ex2"/>
+		</Unit>
+		<Unit filename="/home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/Trip.cpp">
+			<Option target="ex2"/>
+		</Unit>
+		<Unit filename="/home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/Trip.h">
 			<Option target="ex2"/>
 		</Unit>
 		<Unit filename="/home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/lib/googletest-master/googlemock/src/gmock-all.cc">

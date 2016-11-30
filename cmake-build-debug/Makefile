@@ -219,6 +219,33 @@ gtest/fast:
 	$(MAKE) -f lib/googletest-master/googlemock/gtest/CMakeFiles/gtest.dir/build.make lib/googletest-master/googlemock/gtest/CMakeFiles/gtest.dir/build
 .PHONY : gtest/fast
 
+Cab.o: Cab.cpp.o
+
+.PHONY : Cab.o
+
+# target to build an object file
+Cab.cpp.o:
+	$(MAKE) -f CMakeFiles/ex2.dir/build.make CMakeFiles/ex2.dir/Cab.cpp.o
+.PHONY : Cab.cpp.o
+
+Cab.i: Cab.cpp.i
+
+.PHONY : Cab.i
+
+# target to preprocess a source file
+Cab.cpp.i:
+	$(MAKE) -f CMakeFiles/ex2.dir/build.make CMakeFiles/ex2.dir/Cab.cpp.i
+.PHONY : Cab.cpp.i
+
+Cab.s: Cab.cpp.s
+
+.PHONY : Cab.s
+
+# target to generate assembly for a file
+Cab.cpp.s:
+	$(MAKE) -f CMakeFiles/ex2.dir/build.make CMakeFiles/ex2.dir/Cab.cpp.s
+.PHONY : Cab.cpp.s
+
 Driver.o: Driver.cpp.o
 
 .PHONY : Driver.o
@@ -408,6 +435,60 @@ TaxiCenter.cpp.s:
 	$(MAKE) -f CMakeFiles/ex2.dir/build.make CMakeFiles/ex2.dir/TaxiCenter.cpp.s
 .PHONY : TaxiCenter.cpp.s
 
+Tests/CabTest.o: Tests/CabTest.cpp.o
+
+.PHONY : Tests/CabTest.o
+
+# target to build an object file
+Tests/CabTest.cpp.o:
+	$(MAKE) -f CMakeFiles/ex2.dir/build.make CMakeFiles/ex2.dir/Tests/CabTest.cpp.o
+.PHONY : Tests/CabTest.cpp.o
+
+Tests/CabTest.i: Tests/CabTest.cpp.i
+
+.PHONY : Tests/CabTest.i
+
+# target to preprocess a source file
+Tests/CabTest.cpp.i:
+	$(MAKE) -f CMakeFiles/ex2.dir/build.make CMakeFiles/ex2.dir/Tests/CabTest.cpp.i
+.PHONY : Tests/CabTest.cpp.i
+
+Tests/CabTest.s: Tests/CabTest.cpp.s
+
+.PHONY : Tests/CabTest.s
+
+# target to generate assembly for a file
+Tests/CabTest.cpp.s:
+	$(MAKE) -f CMakeFiles/ex2.dir/build.make CMakeFiles/ex2.dir/Tests/CabTest.cpp.s
+.PHONY : Tests/CabTest.cpp.s
+
+Tests/TestPoint.o: Tests/TestPoint.cpp.o
+
+.PHONY : Tests/TestPoint.o
+
+# target to build an object file
+Tests/TestPoint.cpp.o:
+	$(MAKE) -f CMakeFiles/ex2.dir/build.make CMakeFiles/ex2.dir/Tests/TestPoint.cpp.o
+.PHONY : Tests/TestPoint.cpp.o
+
+Tests/TestPoint.i: Tests/TestPoint.cpp.i
+
+.PHONY : Tests/TestPoint.i
+
+# target to preprocess a source file
+Tests/TestPoint.cpp.i:
+	$(MAKE) -f CMakeFiles/ex2.dir/build.make CMakeFiles/ex2.dir/Tests/TestPoint.cpp.i
+.PHONY : Tests/TestPoint.cpp.i
+
+Tests/TestPoint.s: Tests/TestPoint.cpp.s
+
+.PHONY : Tests/TestPoint.s
+
+# target to generate assembly for a file
+Tests/TestPoint.cpp.s:
+	$(MAKE) -f CMakeFiles/ex2.dir/build.make CMakeFiles/ex2.dir/Tests/TestPoint.cpp.s
+.PHONY : Tests/TestPoint.cpp.s
+
 Tests/test.o: Tests/test.cpp.o
 
 .PHONY : Tests/test.o
@@ -434,6 +515,33 @@ Tests/test.s: Tests/test.cpp.s
 Tests/test.cpp.s:
 	$(MAKE) -f CMakeFiles/ex2.dir/build.make CMakeFiles/ex2.dir/Tests/test.cpp.s
 .PHONY : Tests/test.cpp.s
+
+Trip.o: Trip.cpp.o
+
+.PHONY : Trip.o
+
+# target to build an object file
+Trip.cpp.o:
+	$(MAKE) -f CMakeFiles/ex2.dir/build.make CMakeFiles/ex2.dir/Trip.cpp.o
+.PHONY : Trip.cpp.o
+
+Trip.i: Trip.cpp.i
+
+.PHONY : Trip.i
+
+# target to preprocess a source file
+Trip.cpp.i:
+	$(MAKE) -f CMakeFiles/ex2.dir/build.make CMakeFiles/ex2.dir/Trip.cpp.i
+.PHONY : Trip.cpp.i
+
+Trip.s: Trip.cpp.s
+
+.PHONY : Trip.s
+
+# target to generate assembly for a file
+Trip.cpp.s:
+	$(MAKE) -f CMakeFiles/ex2.dir/build.make CMakeFiles/ex2.dir/Trip.cpp.s
+.PHONY : Trip.cpp.s
 
 main.o: main.cpp.o
 
@@ -479,6 +587,9 @@ help:
 	@echo "... gmock"
 	@echo "... gtest_main"
 	@echo "... gtest"
+	@echo "... Cab.o"
+	@echo "... Cab.i"
+	@echo "... Cab.s"
 	@echo "... Driver.o"
 	@echo "... Driver.i"
 	@echo "... Driver.s"
@@ -500,9 +611,18 @@ help:
 	@echo "... TaxiCenter.o"
 	@echo "... TaxiCenter.i"
 	@echo "... TaxiCenter.s"
+	@echo "... Tests/CabTest.o"
+	@echo "... Tests/CabTest.i"
+	@echo "... Tests/CabTest.s"
+	@echo "... Tests/TestPoint.o"
+	@echo "... Tests/TestPoint.i"
+	@echo "... Tests/TestPoint.s"
 	@echo "... Tests/test.o"
 	@echo "... Tests/test.i"
 	@echo "... Tests/test.s"
+	@echo "... Trip.o"
+	@echo "... Trip.i"
+	@echo "... Trip.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
