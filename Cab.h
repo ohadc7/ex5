@@ -13,6 +13,7 @@ private:
     double rate;   //tariff
 
 public:
+    Cab();
     Cab(int id, Model_Of_Car carModel, Color_Of_Car color);
 
     int getId() const;

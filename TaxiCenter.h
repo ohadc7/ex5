@@ -17,6 +17,7 @@ private:
     void sendTaxi(Trip trip, bool isLuxury);
 
 public:
+    void addDriver(Driver driver);
     void orderATrip(Passenger passenger);
 };
 
