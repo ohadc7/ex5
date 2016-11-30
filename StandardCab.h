@@ -6,8 +6,11 @@
 
 class StandardCab: public Cab {
 private:
-    const int speed;
+    const double speed;
+    const double rate;
 public:
+    StandardCab(int id, Model_Of_Car carModel, Color_Of_Car color);
+
     double getSpeed() const;
 
     double getRate() const;
