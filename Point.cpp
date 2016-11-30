@@ -32,8 +32,7 @@ ostream& operator <<(ostream& os, Point &point) {
     return os << "(" << point.getX() << "," << point.getY() << ")";
 }
 
-//TBD
 bool Point::operator!=(const Point &other) const {
-    return false;
+    return !this->operator==(other);
 }
 
