@@ -6,8 +6,12 @@
 
 class LuxuryCab: public Cab {
 private:
-    const int speed;
+    const double speed;
+    const double rate;
+
 public:
+    LuxuryCab(int id, Model_Of_Car carModel, Color_Of_Car color);
+
     double getSpeed() const;
 
     double getRate() const;
