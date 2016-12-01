@@ -2,19 +2,6 @@
 
 using namespace std;
 
-Grid::Grid(int m, int n, vector<Point> listOfObstacles) {
-    width = m;
-    height = n;
-    for (int i = 0; i < width; i++) {
-        vector<Point> verticalVectorOfPoints = vector<Point>();
-        for (int j = 0; j < height; j++) {
-            Point p = Point(i, j);
-            verticalVectorOfPoints.push_back(p);
-        }
-        vectorOfVerticalVectors.push_back(verticalVectorOfPoints);
-    }
-};
-
 Grid::Grid(int m, int n) {
     width = m;
     height = n;
@@ -27,13 +14,10 @@ Grid::Grid(int m, int n) {
         vectorOfVerticalVectors.push_back(verticalVectorOfPoints);
     }
 };
-/*
-Grid::Grid(const Grid &grid) {
-    width = grid.width;
-    height = grid.height;
-    vectorOfVerticalVectors = grid.vectorOfVerticalVectors;
-}
-*/
+
+Grid::Grid(int m, int n, vector<Point> listOfObstacles) : Grid(m, n) {
+    //TBD - setAvailable(true) for each point in the grid that belongs to listOfObstacles
+};
 
 queue<Node<Point>> Grid::getNeighbors(Node<Point> n) {
     Point p = n.getValue();

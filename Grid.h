@@ -28,11 +28,8 @@ public:
 
     Grid(int m,int n);
 
-    //copy constructor
-    //Grid(const Grid &grid);
-
     //return queue of Points in the grid that are next to the Node p (four points at most)
-    //the neighbors order is: left, up, right and down.
+    //the neighbors order is: left, up, right and down. Don't return points that aren't available.
     queue<Node<Point>> getNeighbors(Node<Point> n);
 };
 

@@ -19,7 +19,7 @@ class Node {
 public:
     Node(T value);
     //nodes comparison according to their values
-    virtual bool operator==( Node<T> &other);
+    virtual bool operator==(const Node<T> &other) const;
     //definition of ordering relation between Nodes in order to enable
     //data structures (like Map) to maintain them efficiently.
     //(the exact ordering relation, that we defined, doesn't matter)
@@ -32,7 +32,7 @@ template <class T>
 Node<T>::Node(T value) : value(value) { }
 
 template <class T>
-bool Node<T>::operator==(Node<T> &other) {
+bool Node<T>::operator==(const Node<T> &other) const {
     return (this->value == other.value);
 }
 
