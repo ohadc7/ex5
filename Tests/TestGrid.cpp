@@ -35,12 +35,12 @@ TEST_F(GridTest, SanityChecks) {
     //empty vector (so far)
     vector<Point> vectorOfObstaclesPoints;
     ProgramFlow programFlow = ProgramFlow();
-    programFlow.createMap(1,1,vectorOfObstaclesPoints);
+    programFlow.createGrid(1,1,vectorOfObstaclesPoints);
 
 
     Point obstaclePoint = Point(0,0);
     vectorOfObstaclesPoints.push_back(obstaclePoint);
-    programFlow.createMap(1,1,vectorOfObstaclesPoints);
+    programFlow.createGrid(1,1,vectorOfObstaclesPoints);
     Graph<Point>* g = new Grid(1,1);
     //ASSERT_EQ();
     delete g;

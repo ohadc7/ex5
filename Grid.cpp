@@ -2,6 +2,19 @@
 
 using namespace std;
 
+Grid::Grid(int m, int n, vector<Point> listOfObstacles) {
+    width = m;
+    height = n;
+    for (int i = 0; i < width; i++) {
+        vector<Point> verticalVectorOfPoints = vector<Point>();
+        for (int j = 0; j < height; j++) {
+            Point p = Point(i, j);
+            verticalVectorOfPoints.push_back(p);
+        }
+        vectorOfVerticalVectors.push_back(verticalVectorOfPoints);
+    }
+};
+
 Grid::Grid(int m, int n) {
     width = m;
     height = n;

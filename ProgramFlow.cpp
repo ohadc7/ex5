@@ -11,6 +11,6 @@ void ProgramFlow::createCab(int id) {
 
 }
 
-Grid ProgramFlow::createMap(int width, int height, vector<Point> listOfObstacles) {
-    return Grid(width,height); //some default value
+Grid ProgramFlow::createGrid(int width, int height, vector<Point> listOfObstacles) {
+    return Grid(width,height, listOfObstacles); //some default value
 }

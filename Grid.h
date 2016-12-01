@@ -20,9 +20,12 @@ class Grid: public Graph<Point> {
 private:
     int width;
     int height;
-    vector< vector<Point> > vectorOfVerticalVectors;
+    vector<vector<Point>> vectorOfVerticalVectors;
+
 public:
     //constructor. m is the grid width, n is the grid height.
+    Grid(int m,int n, vector<Point> listOfObstacles);
+
     Grid(int m,int n);
 
     //copy constructor
