@@ -1,5 +1,6 @@
 #include <gtest/gtest.h>
 #include "../Point.h"
+#include "../Graph.h"
 
 class PointTest: public ::testing::Test {
 protected:
@@ -11,15 +12,15 @@ protected:
 
 //our tests:
 TEST_F(PointTest, SanityChecks) {
+    // !=
     ASSERT_NE(p1,p3);
     ASSERT_NE(p1,p4);
+    // ==
+    ASSERT_EQ(p1,p1);
     ASSERT_EQ(p1,p2);
 }
 
 TEST_F(PointTest, OrderingRelationsChecks) {
-    // =
-    ASSERT_EQ(p1,p1);
-    ASSERT_EQ(p1,p2);
     // < asymmetry
     ASSERT_NE((p1<p3),(p3<p1));
     ASSERT_NE((p1<p4),(p4<p1));
@@ -33,7 +34,22 @@ TEST_F(PointTest, printing) {
     according to   http://stackoverflow.com/questions/31815230/
      how-to-test-input-and-output-overloaded-operator-in-c-gtest
      */
+    // << (operator overloading of printing to stream)
     ostringstream output;
     output << p1;
     ASSERT_EQ(output.str(),"(1,2)");
 }
+
+TEST_F(PointTest, isAvailable) {
+    bool boolTrue = true;
+    bool boolFalse = false;
+
+    Point p = Point(0,0);
+    //I assume that default Point has to be available
+    ASSERT_EQ(boolTrue,p.isAvailable());
+    p.setAvailability(boolFalse);
+    ASSERT_EQ(boolFalse,p.isAvailable());
+    p.setAvailability(boolTrue);
+    ASSERT_EQ(boolTrue,p.isAvailable());
+}
+

@@ -18,6 +18,8 @@ public:
     //return true if this Point is passable.
     // false otherwise (=if there is an obstacle in this Point).
     bool isAvailable();
+    //if this Point is passable (there isn't obstacle) return true. false otherwise.
+    void setAvailability(bool isAvailable);
     //oprator overloading for printing point in the form (x,y)
     friend ostream& operator <<(ostream& os, Point &point);
     //definition of ordering relation between Points in order to enable

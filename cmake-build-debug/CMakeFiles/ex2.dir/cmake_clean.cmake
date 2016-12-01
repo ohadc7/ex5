@@ -10,11 +10,11 @@ file(REMOVE_RECURSE
   "CMakeFiles/ex2.dir/Trip.cpp.o"
   "CMakeFiles/ex2.dir/Cab.cpp.o"
   "CMakeFiles/ex2.dir/Tests/TestPoint.cpp.o"
-  "CMakeFiles/ex2.dir/Tests/CabTest.cpp.o"
   "CMakeFiles/ex2.dir/StandardCab.cpp.o"
   "CMakeFiles/ex2.dir/LuxuryCab.cpp.o"
   "CMakeFiles/ex2.dir/Tests/ProgramFlowTest.cpp.o"
   "CMakeFiles/ex2.dir/Tests/DriverTest.cpp.o"
+  "CMakeFiles/ex2.dir/Tests/TestGrid.cpp.o"
   "ex2.pdb"
   "ex2"
 )

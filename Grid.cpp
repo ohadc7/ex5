@@ -14,13 +14,13 @@ Grid::Grid(int m, int n) {
         vectorOfVerticalVectors.push_back(verticalVectorOfPoints);
     }
 };
-
+/*
 Grid::Grid(const Grid &grid) {
     width = grid.width;
     height = grid.height;
     vectorOfVerticalVectors = grid.vectorOfVerticalVectors;
 }
-
+*/
 
 queue<Node<Point>> Grid::getNeighbors(Node<Point> n) {
     Point p = n.getValue();

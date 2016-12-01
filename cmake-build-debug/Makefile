@@ -489,33 +489,6 @@ TaxiCenter.cpp.s:
 	$(MAKE) -f CMakeFiles/ex2.dir/build.make CMakeFiles/ex2.dir/TaxiCenter.cpp.s
 .PHONY : TaxiCenter.cpp.s
 
-Tests/CabTest.o: Tests/CabTest.cpp.o
-
-.PHONY : Tests/CabTest.o
-
-# target to build an object file
-Tests/CabTest.cpp.o:
-	$(MAKE) -f CMakeFiles/ex2.dir/build.make CMakeFiles/ex2.dir/Tests/CabTest.cpp.o
-.PHONY : Tests/CabTest.cpp.o
-
-Tests/CabTest.i: Tests/CabTest.cpp.i
-
-.PHONY : Tests/CabTest.i
-
-# target to preprocess a source file
-Tests/CabTest.cpp.i:
-	$(MAKE) -f CMakeFiles/ex2.dir/build.make CMakeFiles/ex2.dir/Tests/CabTest.cpp.i
-.PHONY : Tests/CabTest.cpp.i
-
-Tests/CabTest.s: Tests/CabTest.cpp.s
-
-.PHONY : Tests/CabTest.s
-
-# target to generate assembly for a file
-Tests/CabTest.cpp.s:
-	$(MAKE) -f CMakeFiles/ex2.dir/build.make CMakeFiles/ex2.dir/Tests/CabTest.cpp.s
-.PHONY : Tests/CabTest.cpp.s
-
 Tests/DriverTest.o: Tests/DriverTest.cpp.o
 
 .PHONY : Tests/DriverTest.o
@@ -569,6 +542,33 @@ Tests/ProgramFlowTest.s: Tests/ProgramFlowTest.cpp.s
 Tests/ProgramFlowTest.cpp.s:
 	$(MAKE) -f CMakeFiles/ex2.dir/build.make CMakeFiles/ex2.dir/Tests/ProgramFlowTest.cpp.s
 .PHONY : Tests/ProgramFlowTest.cpp.s
+
+Tests/TestGrid.o: Tests/TestGrid.cpp.o
+
+.PHONY : Tests/TestGrid.o
+
+# target to build an object file
+Tests/TestGrid.cpp.o:
+	$(MAKE) -f CMakeFiles/ex2.dir/build.make CMakeFiles/ex2.dir/Tests/TestGrid.cpp.o
+.PHONY : Tests/TestGrid.cpp.o
+
+Tests/TestGrid.i: Tests/TestGrid.cpp.i
+
+.PHONY : Tests/TestGrid.i
+
+# target to preprocess a source file
+Tests/TestGrid.cpp.i:
+	$(MAKE) -f CMakeFiles/ex2.dir/build.make CMakeFiles/ex2.dir/Tests/TestGrid.cpp.i
+.PHONY : Tests/TestGrid.cpp.i
+
+Tests/TestGrid.s: Tests/TestGrid.cpp.s
+
+.PHONY : Tests/TestGrid.s
+
+# target to generate assembly for a file
+Tests/TestGrid.cpp.s:
+	$(MAKE) -f CMakeFiles/ex2.dir/build.make CMakeFiles/ex2.dir/Tests/TestGrid.cpp.s
+.PHONY : Tests/TestGrid.cpp.s
 
 Tests/TestPoint.o: Tests/TestPoint.cpp.o
 
@@ -698,15 +698,15 @@ help:
 	@echo "... TaxiCenter.o"
 	@echo "... TaxiCenter.i"
 	@echo "... TaxiCenter.s"
-	@echo "... Tests/CabTest.o"
-	@echo "... Tests/CabTest.i"
-	@echo "... Tests/CabTest.s"
 	@echo "... Tests/DriverTest.o"
 	@echo "... Tests/DriverTest.i"
 	@echo "... Tests/DriverTest.s"
 	@echo "... Tests/ProgramFlowTest.o"
 	@echo "... Tests/ProgramFlowTest.i"
 	@echo "... Tests/ProgramFlowTest.s"
+	@echo "... Tests/TestGrid.o"
+	@echo "... Tests/TestGrid.i"
+	@echo "... Tests/TestGrid.s"
 	@echo "... Tests/TestPoint.o"
 	@echo "... Tests/TestPoint.i"
 	@echo "... Tests/TestPoint.s"

@@ -405,13 +405,13 @@
 		<Unit filename="/home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/TaxiCenter.h">
 			<Option target="ex2"/>
 		</Unit>
-		<Unit filename="/home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/Tests/CabTest.cpp">
-			<Option target="ex2"/>
-		</Unit>
 		<Unit filename="/home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/Tests/DriverTest.cpp">
 			<Option target="ex2"/>
 		</Unit>
 		<Unit filename="/home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/Tests/ProgramFlowTest.cpp">
+			<Option target="ex2"/>
+		</Unit>
+		<Unit filename="/home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/Tests/TestGrid.cpp">
 			<Option target="ex2"/>
 		</Unit>
 		<Unit filename="/home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/Tests/TestPoint.cpp">
