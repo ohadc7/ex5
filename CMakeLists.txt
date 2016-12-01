@@ -13,7 +13,7 @@ set(SOURCE_FILES main.cpp BfsAlgorithm.h
         Driver.cpp Driver.h Trip.cpp Trip.h Cab.cpp Cab.h
         StandardCab.cpp StandardCab.h
         LuxuryCab.cpp LuxuryCab.h Tests/TestPoint.cpp  Tests/ProgramFlowTest.cpp
-        Tests/DriverTest.cpp Tests/TestGrid.cpp)
+        Tests/DriverTest.cpp Tests/TestGrid.cpp Tests/TestTrip.cpp)
 add_executable(ex2 ${SOURCE_FILES} Tests/ProgramFlowTest.cpp
         Tests/DriverTest.cpp Tests/TestGrid.cpp)
 target_link_libraries(ex2 gtest gtest_main)

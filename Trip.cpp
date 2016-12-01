@@ -23,6 +23,10 @@ const list <Passenger> &Trip::getCustomers() const {
     return customers;
 }
 
+int Trip::getNumberOfPassengers() const {
+    return 0;
+}
+
 double Trip::getRateOfTrip() const {
     return rateOfTrip;
 }
@@ -30,3 +34,4 @@ double Trip::getRateOfTrip() const {
 int Trip::getPassedMeters() const {
     return passedMeters;
 }
+
