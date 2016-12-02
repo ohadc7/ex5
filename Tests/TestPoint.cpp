@@ -25,8 +25,7 @@ TEST_F(PointTest, OrderingRelationsChecks) {
     ASSERT_NE((p1<p3),(p3<p1));
     ASSERT_NE((p1<p4),(p4<p1));
     // < not reflexive
-    bool falseResult = false;
-    ASSERT_EQ(falseResult,(p2<p1))
+    ASSERT_EQ((p2<p1), false)
                    << "ERROR: These points are suuposed to be: p2 == p1 == Point(1,2)";
 }
 
@@ -42,14 +41,11 @@ TEST_F(PointTest, printing) {
 }
 
 TEST_F(PointTest, isAvailable) {
-    bool boolTrue = true;
-    bool boolFalse = false;
-
     Point p = Point(0,0);
     //I assume that default Point has to be available
-    ASSERT_EQ(boolTrue,p.isAvailable()) << "[not implemented (so far)]";
-    p.setAvailability(boolFalse);
-    ASSERT_EQ(boolFalse,p.isAvailable()) << "[not implemented (so far)]";
-    p.setAvailability(boolTrue);
-    ASSERT_EQ(boolTrue,p.isAvailable()) << "[not implemented (so far)]";
+    ASSERT_EQ(p.isAvailable(), true) << "[not implemented (so far)]";
+    p.setAvailability(false);
+    ASSERT_EQ(p.isAvailable(), false) << "[not implemented (so far)]";
+    p.setAvailability(true);
+    ASSERT_EQ(p.isAvailable(), true) << "[not implemented (so far)]";
 }

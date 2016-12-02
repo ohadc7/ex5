@@ -8,16 +8,16 @@ protected:
     list<Passenger> passengersList;
 
     virtual void SetUp() {
-        Passenger Reuven = Passenger(Point(0,0),Point(1,0), false);
-        Passenger Shimon = Passenger(Point(9,9),Point(1,0), false);
+        Passenger reuven = Passenger(Point(0,0),Point(1,0), false);
+        Passenger shimon = Passenger(Point(9,9),Point(1,0), false);
         //2 passengers with the same arguments;
-        Passenger Ohad = Passenger(Point(5,5),Point(3,3), false);
-        Passenger Ido = Passenger(Point(5,5),Point(3,3), false);
+        Passenger ohad = Passenger(Point(5,5),Point(3,3), false);
+        Passenger ido = Passenger(Point(5,5),Point(3,3), false);
 
-        passengersList.push_back(Reuven);
-        passengersList.push_back(Shimon);
-        passengersList.push_back(Ohad);
-        passengersList.push_back(Ido);
+        passengersList.push_back(reuven);
+        passengersList.push_back(shimon);
+        passengersList.push_back(ohad);
+        passengersList.push_back(ido);
 
         trip = Trip(1384, Point(0, 0), Point(3, 3), passengersList);
     }

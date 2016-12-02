@@ -10,15 +10,25 @@ class TaxiCenter {
 private:
     list<Driver> listOfDrivers;
     list<Trip> listOfTrips;
-    BfsAlgorithm<Node<Point>> bfsInstance;
+    BfsAlgorithm<Point> bfsInstance;
 
     Driver chooseBestDriver(Passenger passenger);
     Trip createTrip(Driver driver, Passenger passenger);
-    void sendTaxi(Trip trip, bool isLuxury);
+    void sendTaxi(Trip trip);
 
 public:
+    TaxiCenter(BfsAlgorithm<Point> &bfsInstance);
+
     void addDriver(Driver driver);
+
+    //choose best driver, create a trip and send taxi
     void orderATrip(Passenger passenger);
+
+    const list <Driver> &getListOfDrivers() const;
+
+    const list <Trip> &getListOfTrips() const;
+
+    Point getDriverLocation(Driver driver);
 };
 
 
