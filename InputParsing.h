@@ -2,6 +2,8 @@
 #define EX1_VERSION_1_1_INPUTPARSING_H
 
 #include <iostream>
+#include <list>
+#include "Grid.h"
 
 using namespace std;
 class InputParsing {
@@ -12,6 +14,7 @@ private:
     int sourcePointY;
     int destinationPointX;
     int destinationPointY;
+    list<Point> obstacles;
 public:
     InputParsing(string inputString);
     int getgridWidth();
@@ -20,7 +23,7 @@ public:
     int getsourcePointY();
     int getdestinationPointX();
     int getdestinationPointY();
-
+    Grid getGrid();
 };
 
 

@@ -17,6 +17,21 @@ TEST(TestInputParsing, SanityChecks) {
     ASSERT_EQ(inputParsing.getgridWidth(),4);
     ASSERT_EQ(inputParsing.getgridHeight(),5);
 
+    Grid correctGrid = Grid(4,5);
+    for (int i = -1; i < 4; i++) {
+        for (int j = -1; j < 4; j++) {
+            Point p = Point(i,j);
+            ASSERT_EQ(correctGrid.getNeighbors(p), inputParsing.getGrid().getNeighbors(p))
+                           << "ERROR: the neighbors of the point in the parsed grid"
+                                   " and in the correct grid aren't equal";
+        }
+    }
+
+    /*
+     * I don't check parsing grid with obstacles because we don't know
+     * the input form of the obstacles list...
+     */
+
     /*
     inputParsing = InputParsing("100_0,-1_1,8.3_3");
     ASSERT_EQ(inputParsing.getsourcePointX(),-1);

@@ -53,3 +53,7 @@ int InputParsing::getdestinationPointX() {
 int InputParsing::getdestinationPointY() {
     return destinationPointY;
 }
+
+Grid InputParsing::getGrid() {
+    return Grid(this->gridWidth, this->getgridHeight());
+}
