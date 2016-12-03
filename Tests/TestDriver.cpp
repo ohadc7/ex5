@@ -21,7 +21,7 @@ protected:
         driver3.clientSatisfactions(0);
         driver.addPassenger(reuven);
         cabForDriver1 = new StandardCab(1122233, HONDA, BLUE);
-        driver.attachCabToDriver(cabForDriver1);
+        driver.attachCabToDriver((Cab**)&cabForDriver1);
     }
 };
 

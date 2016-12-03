@@ -29,7 +29,7 @@ public:
 
     int getYearsOfExperience() const;
 
-    void attachCabToDriver(Cab *infoCab);
+    void attachCabToDriver(Cab **infoCab);
 
     double getSatisfactions() const;
 
