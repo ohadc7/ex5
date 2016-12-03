@@ -15,7 +15,7 @@ public:
     Passenger(Point source, Point destination, bool isLuxury);
     int getSatisfaction() const;
     bool getIsLuxury();
-    void setSatisfaction(int satisfaction);
+    int giveFeedBack();
 };
 
 

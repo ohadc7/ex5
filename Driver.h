@@ -33,7 +33,7 @@ public:
 
     double getSatisfactions() const;
 
-    const Cab *getInfoCab();
+    Cab *getInfoCab() const;
 
     bool isAvailable();
 

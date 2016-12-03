@@ -1,7 +1,3 @@
-//
-// Created by ido on 29/11/16.
-//
-
 #include "Driver.h"
 
 Driver::Driver(int id, int age, Status_Of_Marriage status, int yearsOfExperience) :
@@ -30,8 +26,8 @@ double Driver::getSatisfactions() const {
     return averageSatisfactions;
 }
 
-const Cab* Driver::getInfoCab() {
-    return NULL;
+Cab* Driver::getInfoCab() const{
+    return cabOfDriver;
 }
 
 Point Driver::currentPlace() {

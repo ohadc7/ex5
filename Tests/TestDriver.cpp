@@ -23,6 +23,10 @@ protected:
         cabForDriver1 = new StandardCab(1122233, HONDA, BLUE);
         driver.attachCabToDriver((Cab**)&cabForDriver1);
     }
+
+    virtual void TearDown(){
+        delete cabForDriver1;
+    }
 };
 
 
@@ -37,7 +41,7 @@ protected:
     EXPECT_EQ(driver.getListOfPassengers().front().getIsLuxury(),reuven.getIsLuxury()) <<
                                                            "check if inserted passenger works";
     EXPECT_EQ(driver2.getListOfPassengers().size(),0)<<"check that empty listOfPassenger is empty";
-  //  EXPECT_EQ(driver.getInfoCab()->getColor(),cabForDriver1->getColor()) << "test the attached cab";
+    EXPECT_EQ(driver.getInfoCab()->getColor(),cabForDriver1->getColor()) << "test the attached cab";
     ASSERT_EQ(driver3.isAvailable(), false) << "check if availability works";
 
 

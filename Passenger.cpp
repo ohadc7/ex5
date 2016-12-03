@@ -11,6 +11,6 @@ bool Passenger::getIsLuxury() {
     return false;
 }
 
-void Passenger::setSatisfaction(int satisfaction){
-    satisfactionNum = satisfaction;
+int Passenger::giveFeedBack() {
+    return 0;
 }
