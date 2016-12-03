@@ -11,8 +11,8 @@ protected:
     Point reuvenSourcePoint = Point(2,2);
     Point reuvenDestinationPoint = Point(1,0);
     Passenger reuven = Passenger(reuvenSourcePoint, reuvenDestinationPoint, false);
-    Driver driver1  = Driver(555555555, 80, WIDOWED, 50, cabForDriver1);
-    Driver driver2 = Driver(121212121, 40, MARRIED, 3, cabForDriver2);
+    Driver driver1  = Driver(555555555, 80, WIDOWED, 50);
+    Driver driver2 = Driver(121212121, 40, MARRIED, 3);
     StandardCab* cabForDriver1;
     StandardCab* cabForDriver2;
 

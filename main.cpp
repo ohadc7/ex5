@@ -17,9 +17,9 @@ int main(int argc, char* argv[]) {
     //inputString = "3_3,0_0,1_1"; //for debugging (instead of the next line)
     getline(cin, inputString);
     InputParsing ip = InputParsing(inputString);
-    Node<Point> startPoint(Point(ip.getsourcePointX(), ip.getsourcePointY()));
-    Node<Point> endPoint(Point(ip.getdestinationPointX(),ip.getdestinationPointY()));
-    Graph<Point>* g = new Grid(ip.getgridWidth(), ip.getgridHeight());
+    Node<Point> startPoint(Point(ip.getSourcePointX(), ip.getSourcePointY()));
+    Node<Point> endPoint(Point(ip.getDestinationPointX(), ip.getDestinationPointY()));
+    Graph<Point>* g = new Grid(ip.getGridWidth(), ip.getGridHeight());
     BfsAlgorithm<Point> bfs(g);
 
     //finding the short path from startPoint to endPoint

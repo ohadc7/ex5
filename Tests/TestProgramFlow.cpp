@@ -11,5 +11,4 @@ TEST(ProgramFlowTest, SanityChecks) {
 
     Grid grid =  programFlow.createGrid(10,10,vector1);
     Grid gridToTest = Grid(10,10, vector1);
- //   ASSERT_EQ(grid,gridToTest);
 }

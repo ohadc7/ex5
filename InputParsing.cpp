@@ -30,30 +30,30 @@ InputParsing::InputParsing(string inputString) {
     destinationPointY = stoi(destinationPointYString);
 }
 
-int InputParsing::getgridWidth() {
+int InputParsing::getGridWidth() {
     return gridWidth;
 }
 
-int InputParsing::getgridHeight() {
+int InputParsing::getGridHeight() {
     return gridHeight;
 }
 
-int InputParsing::getsourcePointX() {
+int InputParsing::getSourcePointX() {
     return sourcePointX;
 }
 
-int InputParsing::getsourcePointY() {
+int InputParsing::getSourcePointY() {
     return sourcePointY;
 }
 
-int InputParsing::getdestinationPointX() {
+int InputParsing::getDestinationPointX() {
     return destinationPointX;
 }
 
-int InputParsing::getdestinationPointY() {
+int InputParsing::getDestinationPointY() {
     return destinationPointY;
 }
 
 Grid InputParsing::getGrid() {
-    return Grid(this->gridWidth, this->getgridHeight());
+    return Grid(this->gridWidth, this->getGridHeight());
 }

@@ -19,8 +19,12 @@ CMakeFiles/ex2.dir/Grid.cpp.o
  /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/Node.h
  /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/Point.h
 CMakeFiles/ex2.dir/InputParsing.cpp.o
+ /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/Graph.h
+ /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/Grid.h
  /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/InputParsing.cpp
  /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/InputParsing.h
+ /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/Node.h
+ /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/Point.h
 CMakeFiles/ex2.dir/LuxuryCab.cpp.o
  /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/Cab.h
  /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/LuxuryCab.cpp
@@ -57,7 +61,36 @@ CMakeFiles/ex2.dir/TaxiCenter.cpp.o
  /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/TaxiCenter.cpp
  /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/TaxiCenter.h
  /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/Trip.h
-CMakeFiles/ex2.dir/Tests/DriverTest.cpp.o
+CMakeFiles/ex2.dir/Tests/TestBfsAlgorithm.cpp.o
+ /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/Tests/TestBfsAlgorithm.cpp
+CMakeFiles/ex2.dir/Tests/TestCabs.cpp.o
+ ../lib/googletest-master/googletest/include/gtest/gtest-death-test.h
+ ../lib/googletest-master/googletest/include/gtest/gtest-message.h
+ ../lib/googletest-master/googletest/include/gtest/gtest-param-test.h
+ ../lib/googletest-master/googletest/include/gtest/gtest-printers.h
+ ../lib/googletest-master/googletest/include/gtest/gtest-test-part.h
+ ../lib/googletest-master/googletest/include/gtest/gtest-typed-test.h
+ ../lib/googletest-master/googletest/include/gtest/gtest.h
+ ../lib/googletest-master/googletest/include/gtest/gtest_pred_impl.h
+ ../lib/googletest-master/googletest/include/gtest/gtest_prod.h
+ ../lib/googletest-master/googletest/include/gtest/internal/custom/gtest-port.h
+ ../lib/googletest-master/googletest/include/gtest/internal/custom/gtest-printers.h
+ ../lib/googletest-master/googletest/include/gtest/internal/gtest-death-test-internal.h
+ ../lib/googletest-master/googletest/include/gtest/internal/gtest-filepath.h
+ ../lib/googletest-master/googletest/include/gtest/internal/gtest-internal.h
+ ../lib/googletest-master/googletest/include/gtest/internal/gtest-linked_ptr.h
+ ../lib/googletest-master/googletest/include/gtest/internal/gtest-param-util-generated.h
+ ../lib/googletest-master/googletest/include/gtest/internal/gtest-param-util.h
+ ../lib/googletest-master/googletest/include/gtest/internal/gtest-port-arch.h
+ ../lib/googletest-master/googletest/include/gtest/internal/gtest-port.h
+ ../lib/googletest-master/googletest/include/gtest/internal/gtest-string.h
+ ../lib/googletest-master/googletest/include/gtest/internal/gtest-tuple.h
+ ../lib/googletest-master/googletest/include/gtest/internal/gtest-type-util.h
+ /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/Cab.h
+ /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/LuxuryCab.h
+ /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/StandardCab.h
+ /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/Tests/TestCabs.cpp
+CMakeFiles/ex2.dir/Tests/TestDriver.cpp.o
  ../lib/googletest-master/googletest/include/gtest/gtest-death-test.h
  ../lib/googletest-master/googletest/include/gtest/gtest-message.h
  ../lib/googletest-master/googletest/include/gtest/gtest-param-test.h
@@ -86,37 +119,8 @@ CMakeFiles/ex2.dir/Tests/DriverTest.cpp.o
  /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/Node.h
  /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/Passenger.h
  /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/Point.h
- /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/Tests/DriverTest.cpp
+ /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/Tests/TestDriver.cpp
  /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/Trip.h
-CMakeFiles/ex2.dir/Tests/ProgramFlowTest.cpp.o
- ../lib/googletest-master/googletest/include/gtest/gtest-death-test.h
- ../lib/googletest-master/googletest/include/gtest/gtest-message.h
- ../lib/googletest-master/googletest/include/gtest/gtest-param-test.h
- ../lib/googletest-master/googletest/include/gtest/gtest-printers.h
- ../lib/googletest-master/googletest/include/gtest/gtest-test-part.h
- ../lib/googletest-master/googletest/include/gtest/gtest-typed-test.h
- ../lib/googletest-master/googletest/include/gtest/gtest.h
- ../lib/googletest-master/googletest/include/gtest/gtest_pred_impl.h
- ../lib/googletest-master/googletest/include/gtest/gtest_prod.h
- ../lib/googletest-master/googletest/include/gtest/internal/custom/gtest-port.h
- ../lib/googletest-master/googletest/include/gtest/internal/custom/gtest-printers.h
- ../lib/googletest-master/googletest/include/gtest/internal/gtest-death-test-internal.h
- ../lib/googletest-master/googletest/include/gtest/internal/gtest-filepath.h
- ../lib/googletest-master/googletest/include/gtest/internal/gtest-internal.h
- ../lib/googletest-master/googletest/include/gtest/internal/gtest-linked_ptr.h
- ../lib/googletest-master/googletest/include/gtest/internal/gtest-param-util-generated.h
- ../lib/googletest-master/googletest/include/gtest/internal/gtest-param-util.h
- ../lib/googletest-master/googletest/include/gtest/internal/gtest-port-arch.h
- ../lib/googletest-master/googletest/include/gtest/internal/gtest-port.h
- ../lib/googletest-master/googletest/include/gtest/internal/gtest-string.h
- ../lib/googletest-master/googletest/include/gtest/internal/gtest-tuple.h
- ../lib/googletest-master/googletest/include/gtest/internal/gtest-type-util.h
- /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/Graph.h
- /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/Grid.h
- /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/Node.h
- /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/Point.h
- /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/ProgramFlow.h
- /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/Tests/ProgramFlowTest.cpp
 CMakeFiles/ex2.dir/Tests/TestGrid.cpp.o
  ../lib/googletest-master/googletest/include/gtest/gtest-death-test.h
  ../lib/googletest-master/googletest/include/gtest/gtest-message.h
@@ -146,6 +150,35 @@ CMakeFiles/ex2.dir/Tests/TestGrid.cpp.o
  /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/Point.h
  /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/ProgramFlow.h
  /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/Tests/TestGrid.cpp
+CMakeFiles/ex2.dir/Tests/TestInputParsing.cpp.o
+ ../lib/googletest-master/googletest/include/gtest/gtest-death-test.h
+ ../lib/googletest-master/googletest/include/gtest/gtest-message.h
+ ../lib/googletest-master/googletest/include/gtest/gtest-param-test.h
+ ../lib/googletest-master/googletest/include/gtest/gtest-printers.h
+ ../lib/googletest-master/googletest/include/gtest/gtest-test-part.h
+ ../lib/googletest-master/googletest/include/gtest/gtest-typed-test.h
+ ../lib/googletest-master/googletest/include/gtest/gtest.h
+ ../lib/googletest-master/googletest/include/gtest/gtest_pred_impl.h
+ ../lib/googletest-master/googletest/include/gtest/gtest_prod.h
+ ../lib/googletest-master/googletest/include/gtest/internal/custom/gtest-port.h
+ ../lib/googletest-master/googletest/include/gtest/internal/custom/gtest-printers.h
+ ../lib/googletest-master/googletest/include/gtest/internal/gtest-death-test-internal.h
+ ../lib/googletest-master/googletest/include/gtest/internal/gtest-filepath.h
+ ../lib/googletest-master/googletest/include/gtest/internal/gtest-internal.h
+ ../lib/googletest-master/googletest/include/gtest/internal/gtest-linked_ptr.h
+ ../lib/googletest-master/googletest/include/gtest/internal/gtest-param-util-generated.h
+ ../lib/googletest-master/googletest/include/gtest/internal/gtest-param-util.h
+ ../lib/googletest-master/googletest/include/gtest/internal/gtest-port-arch.h
+ ../lib/googletest-master/googletest/include/gtest/internal/gtest-port.h
+ ../lib/googletest-master/googletest/include/gtest/internal/gtest-string.h
+ ../lib/googletest-master/googletest/include/gtest/internal/gtest-tuple.h
+ ../lib/googletest-master/googletest/include/gtest/internal/gtest-type-util.h
+ /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/Graph.h
+ /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/Grid.h
+ /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/InputParsing.h
+ /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/Node.h
+ /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/Point.h
+ /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/Tests/TestInputParsing.cpp
 CMakeFiles/ex2.dir/Tests/TestPoint.cpp.o
  ../lib/googletest-master/googletest/include/gtest/gtest-death-test.h
  ../lib/googletest-master/googletest/include/gtest/gtest-message.h
@@ -173,6 +206,98 @@ CMakeFiles/ex2.dir/Tests/TestPoint.cpp.o
  /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/Node.h
  /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/Point.h
  /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/Tests/TestPoint.cpp
+CMakeFiles/ex2.dir/Tests/TestProgramFlow.cpp.o
+ ../lib/googletest-master/googletest/include/gtest/gtest-death-test.h
+ ../lib/googletest-master/googletest/include/gtest/gtest-message.h
+ ../lib/googletest-master/googletest/include/gtest/gtest-param-test.h
+ ../lib/googletest-master/googletest/include/gtest/gtest-printers.h
+ ../lib/googletest-master/googletest/include/gtest/gtest-test-part.h
+ ../lib/googletest-master/googletest/include/gtest/gtest-typed-test.h
+ ../lib/googletest-master/googletest/include/gtest/gtest.h
+ ../lib/googletest-master/googletest/include/gtest/gtest_pred_impl.h
+ ../lib/googletest-master/googletest/include/gtest/gtest_prod.h
+ ../lib/googletest-master/googletest/include/gtest/internal/custom/gtest-port.h
+ ../lib/googletest-master/googletest/include/gtest/internal/custom/gtest-printers.h
+ ../lib/googletest-master/googletest/include/gtest/internal/gtest-death-test-internal.h
+ ../lib/googletest-master/googletest/include/gtest/internal/gtest-filepath.h
+ ../lib/googletest-master/googletest/include/gtest/internal/gtest-internal.h
+ ../lib/googletest-master/googletest/include/gtest/internal/gtest-linked_ptr.h
+ ../lib/googletest-master/googletest/include/gtest/internal/gtest-param-util-generated.h
+ ../lib/googletest-master/googletest/include/gtest/internal/gtest-param-util.h
+ ../lib/googletest-master/googletest/include/gtest/internal/gtest-port-arch.h
+ ../lib/googletest-master/googletest/include/gtest/internal/gtest-port.h
+ ../lib/googletest-master/googletest/include/gtest/internal/gtest-string.h
+ ../lib/googletest-master/googletest/include/gtest/internal/gtest-tuple.h
+ ../lib/googletest-master/googletest/include/gtest/internal/gtest-type-util.h
+ /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/Graph.h
+ /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/Grid.h
+ /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/Node.h
+ /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/Point.h
+ /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/ProgramFlow.h
+ /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/Tests/TestProgramFlow.cpp
+CMakeFiles/ex2.dir/Tests/TestTaxiCenter.cpp.o
+ ../lib/googletest-master/googletest/include/gtest/gtest-death-test.h
+ ../lib/googletest-master/googletest/include/gtest/gtest-message.h
+ ../lib/googletest-master/googletest/include/gtest/gtest-param-test.h
+ ../lib/googletest-master/googletest/include/gtest/gtest-printers.h
+ ../lib/googletest-master/googletest/include/gtest/gtest-test-part.h
+ ../lib/googletest-master/googletest/include/gtest/gtest-typed-test.h
+ ../lib/googletest-master/googletest/include/gtest/gtest.h
+ ../lib/googletest-master/googletest/include/gtest/gtest_pred_impl.h
+ ../lib/googletest-master/googletest/include/gtest/gtest_prod.h
+ ../lib/googletest-master/googletest/include/gtest/internal/custom/gtest-port.h
+ ../lib/googletest-master/googletest/include/gtest/internal/custom/gtest-printers.h
+ ../lib/googletest-master/googletest/include/gtest/internal/gtest-death-test-internal.h
+ ../lib/googletest-master/googletest/include/gtest/internal/gtest-filepath.h
+ ../lib/googletest-master/googletest/include/gtest/internal/gtest-internal.h
+ ../lib/googletest-master/googletest/include/gtest/internal/gtest-linked_ptr.h
+ ../lib/googletest-master/googletest/include/gtest/internal/gtest-param-util-generated.h
+ ../lib/googletest-master/googletest/include/gtest/internal/gtest-param-util.h
+ ../lib/googletest-master/googletest/include/gtest/internal/gtest-port-arch.h
+ ../lib/googletest-master/googletest/include/gtest/internal/gtest-port.h
+ ../lib/googletest-master/googletest/include/gtest/internal/gtest-string.h
+ ../lib/googletest-master/googletest/include/gtest/internal/gtest-tuple.h
+ ../lib/googletest-master/googletest/include/gtest/internal/gtest-type-util.h
+ /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/BfsAlgorithm.h
+ /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/Cab.h
+ /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/Driver.h
+ /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/Graph.h
+ /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/Grid.h
+ /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/Node.h
+ /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/Passenger.h
+ /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/Point.h
+ /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/StandardCab.h
+ /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/TaxiCenter.h
+ /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/Tests/TestTaxiCenter.cpp
+ /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/Trip.h
+CMakeFiles/ex2.dir/Tests/TestTrip.cpp.o
+ ../lib/googletest-master/googletest/include/gtest/gtest-death-test.h
+ ../lib/googletest-master/googletest/include/gtest/gtest-message.h
+ ../lib/googletest-master/googletest/include/gtest/gtest-param-test.h
+ ../lib/googletest-master/googletest/include/gtest/gtest-printers.h
+ ../lib/googletest-master/googletest/include/gtest/gtest-test-part.h
+ ../lib/googletest-master/googletest/include/gtest/gtest-typed-test.h
+ ../lib/googletest-master/googletest/include/gtest/gtest.h
+ ../lib/googletest-master/googletest/include/gtest/gtest_pred_impl.h
+ ../lib/googletest-master/googletest/include/gtest/gtest_prod.h
+ ../lib/googletest-master/googletest/include/gtest/internal/custom/gtest-port.h
+ ../lib/googletest-master/googletest/include/gtest/internal/custom/gtest-printers.h
+ ../lib/googletest-master/googletest/include/gtest/internal/gtest-death-test-internal.h
+ ../lib/googletest-master/googletest/include/gtest/internal/gtest-filepath.h
+ ../lib/googletest-master/googletest/include/gtest/internal/gtest-internal.h
+ ../lib/googletest-master/googletest/include/gtest/internal/gtest-linked_ptr.h
+ ../lib/googletest-master/googletest/include/gtest/internal/gtest-param-util-generated.h
+ ../lib/googletest-master/googletest/include/gtest/internal/gtest-param-util.h
+ ../lib/googletest-master/googletest/include/gtest/internal/gtest-port-arch.h
+ ../lib/googletest-master/googletest/include/gtest/internal/gtest-port.h
+ ../lib/googletest-master/googletest/include/gtest/internal/gtest-string.h
+ ../lib/googletest-master/googletest/include/gtest/internal/gtest-tuple.h
+ ../lib/googletest-master/googletest/include/gtest/internal/gtest-type-util.h
+ /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/Node.h
+ /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/Passenger.h
+ /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/Point.h
+ /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/Tests/TestTrip.cpp
+ /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/Trip.h
 CMakeFiles/ex2.dir/Trip.cpp.o
  /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/Node.h
  /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/Passenger.h

@@ -10,12 +10,12 @@
  */
 TEST(TestInputParsing, SanityChecks) {
     InputParsing inputParsing = InputParsing("4_5,0_1,2_3");
-    ASSERT_EQ(inputParsing.getsourcePointX(),0);
-    ASSERT_EQ(inputParsing.getsourcePointY(),1);
-    ASSERT_EQ(inputParsing.getdestinationPointX(),2);
-    ASSERT_EQ(inputParsing.getdestinationPointY(),3);
-    ASSERT_EQ(inputParsing.getgridWidth(),4);
-    ASSERT_EQ(inputParsing.getgridHeight(),5);
+    ASSERT_EQ(inputParsing.getSourcePointX(),0);
+    ASSERT_EQ(inputParsing.getSourcePointY(),1);
+    ASSERT_EQ(inputParsing.getDestinationPointX(),2);
+    ASSERT_EQ(inputParsing.getDestinationPointY(),3);
+    ASSERT_EQ(inputParsing.getGridWidth(),4);
+    ASSERT_EQ(inputParsing.getGridHeight(),5);
 
     Grid correctGrid = Grid(4,5);
     for (int i = -1; i < 4; i++) {
@@ -34,11 +34,11 @@ TEST(TestInputParsing, SanityChecks) {
 
     /*
     inputParsing = InputParsing("100_0,-1_1,8.3_3");
-    ASSERT_EQ(inputParsing.getsourcePointX(),-1);
-    ASSERT_EQ(inputParsing.getsourcePointY(),1);
-    ASSERT_EQ(inputParsing.getdestinationPointX(),8);
-    ASSERT_EQ(inputParsing.getdestinationPointY(),3);
-    ASSERT_EQ(inputParsing.getgridWidth(),100);
-    ASSERT_EQ(inputParsing.getgridHeight(),0);
+    ASSERT_EQ(inputParsing.getSourcePointX(),-1);
+    ASSERT_EQ(inputParsing.getSourcePointY(),1);
+    ASSERT_EQ(inputParsing.getDestinationPointX(),8);
+    ASSERT_EQ(inputParsing.getDestinationPointY(),3);
+    ASSERT_EQ(inputParsing.getGridWidth(),100);
+    ASSERT_EQ(inputParsing.getGridHeight(),0);
      */
 }

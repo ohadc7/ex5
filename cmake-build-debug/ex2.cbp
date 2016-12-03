@@ -405,16 +405,31 @@
 		<Unit filename="/home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/TaxiCenter.h">
 			<Option target="ex2"/>
 		</Unit>
-		<Unit filename="/home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/Tests/DriverTest.cpp">
+		<Unit filename="/home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/Tests/TestBfsAlgorithm.cpp">
 			<Option target="ex2"/>
 		</Unit>
-		<Unit filename="/home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/Tests/ProgramFlowTest.cpp">
+		<Unit filename="/home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/Tests/TestCabs.cpp">
+			<Option target="ex2"/>
+		</Unit>
+		<Unit filename="/home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/Tests/TestDriver.cpp">
 			<Option target="ex2"/>
 		</Unit>
 		<Unit filename="/home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/Tests/TestGrid.cpp">
 			<Option target="ex2"/>
 		</Unit>
+		<Unit filename="/home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/Tests/TestInputParsing.cpp">
+			<Option target="ex2"/>
+		</Unit>
 		<Unit filename="/home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/Tests/TestPoint.cpp">
+			<Option target="ex2"/>
+		</Unit>
+		<Unit filename="/home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/Tests/TestProgramFlow.cpp">
+			<Option target="ex2"/>
+		</Unit>
+		<Unit filename="/home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/Tests/TestTaxiCenter.cpp">
+			<Option target="ex2"/>
+		</Unit>
+		<Unit filename="/home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/Tests/TestTrip.cpp">
 			<Option target="ex2"/>
 		</Unit>
 		<Unit filename="/home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/Trip.cpp">

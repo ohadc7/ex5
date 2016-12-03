@@ -5,7 +5,7 @@ Trip TaxiCenter::createTrip(Driver driver, Passenger passenger) {
 }
 
 Driver TaxiCenter::chooseBestDriver(Passenger passenger) {
-    return Driver(0, 0, MARRIED, 0, nullptr);
+    return Driver(0, 0, MARRIED, 0);
 }
 
 void TaxiCenter::sendTaxi(Trip trip) {

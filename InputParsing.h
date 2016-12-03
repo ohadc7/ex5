@@ -17,12 +17,12 @@ private:
     list<Point> obstacles;
 public:
     InputParsing(string inputString);
-    int getgridWidth();
-    int getgridHeight();
-    int getsourcePointX();
-    int getsourcePointY();
-    int getdestinationPointX();
-    int getdestinationPointY();
+    int getGridWidth();
+    int getGridHeight();
+    int getSourcePointX();
+    int getSourcePointY();
+    int getDestinationPointX();
+    int getDestinationPointY();
     Grid getGrid();
 };
 
