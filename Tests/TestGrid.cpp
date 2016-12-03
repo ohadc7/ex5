@@ -4,7 +4,7 @@
 #include "../Grid.h"
 #include "../ProgramFlow.h"
 
-class GridTest: public ::testing::Test {
+class TestGrid: public ::testing::Test {
 protected:
     int width;
     int height;
@@ -12,16 +12,14 @@ protected:
     Graph<Point>* graph1;
 
 
-    GridTest() : width(2), height(3), grid1(width,height){
+    TestGrid() : width(2), height(3), grid1(width,height){
         grid1 = Grid(width,height);
         graph1 = new Grid(width,height);
     }
-
-    //virtual void SetUp() { }
  };
 
 
-TEST_F(GridTest, SanityChecks) {
+TEST_F(TestGrid, SanityChecks) {
     Point originPoint = Point(0,0);
     //Grid(2,3) shouldn't contain Point(2,1).
     Point invalidPoint = Point(2,1);
@@ -55,7 +53,7 @@ TEST_F(GridTest, SanityChecks) {
                         << "ERROR: neighbors of (1,2) aren't correct";
 }
 
-TEST_F(GridTest, getNeighborsMethod) {
+TEST_F(TestGrid, getNeighborsMethod) {
     //empty vector (so far)
     vector<Point> vectorOfObstaclesPoints;
     Grid checkedGrid = Grid(2,3,vectorOfObstaclesPoints);

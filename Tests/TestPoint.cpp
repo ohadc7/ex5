@@ -2,7 +2,7 @@
 #include "../Point.h"
 #include "../Graph.h"
 
-class PointTest: public ::testing::Test {
+class TestPoint: public ::testing::Test {
 protected:
     Point p1 = Point(1,2);
     Point p2 = Point(1,2);
@@ -11,7 +11,7 @@ protected:
 };
 
 //our tests:
-TEST_F(PointTest, SanityChecks) {
+TEST_F(TestPoint, SanityChecks) {
     // !=
     ASSERT_NE(p1,p3);
     ASSERT_NE(p1,p4);
@@ -20,7 +20,7 @@ TEST_F(PointTest, SanityChecks) {
     ASSERT_EQ(p1,p2);
 }
 
-TEST_F(PointTest, OrderingRelationsChecks) {
+TEST_F(TestPoint, OrderingRelationsChecks) {
     // < asymmetry
     ASSERT_NE((p1<p3),(p3<p1));
     ASSERT_NE((p1<p4),(p4<p1));
@@ -29,7 +29,7 @@ TEST_F(PointTest, OrderingRelationsChecks) {
                    << "ERROR: These points are suuposed to be: p2 == p1 == Point(1,2)";
 }
 
-TEST_F(PointTest, printing) {
+TEST_F(TestPoint, printing) {
     /*
     according to   http://stackoverflow.com/questions/31815230/
      how-to-test-input-and-output-overloaded-operator-in-c-gtest
@@ -40,7 +40,7 @@ TEST_F(PointTest, printing) {
     ASSERT_EQ(output.str(),"(1,2)");
 }
 
-TEST_F(PointTest, isAvailable) {
+TEST_F(TestPoint, isAvailable) {
     Point p = Point(0,0);
     //I assume that default Point has to be available
     ASSERT_EQ(p.isAvailable(), true) << "[not implemented (so far)]";
