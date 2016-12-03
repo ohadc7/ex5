@@ -1,6 +1,6 @@
 #include "gtest/gtest.h"
 #include "../Driver.h"
-#include "../LuxuryCab.h"
+#include "../Passenger.h"
 
 class TestDriver: public ::testing::Test {
 

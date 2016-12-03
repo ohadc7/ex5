@@ -20,6 +20,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/ex2.dir/Tests/TestInputParsing.cpp.o"
   "CMakeFiles/ex2.dir/Tests/TestTaxiCenter.cpp.o"
   "CMakeFiles/ex2.dir/Tests/TestBfsAlgorithm.cpp.o"
+  "CMakeFiles/ex2.dir/Tests/TestPassenger.cpp.o"
   "ex2.pdb"
   "ex2"
 )

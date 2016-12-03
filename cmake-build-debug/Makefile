@@ -624,6 +624,33 @@ Tests/TestInputParsing.cpp.s:
 	$(MAKE) -f CMakeFiles/ex2.dir/build.make CMakeFiles/ex2.dir/Tests/TestInputParsing.cpp.s
 .PHONY : Tests/TestInputParsing.cpp.s
 
+Tests/TestPassenger.o: Tests/TestPassenger.cpp.o
+
+.PHONY : Tests/TestPassenger.o
+
+# target to build an object file
+Tests/TestPassenger.cpp.o:
+	$(MAKE) -f CMakeFiles/ex2.dir/build.make CMakeFiles/ex2.dir/Tests/TestPassenger.cpp.o
+.PHONY : Tests/TestPassenger.cpp.o
+
+Tests/TestPassenger.i: Tests/TestPassenger.cpp.i
+
+.PHONY : Tests/TestPassenger.i
+
+# target to preprocess a source file
+Tests/TestPassenger.cpp.i:
+	$(MAKE) -f CMakeFiles/ex2.dir/build.make CMakeFiles/ex2.dir/Tests/TestPassenger.cpp.i
+.PHONY : Tests/TestPassenger.cpp.i
+
+Tests/TestPassenger.s: Tests/TestPassenger.cpp.s
+
+.PHONY : Tests/TestPassenger.s
+
+# target to generate assembly for a file
+Tests/TestPassenger.cpp.s:
+	$(MAKE) -f CMakeFiles/ex2.dir/build.make CMakeFiles/ex2.dir/Tests/TestPassenger.cpp.s
+.PHONY : Tests/TestPassenger.cpp.s
+
 Tests/TestPoint.o: Tests/TestPoint.cpp.o
 
 .PHONY : Tests/TestPoint.o
@@ -848,6 +875,9 @@ help:
 	@echo "... Tests/TestInputParsing.o"
 	@echo "... Tests/TestInputParsing.i"
 	@echo "... Tests/TestInputParsing.s"
+	@echo "... Tests/TestPassenger.o"
+	@echo "... Tests/TestPassenger.i"
+	@echo "... Tests/TestPassenger.s"
 	@echo "... Tests/TestPoint.o"
 	@echo "... Tests/TestPoint.i"
 	@echo "... Tests/TestPoint.s"
