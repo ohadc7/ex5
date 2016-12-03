@@ -57,7 +57,7 @@ bool Driver::isAvailable() {
 }
 
 void Driver::attachCabToDriver(Cab *infoCab) {
-    *infoCab = *infoCab;
+    *cabOfDriver = *infoCab;
 }
 
 vector<Passenger> Driver::getListOfPassengers() const{

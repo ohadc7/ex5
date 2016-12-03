@@ -144,6 +144,7 @@ CMakeFiles/ex2.dir/Tests/TestDriver.cpp.o: ../Driver.h
 CMakeFiles/ex2.dir/Tests/TestDriver.cpp.o: ../Node.h
 CMakeFiles/ex2.dir/Tests/TestDriver.cpp.o: ../Passenger.h
 CMakeFiles/ex2.dir/Tests/TestDriver.cpp.o: ../Point.h
+CMakeFiles/ex2.dir/Tests/TestDriver.cpp.o: ../StandardCab.h
 CMakeFiles/ex2.dir/Tests/TestDriver.cpp.o: ../Tests/TestDriver.cpp
 CMakeFiles/ex2.dir/Tests/TestDriver.cpp.o: ../Trip.h
 

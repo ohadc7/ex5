@@ -14,7 +14,7 @@ private:
     double averageSatisfactions;
     Status_Of_Marriage status;
     int yearsOfExperience;
-    Cab *infoCab;
+    Cab *cabOfDriver;
     Trip currentTrip;
     int numOfTrips;
     vector<Passenger> listOfPassengers;

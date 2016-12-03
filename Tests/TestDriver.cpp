@@ -1,6 +1,7 @@
 #include "gtest/gtest.h"
 #include "../Driver.h"
 #include "../Passenger.h"
+#include "../StandardCab.h"
 
 class TestDriver: public ::testing::Test {
 
@@ -11,6 +12,7 @@ protected:
     Point reuvenSourcePoint = Point(2,2);
     Point reuvenDestinationPoint = Point(1,0);
     Passenger reuven = Passenger(reuvenSourcePoint, reuvenDestinationPoint, false);
+    StandardCab* cabForDriver1;
 
     virtual void SetUp() {
         driver.clientSatisfactions(5);
@@ -18,6 +20,8 @@ protected:
         driver2.clientSatisfactions(6);
         driver3.clientSatisfactions(0);
         driver.addPassenger(reuven);
+        cabForDriver1 = new StandardCab(1122233, HONDA, BLUE);
+        driver.attachCabToDriver(cabForDriver1);
     }
 };
 
@@ -33,6 +37,7 @@ protected:
     EXPECT_EQ(driver.getListOfPassengers().front().getIsLuxury(),reuven.getIsLuxury()) <<
                                                            "check if inserted passenger works";
     EXPECT_EQ(driver2.getListOfPassengers().size(),0)<<"check that empty listOfPassenger is empty";
+  //  EXPECT_EQ(driver.getInfoCab()->getColor(),cabForDriver1->getColor()) << "test the attached cab";
     ASSERT_EQ(driver3.isAvailable(), false) << "check if availability works";
 
 
