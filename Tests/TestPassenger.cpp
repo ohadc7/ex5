@@ -4,9 +4,10 @@
 class TestPassenger: public ::testing::Test {
 
 protected:
-    Point reuvenSourcePoint = Point(2,2);
-    Point reuvenDestinationPoint = Point(1,0);
-    Passenger reuven = Passenger(reuvenSourcePoint, reuvenDestinationPoint, false);
+    Point reuvenSourcePoint,reuvenDestinationPoint;
+    Passenger reuven;
+    TestPassenger() : reuvenSourcePoint(2,2), reuvenDestinationPoint(1,0),
+                      reuven(reuvenSourcePoint, reuvenDestinationPoint, false){};
 };
 
 TEST_F(TestPassenger,sanityCheck){

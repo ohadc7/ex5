@@ -13,7 +13,7 @@ public:
     void createTaxiCenter();
     void createDriver(int id, int age, Status_of_Marriage status, int yearsOfExperience);
     void createCab(int id);
-    Grid createGrid(int width, int height, vector<Point> listOfObstacles);
+   // Grid createGrid(int width, int height, vector<Point> listOfObstacles);
 };
 
 

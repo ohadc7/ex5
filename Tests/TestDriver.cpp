@@ -6,13 +6,15 @@
 class TestDriver: public ::testing::Test {
 
 protected:
-    Driver driver = Driver(1, 30, MARRIED, 5);
-    Driver driver2 = Driver(2, 25, SINGLE, 5);
-    Driver driver3 = Driver(3, 28, SINGLE, 5);
-    Point reuvenSourcePoint = Point(2,2);
-    Point reuvenDestinationPoint = Point(1,0);
-    Passenger reuven = Passenger(reuvenSourcePoint, reuvenDestinationPoint, false);
+    Driver driver,driver2,driver3;
+    Point reuvenSourcePoint,reuvenDestinationPoint;
+    Passenger reuven;
     StandardCab* cabForDriver1;
+    TestDriver() : driver(1, 30, MARRIED, 5), driver2(2, 25, SINGLE, 5),
+                   driver3(3, 28, SINGLE, 5), reuvenSourcePoint(2,2),
+                   reuvenDestinationPoint(1,0),
+                   reuven(reuvenSourcePoint, reuvenDestinationPoint, false),
+                   cabForDriver1(new StandardCab(1122233, HONDA, BLUE)) {}
 
     virtual void SetUp() {
         driver.clientSatisfactions(5);
@@ -20,7 +22,6 @@ protected:
         driver2.clientSatisfactions(6);
         driver3.clientSatisfactions(0);
         driver.addPassenger(reuven);
-        cabForDriver1 = new StandardCab(1122233, HONDA, BLUE);
         driver.attachCabToDriver((Cab**)&cabForDriver1);
     }
 

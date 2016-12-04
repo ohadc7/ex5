@@ -3,8 +3,9 @@
 
 class TestBfsAlgorithm : public ::testing::Test {
 protected:
-    Grid *grid = new Grid(10, 10);
-    BfsAlgorithm<Point> bfs = BfsAlgorithm<Point>(grid);
+    Grid *grid;
+    BfsAlgorithm<Point> bfs;
+    TestBfsAlgorithm() : grid(new Grid(10, 10)), bfs(BfsAlgorithm<Point>(grid)){}
 
     virtual void TearDown() {
         delete grid;

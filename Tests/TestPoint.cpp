@@ -3,11 +3,9 @@
 #include "../Graph.h"
 
 class TestPoint: public ::testing::Test {
-protected:
-    Point p1 = Point(1,2);
-    Point p2 = Point(1,2);
-    Point p3 = Point(0,2);
-    Point p4 = Point(1,0);
+public:
+    Point p1,p2,p3,p4;
+    TestPoint() : p1(1,2) ,p2(1,2), p3(0,2), p4(1,0){};
 };
 
 //our tests:

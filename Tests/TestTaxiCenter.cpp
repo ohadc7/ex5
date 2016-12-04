@@ -5,21 +5,22 @@
 class TestTaxiCenter: public ::testing::Test {
 
 protected:
-    Grid* grid = new Grid(10,10);
-    BfsAlgorithm<Point> bfs = BfsAlgorithm<Point>(grid);
-    TaxiCenter taxiCenter = TaxiCenter(bfs);
-    Point reuvenSourcePoint = Point(2,2);
-    Point reuvenDestinationPoint = Point(1,0);
-    Passenger reuven = Passenger(reuvenSourcePoint, reuvenDestinationPoint, false);
-    Driver driver1  = Driver(555555555, 80, WIDOWED, 50);
-    Driver driver2 = Driver(121212121, 40, MARRIED, 3);
+
+    Grid* grid;
+    BfsAlgorithm<Point> bfs;
+    TaxiCenter taxiCenter;
+    Point reuvenSourcePoint,reuvenDestinationPoint;
+    Passenger reuven;
+    Driver driver1,driver2;
     StandardCab* cabForDriver1;
     StandardCab* cabForDriver2;
 
-    virtual void SetUp() {
-        cabForDriver1 = new StandardCab(1122233, HONDA, BLUE);
-        cabForDriver2 = new StandardCab(4455566, FIAT, WHITE);
-    }
+    TestTaxiCenter() : grid(new Grid(10,10)), bfs(grid), taxiCenter(bfs),
+                       reuvenSourcePoint(2,2),reuvenDestinationPoint(0,1),
+                       reuven(reuvenSourcePoint, reuvenDestinationPoint, false),
+                       driver1(555555555, 80, WIDOWED, 50), driver2(121212121, 40, MARRIED, 3),
+                       cabForDriver1(new StandardCab(1122233, HONDA, BLUE)),
+                       cabForDriver2(new StandardCab(4455566, FIAT, WHITE)) {}
 
     virtual void TearDown() {
         delete cabForDriver1;
