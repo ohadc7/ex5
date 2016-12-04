@@ -27,15 +27,19 @@ TEST_F(TestBfsAlgorithm,checkRoutes){
     bfsTest.push((Point(0,1)));bfsTest.push((Point(0,0)));
 
     stack<Node<Point>> bfsTest2;
-    bfsTest2.push((Point(2,2)));bfsTest2.push((Point(1,2)));bfsTest2.push((Point(0,2)));
-    bfsTest2.push((Point(0,1)));bfsTest2.push((Point(1,1)));
+    bfsTest2.push((Point(2,3)));bfsTest2.push((Point(2,3)));bfsTest2.push((Point(2,3)));
+    bfsTest2.push((Point(2,3)));bfsTest2.push((Point(2,3)));
 
 
     for(int i=0; i<bfsOutput.size(); i++) {
-        EXPECT_EQ(bfsOutput.top(), bfsTest.top()) << "check with true route to compere";
+        EXPECT_EQ(bfsOutput.top().getValue(), bfsTest.top().getValue()) << "check with true route to compere";
+        bfsOutput.pop();
+        bfsTest.pop();
     }
     for(int i=0; i<bfsOutput2.size(); i++) {
-        EXPECT_EQ(bfsOutput2.top(), bfsTest2.top()) << "should fail, check with "
+        EXPECT_NE(bfsOutput2.top().getValue(), bfsTest2.top().getValue()) << "should fail, check with "
                             "false route to compere";
+        bfsOutput2.pop();
+        bfsTest2.pop();
     }
 }

@@ -4,11 +4,12 @@
 //our tests:
 TEST(ProgramFlowTest, SanityChecks) {
     ProgramFlow programFlow = ProgramFlow();
-   // programFlow.createCab(1);
-    //programFlow.createDriver(1,30,MARRIED,5);
-    vector<Point> vector1;
-    vector1.push_back(Point(2,2));
-
-    Grid grid =  programFlow.createGrid(10,10,vector1);
-    Grid gridToTest = Grid(10,10, vector1);
+    programFlow.createTaxiCenter();
+    programFlow.createCab(1);
+    /*
+     * we didn't test the methods of
+     * "createDriver(int id, int age, Status_of_Marriage status, int yearsOfExperience)"
+     * and "createGrid(int width, int height, vector<Point> listOfObstacles)" because this two
+     * methods just create objects we specificly check's in TestDriver and TestGrid.
+     * */
 }
