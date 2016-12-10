@@ -57,3 +57,36 @@ int InputParsing::getDestinationPointY() {
 Grid InputParsing::getGrid() {
     return Grid(this->gridWidth, this->getGridHeight());
 }
+
+//new functions
+InputParsing::gridDimensions InputParsing::getGridDimensions(string gridData) {
+    return InputParsing::gridDimensions();
+}
+
+Point InputParsing::getPoint(string pointData) {
+    return Point();
+}
+
+Driver InputParsing::getDriver(string driverData) {
+    return Driver(0, 0, MARRIED, 0);
+}
+
+Trip InputParsing::getTrip(string tripData) {
+    return Trip();
+}
+
+Cab *InputParsing::getVehicle(string vehicleData) {
+    return nullptr;
+}
+
+list <string> InputParsing::splitStrings(string stringWithCommas, int numberOfSeparatedWords) {
+    list<string> separatedWords = list<string>();
+    for (int i = 1; i < numberOfSeparatedWords; i++) {
+        string::size_type commaPosition = stringWithCommas.find(",");
+        string nextWord = stringWithCommas.substr(0, commaPosition);
+        separatedWords.push_back(nextWord);
+        stringWithCommas = stringWithCommas.substr(commaPosition + 1);
+    }
+    return list<string>();
+}
+
