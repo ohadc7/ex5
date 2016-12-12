@@ -61,7 +61,13 @@ Grid InputParsing::getGrid() {
 
 //new functions
 InputParsing::gridDimensions InputParsing::getGridDimensions(string gridData) {
-    return InputParsing::gridDimensions();
+    InputParsing::gridDimensions dimensions;
+    string::size_type spacePosition = gridData.find(" ");
+    int width = stoi(gridData.substr(0, spacePosition));
+    int height = stoi(gridData.substr(spacePosition + 1));
+    dimensions.gridHeight = height;
+    dimensions.gridWidth = width;
+    return dimensions;
 }
 
 Point InputParsing::getPoint(string pointData) {
@@ -73,6 +79,7 @@ Point InputParsing::getPoint(string pointData) {
 InputParsing::driverWithVehicleId InputParsing::getDriver(string driverData) {
     vector<string> driverParameters = this->splitStrings(driverData, 5);
     Status_Of_Marriage driverStatus;
+    //fix status of marriage according to the character in the third string of the list (S/M/D/W)
     if (driverParameters[2] == "S") {
         driverStatus = SINGLE;
     } else if (driverParameters[2] == "M") {
@@ -82,13 +89,14 @@ InputParsing::driverWithVehicleId InputParsing::getDriver(string driverData) {
     } else if (driverParameters[2] == "W") {
         driverStatus = WIDOWED;
     }
-    driverWithVehicleId driverStruct = {Driver(stoi(driverParameters[0]), stoi(driverParameters[1]),
-                                               driverStatus, stoi(driverParameters[3])),
-                                        stoi(driverParameters[4])};
-    driverStruct.driver = Driver(stoi(driverParameters[0]), stoi(driverParameters[1]),
-                                 driverStatus, stoi(driverParameters[3]));
-    driverStruct.vehicleId = stoi(driverParameters[4]);
-    return driverStruct;
+    //create Driver
+    Driver driver = Driver(stoi(driverParameters[0]), stoi(driverParameters[1]),
+                           driverStatus, stoi(driverParameters[3]));
+    int vehicleId = stoi(driverParameters[4]);
+    //create driverWithVehicleId struct
+    driverWithVehicleId driverWithVehicleIdStruct = {driver,
+                                                     vehicleId};
+    return driverWithVehicleIdStruct;
 }
 
 Trip InputParsing::getTrip(string tripData) {

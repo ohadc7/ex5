@@ -40,9 +40,13 @@ int main(int argc, char* argv[]) {
     string sP = "2,3";
     Point p = ip.getPoint(sP);
     cout << endl << endl << endl << p << endl << endl;
+    string sG = "5 7";
+    InputParsing::gridDimensions gd = ip.getGridDimensions(sG);
+    cout <<  "grid width: " << gd.gridWidth << endl;
+    cout <<  "grid height: " << gd.gridHeight << endl;
     string sD = "123456789,30,W,5,1122233";
     InputParsing::driverWithVehicleId d = ip.getDriver(sD);
-    cout << endl << endl << endl << "ID :" << d.driver.getId() << endl;
+    cout << endl << "ID :" << d.driver.getId() << endl;
     cout <<  "status: " << d.driver.getStatus() << endl;
     cout << "vehicleId: " << d.vehicleId << endl << endl;
     //*/
