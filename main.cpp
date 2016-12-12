@@ -32,5 +32,21 @@ int main(int argc, char* argv[]) {
         cout << pointOfIdealPath << endl;
     }
     delete g;
+
+
+
+    //check for inputParsing class:
+    //*
+    string sP = "2,3";
+    Point p = ip.getPoint(sP);
+    cout << endl << endl << endl << p << endl << endl;
+    string sD = "123456789,30,W,5,1122233";
+    InputParsing::driverWithVehicleId d = ip.getDriver(sD);
+    cout << endl << endl << endl << "ID :" << d.driver.getId() << endl;
+    cout <<  "status: " << d.driver.getStatus() << endl;
+    cout << "vehicleId: " << d.vehicleId << endl << endl;
+    //*/
+
+
     return RUN_ALL_TESTS();
 }
