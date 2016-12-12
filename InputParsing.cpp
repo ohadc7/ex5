@@ -1,3 +1,4 @@
+#include <cstring>
 #include "InputParsing.h"
 
 InputParsing::InputParsing(string inputString) {
@@ -64,11 +65,30 @@ InputParsing::gridDimensions InputParsing::getGridDimensions(string gridData) {
 }
 
 Point InputParsing::getPoint(string pointData) {
-    return Point();
+    vector<string> coordinates = this->splitStrings(pointData, 2);
+    Point p = Point(stoi(coordinates[0]),stoi(coordinates[1]));
+    return p;
 }
 
-Driver InputParsing::getDriver(string driverData) {
-    return Driver(0, 0, MARRIED, 0);
+InputParsing::driverWithVehicleId InputParsing::getDriver(string driverData) {
+    vector<string> driverParameters = this->splitStrings(driverData, 5);
+    Status_Of_Marriage driverStatus;
+    if (driverParameters[2] == "S") {
+        driverStatus = SINGLE;
+    } else if (driverParameters[2] == "M") {
+        driverStatus = MARRIED;
+    } else if (driverParameters[2] == "D") {
+        driverStatus = DIVORCED;
+    } else if (driverParameters[2] == "W") {
+        driverStatus = WIDOWED;
+    }
+    driverWithVehicleId driverStruct = {Driver(stoi(driverParameters[0]), stoi(driverParameters[1]),
+                                               driverStatus, stoi(driverParameters[3])),
+                                        stoi(driverParameters[4])};
+    driverStruct.driver = Driver(stoi(driverParameters[0]), stoi(driverParameters[1]),
+                                 driverStatus, stoi(driverParameters[3]));
+    driverStruct.vehicleId = stoi(driverParameters[4]);
+    return driverStruct;
 }
 
 Trip InputParsing::getTrip(string tripData) {
@@ -79,14 +99,15 @@ Cab *InputParsing::getVehicle(string vehicleData) {
     return nullptr;
 }
 
-list <string> InputParsing::splitStrings(string stringWithCommas, int numberOfSeparatedWords) {
-    list<string> separatedWords = list<string>();
+vector<string> InputParsing::splitStrings(string stringWithCommas, int numberOfSeparatedWords) {
+    vector<string> separatedWords = vector<string>();
     for (int i = 1; i < numberOfSeparatedWords; i++) {
         string::size_type commaPosition = stringWithCommas.find(",");
         string nextWord = stringWithCommas.substr(0, commaPosition);
         separatedWords.push_back(nextWord);
         stringWithCommas = stringWithCommas.substr(commaPosition + 1);
     }
-    return list<string>();
+    separatedWords.push_back(stringWithCommas);
+    return separatedWords;
 }
 

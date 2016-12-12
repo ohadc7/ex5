@@ -17,7 +17,7 @@ private:
     int destinationPointY;
     list<Point> obstacles;
 
-    list<string> splitStrings(string stringWithCommas, int numberOfSeparatedWords);
+    vector<string> splitStrings(string stringWithCommas, int numberOfSeparatedWords);
 public:
     InputParsing(string inputString);
     int getGridWidth();
@@ -38,6 +38,10 @@ public:
     //"pointData" string format: "Xcoordinate,Ycoordinate" (int,int). example: 0,0
     Point getPoint(string pointData);
 
+    typedef struct {
+        Driver driver;
+        int vehicleId;
+    } driverWithVehicleId;
     /*
      * "driverData" string format: "id,age,status,experience,vehicleId"
      * (int,int,char:{S,M,D,W},int,int)
@@ -45,7 +49,7 @@ public:
      * S / M / D / W  (represents: Single / Married / Divorced / Widowed)
      * example: 123456789,30,M,5,1122233
      */
-    Driver getDriver(string driverData);
+    driverWithVehicleId getDriver(string driverData);
 
     /*
      * "tripData" string format: "id,xStart,yStart,xEnd,yEnd,numPassengers,tariff"
