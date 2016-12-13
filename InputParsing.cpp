@@ -1,7 +1,27 @@
 #include <cstring>
 #include "InputParsing.h"
 
-InputParsing::InputParsing() {}
+InputParsing::InputParsing() {
+    //construct map of status of marriage
+    mapOfLetterToStatus["S"] = SINGLE;
+    mapOfLetterToStatus["M"] = MARRIED;
+    mapOfLetterToStatus["D"] = DIVORCED;
+    mapOfLetterToStatus["W"] = WIDOWED;
+    //construct map of taxi type (regular/luxury)
+    mapOfNumberToTaxiType[1] = STANDARD_CAB;
+    mapOfNumberToTaxiType[2] = LUXURY_CAB;
+    //construct map of car model (=manufacturer)
+    mapOfLetterToModel["H"] = HONDA;
+    mapOfLetterToModel["S"] = SUBARO;
+    mapOfLetterToModel["T"] = TESLA;
+    mapOfLetterToModel["F"] = FIAT;
+    //construct map of car color
+    mapOfLetterToColor["R"] = RED;
+    mapOfLetterToColor["B"] = BLUE;
+    mapOfLetterToColor["G"] = GREEN;
+    mapOfLetterToColor["P"] = PINK;
+    mapOfLetterToColor["W"] = WHITE;
+}
 
 InputParsing::InputParsing(string inputString) {
     string gridWidthString, gridHeightString;
@@ -80,8 +100,9 @@ Point InputParsing::parsePoint(string pointData) {
 
 InputParsing::parsedDriverData InputParsing::parseDriverData(string driverData) {
     vector<string> listOfStringsOfDriverParameters = this->splitStrings(driverData, 5);
-    Status_Of_Marriage driverStatus;
+    /* OLD CODE (have to be deleted):
     //fix status of marriage according to the character in the third string of the list (S/M/D/W)
+    //Status_Of_Marriage driverStatus = mapOfLetterToStatus.at(listOfStringsOfDriverParameters[2]);
     if (listOfStringsOfDriverParameters[2] == "S") {
         driverStatus = SINGLE;
     } else if (listOfStringsOfDriverParameters[2] == "M") {
@@ -91,13 +112,10 @@ InputParsing::parsedDriverData InputParsing::parseDriverData(string driverData) 
     } else if (listOfStringsOfDriverParameters[2] == "W") {
         driverStatus = WIDOWED;
     }
-    /*
     //create Driver
     Driver driver = Driver(stoi(listOfStringsOfDriverParameters[0]), stoi(listOfStringsOfDriverParameters[1]),
                            driverStatus, stoi(listOfStringsOfDriverParameters[3]));
     int vehicleId = stoi(listOfStringsOfDriverParameters[4]);
-     */
-    /*
     //create driverWithVehicleId struct
     driverWithVehicleId driverWithVehicleIdStruct = {driver,
                                                      vehicleId};
@@ -105,7 +123,8 @@ InputParsing::parsedDriverData InputParsing::parseDriverData(string driverData) 
     parsedDriverData driverParameters;
     driverParameters.id = stoi(listOfStringsOfDriverParameters[0]);
     driverParameters.age = stoi(listOfStringsOfDriverParameters[1]);
-    driverParameters.status = driverStatus;
+    //fix status of marriage according to the character in the third string of the list (S/M/D/W)
+    driverParameters.status = mapOfLetterToStatus.at(listOfStringsOfDriverParameters[2]);
     driverParameters.yearsOfExperience = stoi(listOfStringsOfDriverParameters[3]);
     driverParameters.vehicleId = stoi(listOfStringsOfDriverParameters[4]);
     return driverParameters;
@@ -127,7 +146,13 @@ InputParsing::parsedTripData InputParsing::parseTripData(string tripData) {
 }
 
 InputParsing::parsedCabData InputParsing::parseVehicleData(string vehicleData) {
-    return parsedCabData{};
+    vector<string> listOfStringsOfCabParameters = this->splitStrings(vehicleData, 4);
+    parsedCabData cabParameters;
+    cabParameters.id = stoi(listOfStringsOfCabParameters[0]);
+    cabParameters.taxiType = mapOfNumberToTaxiType.at(stoi(listOfStringsOfCabParameters[1]));
+    cabParameters.manufacturer = mapOfLetterToModel.at(listOfStringsOfCabParameters[2]);
+    cabParameters.color = mapOfLetterToColor.at(listOfStringsOfCabParameters[3]);
+    return cabParameters;
 }
 
 vector<string> InputParsing::splitStrings(string stringWithCommas, int numberOfSeparatedWords) {

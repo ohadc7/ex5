@@ -19,6 +19,7 @@ private:
     int numOfTrips;
     vector<Passenger> listOfPassengers;
 public:
+    Driver();
     Driver(int id, int age, Status_Of_Marriage status, int yearsOfExperience);
     Driver(int id, int age, Status_Of_Marriage status, int yearsOfExperience, Cab **cab);
 

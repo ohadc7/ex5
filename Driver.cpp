@@ -1,5 +1,7 @@
 #include "Driver.h"
 
+Driver::Driver() {}
+
 Driver::Driver(int id, int age, Status_Of_Marriage status, int yearsOfExperience) :
         id(id), age(age), status(status), yearsOfExperience(yearsOfExperience){
     numOfTrips =1;

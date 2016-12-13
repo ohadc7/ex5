@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <list>
+#include <map>
 #include "Grid.h"
 #include "Driver.h"
 
@@ -15,8 +16,12 @@ private:
     int sourcePointY;
     int destinationPointX;
     int destinationPointY;
-    list<Point> obstacles;
+    //list<Point> obstacles;
 
+    map<string,Status_Of_Marriage> mapOfLetterToStatus;
+    map<int,Taxi_Type> mapOfNumberToTaxiType;
+    map<string,Model_Of_Car> mapOfLetterToModel;
+    map<string,Color_Of_Car> mapOfLetterToColor;
     vector<string> splitStrings(string stringWithCommas, int numberOfSeparatedWords);
 public:
     InputParsing();
