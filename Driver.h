@@ -20,7 +20,7 @@ private:
     vector<Passenger> listOfPassengers;
 public:
     Driver(int id, int age, Status_Of_Marriage status, int yearsOfExperience);
-    //Driver(int id, int age, Status_Of_Marriage status, int yearsOfExperience, Cab* cab);
+    Driver(int id, int age, Status_Of_Marriage status, int yearsOfExperience, Cab **cab);
 
 
     int getId() const;

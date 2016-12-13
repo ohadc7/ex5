@@ -112,7 +112,18 @@ InputParsing::parsedDriverData InputParsing::parseDriverData(string driverData) 
 }
 
 InputParsing::parsedTripData InputParsing::parseTripData(string tripData) {
-    return parsedTripData{};
+    vector<string> listOfStringsOfTripParameters = this->splitStrings(tripData, 7);
+    InputParsing::parsedTripData tripParameters;
+    tripParameters.id = stoi(listOfStringsOfTripParameters[0]);
+    int x = stoi(listOfStringsOfTripParameters[1]);
+    int y = stoi(listOfStringsOfTripParameters[2]);
+    tripParameters.start = Point(x,y);
+    x = stoi(listOfStringsOfTripParameters[3]);
+    y = stoi(listOfStringsOfTripParameters[4]);
+    tripParameters.end = Point(x,y);
+    tripParameters.numberOfPassengers = stoi(listOfStringsOfTripParameters[5]);
+    tripParameters.tariff = stod(listOfStringsOfTripParameters[6]);
+    return tripParameters;
 }
 
 InputParsing::parsedCabData InputParsing::parseVehicleData(string vehicleData) {

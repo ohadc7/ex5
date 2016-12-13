@@ -6,6 +6,11 @@ Driver::Driver(int id, int age, Status_Of_Marriage status, int yearsOfExperience
     averageSatisfactions = 0;
 }
 
+Driver::Driver(int id, int age, Status_Of_Marriage status, int yearsOfExperience, Cab **cab) :
+        Driver(id, age, status, yearsOfExperience) {
+    this->attachCabToDriver(cab);
+}
+
 int Driver::getId() const {
     return id;
 }
