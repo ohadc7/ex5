@@ -8,8 +8,8 @@
 
 ProgramFlow programFlow;
 void Menu::optionOneInsertDriver() {
-    InputParsing inputParsing();
-    inputParsing().getDriver("test");
+    InputParsing inputParsing = InputParsing();
+    inputParsing.parseDriverData("test");
     //programFlow.createDriver(inputParsing().getDriver("test"))
 }
 

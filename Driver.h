@@ -5,7 +5,7 @@
 #include "Cab.h"
 #include "Trip.h"
 
-enum Status_Of_Marriage {SINGLE, MARRIED, DIVORCED, WIDOWED};
+typedef enum {SINGLE, MARRIED, DIVORCED, WIDOWED} Status_Of_Marriage;
 
 class Driver {
 private:
@@ -20,6 +20,8 @@ private:
     vector<Passenger> listOfPassengers;
 public:
     Driver(int id, int age, Status_Of_Marriage status, int yearsOfExperience);
+    //Driver(int id, int age, Status_Of_Marriage status, int yearsOfExperience, Cab* cab);
+
 
     int getId() const;
 

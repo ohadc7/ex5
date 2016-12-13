@@ -17,7 +17,7 @@ int main(int argc, char* argv[]) {
     //scan input string (gridWidth_gridHeight,startX_startY,endX_endY) and parse it
     string inputString;
     ProgramFlow programFlow;
-    programFlow.run;
+    programFlow.run();
     inputString = "3_3,0_0,1_1"; //for debugging (instead of the next line)
     //getline(cin, inputString);
     InputParsing ip = InputParsing(inputString);
@@ -42,16 +42,16 @@ int main(int argc, char* argv[]) {
     //check for inputParsing class:
     //*
     string sP = "2,3";
-    Point p = ip.getPoint(sP);
+    Point p = ip.parsePoint(sP);
     cout << endl << endl << endl << p << endl << endl;
     string sG = "5 7";
-    InputParsing::gridDimensions gd = ip.getGridDimensions(sG);
+    InputParsing::gridDimensions gd = ip.parseGridDimensions(sG);
     cout <<  "grid width: " << gd.gridWidth << endl;
     cout <<  "grid height: " << gd.gridHeight << endl;
     string sD = "123456789,30,W,5,1122233";
-    InputParsing::driverWithVehicleId d = ip.getDriver(sD);
-    cout << endl << "ID :" << d.driver.getId() << endl;
-    cout <<  "status: " << d.driver.getStatus() << endl;
+    InputParsing::parsedDriverData d = ip.parseDriverData(sD);
+    cout << endl << "ID :" << d.id << endl;
+    cout <<  "status: " << d.status << endl;
     cout << "vehicleId: " << d.vehicleId << endl << endl;
     //*/
 

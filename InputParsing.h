@@ -19,6 +19,7 @@ private:
 
     vector<string> splitStrings(string stringWithCommas, int numberOfSeparatedWords);
 public:
+    InputParsing();
     InputParsing(string inputString);
     int getGridWidth();
     int getGridHeight();
@@ -34,14 +35,18 @@ public:
         int gridHeight;
     } gridDimensions;
     //"gridData" string format: "gridWidth gridHeight" (int int). example: 3 3
-    gridDimensions getGridDimensions(string gridData);
+    gridDimensions parseGridDimensions(string gridData);
     //"pointData" string format: "Xcoordinate,Ycoordinate" (int,int). example: 0,0
-    Point getPoint(string pointData);
+    Point parsePoint(string pointData);
 
     typedef struct {
-        Driver driver;
+        //Driver driver;
+        int id;
+        int age;
+        Status_Of_Marriage status;
+        int yearsOfExperience;
         int vehicleId;
-    } driverWithVehicleId;
+    } parsedDriverData;
     /*
      * "driverData" string format: "id,age,status,experience,vehicleId"
      * (int,int,char:{S,M,D,W},int,int)
@@ -49,13 +54,20 @@ public:
      * S / M / D / W  (represents: Single / Married / Divorced / Widowed)
      * example: 123456789,30,M,5,1122233
      */
-    driverWithVehicleId getDriver(string driverData);
+    parsedDriverData parseDriverData(string driverData);
 
     /*
      * "tripData" string format: "id,xStart,yStart,xEnd,yEnd,numPassengers,tariff"
      * (int,int,int,int,int,int,double)
      */
-    Trip getTrip(string tripData);
+    typedef struct {
+        int id;
+        Point start;
+        Point end;
+        int numberOfPassengers;
+        double tariff;
+    } parsedTripData;
+    parsedTripData parseTripData(string tripData);
 
     /*
      * "vehicleData" string format: "id,taxiType,manufacturer,color"
@@ -67,7 +79,13 @@ public:
      * 'color' is one of the following letters:
      * R / B / G / P / W (represents: RED, BLUE, GREEN, PINK, WHITE)
      */
-    Cab* getVehicle(string vehicleData);
+    typedef struct {
+        int id;
+        Taxi_Type taxiType;
+        Model_Of_Car manufacturer;
+        Color_Of_Car color;
+    } parsedCabData;
+    parsedCabData parseVehicleData(string vehicleData);
 };
 
 

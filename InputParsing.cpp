@@ -1,6 +1,8 @@
 #include <cstring>
 #include "InputParsing.h"
 
+InputParsing::InputParsing() {}
+
 InputParsing::InputParsing(string inputString) {
     string gridWidthString, gridHeightString;
     string sourcePointXString, sourcePointYString;
@@ -60,7 +62,7 @@ Grid InputParsing::getGrid() {
 }
 
 //new functions
-InputParsing::gridDimensions InputParsing::getGridDimensions(string gridData) {
+InputParsing::gridDimensions InputParsing::parseGridDimensions(string gridData) {
     InputParsing::gridDimensions dimensions;
     string::size_type spacePosition = gridData.find(" ");
     int width = stoi(gridData.substr(0, spacePosition));
@@ -70,41 +72,51 @@ InputParsing::gridDimensions InputParsing::getGridDimensions(string gridData) {
     return dimensions;
 }
 
-Point InputParsing::getPoint(string pointData) {
+Point InputParsing::parsePoint(string pointData) {
     vector<string> coordinates = this->splitStrings(pointData, 2);
     Point p = Point(stoi(coordinates[0]),stoi(coordinates[1]));
     return p;
 }
 
-InputParsing::driverWithVehicleId InputParsing::getDriver(string driverData) {
-    vector<string> driverParameters = this->splitStrings(driverData, 5);
+InputParsing::parsedDriverData InputParsing::parseDriverData(string driverData) {
+    vector<string> listOfStringsOfDriverParameters = this->splitStrings(driverData, 5);
     Status_Of_Marriage driverStatus;
     //fix status of marriage according to the character in the third string of the list (S/M/D/W)
-    if (driverParameters[2] == "S") {
+    if (listOfStringsOfDriverParameters[2] == "S") {
         driverStatus = SINGLE;
-    } else if (driverParameters[2] == "M") {
+    } else if (listOfStringsOfDriverParameters[2] == "M") {
         driverStatus = MARRIED;
-    } else if (driverParameters[2] == "D") {
+    } else if (listOfStringsOfDriverParameters[2] == "D") {
         driverStatus = DIVORCED;
-    } else if (driverParameters[2] == "W") {
+    } else if (listOfStringsOfDriverParameters[2] == "W") {
         driverStatus = WIDOWED;
     }
+    /*
     //create Driver
-    Driver driver = Driver(stoi(driverParameters[0]), stoi(driverParameters[1]),
-                           driverStatus, stoi(driverParameters[3]));
-    int vehicleId = stoi(driverParameters[4]);
+    Driver driver = Driver(stoi(listOfStringsOfDriverParameters[0]), stoi(listOfStringsOfDriverParameters[1]),
+                           driverStatus, stoi(listOfStringsOfDriverParameters[3]));
+    int vehicleId = stoi(listOfStringsOfDriverParameters[4]);
+     */
+    /*
     //create driverWithVehicleId struct
     driverWithVehicleId driverWithVehicleIdStruct = {driver,
                                                      vehicleId};
-    return driverWithVehicleIdStruct;
+    */
+    parsedDriverData driverParameters;
+    driverParameters.id = stoi(listOfStringsOfDriverParameters[0]);
+    driverParameters.age = stoi(listOfStringsOfDriverParameters[1]);
+    driverParameters.status = driverStatus;
+    driverParameters.yearsOfExperience = stoi(listOfStringsOfDriverParameters[3]);
+    driverParameters.vehicleId = stoi(listOfStringsOfDriverParameters[4]);
+    return driverParameters;
 }
 
-Trip InputParsing::getTrip(string tripData) {
-    return Trip();
+InputParsing::parsedTripData InputParsing::parseTripData(string tripData) {
+    return parsedTripData{};
 }
 
-Cab *InputParsing::getVehicle(string vehicleData) {
-    return nullptr;
+InputParsing::parsedCabData InputParsing::parseVehicleData(string vehicleData) {
+    return parsedCabData{};
 }
 
 vector<string> InputParsing::splitStrings(string stringWithCommas, int numberOfSeparatedWords) {
@@ -118,4 +130,6 @@ vector<string> InputParsing::splitStrings(string stringWithCommas, int numberOfS
     separatedWords.push_back(stringWithCommas);
     return separatedWords;
 }
+
+
 

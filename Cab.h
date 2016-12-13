@@ -3,6 +3,7 @@
 
 enum Model_Of_Car {HONDA, SUBARO, TESLA, FIAT};
 enum Color_Of_Car {RED, BLUE, GREEN, PINK, WHITE};
+typedef enum {STANDARD_CAB = 1, LUXURY_CAB = 2} Taxi_Type;
 
 class Cab {
 private:
