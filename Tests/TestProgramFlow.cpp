@@ -4,7 +4,7 @@
 //our tests:
 TEST(ProgramFlowTest, SanityChecks) {
     ProgramFlow programFlow = ProgramFlow();
-    programFlow.createTaxiCenter();
+//    programFlow.createTaxiCenter();
     programFlow.createCab(1);
     /*
      * we didn't test the methods of
