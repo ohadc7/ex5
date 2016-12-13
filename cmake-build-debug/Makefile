@@ -354,6 +354,33 @@ LuxuryCab.cpp.s:
 	$(MAKE) -f CMakeFiles/ex2.dir/build.make CMakeFiles/ex2.dir/LuxuryCab.cpp.s
 .PHONY : LuxuryCab.cpp.s
 
+Menu.o: Menu.cpp.o
+
+.PHONY : Menu.o
+
+# target to build an object file
+Menu.cpp.o:
+	$(MAKE) -f CMakeFiles/ex2.dir/build.make CMakeFiles/ex2.dir/Menu.cpp.o
+.PHONY : Menu.cpp.o
+
+Menu.i: Menu.cpp.i
+
+.PHONY : Menu.i
+
+# target to preprocess a source file
+Menu.cpp.i:
+	$(MAKE) -f CMakeFiles/ex2.dir/build.make CMakeFiles/ex2.dir/Menu.cpp.i
+.PHONY : Menu.cpp.i
+
+Menu.s: Menu.cpp.s
+
+.PHONY : Menu.s
+
+# target to generate assembly for a file
+Menu.cpp.s:
+	$(MAKE) -f CMakeFiles/ex2.dir/build.make CMakeFiles/ex2.dir/Menu.cpp.s
+.PHONY : Menu.cpp.s
+
 Passenger.o: Passenger.cpp.o
 
 .PHONY : Passenger.o
@@ -845,6 +872,9 @@ help:
 	@echo "... LuxuryCab.o"
 	@echo "... LuxuryCab.i"
 	@echo "... LuxuryCab.s"
+	@echo "... Menu.o"
+	@echo "... Menu.i"
+	@echo "... Menu.s"
 	@echo "... Passenger.o"
 	@echo "... Passenger.i"
 	@echo "... Passenger.s"
