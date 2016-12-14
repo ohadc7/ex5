@@ -17,6 +17,11 @@ Grid::Grid(int m, int n) {
 
 Grid::Grid(int m, int n, vector<Point> listOfObstacles) : Grid(m, n) {
     //TBD - setAvailable(true) for each point in the grid that belongs to listOfObstacles
+    while (!listOfObstacles.empty()) {
+        Point obstacle = listOfObstacles.back();
+        listOfObstacles.pop_back();
+        (vectorOfVerticalVectors[obstacle.getX()][obstacle.getY()]).setAvailability(false);
+    }
 };
 
 queue<Node<Point>> Grid::getNeighbors(Node<Point> n) {
@@ -27,13 +32,13 @@ queue<Node<Point>> Grid::getNeighbors(Node<Point> n) {
     //if the point isn't in the graph, return null queue
     if ((x < 0) || (y < 0) || (x >= width) || (y >= height))
         return neighbors;
-    if (x > 0)
+    if ((x > 0) && (vectorOfVerticalVectors[x-1][y].isAvailable() == true))
         neighbors.push(this->vectorOfVerticalVectors[x-1][y]);
-    if (y + 1 < height)
+    if ((y + 1 < height) && (vectorOfVerticalVectors[x][y+1].isAvailable() == true))
         neighbors.push(this->vectorOfVerticalVectors[x][y+1]);
-    if (x + 1 < width)
+    if ((x + 1 < width) && (vectorOfVerticalVectors[x+1][y].isAvailable() == true))
         neighbors.push(this->vectorOfVerticalVectors[x+1][y]);
-    if (y > 0)
+    if ((y > 0) && (vectorOfVerticalVectors[x][y-1].isAvailable() == true))
         neighbors.push(this->vectorOfVerticalVectors[x][y-1]);
     return neighbors;
 }

@@ -2,7 +2,7 @@
 
 Point::Point() : x(0),y(0) {}
 
-Point::Point(int x, int y) : x(x),y(y) { }
+Point::Point(int x, int y) : x(x),y(y),isPassable(true) { }
 
 int Point::getX() {
     return x;
@@ -13,12 +13,12 @@ int Point::getY() {
 }
 
 bool Point::isAvailable() {
-    return true;
+    return isPassable;
 }
 
 
 void Point::setAvailability(bool isAvailable) {
-
+    isPassable = isAvailable;
 }
 
 bool Point::operator==(const Point &other) const {

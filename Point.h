@@ -7,6 +7,7 @@ class Point {
 private:
     int x;
     int y;
+    bool isPassable;
 public:
     Point();
 
