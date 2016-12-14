@@ -6,7 +6,7 @@
 #include "InputParsing.h"
 #include "ProgramFlow.h"
 
-ProgramFlow programFlow;
+
 void Menu::optionOneInsertDriver() {
     InputParsing inputParsing = InputParsing();
     inputParsing.parseDriverData("test");

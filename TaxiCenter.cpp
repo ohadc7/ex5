@@ -46,3 +46,7 @@ TaxiCenter::TaxiCenter(BfsAlgorithm<Point> &bfsInstance) : bfsInstance(bfsInstan
 void TaxiCenter::addTrip(Trip trip) {
     listOfTrips.push_back(trip);
 }
+
+void TaxiCenter::addCab(Cab *cab) {
+    listOfCabs.push_back(cab);
+}

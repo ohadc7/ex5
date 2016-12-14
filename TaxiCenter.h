@@ -11,6 +11,7 @@ class TaxiCenter {
 private:
     vector<Driver> listOfDrivers;
     vector<Trip> listOfTrips;
+    vector<Cab*> listOfCabs;
     BfsAlgorithm<Point> bfsInstance;
     Driver chooseBestDriver(Passenger passenger);
     void sendTaxi(Trip trip);
@@ -19,6 +20,7 @@ public:
     TaxiCenter(BfsAlgorithm<Point> &bfsInstance);
 
     void addDriver(Driver driver);
+    void addCab(Cab* cab);
 
     //choose best driver, create a trip and send taxi
     void orderATrip(Passenger passenger);

@@ -1,7 +1,7 @@
 #include "gtest/gtest.h"
 #include "../TaxiCenter.h"
 #include "../StandardCab.h"
-
+/*
 class TestTaxiCenter: public ::testing::Test {
 
 protected:
@@ -59,6 +59,6 @@ TEST_F(TestTaxiCenter, SanityChecks) {
      * comment: currently, I don't check the ability of chooseBestDriver method to find
      * the closet driver because the initial position of created driver isn't defined in
      * ex1 and we don't have methods that will make 2 drivers to be in 2 different positions.
-    */
-}
 
+}
+*/

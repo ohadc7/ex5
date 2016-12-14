@@ -10,23 +10,23 @@
 
 using namespace std;
 
-void ProgramFlow::createTaxiCenter(BfsAlgorithm<Point> bfs) {
-    taxiCenter = TaxiCenter(bfs);
+TaxiCenter ProgramFlow::createTaxiCenter(BfsAlgorithm<Point> bfs) {
+    return TaxiCenter(bfs);
 }
 
-void ProgramFlow::createDriver(int id, int age, Status_Of_Marriage status,
+Driver ProgramFlow::createDriver(int id, int age, Status_Of_Marriage status,
                                int yearsOfExperience, int vehicleId) {
-   taxiCenter.addDriver(Driver(id,age,status,yearsOfExperience,vehicleId));
+  return Driver(id,age,status,yearsOfExperience,vehicleId);
 }
 
 
-void ProgramFlow::createCab(int id,int cabType, Model_Of_Car carModel, Color_Of_Car color) {
+Cab * ProgramFlow::createCab(int id,int cabType, Model_Of_Car carModel, Color_Of_Car color) {
     if(cabType==1){
         Cab *standardCab;
-        standardCab = new StandardCab(id, carModel, color);
+       return new StandardCab(id, carModel, color);
     }else if(cabType==2){
         Cab* luxuryCab;
-        luxuryCab = new LuxuryCab(id, carModel, color);
+       return new LuxuryCab(id, carModel, color);
     }
 
 }
@@ -57,25 +57,29 @@ void ProgramFlow::run() {
         }
     }
     BfsAlgorithm<Point> bfs = createGrid(gd.gridWidth, gd.gridHeight, listOfObstacles);
-    createTaxiCenter(bfs);
+    TaxiCenter taxiCenter =  createTaxiCenter(bfs);
 
     while (true) {
         getline(cin, inputString);
         switch (stoi(inputString)) {
             case 1: {
+                getline(cin, inputString);
                 InputParsing::parsedDriverData driver = inputParsing.parseDriverData(inputString);
-                createDriver(driver.id, driver.age, driver.status, driver.yearsOfExperience,
-                             driver.vehicleId);
+               taxiCenter.addDriver(createDriver(driver.id, driver.age, driver.status, driver.yearsOfExperience,
+                             driver.vehicleId));
                 break;
             }
                 case 2: {
+                    getline(cin, inputString);
                     InputParsing::parsedTripData trip = inputParsing.parseTripData(inputString);
                     taxiCenter.createTrip(trip);
                     break;
                 }
             case 3: {
-                InputParsing::parsedCabData cab = inputParsing.parseVehicleData(inputString);
-                createCab(cab.id, cab.taxiType, cab.manufacturer, cab.color);
+                //getline(cin, inputString);
+                //InputParsing::parsedCabData cab = inputParsing.parseVehicleData(inputString);
+              //taxiCenter.addCab(createCab(cab.id, cab.taxiType, cab.manufacturer, cab.color));
+                taxiCenter.addCab(createCab(0,1,HONDA,RED));
                 break;
             }
                 case 4: {
@@ -94,8 +98,4 @@ void ProgramFlow::run() {
                 break;
         }
     }
-}
-
-ProgramFlow::ProgramFlow() {
-
 }
