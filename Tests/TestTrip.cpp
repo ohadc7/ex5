@@ -1,6 +1,6 @@
 #include "gtest/gtest.h"
 #include "../Trip.h"
-/*
+
 class TestTrip: public ::testing::Test {
 
 protected:
@@ -19,7 +19,7 @@ protected:
         passengersList.push_back(ohad);
         passengersList.push_back(ido);
 
-//        trip = Trip(1384, Point(0, 0), Point(3, 3), passengersList);
+        trip = Trip(1384, Point(0, 0), Point(3, 3), (int)passengersList.size(),20);
     }
 
 };
@@ -32,4 +32,3 @@ TEST_F(TestTrip, GettersCheck) {
     ASSERT_EQ(trip.getNumberOfPassengers(),4) << "ERROR: this trip has to contain 4 passengers";
 }
 
-*/

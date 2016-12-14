@@ -14,7 +14,7 @@ set(SOURCE_FILES main.cpp BfsAlgorithm.h
         StandardCab.cpp StandardCab.h
         LuxuryCab.cpp LuxuryCab.h Tests/TestPoint.cpp Tests/TestProgramFlow.cpp
         Tests/TestDriver.cpp Tests/TestGrid.cpp Tests/TestTrip.cpp Tests/TestCabs.cpp
-        Tests/TestInputParsing.cpp Tests/TestTaxiCenter.cpp Tests/TestBfsAlgorithm.cpp Tests/TestPassenger.cpp Menu.cpp Menu.h)
+        Tests/TestInputParsing.cpp Tests/TestTaxiCenter.cpp Tests/TestBfsAlgorithm.cpp Tests/TestPassenger.cpp)
 add_executable(ex2 ${SOURCE_FILES} Tests/TestProgramFlow.cpp
-        Tests/TestDriver.cpp Tests/TestGrid.cpp Tests/TestBfsAlgorithm.cpp Tests/TestPassenger.cpp Menu.cpp Menu.h)
+        Tests/TestDriver.cpp Tests/TestGrid.cpp Tests/TestBfsAlgorithm.cpp Tests/TestPassenger.cpp)
 target_link_libraries(ex2 gtest gtest_main)

@@ -1,15 +1,14 @@
 #include "TaxiCenter.h"
-#include "InputParsing.h"
 
-void TaxiCenter::createTrip(InputParsing::parsedTripData parsedTripDatarip) {
-    Trip trip(parsedTripDatarip.id, parsedTripDatarip.start, parsedTripDatarip.end,
-              parsedTripDatarip.numberOfPassengers, parsedTripDatarip.tariff);
+void TaxiCenter::createTrip(InputParsing::parsedTripData parsedTripDataTrip) {
+    Trip trip(parsedTripDataTrip.id, parsedTripDataTrip.start, parsedTripDataTrip.end,
+              parsedTripDataTrip.numberOfPassengers, parsedTripDataTrip.tariff);
     listOfTrips.push_back(trip);
 }
 
-Driver TaxiCenter::chooseBestDriver(Passenger passenger) {
-    return Driver(0, 0, MARRIED, 0, nullptr);
-}
+/*Driver TaxiCenter::chooseBestDriver(Passenger passenger) {
+    return NULL;//Driver(0, 0, MARRIED, 0, nullptr);
+}*/
 
 void TaxiCenter::sendTaxi(Trip trip) {
 
@@ -39,6 +38,7 @@ Point TaxiCenter::getDriverLocation(int driverId) {
         }
         index++;
     }
+    throw "No Driver found";
 }
 
 TaxiCenter::TaxiCenter(BfsAlgorithm<Point> &bfsInstance) : bfsInstance(bfsInstance) {}
@@ -59,4 +59,13 @@ void TaxiCenter::startDriving() {
         }
         index++;
     }
+}
+
+Cab* TaxiCenter::getCab(int id) {
+    for (Cab * &cab : listOfCabs){
+        if(cab->getId() == id){
+            return cab;
+        }
+    }
+   throw "no cab found";
 }

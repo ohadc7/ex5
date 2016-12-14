@@ -15,13 +15,11 @@ public:
 
     TaxiCenter createTaxiCenter(BfsAlgorithm<Point> bfs);
 
-    Driver createDriver(int id, int age, Status_Of_Marriage status, int yearsOfExperience,int vehicleId);
+    Driver createDriver(int id, int age, Status_Of_Marriage status, int yearsOfExperience, Cab* cab);
 
     Cab * createCab(int id,int cabType, Model_Of_Car carModel, Color_Of_Car color);
 
     BfsAlgorithm<Point> createGrid(int width, int height, vector<Point> listOfObstacles);
-
-    void startDriving();
 };
 
 #endif //EX1_VERSION_1_1_PROGRAMFLOW_H

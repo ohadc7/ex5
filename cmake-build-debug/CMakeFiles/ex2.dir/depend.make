@@ -33,21 +33,6 @@ CMakeFiles/ex2.dir/LuxuryCab.cpp.o: ../Cab.h
 CMakeFiles/ex2.dir/LuxuryCab.cpp.o: ../LuxuryCab.cpp
 CMakeFiles/ex2.dir/LuxuryCab.cpp.o: ../LuxuryCab.h
 
-CMakeFiles/ex2.dir/Menu.cpp.o: ../BfsAlgorithm.h
-CMakeFiles/ex2.dir/Menu.cpp.o: ../Cab.h
-CMakeFiles/ex2.dir/Menu.cpp.o: ../Driver.h
-CMakeFiles/ex2.dir/Menu.cpp.o: ../Graph.h
-CMakeFiles/ex2.dir/Menu.cpp.o: ../Grid.h
-CMakeFiles/ex2.dir/Menu.cpp.o: ../InputParsing.h
-CMakeFiles/ex2.dir/Menu.cpp.o: ../Menu.cpp
-CMakeFiles/ex2.dir/Menu.cpp.o: ../Menu.h
-CMakeFiles/ex2.dir/Menu.cpp.o: ../Node.h
-CMakeFiles/ex2.dir/Menu.cpp.o: ../Passenger.h
-CMakeFiles/ex2.dir/Menu.cpp.o: ../Point.h
-CMakeFiles/ex2.dir/Menu.cpp.o: ../ProgramFlow.h
-CMakeFiles/ex2.dir/Menu.cpp.o: ../TaxiCenter.h
-CMakeFiles/ex2.dir/Menu.cpp.o: ../Trip.h
-
 CMakeFiles/ex2.dir/Passenger.cpp.o: ../Node.h
 CMakeFiles/ex2.dir/Passenger.cpp.o: ../Passenger.cpp
 CMakeFiles/ex2.dir/Passenger.cpp.o: ../Passenger.h
@@ -64,7 +49,6 @@ CMakeFiles/ex2.dir/ProgramFlow.cpp.o: ../Graph.h
 CMakeFiles/ex2.dir/ProgramFlow.cpp.o: ../Grid.h
 CMakeFiles/ex2.dir/ProgramFlow.cpp.o: ../InputParsing.h
 CMakeFiles/ex2.dir/ProgramFlow.cpp.o: ../LuxuryCab.h
-CMakeFiles/ex2.dir/ProgramFlow.cpp.o: ../Menu.h
 CMakeFiles/ex2.dir/ProgramFlow.cpp.o: ../Node.h
 CMakeFiles/ex2.dir/ProgramFlow.cpp.o: ../Passenger.h
 CMakeFiles/ex2.dir/ProgramFlow.cpp.o: ../Point.h
@@ -435,7 +419,6 @@ CMakeFiles/ex2.dir/main.cpp.o: ../Driver.h
 CMakeFiles/ex2.dir/main.cpp.o: ../Graph.h
 CMakeFiles/ex2.dir/main.cpp.o: ../Grid.h
 CMakeFiles/ex2.dir/main.cpp.o: ../InputParsing.h
-CMakeFiles/ex2.dir/main.cpp.o: ../Menu.h
 CMakeFiles/ex2.dir/main.cpp.o: ../Node.h
 CMakeFiles/ex2.dir/main.cpp.o: ../Passenger.h
 CMakeFiles/ex2.dir/main.cpp.o: ../Point.h

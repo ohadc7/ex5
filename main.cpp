@@ -5,7 +5,6 @@
 #include "Grid.h"
 #include "BfsAlgorithm.h"
 #include "InputParsing.h"
-#include "Menu.h"
 #include "ProgramFlow.h"
 
 using namespace std;
@@ -18,6 +17,8 @@ int main(int argc, char* argv[]) {
     string inputString;
     ProgramFlow programFlow;
     programFlow.run();
+
+    /*
     inputString = "3_3,0_0,1_1"; //for debugging (instead of the next line)
     //getline(cin, inputString);
     InputParsing ip = InputParsing(inputString);
@@ -53,8 +54,8 @@ int main(int argc, char* argv[]) {
     cout << endl << "ID :" << d.id << endl;
     cout <<  "status: " << d.status << endl;
     cout << "vehicleId: " << d.vehicleId << endl << endl;
-    //*/
-
+    //
+*/
 
     return RUN_ALL_TESTS();
 }

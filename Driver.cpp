@@ -2,15 +2,10 @@
 
 
 
-Driver::Driver(int id, int age, Status_Of_Marriage status, int yearsOfExperience,int vehicleId) :
-        id(id), age(age), status(status), yearsOfExperience(yearsOfExperience), vehicleId(vehicleId){
+Driver::Driver(int id, int age, Status_Of_Marriage status, int yearsOfExperience, Cab *cab) :
+        id(id), age(age), status(status), yearsOfExperience(yearsOfExperience), cabOfDriver(cab){
     numOfTrips =1;
     averageSatisfactions = 0;
-}
-
-Driver::Driver(int id, int age, Status_Of_Marriage status, int yearsOfExperience, Cab **cab) :
-        Driver(id, age, status, yearsOfExperience,vehicleId) {
-    this->attachCabToDriver(cab);
 }
 
 int Driver::getId() const {
@@ -59,20 +54,12 @@ bool Driver::isAvailable() {
     return true;
 }
 
-void Driver::attachCabToDriver(Cab **infoCab) {
-    cabOfDriver = *infoCab;
-}
-
 vector<Passenger> Driver::getListOfPassengers() const{
     return listOfPassengers;
 }
 
 void Driver::addPassenger(Passenger passenger) {
     listOfPassengers.push_back(passenger);
-}
-
-void Driver::setLocation(Point point) {
-
 }
 
 void Driver::setCurrentLocation(Point pointNewLocation) {

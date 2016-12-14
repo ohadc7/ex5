@@ -13,7 +13,7 @@ private:
     vector<Trip> listOfTrips;
     vector<Cab*> listOfCabs;
     BfsAlgorithm<Point> bfsInstance;
-    Driver chooseBestDriver(Passenger passenger);
+    //Driver chooseBestDriver(Passenger passenger);
     void sendTaxi(Trip trip);
 
 public:
@@ -36,6 +36,8 @@ public:
     void addTrip(Trip trip);
 
     void createTrip(InputParsing::parsedTripData);
+
+    Cab* getCab(int id);
 };
 
 

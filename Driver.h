@@ -16,13 +16,10 @@ private:
     int yearsOfExperience;
     Cab *cabOfDriver;
     int numOfTrips;
-    int vehicleId;
     Point currentLocation;
     vector<Passenger> listOfPassengers;
 public:
-    Driver(int id, int age, Status_Of_Marriage status, int yearsOfExperience,int vehicleId);
-    Driver(int id, int age, Status_Of_Marriage status, int yearsOfExperience, Cab **cab);
-
+    Driver(int id, int age, Status_Of_Marriage status, int yearsOfExperience, Cab *cab);
 
     int getId() const;
 
@@ -31,8 +28,6 @@ public:
     Status_Of_Marriage getStatus() const;
 
     int getYearsOfExperience() const;
-
-    void attachCabToDriver(Cab **infoCab);
 
     double getSatisfactions() const;
 
@@ -50,7 +45,5 @@ public:
 
     void addPassenger(Passenger passenger);
 
-    void setLocation(Point point);
-
 };
-#endif //EX1_VERSION_1_1_DRIVER_H
+#endif

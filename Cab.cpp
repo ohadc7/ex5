@@ -1,7 +1,9 @@
 #include "Cab.h"
 
 Cab::Cab(int id, Model_Of_Car carModel, Color_Of_Car color) : id(id), carModel(carModel),
-                                                              color(color) {}
+                                                              color(color) {
+    passedKilometers = 0;
+}
 
 int Cab::getId() const {
     return id;
