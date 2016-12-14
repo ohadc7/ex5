@@ -1,6 +1,6 @@
 #include <gtest/gtest.h>
 #include "../ProgramFlow.h"
-
+/*
 //our tests:
 TEST(ProgramFlowTest, SanityChecks) {
     ProgramFlow programFlow = ProgramFlow();
@@ -12,4 +12,5 @@ TEST(ProgramFlowTest, SanityChecks) {
      * and "createGrid(int width, int height, vector<Point> listOfObstacles)" because this two
      * methods just create objects we specificly check's in TestDriver and TestGrid.
      * */
-}
+//}
+//*/

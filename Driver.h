@@ -15,12 +15,11 @@ private:
     Status_Of_Marriage status;
     int yearsOfExperience;
     Cab *cabOfDriver;
-    Trip currentTrip;
     int numOfTrips;
+    int vehicleId;
     vector<Passenger> listOfPassengers;
 public:
-    Driver();
-    Driver(int id, int age, Status_Of_Marriage status, int yearsOfExperience);
+    Driver(int id, int age, Status_Of_Marriage status, int yearsOfExperience,int vehicleId);
     Driver(int id, int age, Status_Of_Marriage status, int yearsOfExperience, Cab **cab);
 
 

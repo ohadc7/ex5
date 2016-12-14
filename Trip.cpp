@@ -1,11 +1,8 @@
 #include "Trip.h"
 
-Trip::Trip(int rideId, Point startingPoint, Point endingPoint, list <Passenger> customers)
-        : rideId(rideId), startingPoint(startingPoint), endingPoint(endingPoint), customers(customers) {}
-
-Trip::Trip() {
-
-}
+Trip::Trip(int rideId, Point startingPoint, Point endingPoint, int numOfPassengers, double taarif)
+        : rideId(rideId), startingPoint(startingPoint), endingPoint(endingPoint),
+          numOfPassengers(numOfPassengers), rateOfTrip(taarif) {}
 
 int Trip::getRideId() const {
     return rideId;

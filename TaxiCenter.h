@@ -5,15 +5,14 @@
 #include "Trip.h"
 #include "Passenger.h"
 #include "BfsAlgorithm.h"
+#include "InputParsing.h"
 
 class TaxiCenter {
 private:
-    list<Driver> listOfDrivers;
-    list<Trip> listOfTrips;
+    vector<Driver> listOfDrivers;
+    vector<Trip> listOfTrips;
     BfsAlgorithm<Point> bfsInstance;
-
     Driver chooseBestDriver(Passenger passenger);
-    Trip createTrip(Driver driver, Passenger passenger);
     void sendTaxi(Trip trip);
 
 public:
@@ -24,11 +23,15 @@ public:
     //choose best driver, create a trip and send taxi
     void orderATrip(Passenger passenger);
 
-    const list <Driver> &getListOfDrivers() const;
+    const vector<Driver> &getListOfDrivers() const;
 
-    const list <Trip> &getListOfTrips() const;
+    const vector<Trip> &getListOfTrips() const;
 
-    Point getDriverLocation(Driver driver);
+    Point getDriverLocation(int driverId);
+
+    void addTrip(Trip trip);
+
+    void createTrip(InputParsing::parsedTripData);
 };
 
 

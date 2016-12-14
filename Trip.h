@@ -7,9 +7,6 @@
 #include "Passenger.h"
 
 class Trip {
-public:
-    Trip();
-    Trip(int rideId, Point startingPoint, Point endingPoint, list <Passenger> customers);
 
 private:
     int rideId;
@@ -17,8 +14,10 @@ private:
     Point startingPoint;
     Point endingPoint;
     list<Passenger> customers; //passengers
+    int numOfPassengers;
     double rateOfTrip; //tariff
 public:
+    Trip(int rideId, Point startingPoint, Point endingPoint,int numOfPassengers,double taarif);
     int getRideId() const;
     int getPassedMeters() const;
     int getNumberOfPassengers() const;

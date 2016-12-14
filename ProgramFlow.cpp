@@ -5,19 +5,29 @@
 #include "InputParsing.h"
 #include "TaxiCenter.h"
 #include "Menu.h"
+#include "StandardCab.h"
+#include "LuxuryCab.h"
 
 using namespace std;
 
 void ProgramFlow::createTaxiCenter(BfsAlgorithm<Point> bfs) {
-    TaxiCenter taxiCenter(bfs);
+    taxiCenter = TaxiCenter(bfs);
 }
 
-void ProgramFlow::createDriver(int id, int age, Status_Of_Marriage status, int yearsOfExperience) {
-
-
+void ProgramFlow::createDriver(int id, int age, Status_Of_Marriage status,
+                               int yearsOfExperience, int vehicleId) {
+   taxiCenter.addDriver(Driver(id,age,status,yearsOfExperience,vehicleId));
 }
 
-void ProgramFlow::createCab(int id) {
+
+void ProgramFlow::createCab(int id,int cabType, Model_Of_Car carModel, Color_Of_Car color) {
+    if(cabType==1){
+        Cab *standardCab;
+        standardCab = new StandardCab(id, carModel, color);
+    }else if(cabType==2){
+        Cab* luxuryCab;
+        luxuryCab = new LuxuryCab(id, carModel, color);
+    }
 
 }
 
@@ -48,27 +58,44 @@ void ProgramFlow::run() {
     }
     BfsAlgorithm<Point> bfs = createGrid(gd.gridWidth, gd.gridHeight, listOfObstacles);
     createTaxiCenter(bfs);
+
     while (true) {
         getline(cin, inputString);
         switch (stoi(inputString)) {
-            case 1:
-
+            case 1: {
+                InputParsing::parsedDriverData driver = inputParsing.parseDriverData(inputString);
+                createDriver(driver.id, driver.age, driver.status, driver.yearsOfExperience,
+                             driver.vehicleId);
                 break;
-            case 2:
-                /*int rideId, Point startingPoint, Point endingPoint, list <Passenger> customers
-                Trip trip();
-                createTrip(inputParsing.g)
+            }
+                case 2: {
+                    InputParsing::parsedTripData trip = inputParsing.parseTripData(inputString);
+                    taxiCenter.createTrip(trip);
+                    break;
+                }
+            case 3: {
+                InputParsing::parsedCabData cab = inputParsing.parseVehicleData(inputString);
+                createCab(cab.id, cab.taxiType, cab.manufacturer, cab.color);
                 break;
-            case 3:
-                break;
-            case 4:
-                break;
-            case 6:
-                break;
-            case 7:
-                break;
+            }
+                case 4: {
+                    getline(cin, inputString);
+                    Point point(taxiCenter.getDriverLocation(stoi(inputString)));
+                    cout << point;
+                    break;
+                }
+                    case 6: {
+                        break;
+                    }
+            case 7: {
+                exit(0);
+            }
             default:
                 break;
         }
-    }*/
+    }
+}
+
+ProgramFlow::ProgramFlow() {
+
 }

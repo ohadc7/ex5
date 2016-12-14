@@ -3,21 +3,24 @@
 #include <vector>
 #include "Driver.h"
 #include "BfsAlgorithm.h"
+#include "TaxiCenter.h"
 
 #ifndef EX1_VERSION_1_1_PROGRAMFLOW_H
 #define EX1_VERSION_1_1_PROGRAMFLOW_H
 
-//enum Status_of_Marriage {SINGLE, MARRIED, DIVORCED, WIDOWED};
 
 class ProgramFlow {
+private:
+    TaxiCenter taxiCenter;
 public:
+    ProgramFlow();
     void run();
 
     void createTaxiCenter(BfsAlgorithm<Point> bfs);
 
-    void createDriver(int id, int age, Status_Of_Marriage status, int yearsOfExperience);
+    void createDriver(int id, int age, Status_Of_Marriage status, int yearsOfExperience,int vehicleId);
 
-    void createCab(int id);
+    void createCab(int id,int cabType, Model_Of_Car carModel, Color_Of_Car color);
 
     BfsAlgorithm<Point> createGrid(int width, int height, vector<Point> listOfObstacles);
 };

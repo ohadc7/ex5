@@ -1,15 +1,15 @@
 #include "Driver.h"
 
-Driver::Driver() {}
 
-Driver::Driver(int id, int age, Status_Of_Marriage status, int yearsOfExperience) :
-        id(id), age(age), status(status), yearsOfExperience(yearsOfExperience){
+
+Driver::Driver(int id, int age, Status_Of_Marriage status, int yearsOfExperience,int vehicleId) :
+        id(id), age(age), status(status), yearsOfExperience(yearsOfExperience), vehicleId(vehicleId){
     numOfTrips =1;
     averageSatisfactions = 0;
 }
 
 Driver::Driver(int id, int age, Status_Of_Marriage status, int yearsOfExperience, Cab **cab) :
-        Driver(id, age, status, yearsOfExperience) {
+        Driver(id, age, status, yearsOfExperience,vehicleId) {
     this->attachCabToDriver(cab);
 }
 
