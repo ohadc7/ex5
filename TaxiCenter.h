@@ -21,6 +21,8 @@ public:
 
     void addDriver(Driver driver);
     void addCab(Cab* cab);
+    void startDriving();
+
 
     //choose best driver, create a trip and send taxi
     void orderATrip(Passenger passenger);

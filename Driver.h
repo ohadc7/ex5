@@ -17,6 +17,7 @@ private:
     Cab *cabOfDriver;
     int numOfTrips;
     int vehicleId;
+    Point currentLocation;
     vector<Passenger> listOfPassengers;
 public:
     Driver(int id, int age, Status_Of_Marriage status, int yearsOfExperience,int vehicleId);
@@ -41,11 +42,15 @@ public:
 
     Point currentPlace();
 
+    void setCurrentLocation(Point pointNewLocation);
+
     void clientSatisfactions(int clientSatisfactions);
 
     vector<Passenger> getListOfPassengers() const;
 
     void addPassenger(Passenger passenger);
+
+    void setLocation(Point point);
 
 };
 #endif //EX1_VERSION_1_1_DRIVER_H

@@ -38,7 +38,7 @@ Cab* Driver::getInfoCab() const{
 }
 
 Point Driver::currentPlace() {
-    return Point(0,0);
+    return currentLocation;
 }
 
 void Driver::clientSatisfactions(int clientSatisfactions){
@@ -69,5 +69,13 @@ vector<Passenger> Driver::getListOfPassengers() const{
 
 void Driver::addPassenger(Passenger passenger) {
     listOfPassengers.push_back(passenger);
+}
+
+void Driver::setLocation(Point point) {
+
+}
+
+void Driver::setCurrentLocation(Point pointNewLocation) {
+    currentLocation = pointNewLocation;
 }
 

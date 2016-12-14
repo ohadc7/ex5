@@ -34,10 +34,10 @@ const vector<Trip> &TaxiCenter::getListOfTrips() const {
 Point TaxiCenter::getDriverLocation(int driverId) {
     unsigned long index = 0;
     for(Driver &driver : listOfDrivers) {
-        index++;
         if(driver.getId() == driverId){
             return listOfTrips.at(index).getEndingPoint();
         }
+        index++;
     }
 }
 
@@ -49,4 +49,14 @@ void TaxiCenter::addTrip(Trip trip) {
 
 void TaxiCenter::addCab(Cab *cab) {
     listOfCabs.push_back(cab);
+}
+
+void TaxiCenter::startDriving() {
+    unsigned long index = 0;
+    for(Driver &driver : listOfDrivers) {
+        if(driver.getId() == listOfTrips.at(index).getRideId()){
+            driver.setCurrentLocation(listOfTrips.at(index).getEndingPoint());
+        }
+        index++;
+    }
 }
