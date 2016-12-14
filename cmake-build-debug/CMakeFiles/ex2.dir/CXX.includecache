@@ -393,6 +393,8 @@ StandardCab.h
 /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/StandardCab.h
 LuxuryCab.h
 /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/LuxuryCab.h
+InputParsing.h
+/home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/InputParsing.h
 
 /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/ProgramFlow.h
 Point.h
@@ -457,6 +459,8 @@ gtest/gtest.h
 /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/Passenger.h
 ../StandardCab.h
 /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/StandardCab.h
+../LuxuryCab.h
+/home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/LuxuryCab.h
 
 /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/Tests/TestGrid.cpp
 gtest/gtest.h

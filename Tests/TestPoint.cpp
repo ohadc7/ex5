@@ -33,6 +33,7 @@ TEST_F(TestPoint, printing) {
      how-to-test-input-and-output-overloaded-operator-in-c-gtest
      */
     // << (operator overloading of printing to stream)
+
     ostringstream output;
     output << p1;
     ASSERT_EQ(output.str(),"(1,2)");

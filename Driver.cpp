@@ -3,10 +3,16 @@
 
 
 Driver::Driver(int id, int age, Status_Of_Marriage status, int yearsOfExperience, Cab *cab) :
-        id(id), age(age), status(status), yearsOfExperience(yearsOfExperience), cabOfDriver(cab){
+        id(id), age(age), status(status), yearsOfExperience(yearsOfExperience){
     numOfTrips =1;
     averageSatisfactions = 0;
+    this->attachCabToDriver(cab);
 }
+
+/*Driver::Driver(int id, int age, Status_Of_Marriage status, int yearsOfExperience, Cab **cab) :
+        Driver(id, age, status, yearsOfExperience,vehicleId) {
+    this->attachCabToDriver(cab);
+}*/
 
 int Driver::getId() const {
     return id;
@@ -52,6 +58,10 @@ void Driver::clientSatisfactions(int clientSatisfactions){
 
 bool Driver::isAvailable() {
     return true;
+}
+
+void Driver::attachCabToDriver(Cab *infoCab) {
+    cabOfDriver = infoCab;
 }
 
 vector<Passenger> Driver::getListOfPassengers() const{

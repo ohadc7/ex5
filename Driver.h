@@ -29,6 +29,8 @@ public:
 
     int getYearsOfExperience() const;
 
+    void attachCabToDriver(Cab *infoCab);
+
     double getSatisfactions() const;
 
     Cab *getInfoCab() const;
@@ -46,4 +48,4 @@ public:
     void addPassenger(Passenger passenger);
 
 };
-#endif
+#endif //EX1_VERSION_1_1_DRIVER_H

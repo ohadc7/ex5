@@ -32,7 +32,7 @@ BfsAlgorithm<Point> ProgramFlow::createGrid(int width, int height, vector<Point>
     return bfs;
 }
 
-void ProgramFlow::run() {
+int ProgramFlow::run() {
 
     string inputString;
     getline(cin, inputString);
@@ -84,7 +84,7 @@ void ProgramFlow::run() {
             case 4: {
                 getline(cin, inputString);
                 try {
-                    Point point(taxiCenter.getDriverLocation(stoi(inputString)));
+                     Point point(taxiCenter.getDriverLocation(stoi(inputString)));
                     cout << point << '\n';
                 } catch (const char *msg) {
                     cerr << msg << endl;
@@ -96,7 +96,7 @@ void ProgramFlow::run() {
                 break;
             }
             case 7: {
-                exit(0);
+                return 0;
             }
             default:
                 break;

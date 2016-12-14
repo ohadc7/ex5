@@ -155,6 +155,7 @@ CMakeFiles/ex2.dir/Tests/TestDriver.cpp.o: ../lib/googletest-master/googletest/i
 CMakeFiles/ex2.dir/Tests/TestDriver.cpp.o: ../lib/googletest-master/googletest/include/gtest/internal/gtest-type-util.h
 CMakeFiles/ex2.dir/Tests/TestDriver.cpp.o: ../Cab.h
 CMakeFiles/ex2.dir/Tests/TestDriver.cpp.o: ../Driver.h
+CMakeFiles/ex2.dir/Tests/TestDriver.cpp.o: ../LuxuryCab.h
 CMakeFiles/ex2.dir/Tests/TestDriver.cpp.o: ../Node.h
 CMakeFiles/ex2.dir/Tests/TestDriver.cpp.o: ../Passenger.h
 CMakeFiles/ex2.dir/Tests/TestDriver.cpp.o: ../Point.h

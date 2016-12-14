@@ -32,7 +32,7 @@ TEST(TestInputParsing, SanityChecks) {
      * the input form of the obstacles list...
      */
 
-    /*
+
     inputParsing = InputParsing("100_0,-1_1,8.3_3");
     ASSERT_EQ(inputParsing.getSourcePointX(),-1);
     ASSERT_EQ(inputParsing.getSourcePointY(),1);
@@ -40,5 +40,5 @@ TEST(TestInputParsing, SanityChecks) {
     ASSERT_EQ(inputParsing.getDestinationPointY(),3);
     ASSERT_EQ(inputParsing.getGridWidth(),100);
     ASSERT_EQ(inputParsing.getGridHeight(),0);
-     */
+
 }
