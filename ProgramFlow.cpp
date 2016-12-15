@@ -31,7 +31,7 @@ BfsAlgorithm<Point> ProgramFlow::createGrid(int width, int height, vector<Point>
     return bfs;
 }
 
-void ProgramFlow::run() {
+int ProgramFlow::run() {
 
     string inputString;
     getline(cin, inputString);
@@ -94,7 +94,7 @@ void ProgramFlow::run() {
                 break;
             }
             case 7: {
-                exit(0);
+                return 0;
             }
             default:
                 break;
