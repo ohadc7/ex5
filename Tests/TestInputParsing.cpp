@@ -1,44 +1,72 @@
 #include <gtest/gtest.h>
 #include "../InputParsing.h"
 
-/*
- * InputParsing parse rhe input of ex1. I don't know the how will we  get the
- * input that represents Map in the next exercises, so I can't write tests for it.
- * [according to ex1 exercise we can assume the input will be valid -
- * no 0 size axis, no negative numbers etc...
- * (I think our code can treat these cases, but no requirement to do it)]
- */
-TEST(TestInputParsing, SanityChecks) {
-    InputParsing inputParsing = InputParsing("4_5,0_1,2_3");
-    ASSERT_EQ(inputParsing.getSourcePointX(),0);
-    ASSERT_EQ(inputParsing.getSourcePointY(),1);
-    ASSERT_EQ(inputParsing.getDestinationPointX(),2);
-    ASSERT_EQ(inputParsing.getDestinationPointY(),3);
-    ASSERT_EQ(inputParsing.getGridWidth(),4);
-    ASSERT_EQ(inputParsing.getGridHeight(),5);
+class TestInputParsing: public ::testing::Test {
+protected:
+    InputParsing inputParsing;
 
-    Grid correctGrid = Grid(4,5);
-    for (int i = -1; i < 4; i++) {
-        for (int j = -1; j < 4; j++) {
-            Point p = Point(i,j);
-            ASSERT_EQ(correctGrid.getNeighbors(p), inputParsing.getGrid().getNeighbors(p))
-                           << "ERROR: the neighbors of the point in the parsed grid"
-                                   " and in the correct grid aren't equal";
-        }
-    }
+    TestInputParsing() : inputParsing() {}
+};
+
+TEST_F(TestInputParsing, pointParsing) {
+    string pointString = "2,3";
+    Point p = inputParsing.parsePoint(pointString);
+    ASSERT_EQ(p, Point(2, 3)) << "error of parsing point";
+}
+
+
+TEST_F(TestInputParsing, gridParsing) {
+    string gridDimensionsString = "5 7";
+    InputParsing::gridDimensions gridDimensionsStruct =
+            inputParsing.parseGridDimensions(gridDimensionsString);
+    ASSERT_EQ(gridDimensionsStruct.gridWidth, 5) << "error of parsing grid dimensions";
+    ASSERT_EQ(gridDimensionsStruct.gridHeight, 7) << "error of parsing grid dimensions";
+}
+
+TEST_F(TestInputParsing, driverParsing) {
+    string driverString = "123456789,30,W,5,1122233";
+    InputParsing::parsedDriverData driverDataStruct = inputParsing.parseDriverData(driverString);
+    ASSERT_EQ(driverDataStruct.id,123456789) << "error of parsing driver id";
+    ASSERT_EQ(driverDataStruct.age,30) << "error of parsing driver age";
+    Driver:Status_Of_Marriage correctStatus = WIDOWED;
+    ASSERT_EQ(driverDataStruct.status,correctStatus) << "error of parsing driver status";
+    ASSERT_EQ(driverDataStruct.vehicleId,1122233) << "error of parsing driver vehicle id";
+    ASSERT_EQ(driverDataStruct.yearsOfExperience,5)
+                                << "error of parsing number of years of experience";
+}
+
+TEST_F(TestInputParsing, tripParsing) {
+    InputParsing::parsedTripData tripDataStruct = inputParsing.parseTripData("0,2,10,9,3,4,3.20");
+    ASSERT_EQ(tripDataStruct.id,0) << "error of parsing trip";
+    ASSERT_EQ(tripDataStruct.start,Point(2,10)) << "error of parsing trip";
+    ASSERT_EQ(tripDataStruct.end,Point(9,3)) << "error of parsing trip";
+    ASSERT_EQ(tripDataStruct.numberOfPassengers,4) << "error of parsing trip";
+    ASSERT_EQ(tripDataStruct.tariff,3.20) << "error of parsing trip";
+}
+
+TEST_F(TestInputParsing, cabParsing) { //tbd
 
     /*
-     * I don't check parsing grid with obstacles because we don't know
-     * the input form of the obstacles list...
-     */
+  * "vehicleData" string format: "id,taxiType,manufacturer,color"
+  * (int,{1:NormalCab,2:LuxuryCab},char:{H,S,T,F},char:{R,B,G,P,W})
+  * 'taxiType' is one of the following characters:
+  * 1 / 2 (represents: StandardCab / LuxuryCab).
+  * 'manufacturer' is one of the following letters:
+  * H / S / T / F (represents: HONDA, SUBARO, TESLA, FIAT)
+  * 'color' is one of the following letters:
+  * R / B / G / P / W (represents: RED, BLUE, GREEN, PINK, WHITE)
+  */
+    InputParsing::parsedCabData cabDataStruct = inputParsing.parseVehicleData("9900088,1,S,W");
+    ASSERT_EQ(cabDataStruct.taxiType,STANDARD_CAB) << "error of parsing cab";
+    ASSERT_EQ(cabDataStruct.id,9900088) << "error of parsing cab";
+    ASSERT_EQ(cabDataStruct.color,WHITE) << "error of parsing cab";
+    ASSERT_EQ(cabDataStruct.manufacturer,SUBARO) << "error of parsing cab";
+
+    cabDataStruct = inputParsing.parseVehicleData("0,2,F,P");
+    ASSERT_EQ(cabDataStruct.id,0) << "error of parsing cab";
+    ASSERT_EQ(cabDataStruct.taxiType,LUXURY_CAB) << "error of parsing cab";
+    ASSERT_EQ(cabDataStruct.manufacturer,FIAT) << "error of parsing cab";
+    ASSERT_EQ(cabDataStruct.color,PINK) << "error of parsing cab";
+ }
 
 
-    inputParsing = InputParsing("100_0,-1_1,8.3_3");
-    ASSERT_EQ(inputParsing.getSourcePointX(),-1);
-    ASSERT_EQ(inputParsing.getSourcePointY(),1);
-    ASSERT_EQ(inputParsing.getDestinationPointX(),8);
-    ASSERT_EQ(inputParsing.getDestinationPointY(),3);
-    ASSERT_EQ(inputParsing.getGridWidth(),100);
-    ASSERT_EQ(inputParsing.getGridHeight(),0);
-
-}
