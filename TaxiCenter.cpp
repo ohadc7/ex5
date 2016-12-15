@@ -1,14 +1,10 @@
 #include "TaxiCenter.h"
 
 void TaxiCenter::createTrip(InputParsing::parsedTripData parsedTripDataTrip) {
-    Trip trip(parsedTripDataTrip.id, parsedTripDataTrip.start, parsedTripDataTrip.end,
-              parsedTripDataTrip.numberOfPassengers, parsedTripDataTrip.tariff);
+    Trip *trip = new Trip(parsedTripDataTrip.id, parsedTripDataTrip.start, parsedTripDataTrip.end,
+                          parsedTripDataTrip.numberOfPassengers, parsedTripDataTrip.tariff);
     listOfTrips.push_back(trip);
 }
-
-/*Driver TaxiCenter::chooseBestDriver(Passenger passenger) {
-    return NULL;//Driver(0, 0, MARRIED, 0, nullptr);
-}*/
 
 void TaxiCenter::sendTaxi(Trip trip) {
 
@@ -26,24 +22,23 @@ const vector<Driver> &TaxiCenter::getListOfDrivers() const {
     return listOfDrivers;
 }
 
-const vector<Trip> &TaxiCenter::getListOfTrips() const {
+const vector<Trip *> &TaxiCenter::getListOfTrips() const {
     return listOfTrips;
 }
 
 Point TaxiCenter::getDriverLocation(int driverId) {
-    unsigned long index = 0;
-    for(Driver &driver : listOfDrivers) {
-        if(driver.getId() == driverId){
-            return listOfTrips.at(index).getEndingPoint();
+
+    for (unsigned int i = 0; i < listOfDrivers.size(); i++) {
+        if (listOfDrivers.at(i).getId() == driverId) {
+            return listOfDrivers.at(i).currentPlace();
         }
-        index++;
     }
     throw "No Driver found";
 }
 
 TaxiCenter::TaxiCenter(BfsAlgorithm<Point> &bfsInstance) : bfsInstance(bfsInstance) {}
 
-void TaxiCenter::addTrip(Trip trip) {
+void TaxiCenter::addTrip(Trip *trip) {
     listOfTrips.push_back(trip);
 }
 
@@ -52,19 +47,19 @@ void TaxiCenter::addCab(Cab *cab) {
 }
 
 void TaxiCenter::startDriving() {
-    unsigned long index = 0;
-    for(Driver &driver : listOfDrivers) {
-        if(driver.getId() == listOfTrips.at(index).getRideId()){
-            driver.setCurrentLocation(listOfTrips.at(index).getEndingPoint());
+    for (unsigned int i = 0; i < listOfDrivers.size(); i++) {
+        if (listOfTrips.size() > 0) {
+            listOfDrivers.at(i).assignTrip(listOfTrips.front());
+            listOfDrivers.at(i).setCurrentLocation();
+            listOfTrips.pop_back();
         }
-        index++;
     }
 }
 
 Cab* TaxiCenter::getCab(int id) {
-    for (Cab * &cab : listOfCabs){
-        if(cab->getId() == id){
-            return cab;
+    for (unsigned int i = 0; i < listOfCabs.size(); i++) {
+        if (listOfCabs.at(i)->getId() == id) {
+            return listOfCabs.at(i);
         }
     }
    throw "no cab found";

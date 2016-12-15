@@ -32,3 +32,4 @@ int Trip::getPassedMeters() const {
     return passedMeters;
 }
 
+

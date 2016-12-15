@@ -44,12 +44,12 @@ TEST_F(TestTaxiCenter, SanityChecks) {
     //check orderATrip, chooseBestDriver, createTrip, sendTaxi methods
     //("orderATrip" is checked explicitly and the other 3 methods are checked implicitly)
     taxiCenter.orderATrip(reuven);
-    vector<Trip> taxiCenterListOfTrip = taxiCenter.getListOfTrips();
+    vector<Trip *> taxiCenterListOfTrip = taxiCenter.getListOfTrips();
     ASSERT_EQ(taxiCenterListOfTrip.size(), 1);
-    Trip taxiCenterTrip = taxiCenterListOfTrip.front();
-    ASSERT_EQ(taxiCenterTrip.getNumberOfPassengers(), 1);
-    ASSERT_EQ(taxiCenterTrip.getStartingPoint(), reuvenSourcePoint);
-    ASSERT_EQ(taxiCenterTrip.getEndingPoint(), reuvenDestinationPoint);
+    Trip *taxiCenterTrip = taxiCenterListOfTrip.front();
+    ASSERT_EQ(taxiCenterTrip->getNumberOfPassengers(), 1);
+    ASSERT_EQ(taxiCenterTrip->getStartingPoint(), reuvenSourcePoint);
+    ASSERT_EQ(taxiCenterTrip->getEndingPoint(), reuvenDestinationPoint);
 
     taxiCenter.addDriver(driver2);
     Point driver1Position = driver2.currentPlace();

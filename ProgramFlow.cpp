@@ -3,7 +3,6 @@
 #include "ProgramFlow.h"
 #include "StandardCab.h"
 #include "LuxuryCab.h"
-#include "InputParsing.h"
 
 using namespace std;
 
@@ -27,12 +26,12 @@ Cab *ProgramFlow::createCab(int id, int cabType, Model_Of_Car carModel, Color_Of
 
 
 BfsAlgorithm<Point> ProgramFlow::createGrid(int width, int height, vector<Point> listOfObstacles) {
-    Graph<Point> *g = new Grid(width, height);
+    Graph<Point> *g = new Grid(width, height, listOfObstacles);
     BfsAlgorithm<Point> bfs(g);
     return bfs;
 }
 
-int ProgramFlow::run() {
+void ProgramFlow::run() {
 
     string inputString;
     getline(cin, inputString);
@@ -46,7 +45,6 @@ int ProgramFlow::run() {
         for (int i = 0; i < numOfObstacles; i++) {
             getline(cin, inputString);
             Point p(inputParsing.parsePoint(inputString));
-
             listOfObstacles.push_back(p);
         }
     }
@@ -96,7 +94,7 @@ int ProgramFlow::run() {
                 break;
             }
             case 7: {
-                return 0;
+                exit(0);
             }
             default:
                 break;

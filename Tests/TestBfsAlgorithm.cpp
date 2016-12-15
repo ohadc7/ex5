@@ -5,7 +5,11 @@ class TestBfsAlgorithm : public ::testing::Test {
 protected:
     Grid *grid;
     BfsAlgorithm<Point> bfs;
-    TestBfsAlgorithm() : grid(new Grid(10, 10)), bfs(BfsAlgorithm<Point>(grid)){}
+    vector<Point> listOfObstacles;
+    Point p;
+
+    TestBfsAlgorithm() : listOfObstacles(vector<Point>()), grid(new Grid(10, 10, listOfObstacles)),
+                         bfs(BfsAlgorithm<Point>(grid)) {}
 
     virtual void TearDown() {
         delete grid;

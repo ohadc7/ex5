@@ -72,7 +72,11 @@ void Driver::addPassenger(Passenger passenger) {
     listOfPassengers.push_back(passenger);
 }
 
-void Driver::setCurrentLocation(Point pointNewLocation) {
-    currentLocation = pointNewLocation;
+void Driver::setCurrentLocation() {
+    currentLocation = currentTrip->getEndingPoint();
+}
+
+void Driver::assignTrip(Trip *trip) {
+    currentTrip = trip;
 }
 

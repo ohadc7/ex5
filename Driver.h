@@ -18,6 +18,7 @@ private:
     int numOfTrips;
     Point currentLocation;
     vector<Passenger> listOfPassengers;
+    Trip *currentTrip;
 public:
     Driver(int id, int age, Status_Of_Marriage status, int yearsOfExperience, Cab *cab);
 
@@ -39,7 +40,7 @@ public:
 
     Point currentPlace();
 
-    void setCurrentLocation(Point pointNewLocation);
+    void setCurrentLocation();
 
     void clientSatisfactions(int clientSatisfactions);
 
@@ -47,5 +48,6 @@ public:
 
     void addPassenger(Passenger passenger);
 
+    void assignTrip(Trip *trip);
 };
 #endif //EX1_VERSION_1_1_DRIVER_H

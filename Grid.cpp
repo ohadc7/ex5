@@ -15,7 +15,17 @@ Grid::Grid(int m, int n) {
     }
 };
 
-Grid::Grid(int m, int n, vector<Point> listOfObstacles) : Grid(m, n) {
+Grid::Grid(int m, int n, vector<Point> listOfObstacles) {
+    width = m;
+    height = n;
+    for (int i = 0; i < width; i++) {
+        vector<Point> verticalVectorOfPoints = vector<Point>();
+        for (int j = 0; j < height; j++) {
+            Point p = Point(i, j);
+            verticalVectorOfPoints.push_back(p);
+        }
+        vectorOfVerticalVectors.push_back(verticalVectorOfPoints);
+    }
     //TBD - setAvailable(true) for each point in the grid that belongs to listOfObstacles
     while (!listOfObstacles.empty()) {
         Point obstacle = listOfObstacles.back();

@@ -11,7 +11,7 @@
 
 class ProgramFlow {
 public:
-    int run();
+    void run();
 
     TaxiCenter createTaxiCenter(BfsAlgorithm<Point> bfs);
 
