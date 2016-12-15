@@ -4,7 +4,7 @@
 class TestTrip : public ::testing::Test {
 
 protected:
-    Trip *trip;
+    Trip trip;
     list <Passenger> passengersList;
     Passenger reuven, shimon, ohad, ido;
 
@@ -13,9 +13,10 @@ protected:
             //2 passengers with the same arguments;
                  ohad(Point(5, 5), Point(3, 3), false),
                  ido(Point(5, 5), Point(3, 3), false),
-                 trip(new Trip(1384, Point(0, 0), Point(3, 3), (int) passengersList.size(), 20)) {};
+                 passengersList(),
+                 trip(1384, Point(0, 0), Point(3, 3), 0, 20) {};
 
-    virtual void SetUp() {
+    virtual void setUp() {
         passengersList.push_back(reuven);
         passengersList.push_back(shimon);
         passengersList.push_back(ohad);
@@ -23,17 +24,13 @@ protected:
 
     }
 
-    virtual void TearDown() {
-        delete trip;
-    }
-
 };
 
 TEST_F(TestTrip, GettersCheck) {
-    ASSERT_EQ(trip->getRideId(), 1384);
-    ASSERT_EQ(trip->getStartingPoint(), Point(0, 0));
-    ASSERT_EQ(trip->getEndingPoint(), Point(3, 3));
-    ASSERT_EQ(trip->getPassedMeters(), 0) << "ERROR: passed meters of constructed trip isn't 0";
-    ASSERT_EQ(trip->getNumberOfPassengers(), 4) << "ERROR: this trip has to contain 4 passengers";
+    ASSERT_EQ(trip.getRideId(), 1384);
+    ASSERT_EQ(trip.getStartingPoint(), Point(0, 0));
+    ASSERT_EQ(trip.getEndingPoint(), Point(3, 3));
+    ASSERT_EQ(trip.getPassedMeters(), 0) << "ERROR: passed meters of constructed trip isn't 0";
+    ASSERT_EQ(trip.getNumberOfPassengers(), 4) << "ERROR: this trip has to contain 4 passengers";
 }
 

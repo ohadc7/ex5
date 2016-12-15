@@ -44,18 +44,7 @@ TEST_F(TestInputParsing, tripParsing) {
     ASSERT_EQ(tripDataStruct.tariff,3.20) << "error of parsing trip";
 }
 
-TEST_F(TestInputParsing, cabParsing) { //tbd
-
-    /*
-  * "vehicleData" string format: "id,taxiType,manufacturer,color"
-  * (int,{1:NormalCab,2:LuxuryCab},char:{H,S,T,F},char:{R,B,G,P,W})
-  * 'taxiType' is one of the following characters:
-  * 1 / 2 (represents: StandardCab / LuxuryCab).
-  * 'manufacturer' is one of the following letters:
-  * H / S / T / F (represents: HONDA, SUBARO, TESLA, FIAT)
-  * 'color' is one of the following letters:
-  * R / B / G / P / W (represents: RED, BLUE, GREEN, PINK, WHITE)
-  */
+TEST_F(TestInputParsing, cabParsing) {
     InputParsing::parsedCabData cabDataStruct = inputParsing.parseVehicleData("9900088,1,S,W");
     ASSERT_EQ(cabDataStruct.taxiType,STANDARD_CAB) << "error of parsing cab";
     ASSERT_EQ(cabDataStruct.id,9900088) << "error of parsing cab";
