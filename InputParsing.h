@@ -10,31 +10,15 @@
 using namespace std;
 class InputParsing {
 private:
-    int gridWidth;
-    int gridHeight;
-    int sourcePointX;
-    int sourcePointY;
-    int destinationPointX;
-    int destinationPointY;
-    //list<Point> obstacles;
-
     map<string,Status_Of_Marriage> mapOfLetterToStatus;
     map<int,Taxi_Type> mapOfNumberToTaxiType;
     map<string,Model_Of_Car> mapOfLetterToModel;
     map<string,Color_Of_Car> mapOfLetterToColor;
     vector<string> splitStrings(string stringWithCommas, int numberOfSeparatedWords);
+
 public:
     InputParsing();
-    InputParsing(string inputString);
-    int getGridWidth();
-    int getGridHeight();
-    int getSourcePointX();
-    int getSourcePointY();
-    int getDestinationPointX();
-    int getDestinationPointY();
-    Grid getGrid();
 
-    //new functions:
     typedef struct {
         int gridWidth;
         int gridHeight;
