@@ -45,8 +45,8 @@ protected:
     ASSERT_EQ(driver.getStatus(), MARRIED) << "test the Marriage status of driver";
     ASSERT_EQ(driver.getYearsOfExperience(), 5) << "test years of experience";
     ASSERT_EQ(driver.getSatisfactions(), 4.5) << "test the average satisfaction change";
-    EXPECT_EQ(driver2.getSatisfactions(),6) << "test should fail,average satisfaction can't be >5";
-    EXPECT_EQ(driver3.getSatisfactions(),0) << "test should fail,average satisfaction can't be <1";
+    EXPECT_NE(driver2.getSatisfactions(),6) << "average satisfaction can't be >5";
+    EXPECT_NE(driver3.getSatisfactions(),0) << "average satisfaction can't be <1";
     EXPECT_EQ(driver.getListOfPassengers().front().getIsLuxury(),reuven.getIsLuxury()) <<
                                                            "check if inserted passenger works";
     EXPECT_EQ(driver2.getListOfPassengers().size(),0)<<"check that empty listOfPassenger is empty";
