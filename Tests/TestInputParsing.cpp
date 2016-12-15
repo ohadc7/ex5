@@ -57,5 +57,3 @@ TEST_F(TestInputParsing, cabParsing) {
     ASSERT_EQ(cabDataStruct.manufacturer,FIAT) << "error of parsing cab";
     ASSERT_EQ(cabDataStruct.color,PINK) << "error of parsing cab";
  }
-
-
