@@ -1,6 +1,8 @@
 #ifndef EX2_STANDARDCAB_H
 #define EX2_STANDARDCAB_H
 
+#define SPEED_OF_STANDARD_CAB 1
+#define RATE_OF_STANDARD_CAB  100
 
 #include "Cab.h"
 
