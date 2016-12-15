@@ -12,4 +12,7 @@ double LuxuryCab::getRate() const {
     return 0;
 }
 
+LuxuryCab::~LuxuryCab() {
+}
+
 

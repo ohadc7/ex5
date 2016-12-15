@@ -11,3 +11,7 @@ double StandardCab::getSpeed() const {
 double StandardCab::getRate() const {
     return 0;
 }
+
+StandardCab::~StandardCab() {
+
+}

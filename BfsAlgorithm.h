@@ -31,11 +31,13 @@ public:
     //return stack that maintains the nodes in the shortest path from "start" to "end".
     //(if no path from start to end, return empty stack).
     stack<Node<T>> navigate( Node<T> &start, Node<T> &end);
+
 };
 
 
 template <class T>
 BfsAlgorithm<T>::BfsAlgorithm(Graph<T> *graph) : graph(graph) {}
+
 
 template <class T>
 stack<Node<T>> BfsAlgorithm<T>::navigate(Node<T> &start, Node<T> &end) {

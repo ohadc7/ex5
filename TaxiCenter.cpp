@@ -51,7 +51,10 @@ void TaxiCenter::startDriving() {
         if (listOfTrips.size() > 0) {
             listOfDrivers.at(i).assignTrip(listOfTrips.front());
             listOfDrivers.at(i).setCurrentLocation();
+            delete listOfTrips[i];
             listOfTrips.pop_back();
+            //delete listOfTrips.at(i);
+
         }
     }
 }
@@ -64,3 +67,7 @@ Cab* TaxiCenter::getCab(int id) {
     }
    throw "no cab found";
 }
+
+TaxiCenter::~TaxiCenter() {
+}
+

@@ -25,6 +25,8 @@ public:
     const Point &getEndingPoint() const;
     const list <Passenger> &getCustomers() const;
     double getRateOfTrip() const;
+
+    ~Trip();
 };
 
 

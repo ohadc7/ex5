@@ -15,6 +15,8 @@ public:
     double getSpeed() const;
 
     double getRate() const;
+
+    virtual ~LuxuryCab();
 };
 
 

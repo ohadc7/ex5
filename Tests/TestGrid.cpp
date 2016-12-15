@@ -2,7 +2,6 @@
 #include "../Point.h"
 #include "../Graph.h"
 #include "../Grid.h"
-#include "../ProgramFlow.h"
 
 class TestGrid: public ::testing::Test {
 protected:
@@ -15,6 +14,10 @@ protected:
     TestGrid() : width(2), height(3), grid1(width,height){
         grid1 = Grid(width,height);
         graph1 = new Grid(width,height);
+    }
+
+    virtual void TearDown() {
+        delete graph1;
     }
  };
 

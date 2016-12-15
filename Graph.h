@@ -15,9 +15,11 @@ using namespace std;
 template <class T>
 class Graph {
 public:
-    virtual ~Graph() {}
     //return queue that maintain all the Points that have a direct access to the Node p
     virtual queue<Node<T>> getNeighbors(Node<T> n)=0;
+
+    virtual ~Graph() {}
 };
+
 
 #endif //EX1_GRAPH_H

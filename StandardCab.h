@@ -15,6 +15,7 @@ public:
 
     double getRate() const;
 
+    virtual ~StandardCab();
 };
 
 

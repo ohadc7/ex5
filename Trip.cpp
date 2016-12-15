@@ -32,4 +32,7 @@ int Trip::getPassedMeters() const {
     return passedMeters;
 }
 
+Trip::~Trip() {
+}
+
 

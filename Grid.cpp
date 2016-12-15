@@ -42,13 +42,16 @@ queue<Node<Point>> Grid::getNeighbors(Node<Point> n) {
     //if the point isn't in the graph, return null queue
     if ((x < 0) || (y < 0) || (x >= width) || (y >= height))
         return neighbors;
-    if ((x > 0) && (vectorOfVerticalVectors[x-1][y].isAvailable() == true))
+    if ((x > 0) && vectorOfVerticalVectors[x - 1][y].isAvailable())
         neighbors.push(this->vectorOfVerticalVectors[x-1][y]);
-    if ((y + 1 < height) && (vectorOfVerticalVectors[x][y+1].isAvailable() == true))
+    if ((y + 1 < height) && vectorOfVerticalVectors[x][y + 1].isAvailable())
         neighbors.push(this->vectorOfVerticalVectors[x][y+1]);
-    if ((x + 1 < width) && (vectorOfVerticalVectors[x+1][y].isAvailable() == true))
+    if ((x + 1 < width) && vectorOfVerticalVectors[x + 1][y].isAvailable())
         neighbors.push(this->vectorOfVerticalVectors[x+1][y]);
-    if ((y > 0) && (vectorOfVerticalVectors[x][y-1].isAvailable() == true))
+    if ((y > 0) && vectorOfVerticalVectors[x][y - 1].isAvailable())
         neighbors.push(this->vectorOfVerticalVectors[x][y-1]);
     return neighbors;
+}
+
+Grid::~Grid() {
 }

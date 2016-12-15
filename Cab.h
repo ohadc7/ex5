@@ -29,6 +29,8 @@ public:
 
     virtual double getRate() const = 0;
 
+    virtual ~Cab();
+
 };
 
 

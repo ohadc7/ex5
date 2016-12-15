@@ -26,6 +26,7 @@ protected:
     virtual void TearDown() {
         delete cabForDriver1;
         delete cabForDriver2;
+        delete grid;
     }
 
 };

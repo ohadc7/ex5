@@ -36,6 +36,8 @@ public:
     void createTrip(InputParsing::parsedTripData);
 
     Cab* getCab(int id);
+
+    ~TaxiCenter();
 };
 
 
