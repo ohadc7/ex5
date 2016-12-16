@@ -2,7 +2,7 @@
 
 Trip::Trip(int rideId, Point startingPoint, Point endingPoint, int numOfPassengers, double taarif)
         : rideId(rideId), startingPoint(startingPoint), endingPoint(endingPoint),
-          numOfPassengers(numOfPassengers), rateOfTrip(taarif) {}
+          numOfPassengers(numOfPassengers), rateOfTrip(taarif), passedMeters(0) {}
 
 int Trip::getRideId() const {
     return rideId;
@@ -21,7 +21,7 @@ const list <Passenger> &Trip::getCustomers() const {
 }
 
 int Trip::getNumberOfPassengers() const {
-    return 0;
+    return customers.size();
 }
 
 double Trip::getRateOfTrip() const {

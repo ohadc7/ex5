@@ -1,11 +1,12 @@
 #include <string>
+#include <gtest/gtest.h>
 #include "ProgramFlow.h"
 
 using namespace std;
 
 int main(int argc, char* argv[]) {
 
-    //::testing::InitGoogleTest(&argc, argv);
+    ::testing::InitGoogleTest(&argc, argv);
 
     //scan input string (gridWidth_gridHeight,startX_startY,endX_endY) and parse it
     string inputString;
@@ -50,6 +51,6 @@ int main(int argc, char* argv[]) {
     cout << "vehicleId: " << d.vehicleId << endl << endl;
     //
 */
-    return 0;
-    //return RUN_ALL_TESTS();
+    //return 0;
+    return RUN_ALL_TESTS();
 }

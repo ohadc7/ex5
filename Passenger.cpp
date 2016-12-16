@@ -4,13 +4,16 @@ Passenger::Passenger(Point source, Point destination, bool isLuxury):
         source(source), destination(destination), isLuxury(isLuxury){}
 
 int Passenger::getSatisfaction() const{
-    return satisfactionNum;
+    int satisfaction = rand() % 5 + 1;
+    return satisfaction;
 }
 
 bool Passenger::getIsLuxury() {
+    //TBD
+    //ex1, ex2 and ex3 have not defined option to choose type of taxi by the customer
     return false;
 }
 
 int Passenger::giveFeedBack() {
-    return 0;
+    return this->getSatisfaction();
 }

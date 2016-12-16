@@ -57,6 +57,9 @@ void Driver::clientSatisfactions(int clientSatisfactions){
 }
 
 bool Driver::isAvailable() {
+    if (currentTrip == NULL) {
+        return false;
+    }
     return true;
 }
 

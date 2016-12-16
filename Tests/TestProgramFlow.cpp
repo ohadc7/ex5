@@ -6,8 +6,15 @@
 class TestProgramFlow: public ::testing::Test {
 protected:
     ProgramFlow pFlow;
+    Graph<Point>* graph;
 
-    TestProgramFlow() : pFlow() {}
+    TestProgramFlow() : pFlow() {
+        graph = new Grid(5,5);
+    }
+
+    virtual void TearDown() {
+        delete graph;
+    }
 };
 
 
@@ -23,7 +30,9 @@ TEST_F(TestProgramFlow, SanityChecks) {
     cab = pFlow.createCab(1133355, LUXURY_CAB, TESLA, BLUE);
     ASSERT_EQ(cab->getSpeed(), SPEED_OF_LUXURY_CAB);
 
-    //pFlow.createTaxiCenter();
+    BfsAlgorithm<Point> bfs(graph);
+    TaxiCenter taxiCenter = pFlow.createTaxiCenter(bfs);
+
 
     /*
      * we didn't test the methods of

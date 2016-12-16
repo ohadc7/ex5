@@ -58,7 +58,7 @@ TEST_F(TestTaxiCenter, SanityChecks) {
     ASSERT_EQ(driver1PositionAccordingToTaxiCenter, driver1Position);
 
     /*
-     * comment: currently, I don't check the ability of chooseBestDriver method to find
+     * comment: currently (ex2), I don't check the ability of chooseBestDriver method to find
      * the closet driver because the initial position of created driver isn't defined in
      * ex1 and we don't have methods that will make 2 drivers to be in 2 different positions.
 */
