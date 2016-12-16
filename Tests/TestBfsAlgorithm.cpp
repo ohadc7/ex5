@@ -1,6 +1,7 @@
 #include "gtest/gtest.h"
 #include "../BfsAlgorithm.h"
 
+/*
 class TestBfsAlgorithm : public ::testing::Test {
 protected:
     Grid *grid;
@@ -15,8 +16,13 @@ protected:
         delete grid;
     }
 };
+ */
 
-TEST_F(TestBfsAlgorithm,checkRoutes){
+TEST(TestBfsAlgorithm,checkRoutes){
+    vector<Point> listOfObstacles = vector<Point>();
+    Grid *grid = new Grid(10, 10, listOfObstacles);
+    BfsAlgorithm<Point> bfs = BfsAlgorithm<Point>(grid);
+    Point p;
 
     Node<Point> startPoint(Point(0, 0));
     Node<Point> endPoint(Point(5,5));
@@ -47,4 +53,6 @@ TEST_F(TestBfsAlgorithm,checkRoutes){
         bfsOutput2.pop();
         bfsTest2.pop();
     }
+
+    delete grid;
 }
