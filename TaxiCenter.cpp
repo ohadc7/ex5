@@ -69,5 +69,8 @@ Cab* TaxiCenter::getCab(int id) {
 }
 
 TaxiCenter::~TaxiCenter() {
+    for (unsigned int i = 0; i < listOfCabs.size(); i++) {
+        delete listOfCabs[i];
+    }
 }
 

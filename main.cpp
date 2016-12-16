@@ -10,7 +10,7 @@ int main(int argc, char* argv[]) {
     //scan input string (gridWidth_gridHeight,startX_startY,endX_endY) and parse it
     string inputString;
     ProgramFlow programFlow;
-    //programFlow.run();
+    programFlow.run();
 
     /*
     inputString = "3_3,0_0,1_1"; //for debugging (instead of the next line)
@@ -31,11 +31,11 @@ int main(int argc, char* argv[]) {
         cout << pointOfIdealPath << endl;
     }
     delete g;
-
+*/
 
 
     //check for inputParsing class:
-    //*
+    /*
     string sP = "2,3";
     Point p = ip.parsePoint(sP);
     cout << endl << endl << endl << p << endl << endl;

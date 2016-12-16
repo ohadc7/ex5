@@ -32,6 +32,8 @@ public:
     //(if no path from start to end, return empty stack).
     stack<Node<T>> navigate( Node<T> &start, Node<T> &end);
 
+    ~BfsAlgorithm() {}
+
 };
 
 

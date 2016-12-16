@@ -19,7 +19,7 @@ public:
 
     Cab * createCab(int id,int cabType, Model_Of_Car carModel, Color_Of_Car color);
 
-    BfsAlgorithm<Point> createGrid(int width, int height, vector<Point> listOfObstacles);
+    Graph<Point> *createGrid(int width, int height, vector<Point> listOfObstacles);
 };
 
 #endif //EX1_VERSION_1_1_PROGRAMFLOW_H

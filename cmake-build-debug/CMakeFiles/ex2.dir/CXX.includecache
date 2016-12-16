@@ -467,8 +467,6 @@ gtest/gtest.h
 /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/Graph.h
 ../Grid.h
 /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/Grid.h
-../ProgramFlow.h
-/home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/ProgramFlow.h
 
 /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/Tests/TestInputParsing.cpp
 gtest/gtest.h
@@ -495,6 +493,10 @@ gtest/gtest.h
 -
 ../ProgramFlow.h
 /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/ProgramFlow.h
+../StandardCab.h
+/home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/StandardCab.h
+../LuxuryCab.h
+/home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/LuxuryCab.h
 
 /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/Tests/TestTaxiCenter.cpp
 gtest/gtest.h
@@ -525,18 +527,6 @@ Passenger.h
 /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/main.cpp
 string
 -
-iostream
--
-gtest/gtest.h
--
-Node.h
-/home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/Node.h
-Grid.h
-/home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/Grid.h
-BfsAlgorithm.h
-/home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/BfsAlgorithm.h
-InputParsing.h
-/home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/InputParsing.h
 ProgramFlow.h
 /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/ProgramFlow.h
 

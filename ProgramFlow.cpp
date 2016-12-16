@@ -18,17 +18,20 @@ Driver ProgramFlow::createDriver(int id, int age, Status_Of_Marriage status,
 
 Cab *ProgramFlow::createCab(int id, int cabType, Model_Of_Car carModel, Color_Of_Car color) {
     if (cabType == 1) {
-        return new StandardCab(id, carModel, color);
+        Cab *standard = new StandardCab(id, carModel, color);
+        return standard;
     } else {
-        return new LuxuryCab(id, carModel, color);
+        Cab *luxury = new LuxuryCab(id, carModel, color);
+        return luxury;
     }
 }
 
 
-BfsAlgorithm<Point> ProgramFlow::createGrid(int width, int height, vector<Point> listOfObstacles) {
+Graph<Point> *ProgramFlow::createGrid(int width, int height, vector<Point> listOfObstacles) {
     Graph<Point> *g = new Grid(width, height, listOfObstacles);
-    BfsAlgorithm<Point> bfs(g);
-    return bfs;
+    return g;
+    // BfsAlgorithm<Point> bfs(g);
+    //return bfs;
 }
 
 int ProgramFlow::run() {
@@ -48,7 +51,8 @@ int ProgramFlow::run() {
             listOfObstacles.push_back(p);
         }
     }
-    BfsAlgorithm<Point> bfs = createGrid(gd.gridWidth, gd.gridHeight, listOfObstacles);
+    Graph<Point> *grid = createGrid(gd.gridWidth, gd.gridHeight, listOfObstacles);
+    BfsAlgorithm<Point> bfs(grid);
     TaxiCenter taxiCenter = createTaxiCenter(bfs);
 
     while (true) {
@@ -83,7 +87,7 @@ int ProgramFlow::run() {
                 getline(cin, inputString);
                 try {
                      Point point(taxiCenter.getDriverLocation(stoi(inputString)));
-                    cout << point << '\n';
+                    cout << '\n' << point << '\n';
                 } catch (const char *msg) {
                     cerr << msg << endl;
                 }
@@ -94,6 +98,7 @@ int ProgramFlow::run() {
                 break;
             }
             case 7: {
+                delete grid;
                 return 0;
             }
             default:
