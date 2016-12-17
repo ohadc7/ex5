@@ -30,8 +30,6 @@ Cab *ProgramFlow::createCab(int id, int cabType, Model_Of_Car carModel, Color_Of
 Graph<Point> *ProgramFlow::createGrid(int width, int height, vector<Point> listOfObstacles) {
     Graph<Point> *g = new Grid(width, height, listOfObstacles);
     return g;
-    // BfsAlgorithm<Point> bfs(g);
-    //return bfs;
 }
 
 int ProgramFlow::run(istream &inputStream) {
@@ -86,7 +84,7 @@ int ProgramFlow::run(istream &inputStream) {
                 getline(inputStream, inputString);
                 try {
                      Point point(taxiCenter.getDriverLocation(stoi(inputString)));
-                    cout << '\n' << point << '\n';
+                    cout << point << '\n';
                 } catch (const char *msg) {
                     cerr << msg << endl;
                 }

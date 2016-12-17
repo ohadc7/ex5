@@ -21,7 +21,7 @@ const list <Passenger> &Trip::getCustomers() const {
 }
 
 int Trip::getNumberOfPassengers() const {
-    return customers.size();
+    return (int) customers.size();
 }
 
 double Trip::getRateOfTrip() const {

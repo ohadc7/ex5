@@ -42,26 +42,6 @@ Point InputParsing::parsePoint(string pointData) {
 
 InputParsing::parsedDriverData InputParsing::parseDriverData(string driverData) {
     vector<string> listOfStringsOfDriverParameters = this->splitStrings(driverData, 5);
-    /* OLD CODE (have to be deleted):
-    //fix status of marriage according to the character in the third string of the list (S/M/D/W)
-    //Status_Of_Marriage driverStatus = mapOfLetterToStatus.at(listOfStringsOfDriverParameters[2]);
-    if (listOfStringsOfDriverParameters[2] == "S") {
-        driverStatus = SINGLE;
-    } else if (listOfStringsOfDriverParameters[2] == "M") {
-        driverStatus = MARRIED;
-    } else if (listOfStringsOfDriverParameters[2] == "D") {
-        driverStatus = DIVORCED;
-    } else if (listOfStringsOfDriverParameters[2] == "W") {
-        driverStatus = WIDOWED;
-    }
-    //create Driver
-    Driver driver = Driver(stoi(listOfStringsOfDriverParameters[0]), stoi(listOfStringsOfDriverParameters[1]),
-                           driverStatus, stoi(listOfStringsOfDriverParameters[3]));
-    int vehicleId = stoi(listOfStringsOfDriverParameters[4]);
-    //create driverWithVehicleId struct
-    driverWithVehicleId driverWithVehicleIdStruct = {driver,
-                                                     vehicleId};
-    */
     parsedDriverData driverParameters;
     driverParameters.id = stoi(listOfStringsOfDriverParameters[0]);
     driverParameters.age = stoi(listOfStringsOfDriverParameters[1]);
