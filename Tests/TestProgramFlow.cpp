@@ -1,7 +1,7 @@
 #include <gtest/gtest.h>
-#include "../ProgramFlow.h"
-#include "../StandardCab.h"
-#include "../LuxuryCab.h"
+#include "../src/ProgramFlow.h"
+#include "../src/StandardCab.h"
+#include "../src/LuxuryCab.h"
 
 class TestProgramFlow: public ::testing::Test {
 protected:
@@ -29,8 +29,8 @@ TEST_F(TestProgramFlow, simpleMethods) {
     ASSERT_EQ(cab->getId(), 2244466);
     ASSERT_EQ(cab->getSpeed(), SPEED_OF_STANDARD_CAB);
     //luxury cab
-    cab = pFlow.createCab(1133355, LUXURY_CAB, TESLA, BLUE);
-    ASSERT_EQ(cab->getSpeed(), SPEED_OF_LUXURY_CAB);
+    Cab *cab2 = pFlow.createCab(1133355, LUXURY_CAB, TESLA, BLUE);
+    ASSERT_EQ(cab2->getSpeed(), SPEED_OF_LUXURY_CAB);
 
     /*
      * we didn't test the methods of
@@ -38,6 +38,8 @@ TEST_F(TestProgramFlow, simpleMethods) {
      * and "createGrid(int width, int height, vector<Point> listOfObstacles)" because this two
      * methods just create objects we specificly check's in TestDriver and TestGrid.
      * */
+    delete cab;
+    delete cab2;
 }
 
 TEST_F(TestProgramFlow, runMethod) {
