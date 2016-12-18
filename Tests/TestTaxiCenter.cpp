@@ -44,7 +44,7 @@ TEST_F(TestTaxiCenter, SanityChecks) {
 
     //check orderATrip, chooseBestDriver, createTrip, sendTaxi methods
     //("orderATrip" is checked explicitly and the other 3 methods are checked implicitly)
-    taxiCenter.orderATrip(reuven);
+    //taxiCenter.orderATrip(reuven);
     vector<Trip *> taxiCenterListOfTrip = taxiCenter.getListOfTrips();
     ASSERT_EQ(taxiCenterListOfTrip.size(), 1);
     Trip *taxiCenterTrip = taxiCenterListOfTrip.front();

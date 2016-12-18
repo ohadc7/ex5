@@ -13,17 +13,12 @@ private:
     vector<Trip *> listOfTrips;
     vector<Cab*> listOfCabs;
     BfsAlgorithm<Point> bfsInstance;
-    //Driver chooseBestDriver(Passenger passenger);
-    void sendTaxi(Trip trip);
-
 public:
     TaxiCenter(BfsAlgorithm<Point> &bfsInstance);
 
     void addDriver(Driver driver);
     void addCab(Cab* cab);
     void startDriving();
-
-    void orderATrip(Passenger passenger);
 
     const vector<Driver> &getListOfDrivers() const;
 

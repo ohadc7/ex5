@@ -9,11 +9,6 @@ Driver::Driver(int id, int age, Status_Of_Marriage status, int yearsOfExperience
     this->attachCabToDriver(cab);
 }
 
-/*Driver::Driver(int id, int age, Status_Of_Marriage status, int yearsOfExperience, Cab **cab) :
-        Driver(id, age, status, yearsOfExperience,vehicleId) {
-    this->attachCabToDriver(cab);
-}*/
-
 int Driver::getId() const {
     return id;
 }
@@ -57,10 +52,7 @@ void Driver::clientSatisfactions(int clientSatisfactions){
 }
 
 bool Driver::isAvailable() {
-    if (currentTrip == NULL) {
-        return false;
-    }
-    return true;
+    return currentTrip != NULL;
 }
 
 void Driver::attachCabToDriver(Cab *infoCab) {

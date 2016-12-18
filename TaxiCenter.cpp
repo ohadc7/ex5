@@ -6,16 +6,8 @@ void TaxiCenter::createTrip(InputParsing::parsedTripData parsedTripDataTrip) {
     listOfTrips.push_back(trip);
 }
 
-void TaxiCenter::sendTaxi(Trip trip) {
-
-}
-
 void TaxiCenter::addDriver(Driver driver) {
     listOfDrivers.push_back(driver);
-}
-
-void TaxiCenter::orderATrip(Passenger passenger) {
-
 }
 
 const vector<Driver> &TaxiCenter::getListOfDrivers() const {
@@ -49,9 +41,7 @@ void TaxiCenter::addCab(Cab *cab) {
 void TaxiCenter::startDriving() {
     for (unsigned int i = 0; i < listOfDrivers.size(); i++) {
         if (listOfTrips.size() > 0) {
-            if ((listOfDrivers.at(i).currentPlace() == (listOfTrips.front()->getEndingPoint()))
-                ||
-                (listOfDrivers.at(i).currentPlace() == listOfTrips.front()->getStartingPoint())) {
+            if ((listOfDrivers.at(i).currentPlace() == listOfTrips.front()->getStartingPoint())) {
                 listOfDrivers.at(i).assignTrip(listOfTrips.front());
                 listOfDrivers.at(i).setCurrentLocation();
                 delete listOfTrips[i];

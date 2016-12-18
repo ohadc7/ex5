@@ -1,23 +1,6 @@
 #include "gtest/gtest.h"
 #include "../BfsAlgorithm.h"
 
-/*
-class TestBfsAlgorithm : public ::testing::Test {
-protected:
-    Grid *grid;
-    BfsAlgorithm<Point> bfs;
-    vector<Point> listOfObstacles;
-    Point p;
-
-    TestBfsAlgorithm() : listOfObstacles(vector<Point>()), grid(new Grid(10, 10, listOfObstacles)),
-                         bfs(BfsAlgorithm<Point>(grid)) {}
-
-    virtual void TearDown() {
-        delete grid;
-    }
-};
- */
-
 TEST(TestBfsAlgorithm,checkRoutes){
     vector<Point> listOfObstacles = vector<Point>();
     Grid *grid = new Grid(10, 10, listOfObstacles);
