@@ -41,13 +41,14 @@ void TaxiCenter::addCab(Cab *cab) {
 void TaxiCenter::startDriving() {
     for (unsigned int i = 0; i < listOfDrivers.size(); i++) {
         if (listOfTrips.size() > 0) {
-            if ((listOfDrivers.at(i).currentPlace() == listOfTrips.front()->getStartingPoint())) {
-                listOfDrivers.at(i).assignTrip(listOfTrips.front());
-                listOfDrivers.at(i).setCurrentLocation();
-                delete listOfTrips[i];
-                listOfTrips.pop_back();
+            for (unsigned int j = 0; j < listOfDrivers.size(); j++) {
+                if ((listOfDrivers.at(i).currentPlace() == listOfTrips.at(j)->getStartingPoint())) {
+                    listOfDrivers.at(i).assignTrip(listOfTrips.front());
+                    listOfDrivers.at(i).setCurrentLocation();
+                    delete listOfTrips[i];
+                    listOfTrips.pop_back();
+                }
             }
-
         }
     }
 }
@@ -67,3 +68,12 @@ TaxiCenter::~TaxiCenter() {
     }
 }
 
+/*const vector<Driver> &TaxiCenter::getListOfAvilableDrivers() const {
+    return <#initializer#>;
+}
+
+void TaxiCenter::addAvialbleDriver(Driver driver) {
+
+}
+
+*/

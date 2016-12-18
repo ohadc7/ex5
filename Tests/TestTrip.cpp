@@ -31,5 +31,4 @@ TEST_F(TestTrip, GettersCheck) {
     ASSERT_EQ(trip.getStartingPoint(), Point(0, 0));
     ASSERT_EQ(trip.getEndingPoint(), Point(3, 3));
     ASSERT_EQ(trip.getPassedMeters(), 0) << "ERROR: passed meters of constructed trip isn't 0";
-    ASSERT_EQ(trip.getNumberOfPassengers(), 4) << "ERROR: this trip has to contain 4 passengers";
 }

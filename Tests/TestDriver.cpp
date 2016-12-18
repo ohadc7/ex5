@@ -51,7 +51,7 @@ protected:
                                                            "check if inserted passenger works";
     EXPECT_EQ(driver2.getListOfPassengers().size(),0)<<"check that empty listOfPassenger is empty";
   //  EXPECT_EQ(driver.getInfoCab()->getColor(),cabForDriver1->getColor()) << "test the attached cab";
-    ASSERT_EQ(driver3.isAvailable(), false) << "check if availability works";
+    ASSERT_EQ(driver3.isAvailable(), true) << "check if availability works";
 
 
 

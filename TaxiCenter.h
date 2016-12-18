@@ -10,6 +10,7 @@
 class TaxiCenter {
 private:
     vector<Driver> listOfDrivers;
+    vector<Driver> listOfAvialbeDrivers;
     vector<Trip *> listOfTrips;
     vector<Cab*> listOfCabs;
     BfsAlgorithm<Point> bfsInstance;
@@ -23,6 +24,10 @@ public:
     const vector<Driver> &getListOfDrivers() const;
 
     const vector<Trip *> &getListOfTrips() const;
+
+    //void addAvialbleDriver(Driver driver);
+
+    // const vector<Driver> &getListOfAvilableDrivers() const;
 
     Point getDriverLocation(int driverId);
 

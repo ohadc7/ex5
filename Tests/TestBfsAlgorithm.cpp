@@ -5,7 +5,6 @@ TEST(TestBfsAlgorithm,checkRoutes){
     vector<Point> listOfObstacles = vector<Point>();
     Grid *grid = new Grid(10, 10, listOfObstacles);
     BfsAlgorithm<Point> bfs = BfsAlgorithm<Point>(grid);
-    Point p;
 
     Node<Point> startPoint(Point(0, 0));
     Node<Point> endPoint(Point(5,5));
