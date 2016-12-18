@@ -40,12 +40,13 @@ void TaxiCenter::addCab(Cab *cab) {
 void TaxiCenter::startDriving() {
     for (unsigned int i = 0; i < listOfDrivers.size(); i++) {
         if (listOfTrips.size() > 0) {
-            for (unsigned int j = 0; j < listOfDrivers.size(); j++) {
+            for (unsigned int j = 0; j < listOfTrips.size(); j++) {
                 if ((listOfDrivers.at(i).currentPlace() == listOfTrips.at(j)->getStartingPoint())) {
-                    listOfDrivers.at(i).assignTrip(listOfTrips.front());
+                    listOfDrivers.at(i).assignTrip(listOfTrips.at(j));
                     listOfDrivers.at(i).setCurrentLocation();
                     delete listOfTrips[i];
-                    listOfTrips.pop_back();
+                    listOfTrips.erase(listOfTrips.begin() + j);
+                    break;
                 }
             }
         }
