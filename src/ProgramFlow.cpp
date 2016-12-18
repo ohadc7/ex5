@@ -32,8 +32,8 @@ Graph<Point> *ProgramFlow::createGrid(int width, int height, vector<Point> listO
     return g;
 }
 
-//(the default inputStream is 'cin')
-int ProgramFlow::run(istream &inputStream) {
+//(the default inputStream is 'cin', the default outputStream is 'cout')
+int ProgramFlow::run(istream &inputStream, ostream &outputStream) {
     string inputString;
     //get the grid dimensions
     getline(inputStream, inputString);
@@ -94,7 +94,7 @@ int ProgramFlow::run(istream &inputStream) {
                 getline(inputStream, inputString);
                 try {
                      Point point(taxiCenter.getDriverLocation(stoi(inputString)));
-                    cout << point << '\n';
+                    outputStream << point << '\n';
                 } catch (const char *msg) {
                     cerr << msg << endl;
                 }

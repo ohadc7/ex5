@@ -1,7 +1,7 @@
 #include <gtest/gtest.h>
-#include "../src/ProgramFlow.h"
-#include "../src/StandardCab.h"
-#include "../src/LuxuryCab.h"
+#include "../ProgramFlow.h"
+#include "../StandardCab.h"
+#include "../LuxuryCab.h"
 
 class TestProgramFlow: public ::testing::Test {
 protected:
@@ -29,8 +29,8 @@ TEST_F(TestProgramFlow, simpleMethods) {
     ASSERT_EQ(cab->getId(), 2244466);
     ASSERT_EQ(cab->getSpeed(), SPEED_OF_STANDARD_CAB);
     //luxury cab
-    Cab *cab2 = pFlow.createCab(1133355, LUXURY_CAB, TESLA, BLUE);
-    ASSERT_EQ(cab2->getSpeed(), SPEED_OF_LUXURY_CAB);
+    cab = pFlow.createCab(1133355, LUXURY_CAB, TESLA, BLUE);
+    ASSERT_EQ(cab->getSpeed(), SPEED_OF_LUXURY_CAB);
 
     /*
      * we didn't test the methods of
@@ -38,15 +38,18 @@ TEST_F(TestProgramFlow, simpleMethods) {
      * and "createGrid(int width, int height, vector<Point> listOfObstacles)" because this two
      * methods just create objects we specificly check's in TestDriver and TestGrid.
      * */
+}
+
+TEST_F(TestProgramFlow, runMethod) {
 
     BfsAlgorithm<Point> bfs(graph);
     TaxiCenter taxiCenter = pFlow.createTaxiCenter(bfs);
-    istringstream iss("3 3\n0\n3\n0,1,H,G\n1\n0,30,M,1,0\n2\n0,0,0,0,2,1,20\n6\n7");
-    pFlow.run(iss);
-
-    /*  the following test has to be performed in the middle of the run method
-    (after "3 3\n0\n3\n0,1,H,G\n1\n0,30,M,1,0\n2\n0,0,0,0,2,1,20\n6\n"
-    and before "7")  */
-    delete cab;
-    delete cab2;
+    //pass input to the run method and check its output
+    istringstream iss("3 3\n0\n3\n0,1,H,G\n1\n0,30,M,1,0\n2\n0,0,0,0,2,1,20\n6\n4\n0\n7");
+    ostringstream oss;
+    pFlow.run(iss, oss);
+    string s = oss.str();
+    ASSERT_EQ(s, "(0,2)\n") << "ERROR: query about the driver whose id is 0 should print"
+                        "its current place (after the trip). It has to be the point (0,2)";
 }
+
