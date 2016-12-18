@@ -38,19 +38,18 @@ TEST_F(TestProgramFlow, simpleMethods) {
      * and "createGrid(int width, int height, vector<Point> listOfObstacles)" because this two
      * methods just create objects we specificly check's in TestDriver and TestGrid.
      * */
-
-    BfsAlgorithm<Point> bfs(graph);
-    TaxiCenter taxiCenter = pFlow.createTaxiCenter(bfs);
-    istringstream iss("3 3\n0\n3\n0,1,H,G\n1\n0,30,M,1,0\n2\n0,0,0,0,2,1,20\n6\n7");
-    pFlow.run(iss);
-
-    /*  the following test has to be performed in the middle of the run method
-    (after "3 3\n0\n3\n0,1,H,G\n1\n0,30,M,1,0\n2\n0,0,0,0,2,1,20\n6\n"
-    and before "7")  */
-    //ASSERT_EQ(taxiCenter.getDriverLocation(0), Point(0, 2));
 }
 
 TEST_F(TestProgramFlow, runMethod) {
 
+    BfsAlgorithm<Point> bfs(graph);
+    TaxiCenter taxiCenter = pFlow.createTaxiCenter(bfs);
+    //pass input to the run method and check its output
+    istringstream iss("3 3\n0\n3\n0,1,H,G\n1\n0,30,M,1,0\n2\n0,0,0,0,2,1,20\n6\n4\n0\n7");
+    ostringstream oss;
+    pFlow.run(iss, oss);
+    string s = oss.str();
+    ASSERT_EQ(s, "(0,2)\n") << "ERROR: query about the driver whose id is 0 should print"
+                        "its current place (after the trip). It has to be the point (0,2)";
 }
 
