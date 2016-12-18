@@ -44,7 +44,7 @@ void TaxiCenter::startDriving() {
                 if ((listOfDrivers.at(i).currentPlace() == listOfTrips.at(j)->getStartingPoint())) {
                     listOfDrivers.at(i).assignTrip(listOfTrips.at(j));
                     listOfDrivers.at(i).setCurrentLocation();
-                    delete listOfTrips[i];
+                    delete listOfTrips[j];
                     listOfTrips.erase(listOfTrips.begin() + j);
                     break;
                 }
