@@ -1,7 +1,7 @@
 #include "gtest/gtest.h"
-#include "../Driver.h"
-#include "../StandardCab.h"
-#include "../LuxuryCab.h"
+#include "../src/Driver.h"
+#include "../src/StandardCab.h"
+#include "../src/LuxuryCab.h"
 
 class TestDriver: public ::testing::Test {
 

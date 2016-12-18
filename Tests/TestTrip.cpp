@@ -1,5 +1,5 @@
 #include "gtest/gtest.h"
-#include "../Trip.h"
+#include "../src/Trip.h"
 
 class TestTrip : public ::testing::Test {
 

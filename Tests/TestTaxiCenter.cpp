@@ -1,6 +1,6 @@
 #include "gtest/gtest.h"
-#include "../TaxiCenter.h"
-#include "../StandardCab.h"
+#include "../src/TaxiCenter.h"
+#include "../src/StandardCab.h"
 
 class TestTaxiCenter : public ::testing::Test {
 

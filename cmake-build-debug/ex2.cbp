@@ -336,75 +336,6 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/BfsAlgorithm.h">
-			<Option target="ex2"/>
-		</Unit>
-		<Unit filename="/home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/Cab.cpp">
-			<Option target="ex2"/>
-		</Unit>
-		<Unit filename="/home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/Cab.h">
-			<Option target="ex2"/>
-		</Unit>
-		<Unit filename="/home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/Driver.cpp">
-			<Option target="ex2"/>
-		</Unit>
-		<Unit filename="/home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/Driver.h">
-			<Option target="ex2"/>
-		</Unit>
-		<Unit filename="/home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/Graph.h">
-			<Option target="ex2"/>
-		</Unit>
-		<Unit filename="/home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/Grid.cpp">
-			<Option target="ex2"/>
-		</Unit>
-		<Unit filename="/home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/Grid.h">
-			<Option target="ex2"/>
-		</Unit>
-		<Unit filename="/home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/InputParsing.cpp">
-			<Option target="ex2"/>
-		</Unit>
-		<Unit filename="/home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/InputParsing.h">
-			<Option target="ex2"/>
-		</Unit>
-		<Unit filename="/home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/LuxuryCab.cpp">
-			<Option target="ex2"/>
-		</Unit>
-		<Unit filename="/home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/LuxuryCab.h">
-			<Option target="ex2"/>
-		</Unit>
-		<Unit filename="/home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/Node.h">
-			<Option target="ex2"/>
-		</Unit>
-		<Unit filename="/home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/Passenger.cpp">
-			<Option target="ex2"/>
-		</Unit>
-		<Unit filename="/home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/Passenger.h">
-			<Option target="ex2"/>
-		</Unit>
-		<Unit filename="/home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/Point.cpp">
-			<Option target="ex2"/>
-		</Unit>
-		<Unit filename="/home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/Point.h">
-			<Option target="ex2"/>
-		</Unit>
-		<Unit filename="/home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/ProgramFlow.cpp">
-			<Option target="ex2"/>
-		</Unit>
-		<Unit filename="/home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/ProgramFlow.h">
-			<Option target="ex2"/>
-		</Unit>
-		<Unit filename="/home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/StandardCab.cpp">
-			<Option target="ex2"/>
-		</Unit>
-		<Unit filename="/home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/StandardCab.h">
-			<Option target="ex2"/>
-		</Unit>
-		<Unit filename="/home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/TaxiCenter.cpp">
-			<Option target="ex2"/>
-		</Unit>
-		<Unit filename="/home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/TaxiCenter.h">
-			<Option target="ex2"/>
-		</Unit>
 		<Unit filename="/home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/Tests/TestBfsAlgorithm.cpp">
 			<Option target="ex2"/>
 		</Unit>
@@ -435,10 +366,7 @@
 		<Unit filename="/home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/Tests/TestTrip.cpp">
 			<Option target="ex2"/>
 		</Unit>
-		<Unit filename="/home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/Trip.cpp">
-			<Option target="ex2"/>
-		</Unit>
-		<Unit filename="/home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/Trip.h">
+		<Unit filename="/home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/Tests/main_test.cpp">
 			<Option target="ex2"/>
 		</Unit>
 		<Unit filename="/home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/lib/googletest-master/googlemock/src/gmock-all.cc">
@@ -456,7 +384,82 @@
 		<Unit filename="/home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/lib/googletest-master/googletest/src/gtest_main.cc">
 			<Option target="gtest_main"/>
 		</Unit>
-		<Unit filename="/home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/main.cpp">
+		<Unit filename="/home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/src/BfsAlgorithm.h">
+			<Option target="ex2"/>
+		</Unit>
+		<Unit filename="/home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/src/Cab.cpp">
+			<Option target="ex2"/>
+		</Unit>
+		<Unit filename="/home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/src/Cab.h">
+			<Option target="ex2"/>
+		</Unit>
+		<Unit filename="/home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/src/Driver.cpp">
+			<Option target="ex2"/>
+		</Unit>
+		<Unit filename="/home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/src/Driver.h">
+			<Option target="ex2"/>
+		</Unit>
+		<Unit filename="/home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/src/Graph.h">
+			<Option target="ex2"/>
+		</Unit>
+		<Unit filename="/home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/src/Grid.cpp">
+			<Option target="ex2"/>
+		</Unit>
+		<Unit filename="/home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/src/Grid.h">
+			<Option target="ex2"/>
+		</Unit>
+		<Unit filename="/home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/src/InputParsing.cpp">
+			<Option target="ex2"/>
+		</Unit>
+		<Unit filename="/home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/src/InputParsing.h">
+			<Option target="ex2"/>
+		</Unit>
+		<Unit filename="/home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/src/LuxuryCab.cpp">
+			<Option target="ex2"/>
+		</Unit>
+		<Unit filename="/home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/src/LuxuryCab.h">
+			<Option target="ex2"/>
+		</Unit>
+		<Unit filename="/home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/src/Node.h">
+			<Option target="ex2"/>
+		</Unit>
+		<Unit filename="/home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/src/Passenger.cpp">
+			<Option target="ex2"/>
+		</Unit>
+		<Unit filename="/home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/src/Passenger.h">
+			<Option target="ex2"/>
+		</Unit>
+		<Unit filename="/home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/src/Point.cpp">
+			<Option target="ex2"/>
+		</Unit>
+		<Unit filename="/home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/src/Point.h">
+			<Option target="ex2"/>
+		</Unit>
+		<Unit filename="/home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/src/ProgramFlow.cpp">
+			<Option target="ex2"/>
+		</Unit>
+		<Unit filename="/home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/src/ProgramFlow.h">
+			<Option target="ex2"/>
+		</Unit>
+		<Unit filename="/home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/src/StandardCab.cpp">
+			<Option target="ex2"/>
+		</Unit>
+		<Unit filename="/home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/src/StandardCab.h">
+			<Option target="ex2"/>
+		</Unit>
+		<Unit filename="/home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/src/TaxiCenter.cpp">
+			<Option target="ex2"/>
+		</Unit>
+		<Unit filename="/home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/src/TaxiCenter.h">
+			<Option target="ex2"/>
+		</Unit>
+		<Unit filename="/home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/src/Trip.cpp">
+			<Option target="ex2"/>
+		</Unit>
+		<Unit filename="/home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/src/Trip.h">
+			<Option target="ex2"/>
+		</Unit>
+		<Unit filename="/home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/src/main.cpp">
 			<Option target="ex2"/>
 		</Unit>
 		<Unit filename="/home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/CMakeLists.txt">

@@ -1,5 +1,5 @@
 #include <gtest/gtest.h>
-#include "../InputParsing.h"
+#include "../src/InputParsing.h"
 
 class TestInputParsing: public ::testing::Test {
 protected:

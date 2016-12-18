@@ -1,5 +1,5 @@
 #include "gtest/gtest.h"
-#include "../BfsAlgorithm.h"
+#include "../src/BfsAlgorithm.h"
 
 TEST(TestBfsAlgorithm,checkRoutes){
     vector<Point> listOfObstacles = vector<Point>();

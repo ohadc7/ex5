@@ -1,7 +1,7 @@
 #include <gtest/gtest.h>
-#include "../Point.h"
-#include "../Graph.h"
-#include "../Grid.h"
+#include "../src/Point.h"
+#include "../src/Graph.h"
+#include "../src/Grid.h"
 
 class TestGrid: public ::testing::Test {
 protected:

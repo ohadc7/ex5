@@ -57,292 +57,292 @@ include CMakeFiles/ex2.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/ex2.dir/flags.make
 
-CMakeFiles/ex2.dir/main.cpp.o: CMakeFiles/ex2.dir/flags.make
-CMakeFiles/ex2.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/ex2.dir/main.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ex2.dir/main.cpp.o -c /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/main.cpp
+CMakeFiles/ex2.dir/src/main.cpp.o: CMakeFiles/ex2.dir/flags.make
+CMakeFiles/ex2.dir/src/main.cpp.o: ../src/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/ex2.dir/src/main.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ex2.dir/src/main.cpp.o -c /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/src/main.cpp
 
-CMakeFiles/ex2.dir/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ex2.dir/main.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/main.cpp > CMakeFiles/ex2.dir/main.cpp.i
+CMakeFiles/ex2.dir/src/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ex2.dir/src/main.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/src/main.cpp > CMakeFiles/ex2.dir/src/main.cpp.i
 
-CMakeFiles/ex2.dir/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ex2.dir/main.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/main.cpp -o CMakeFiles/ex2.dir/main.cpp.s
+CMakeFiles/ex2.dir/src/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ex2.dir/src/main.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/src/main.cpp -o CMakeFiles/ex2.dir/src/main.cpp.s
 
-CMakeFiles/ex2.dir/main.cpp.o.requires:
+CMakeFiles/ex2.dir/src/main.cpp.o.requires:
 
-.PHONY : CMakeFiles/ex2.dir/main.cpp.o.requires
+.PHONY : CMakeFiles/ex2.dir/src/main.cpp.o.requires
 
-CMakeFiles/ex2.dir/main.cpp.o.provides: CMakeFiles/ex2.dir/main.cpp.o.requires
-	$(MAKE) -f CMakeFiles/ex2.dir/build.make CMakeFiles/ex2.dir/main.cpp.o.provides.build
-.PHONY : CMakeFiles/ex2.dir/main.cpp.o.provides
+CMakeFiles/ex2.dir/src/main.cpp.o.provides: CMakeFiles/ex2.dir/src/main.cpp.o.requires
+	$(MAKE) -f CMakeFiles/ex2.dir/build.make CMakeFiles/ex2.dir/src/main.cpp.o.provides.build
+.PHONY : CMakeFiles/ex2.dir/src/main.cpp.o.provides
 
-CMakeFiles/ex2.dir/main.cpp.o.provides.build: CMakeFiles/ex2.dir/main.cpp.o
+CMakeFiles/ex2.dir/src/main.cpp.o.provides.build: CMakeFiles/ex2.dir/src/main.cpp.o
 
 
-CMakeFiles/ex2.dir/Grid.cpp.o: CMakeFiles/ex2.dir/flags.make
-CMakeFiles/ex2.dir/Grid.cpp.o: ../Grid.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/ex2.dir/Grid.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ex2.dir/Grid.cpp.o -c /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/Grid.cpp
+CMakeFiles/ex2.dir/src/Grid.cpp.o: CMakeFiles/ex2.dir/flags.make
+CMakeFiles/ex2.dir/src/Grid.cpp.o: ../src/Grid.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/ex2.dir/src/Grid.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ex2.dir/src/Grid.cpp.o -c /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/src/Grid.cpp
 
-CMakeFiles/ex2.dir/Grid.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ex2.dir/Grid.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/Grid.cpp > CMakeFiles/ex2.dir/Grid.cpp.i
+CMakeFiles/ex2.dir/src/Grid.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ex2.dir/src/Grid.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/src/Grid.cpp > CMakeFiles/ex2.dir/src/Grid.cpp.i
 
-CMakeFiles/ex2.dir/Grid.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ex2.dir/Grid.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/Grid.cpp -o CMakeFiles/ex2.dir/Grid.cpp.s
+CMakeFiles/ex2.dir/src/Grid.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ex2.dir/src/Grid.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/src/Grid.cpp -o CMakeFiles/ex2.dir/src/Grid.cpp.s
 
-CMakeFiles/ex2.dir/Grid.cpp.o.requires:
+CMakeFiles/ex2.dir/src/Grid.cpp.o.requires:
 
-.PHONY : CMakeFiles/ex2.dir/Grid.cpp.o.requires
+.PHONY : CMakeFiles/ex2.dir/src/Grid.cpp.o.requires
 
-CMakeFiles/ex2.dir/Grid.cpp.o.provides: CMakeFiles/ex2.dir/Grid.cpp.o.requires
-	$(MAKE) -f CMakeFiles/ex2.dir/build.make CMakeFiles/ex2.dir/Grid.cpp.o.provides.build
-.PHONY : CMakeFiles/ex2.dir/Grid.cpp.o.provides
+CMakeFiles/ex2.dir/src/Grid.cpp.o.provides: CMakeFiles/ex2.dir/src/Grid.cpp.o.requires
+	$(MAKE) -f CMakeFiles/ex2.dir/build.make CMakeFiles/ex2.dir/src/Grid.cpp.o.provides.build
+.PHONY : CMakeFiles/ex2.dir/src/Grid.cpp.o.provides
 
-CMakeFiles/ex2.dir/Grid.cpp.o.provides.build: CMakeFiles/ex2.dir/Grid.cpp.o
+CMakeFiles/ex2.dir/src/Grid.cpp.o.provides.build: CMakeFiles/ex2.dir/src/Grid.cpp.o
 
 
-CMakeFiles/ex2.dir/Point.cpp.o: CMakeFiles/ex2.dir/flags.make
-CMakeFiles/ex2.dir/Point.cpp.o: ../Point.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/ex2.dir/Point.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ex2.dir/Point.cpp.o -c /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/Point.cpp
+CMakeFiles/ex2.dir/src/Point.cpp.o: CMakeFiles/ex2.dir/flags.make
+CMakeFiles/ex2.dir/src/Point.cpp.o: ../src/Point.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/ex2.dir/src/Point.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ex2.dir/src/Point.cpp.o -c /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/src/Point.cpp
 
-CMakeFiles/ex2.dir/Point.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ex2.dir/Point.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/Point.cpp > CMakeFiles/ex2.dir/Point.cpp.i
+CMakeFiles/ex2.dir/src/Point.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ex2.dir/src/Point.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/src/Point.cpp > CMakeFiles/ex2.dir/src/Point.cpp.i
 
-CMakeFiles/ex2.dir/Point.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ex2.dir/Point.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/Point.cpp -o CMakeFiles/ex2.dir/Point.cpp.s
+CMakeFiles/ex2.dir/src/Point.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ex2.dir/src/Point.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/src/Point.cpp -o CMakeFiles/ex2.dir/src/Point.cpp.s
 
-CMakeFiles/ex2.dir/Point.cpp.o.requires:
+CMakeFiles/ex2.dir/src/Point.cpp.o.requires:
 
-.PHONY : CMakeFiles/ex2.dir/Point.cpp.o.requires
+.PHONY : CMakeFiles/ex2.dir/src/Point.cpp.o.requires
 
-CMakeFiles/ex2.dir/Point.cpp.o.provides: CMakeFiles/ex2.dir/Point.cpp.o.requires
-	$(MAKE) -f CMakeFiles/ex2.dir/build.make CMakeFiles/ex2.dir/Point.cpp.o.provides.build
-.PHONY : CMakeFiles/ex2.dir/Point.cpp.o.provides
+CMakeFiles/ex2.dir/src/Point.cpp.o.provides: CMakeFiles/ex2.dir/src/Point.cpp.o.requires
+	$(MAKE) -f CMakeFiles/ex2.dir/build.make CMakeFiles/ex2.dir/src/Point.cpp.o.provides.build
+.PHONY : CMakeFiles/ex2.dir/src/Point.cpp.o.provides
 
-CMakeFiles/ex2.dir/Point.cpp.o.provides.build: CMakeFiles/ex2.dir/Point.cpp.o
+CMakeFiles/ex2.dir/src/Point.cpp.o.provides.build: CMakeFiles/ex2.dir/src/Point.cpp.o
 
 
-CMakeFiles/ex2.dir/InputParsing.cpp.o: CMakeFiles/ex2.dir/flags.make
-CMakeFiles/ex2.dir/InputParsing.cpp.o: ../InputParsing.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/ex2.dir/InputParsing.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ex2.dir/InputParsing.cpp.o -c /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/InputParsing.cpp
+CMakeFiles/ex2.dir/src/InputParsing.cpp.o: CMakeFiles/ex2.dir/flags.make
+CMakeFiles/ex2.dir/src/InputParsing.cpp.o: ../src/InputParsing.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/ex2.dir/src/InputParsing.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ex2.dir/src/InputParsing.cpp.o -c /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/src/InputParsing.cpp
 
-CMakeFiles/ex2.dir/InputParsing.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ex2.dir/InputParsing.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/InputParsing.cpp > CMakeFiles/ex2.dir/InputParsing.cpp.i
+CMakeFiles/ex2.dir/src/InputParsing.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ex2.dir/src/InputParsing.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/src/InputParsing.cpp > CMakeFiles/ex2.dir/src/InputParsing.cpp.i
 
-CMakeFiles/ex2.dir/InputParsing.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ex2.dir/InputParsing.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/InputParsing.cpp -o CMakeFiles/ex2.dir/InputParsing.cpp.s
+CMakeFiles/ex2.dir/src/InputParsing.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ex2.dir/src/InputParsing.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/src/InputParsing.cpp -o CMakeFiles/ex2.dir/src/InputParsing.cpp.s
 
-CMakeFiles/ex2.dir/InputParsing.cpp.o.requires:
+CMakeFiles/ex2.dir/src/InputParsing.cpp.o.requires:
 
-.PHONY : CMakeFiles/ex2.dir/InputParsing.cpp.o.requires
+.PHONY : CMakeFiles/ex2.dir/src/InputParsing.cpp.o.requires
 
-CMakeFiles/ex2.dir/InputParsing.cpp.o.provides: CMakeFiles/ex2.dir/InputParsing.cpp.o.requires
-	$(MAKE) -f CMakeFiles/ex2.dir/build.make CMakeFiles/ex2.dir/InputParsing.cpp.o.provides.build
-.PHONY : CMakeFiles/ex2.dir/InputParsing.cpp.o.provides
+CMakeFiles/ex2.dir/src/InputParsing.cpp.o.provides: CMakeFiles/ex2.dir/src/InputParsing.cpp.o.requires
+	$(MAKE) -f CMakeFiles/ex2.dir/build.make CMakeFiles/ex2.dir/src/InputParsing.cpp.o.provides.build
+.PHONY : CMakeFiles/ex2.dir/src/InputParsing.cpp.o.provides
 
-CMakeFiles/ex2.dir/InputParsing.cpp.o.provides.build: CMakeFiles/ex2.dir/InputParsing.cpp.o
+CMakeFiles/ex2.dir/src/InputParsing.cpp.o.provides.build: CMakeFiles/ex2.dir/src/InputParsing.cpp.o
 
 
-CMakeFiles/ex2.dir/ProgramFlow.cpp.o: CMakeFiles/ex2.dir/flags.make
-CMakeFiles/ex2.dir/ProgramFlow.cpp.o: ../ProgramFlow.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/ex2.dir/ProgramFlow.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ex2.dir/ProgramFlow.cpp.o -c /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/ProgramFlow.cpp
+CMakeFiles/ex2.dir/src/ProgramFlow.cpp.o: CMakeFiles/ex2.dir/flags.make
+CMakeFiles/ex2.dir/src/ProgramFlow.cpp.o: ../src/ProgramFlow.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/ex2.dir/src/ProgramFlow.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ex2.dir/src/ProgramFlow.cpp.o -c /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/src/ProgramFlow.cpp
 
-CMakeFiles/ex2.dir/ProgramFlow.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ex2.dir/ProgramFlow.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/ProgramFlow.cpp > CMakeFiles/ex2.dir/ProgramFlow.cpp.i
+CMakeFiles/ex2.dir/src/ProgramFlow.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ex2.dir/src/ProgramFlow.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/src/ProgramFlow.cpp > CMakeFiles/ex2.dir/src/ProgramFlow.cpp.i
 
-CMakeFiles/ex2.dir/ProgramFlow.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ex2.dir/ProgramFlow.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/ProgramFlow.cpp -o CMakeFiles/ex2.dir/ProgramFlow.cpp.s
+CMakeFiles/ex2.dir/src/ProgramFlow.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ex2.dir/src/ProgramFlow.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/src/ProgramFlow.cpp -o CMakeFiles/ex2.dir/src/ProgramFlow.cpp.s
 
-CMakeFiles/ex2.dir/ProgramFlow.cpp.o.requires:
+CMakeFiles/ex2.dir/src/ProgramFlow.cpp.o.requires:
 
-.PHONY : CMakeFiles/ex2.dir/ProgramFlow.cpp.o.requires
+.PHONY : CMakeFiles/ex2.dir/src/ProgramFlow.cpp.o.requires
 
-CMakeFiles/ex2.dir/ProgramFlow.cpp.o.provides: CMakeFiles/ex2.dir/ProgramFlow.cpp.o.requires
-	$(MAKE) -f CMakeFiles/ex2.dir/build.make CMakeFiles/ex2.dir/ProgramFlow.cpp.o.provides.build
-.PHONY : CMakeFiles/ex2.dir/ProgramFlow.cpp.o.provides
+CMakeFiles/ex2.dir/src/ProgramFlow.cpp.o.provides: CMakeFiles/ex2.dir/src/ProgramFlow.cpp.o.requires
+	$(MAKE) -f CMakeFiles/ex2.dir/build.make CMakeFiles/ex2.dir/src/ProgramFlow.cpp.o.provides.build
+.PHONY : CMakeFiles/ex2.dir/src/ProgramFlow.cpp.o.provides
 
-CMakeFiles/ex2.dir/ProgramFlow.cpp.o.provides.build: CMakeFiles/ex2.dir/ProgramFlow.cpp.o
+CMakeFiles/ex2.dir/src/ProgramFlow.cpp.o.provides.build: CMakeFiles/ex2.dir/src/ProgramFlow.cpp.o
 
 
-CMakeFiles/ex2.dir/TaxiCenter.cpp.o: CMakeFiles/ex2.dir/flags.make
-CMakeFiles/ex2.dir/TaxiCenter.cpp.o: ../TaxiCenter.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/ex2.dir/TaxiCenter.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ex2.dir/TaxiCenter.cpp.o -c /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/TaxiCenter.cpp
+CMakeFiles/ex2.dir/src/TaxiCenter.cpp.o: CMakeFiles/ex2.dir/flags.make
+CMakeFiles/ex2.dir/src/TaxiCenter.cpp.o: ../src/TaxiCenter.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/ex2.dir/src/TaxiCenter.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ex2.dir/src/TaxiCenter.cpp.o -c /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/src/TaxiCenter.cpp
 
-CMakeFiles/ex2.dir/TaxiCenter.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ex2.dir/TaxiCenter.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/TaxiCenter.cpp > CMakeFiles/ex2.dir/TaxiCenter.cpp.i
+CMakeFiles/ex2.dir/src/TaxiCenter.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ex2.dir/src/TaxiCenter.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/src/TaxiCenter.cpp > CMakeFiles/ex2.dir/src/TaxiCenter.cpp.i
 
-CMakeFiles/ex2.dir/TaxiCenter.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ex2.dir/TaxiCenter.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/TaxiCenter.cpp -o CMakeFiles/ex2.dir/TaxiCenter.cpp.s
+CMakeFiles/ex2.dir/src/TaxiCenter.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ex2.dir/src/TaxiCenter.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/src/TaxiCenter.cpp -o CMakeFiles/ex2.dir/src/TaxiCenter.cpp.s
 
-CMakeFiles/ex2.dir/TaxiCenter.cpp.o.requires:
+CMakeFiles/ex2.dir/src/TaxiCenter.cpp.o.requires:
 
-.PHONY : CMakeFiles/ex2.dir/TaxiCenter.cpp.o.requires
+.PHONY : CMakeFiles/ex2.dir/src/TaxiCenter.cpp.o.requires
 
-CMakeFiles/ex2.dir/TaxiCenter.cpp.o.provides: CMakeFiles/ex2.dir/TaxiCenter.cpp.o.requires
-	$(MAKE) -f CMakeFiles/ex2.dir/build.make CMakeFiles/ex2.dir/TaxiCenter.cpp.o.provides.build
-.PHONY : CMakeFiles/ex2.dir/TaxiCenter.cpp.o.provides
+CMakeFiles/ex2.dir/src/TaxiCenter.cpp.o.provides: CMakeFiles/ex2.dir/src/TaxiCenter.cpp.o.requires
+	$(MAKE) -f CMakeFiles/ex2.dir/build.make CMakeFiles/ex2.dir/src/TaxiCenter.cpp.o.provides.build
+.PHONY : CMakeFiles/ex2.dir/src/TaxiCenter.cpp.o.provides
 
-CMakeFiles/ex2.dir/TaxiCenter.cpp.o.provides.build: CMakeFiles/ex2.dir/TaxiCenter.cpp.o
+CMakeFiles/ex2.dir/src/TaxiCenter.cpp.o.provides.build: CMakeFiles/ex2.dir/src/TaxiCenter.cpp.o
 
 
-CMakeFiles/ex2.dir/Passenger.cpp.o: CMakeFiles/ex2.dir/flags.make
-CMakeFiles/ex2.dir/Passenger.cpp.o: ../Passenger.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/ex2.dir/Passenger.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ex2.dir/Passenger.cpp.o -c /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/Passenger.cpp
+CMakeFiles/ex2.dir/src/Passenger.cpp.o: CMakeFiles/ex2.dir/flags.make
+CMakeFiles/ex2.dir/src/Passenger.cpp.o: ../src/Passenger.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/ex2.dir/src/Passenger.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ex2.dir/src/Passenger.cpp.o -c /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/src/Passenger.cpp
 
-CMakeFiles/ex2.dir/Passenger.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ex2.dir/Passenger.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/Passenger.cpp > CMakeFiles/ex2.dir/Passenger.cpp.i
+CMakeFiles/ex2.dir/src/Passenger.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ex2.dir/src/Passenger.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/src/Passenger.cpp > CMakeFiles/ex2.dir/src/Passenger.cpp.i
 
-CMakeFiles/ex2.dir/Passenger.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ex2.dir/Passenger.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/Passenger.cpp -o CMakeFiles/ex2.dir/Passenger.cpp.s
+CMakeFiles/ex2.dir/src/Passenger.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ex2.dir/src/Passenger.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/src/Passenger.cpp -o CMakeFiles/ex2.dir/src/Passenger.cpp.s
 
-CMakeFiles/ex2.dir/Passenger.cpp.o.requires:
+CMakeFiles/ex2.dir/src/Passenger.cpp.o.requires:
 
-.PHONY : CMakeFiles/ex2.dir/Passenger.cpp.o.requires
+.PHONY : CMakeFiles/ex2.dir/src/Passenger.cpp.o.requires
 
-CMakeFiles/ex2.dir/Passenger.cpp.o.provides: CMakeFiles/ex2.dir/Passenger.cpp.o.requires
-	$(MAKE) -f CMakeFiles/ex2.dir/build.make CMakeFiles/ex2.dir/Passenger.cpp.o.provides.build
-.PHONY : CMakeFiles/ex2.dir/Passenger.cpp.o.provides
+CMakeFiles/ex2.dir/src/Passenger.cpp.o.provides: CMakeFiles/ex2.dir/src/Passenger.cpp.o.requires
+	$(MAKE) -f CMakeFiles/ex2.dir/build.make CMakeFiles/ex2.dir/src/Passenger.cpp.o.provides.build
+.PHONY : CMakeFiles/ex2.dir/src/Passenger.cpp.o.provides
 
-CMakeFiles/ex2.dir/Passenger.cpp.o.provides.build: CMakeFiles/ex2.dir/Passenger.cpp.o
+CMakeFiles/ex2.dir/src/Passenger.cpp.o.provides.build: CMakeFiles/ex2.dir/src/Passenger.cpp.o
 
 
-CMakeFiles/ex2.dir/Driver.cpp.o: CMakeFiles/ex2.dir/flags.make
-CMakeFiles/ex2.dir/Driver.cpp.o: ../Driver.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/ex2.dir/Driver.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ex2.dir/Driver.cpp.o -c /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/Driver.cpp
+CMakeFiles/ex2.dir/src/Driver.cpp.o: CMakeFiles/ex2.dir/flags.make
+CMakeFiles/ex2.dir/src/Driver.cpp.o: ../src/Driver.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/ex2.dir/src/Driver.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ex2.dir/src/Driver.cpp.o -c /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/src/Driver.cpp
 
-CMakeFiles/ex2.dir/Driver.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ex2.dir/Driver.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/Driver.cpp > CMakeFiles/ex2.dir/Driver.cpp.i
+CMakeFiles/ex2.dir/src/Driver.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ex2.dir/src/Driver.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/src/Driver.cpp > CMakeFiles/ex2.dir/src/Driver.cpp.i
 
-CMakeFiles/ex2.dir/Driver.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ex2.dir/Driver.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/Driver.cpp -o CMakeFiles/ex2.dir/Driver.cpp.s
+CMakeFiles/ex2.dir/src/Driver.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ex2.dir/src/Driver.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/src/Driver.cpp -o CMakeFiles/ex2.dir/src/Driver.cpp.s
 
-CMakeFiles/ex2.dir/Driver.cpp.o.requires:
+CMakeFiles/ex2.dir/src/Driver.cpp.o.requires:
 
-.PHONY : CMakeFiles/ex2.dir/Driver.cpp.o.requires
+.PHONY : CMakeFiles/ex2.dir/src/Driver.cpp.o.requires
 
-CMakeFiles/ex2.dir/Driver.cpp.o.provides: CMakeFiles/ex2.dir/Driver.cpp.o.requires
-	$(MAKE) -f CMakeFiles/ex2.dir/build.make CMakeFiles/ex2.dir/Driver.cpp.o.provides.build
-.PHONY : CMakeFiles/ex2.dir/Driver.cpp.o.provides
+CMakeFiles/ex2.dir/src/Driver.cpp.o.provides: CMakeFiles/ex2.dir/src/Driver.cpp.o.requires
+	$(MAKE) -f CMakeFiles/ex2.dir/build.make CMakeFiles/ex2.dir/src/Driver.cpp.o.provides.build
+.PHONY : CMakeFiles/ex2.dir/src/Driver.cpp.o.provides
 
-CMakeFiles/ex2.dir/Driver.cpp.o.provides.build: CMakeFiles/ex2.dir/Driver.cpp.o
+CMakeFiles/ex2.dir/src/Driver.cpp.o.provides.build: CMakeFiles/ex2.dir/src/Driver.cpp.o
 
 
-CMakeFiles/ex2.dir/Trip.cpp.o: CMakeFiles/ex2.dir/flags.make
-CMakeFiles/ex2.dir/Trip.cpp.o: ../Trip.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/ex2.dir/Trip.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ex2.dir/Trip.cpp.o -c /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/Trip.cpp
+CMakeFiles/ex2.dir/src/Trip.cpp.o: CMakeFiles/ex2.dir/flags.make
+CMakeFiles/ex2.dir/src/Trip.cpp.o: ../src/Trip.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/ex2.dir/src/Trip.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ex2.dir/src/Trip.cpp.o -c /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/src/Trip.cpp
 
-CMakeFiles/ex2.dir/Trip.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ex2.dir/Trip.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/Trip.cpp > CMakeFiles/ex2.dir/Trip.cpp.i
+CMakeFiles/ex2.dir/src/Trip.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ex2.dir/src/Trip.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/src/Trip.cpp > CMakeFiles/ex2.dir/src/Trip.cpp.i
 
-CMakeFiles/ex2.dir/Trip.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ex2.dir/Trip.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/Trip.cpp -o CMakeFiles/ex2.dir/Trip.cpp.s
+CMakeFiles/ex2.dir/src/Trip.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ex2.dir/src/Trip.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/src/Trip.cpp -o CMakeFiles/ex2.dir/src/Trip.cpp.s
 
-CMakeFiles/ex2.dir/Trip.cpp.o.requires:
+CMakeFiles/ex2.dir/src/Trip.cpp.o.requires:
 
-.PHONY : CMakeFiles/ex2.dir/Trip.cpp.o.requires
+.PHONY : CMakeFiles/ex2.dir/src/Trip.cpp.o.requires
 
-CMakeFiles/ex2.dir/Trip.cpp.o.provides: CMakeFiles/ex2.dir/Trip.cpp.o.requires
-	$(MAKE) -f CMakeFiles/ex2.dir/build.make CMakeFiles/ex2.dir/Trip.cpp.o.provides.build
-.PHONY : CMakeFiles/ex2.dir/Trip.cpp.o.provides
+CMakeFiles/ex2.dir/src/Trip.cpp.o.provides: CMakeFiles/ex2.dir/src/Trip.cpp.o.requires
+	$(MAKE) -f CMakeFiles/ex2.dir/build.make CMakeFiles/ex2.dir/src/Trip.cpp.o.provides.build
+.PHONY : CMakeFiles/ex2.dir/src/Trip.cpp.o.provides
 
-CMakeFiles/ex2.dir/Trip.cpp.o.provides.build: CMakeFiles/ex2.dir/Trip.cpp.o
+CMakeFiles/ex2.dir/src/Trip.cpp.o.provides.build: CMakeFiles/ex2.dir/src/Trip.cpp.o
 
 
-CMakeFiles/ex2.dir/Cab.cpp.o: CMakeFiles/ex2.dir/flags.make
-CMakeFiles/ex2.dir/Cab.cpp.o: ../Cab.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/ex2.dir/Cab.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ex2.dir/Cab.cpp.o -c /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/Cab.cpp
+CMakeFiles/ex2.dir/src/Cab.cpp.o: CMakeFiles/ex2.dir/flags.make
+CMakeFiles/ex2.dir/src/Cab.cpp.o: ../src/Cab.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/ex2.dir/src/Cab.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ex2.dir/src/Cab.cpp.o -c /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/src/Cab.cpp
 
-CMakeFiles/ex2.dir/Cab.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ex2.dir/Cab.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/Cab.cpp > CMakeFiles/ex2.dir/Cab.cpp.i
+CMakeFiles/ex2.dir/src/Cab.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ex2.dir/src/Cab.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/src/Cab.cpp > CMakeFiles/ex2.dir/src/Cab.cpp.i
 
-CMakeFiles/ex2.dir/Cab.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ex2.dir/Cab.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/Cab.cpp -o CMakeFiles/ex2.dir/Cab.cpp.s
+CMakeFiles/ex2.dir/src/Cab.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ex2.dir/src/Cab.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/src/Cab.cpp -o CMakeFiles/ex2.dir/src/Cab.cpp.s
 
-CMakeFiles/ex2.dir/Cab.cpp.o.requires:
+CMakeFiles/ex2.dir/src/Cab.cpp.o.requires:
 
-.PHONY : CMakeFiles/ex2.dir/Cab.cpp.o.requires
+.PHONY : CMakeFiles/ex2.dir/src/Cab.cpp.o.requires
 
-CMakeFiles/ex2.dir/Cab.cpp.o.provides: CMakeFiles/ex2.dir/Cab.cpp.o.requires
-	$(MAKE) -f CMakeFiles/ex2.dir/build.make CMakeFiles/ex2.dir/Cab.cpp.o.provides.build
-.PHONY : CMakeFiles/ex2.dir/Cab.cpp.o.provides
+CMakeFiles/ex2.dir/src/Cab.cpp.o.provides: CMakeFiles/ex2.dir/src/Cab.cpp.o.requires
+	$(MAKE) -f CMakeFiles/ex2.dir/build.make CMakeFiles/ex2.dir/src/Cab.cpp.o.provides.build
+.PHONY : CMakeFiles/ex2.dir/src/Cab.cpp.o.provides
 
-CMakeFiles/ex2.dir/Cab.cpp.o.provides.build: CMakeFiles/ex2.dir/Cab.cpp.o
+CMakeFiles/ex2.dir/src/Cab.cpp.o.provides.build: CMakeFiles/ex2.dir/src/Cab.cpp.o
 
 
-CMakeFiles/ex2.dir/StandardCab.cpp.o: CMakeFiles/ex2.dir/flags.make
-CMakeFiles/ex2.dir/StandardCab.cpp.o: ../StandardCab.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/ex2.dir/StandardCab.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ex2.dir/StandardCab.cpp.o -c /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/StandardCab.cpp
+CMakeFiles/ex2.dir/src/StandardCab.cpp.o: CMakeFiles/ex2.dir/flags.make
+CMakeFiles/ex2.dir/src/StandardCab.cpp.o: ../src/StandardCab.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/ex2.dir/src/StandardCab.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ex2.dir/src/StandardCab.cpp.o -c /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/src/StandardCab.cpp
 
-CMakeFiles/ex2.dir/StandardCab.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ex2.dir/StandardCab.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/StandardCab.cpp > CMakeFiles/ex2.dir/StandardCab.cpp.i
+CMakeFiles/ex2.dir/src/StandardCab.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ex2.dir/src/StandardCab.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/src/StandardCab.cpp > CMakeFiles/ex2.dir/src/StandardCab.cpp.i
 
-CMakeFiles/ex2.dir/StandardCab.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ex2.dir/StandardCab.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/StandardCab.cpp -o CMakeFiles/ex2.dir/StandardCab.cpp.s
+CMakeFiles/ex2.dir/src/StandardCab.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ex2.dir/src/StandardCab.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/src/StandardCab.cpp -o CMakeFiles/ex2.dir/src/StandardCab.cpp.s
 
-CMakeFiles/ex2.dir/StandardCab.cpp.o.requires:
+CMakeFiles/ex2.dir/src/StandardCab.cpp.o.requires:
 
-.PHONY : CMakeFiles/ex2.dir/StandardCab.cpp.o.requires
+.PHONY : CMakeFiles/ex2.dir/src/StandardCab.cpp.o.requires
 
-CMakeFiles/ex2.dir/StandardCab.cpp.o.provides: CMakeFiles/ex2.dir/StandardCab.cpp.o.requires
-	$(MAKE) -f CMakeFiles/ex2.dir/build.make CMakeFiles/ex2.dir/StandardCab.cpp.o.provides.build
-.PHONY : CMakeFiles/ex2.dir/StandardCab.cpp.o.provides
+CMakeFiles/ex2.dir/src/StandardCab.cpp.o.provides: CMakeFiles/ex2.dir/src/StandardCab.cpp.o.requires
+	$(MAKE) -f CMakeFiles/ex2.dir/build.make CMakeFiles/ex2.dir/src/StandardCab.cpp.o.provides.build
+.PHONY : CMakeFiles/ex2.dir/src/StandardCab.cpp.o.provides
 
-CMakeFiles/ex2.dir/StandardCab.cpp.o.provides.build: CMakeFiles/ex2.dir/StandardCab.cpp.o
+CMakeFiles/ex2.dir/src/StandardCab.cpp.o.provides.build: CMakeFiles/ex2.dir/src/StandardCab.cpp.o
 
 
-CMakeFiles/ex2.dir/LuxuryCab.cpp.o: CMakeFiles/ex2.dir/flags.make
-CMakeFiles/ex2.dir/LuxuryCab.cpp.o: ../LuxuryCab.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/ex2.dir/LuxuryCab.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ex2.dir/LuxuryCab.cpp.o -c /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/LuxuryCab.cpp
+CMakeFiles/ex2.dir/src/LuxuryCab.cpp.o: CMakeFiles/ex2.dir/flags.make
+CMakeFiles/ex2.dir/src/LuxuryCab.cpp.o: ../src/LuxuryCab.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/ex2.dir/src/LuxuryCab.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ex2.dir/src/LuxuryCab.cpp.o -c /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/src/LuxuryCab.cpp
 
-CMakeFiles/ex2.dir/LuxuryCab.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ex2.dir/LuxuryCab.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/LuxuryCab.cpp > CMakeFiles/ex2.dir/LuxuryCab.cpp.i
+CMakeFiles/ex2.dir/src/LuxuryCab.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ex2.dir/src/LuxuryCab.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/src/LuxuryCab.cpp > CMakeFiles/ex2.dir/src/LuxuryCab.cpp.i
 
-CMakeFiles/ex2.dir/LuxuryCab.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ex2.dir/LuxuryCab.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/LuxuryCab.cpp -o CMakeFiles/ex2.dir/LuxuryCab.cpp.s
+CMakeFiles/ex2.dir/src/LuxuryCab.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ex2.dir/src/LuxuryCab.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/src/LuxuryCab.cpp -o CMakeFiles/ex2.dir/src/LuxuryCab.cpp.s
 
-CMakeFiles/ex2.dir/LuxuryCab.cpp.o.requires:
+CMakeFiles/ex2.dir/src/LuxuryCab.cpp.o.requires:
 
-.PHONY : CMakeFiles/ex2.dir/LuxuryCab.cpp.o.requires
+.PHONY : CMakeFiles/ex2.dir/src/LuxuryCab.cpp.o.requires
 
-CMakeFiles/ex2.dir/LuxuryCab.cpp.o.provides: CMakeFiles/ex2.dir/LuxuryCab.cpp.o.requires
-	$(MAKE) -f CMakeFiles/ex2.dir/build.make CMakeFiles/ex2.dir/LuxuryCab.cpp.o.provides.build
-.PHONY : CMakeFiles/ex2.dir/LuxuryCab.cpp.o.provides
+CMakeFiles/ex2.dir/src/LuxuryCab.cpp.o.provides: CMakeFiles/ex2.dir/src/LuxuryCab.cpp.o.requires
+	$(MAKE) -f CMakeFiles/ex2.dir/build.make CMakeFiles/ex2.dir/src/LuxuryCab.cpp.o.provides.build
+.PHONY : CMakeFiles/ex2.dir/src/LuxuryCab.cpp.o.provides
 
-CMakeFiles/ex2.dir/LuxuryCab.cpp.o.provides.build: CMakeFiles/ex2.dir/LuxuryCab.cpp.o
+CMakeFiles/ex2.dir/src/LuxuryCab.cpp.o.provides.build: CMakeFiles/ex2.dir/src/LuxuryCab.cpp.o
 
 
 CMakeFiles/ex2.dir/Tests/TestPoint.cpp.o: CMakeFiles/ex2.dir/flags.make
@@ -585,20 +585,44 @@ CMakeFiles/ex2.dir/Tests/TestPassenger.cpp.o.provides: CMakeFiles/ex2.dir/Tests/
 CMakeFiles/ex2.dir/Tests/TestPassenger.cpp.o.provides.build: CMakeFiles/ex2.dir/Tests/TestPassenger.cpp.o
 
 
+CMakeFiles/ex2.dir/Tests/main_test.cpp.o: CMakeFiles/ex2.dir/flags.make
+CMakeFiles/ex2.dir/Tests/main_test.cpp.o: ../Tests/main_test.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/ex2.dir/Tests/main_test.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ex2.dir/Tests/main_test.cpp.o -c /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/Tests/main_test.cpp
+
+CMakeFiles/ex2.dir/Tests/main_test.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ex2.dir/Tests/main_test.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/Tests/main_test.cpp > CMakeFiles/ex2.dir/Tests/main_test.cpp.i
+
+CMakeFiles/ex2.dir/Tests/main_test.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ex2.dir/Tests/main_test.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/Tests/main_test.cpp -o CMakeFiles/ex2.dir/Tests/main_test.cpp.s
+
+CMakeFiles/ex2.dir/Tests/main_test.cpp.o.requires:
+
+.PHONY : CMakeFiles/ex2.dir/Tests/main_test.cpp.o.requires
+
+CMakeFiles/ex2.dir/Tests/main_test.cpp.o.provides: CMakeFiles/ex2.dir/Tests/main_test.cpp.o.requires
+	$(MAKE) -f CMakeFiles/ex2.dir/build.make CMakeFiles/ex2.dir/Tests/main_test.cpp.o.provides.build
+.PHONY : CMakeFiles/ex2.dir/Tests/main_test.cpp.o.provides
+
+CMakeFiles/ex2.dir/Tests/main_test.cpp.o.provides.build: CMakeFiles/ex2.dir/Tests/main_test.cpp.o
+
+
 # Object files for target ex2
 ex2_OBJECTS = \
-"CMakeFiles/ex2.dir/main.cpp.o" \
-"CMakeFiles/ex2.dir/Grid.cpp.o" \
-"CMakeFiles/ex2.dir/Point.cpp.o" \
-"CMakeFiles/ex2.dir/InputParsing.cpp.o" \
-"CMakeFiles/ex2.dir/ProgramFlow.cpp.o" \
-"CMakeFiles/ex2.dir/TaxiCenter.cpp.o" \
-"CMakeFiles/ex2.dir/Passenger.cpp.o" \
-"CMakeFiles/ex2.dir/Driver.cpp.o" \
-"CMakeFiles/ex2.dir/Trip.cpp.o" \
-"CMakeFiles/ex2.dir/Cab.cpp.o" \
-"CMakeFiles/ex2.dir/StandardCab.cpp.o" \
-"CMakeFiles/ex2.dir/LuxuryCab.cpp.o" \
+"CMakeFiles/ex2.dir/src/main.cpp.o" \
+"CMakeFiles/ex2.dir/src/Grid.cpp.o" \
+"CMakeFiles/ex2.dir/src/Point.cpp.o" \
+"CMakeFiles/ex2.dir/src/InputParsing.cpp.o" \
+"CMakeFiles/ex2.dir/src/ProgramFlow.cpp.o" \
+"CMakeFiles/ex2.dir/src/TaxiCenter.cpp.o" \
+"CMakeFiles/ex2.dir/src/Passenger.cpp.o" \
+"CMakeFiles/ex2.dir/src/Driver.cpp.o" \
+"CMakeFiles/ex2.dir/src/Trip.cpp.o" \
+"CMakeFiles/ex2.dir/src/Cab.cpp.o" \
+"CMakeFiles/ex2.dir/src/StandardCab.cpp.o" \
+"CMakeFiles/ex2.dir/src/LuxuryCab.cpp.o" \
 "CMakeFiles/ex2.dir/Tests/TestPoint.cpp.o" \
 "CMakeFiles/ex2.dir/Tests/TestProgramFlow.cpp.o" \
 "CMakeFiles/ex2.dir/Tests/TestDriver.cpp.o" \
@@ -608,23 +632,24 @@ ex2_OBJECTS = \
 "CMakeFiles/ex2.dir/Tests/TestInputParsing.cpp.o" \
 "CMakeFiles/ex2.dir/Tests/TestTaxiCenter.cpp.o" \
 "CMakeFiles/ex2.dir/Tests/TestBfsAlgorithm.cpp.o" \
-"CMakeFiles/ex2.dir/Tests/TestPassenger.cpp.o"
+"CMakeFiles/ex2.dir/Tests/TestPassenger.cpp.o" \
+"CMakeFiles/ex2.dir/Tests/main_test.cpp.o"
 
 # External object files for target ex2
 ex2_EXTERNAL_OBJECTS =
 
-ex2: CMakeFiles/ex2.dir/main.cpp.o
-ex2: CMakeFiles/ex2.dir/Grid.cpp.o
-ex2: CMakeFiles/ex2.dir/Point.cpp.o
-ex2: CMakeFiles/ex2.dir/InputParsing.cpp.o
-ex2: CMakeFiles/ex2.dir/ProgramFlow.cpp.o
-ex2: CMakeFiles/ex2.dir/TaxiCenter.cpp.o
-ex2: CMakeFiles/ex2.dir/Passenger.cpp.o
-ex2: CMakeFiles/ex2.dir/Driver.cpp.o
-ex2: CMakeFiles/ex2.dir/Trip.cpp.o
-ex2: CMakeFiles/ex2.dir/Cab.cpp.o
-ex2: CMakeFiles/ex2.dir/StandardCab.cpp.o
-ex2: CMakeFiles/ex2.dir/LuxuryCab.cpp.o
+ex2: CMakeFiles/ex2.dir/src/main.cpp.o
+ex2: CMakeFiles/ex2.dir/src/Grid.cpp.o
+ex2: CMakeFiles/ex2.dir/src/Point.cpp.o
+ex2: CMakeFiles/ex2.dir/src/InputParsing.cpp.o
+ex2: CMakeFiles/ex2.dir/src/ProgramFlow.cpp.o
+ex2: CMakeFiles/ex2.dir/src/TaxiCenter.cpp.o
+ex2: CMakeFiles/ex2.dir/src/Passenger.cpp.o
+ex2: CMakeFiles/ex2.dir/src/Driver.cpp.o
+ex2: CMakeFiles/ex2.dir/src/Trip.cpp.o
+ex2: CMakeFiles/ex2.dir/src/Cab.cpp.o
+ex2: CMakeFiles/ex2.dir/src/StandardCab.cpp.o
+ex2: CMakeFiles/ex2.dir/src/LuxuryCab.cpp.o
 ex2: CMakeFiles/ex2.dir/Tests/TestPoint.cpp.o
 ex2: CMakeFiles/ex2.dir/Tests/TestProgramFlow.cpp.o
 ex2: CMakeFiles/ex2.dir/Tests/TestDriver.cpp.o
@@ -635,12 +660,13 @@ ex2: CMakeFiles/ex2.dir/Tests/TestInputParsing.cpp.o
 ex2: CMakeFiles/ex2.dir/Tests/TestTaxiCenter.cpp.o
 ex2: CMakeFiles/ex2.dir/Tests/TestBfsAlgorithm.cpp.o
 ex2: CMakeFiles/ex2.dir/Tests/TestPassenger.cpp.o
+ex2: CMakeFiles/ex2.dir/Tests/main_test.cpp.o
 ex2: CMakeFiles/ex2.dir/build.make
 ex2: lib/googletest-master/googlemock/gtest/libgtest.a
 ex2: lib/googletest-master/googlemock/gtest/libgtest_main.a
 ex2: lib/googletest-master/googlemock/gtest/libgtest.a
 ex2: CMakeFiles/ex2.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Linking CXX executable ex2"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Linking CXX executable ex2"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ex2.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -648,18 +674,18 @@ CMakeFiles/ex2.dir/build: ex2
 
 .PHONY : CMakeFiles/ex2.dir/build
 
-CMakeFiles/ex2.dir/requires: CMakeFiles/ex2.dir/main.cpp.o.requires
-CMakeFiles/ex2.dir/requires: CMakeFiles/ex2.dir/Grid.cpp.o.requires
-CMakeFiles/ex2.dir/requires: CMakeFiles/ex2.dir/Point.cpp.o.requires
-CMakeFiles/ex2.dir/requires: CMakeFiles/ex2.dir/InputParsing.cpp.o.requires
-CMakeFiles/ex2.dir/requires: CMakeFiles/ex2.dir/ProgramFlow.cpp.o.requires
-CMakeFiles/ex2.dir/requires: CMakeFiles/ex2.dir/TaxiCenter.cpp.o.requires
-CMakeFiles/ex2.dir/requires: CMakeFiles/ex2.dir/Passenger.cpp.o.requires
-CMakeFiles/ex2.dir/requires: CMakeFiles/ex2.dir/Driver.cpp.o.requires
-CMakeFiles/ex2.dir/requires: CMakeFiles/ex2.dir/Trip.cpp.o.requires
-CMakeFiles/ex2.dir/requires: CMakeFiles/ex2.dir/Cab.cpp.o.requires
-CMakeFiles/ex2.dir/requires: CMakeFiles/ex2.dir/StandardCab.cpp.o.requires
-CMakeFiles/ex2.dir/requires: CMakeFiles/ex2.dir/LuxuryCab.cpp.o.requires
+CMakeFiles/ex2.dir/requires: CMakeFiles/ex2.dir/src/main.cpp.o.requires
+CMakeFiles/ex2.dir/requires: CMakeFiles/ex2.dir/src/Grid.cpp.o.requires
+CMakeFiles/ex2.dir/requires: CMakeFiles/ex2.dir/src/Point.cpp.o.requires
+CMakeFiles/ex2.dir/requires: CMakeFiles/ex2.dir/src/InputParsing.cpp.o.requires
+CMakeFiles/ex2.dir/requires: CMakeFiles/ex2.dir/src/ProgramFlow.cpp.o.requires
+CMakeFiles/ex2.dir/requires: CMakeFiles/ex2.dir/src/TaxiCenter.cpp.o.requires
+CMakeFiles/ex2.dir/requires: CMakeFiles/ex2.dir/src/Passenger.cpp.o.requires
+CMakeFiles/ex2.dir/requires: CMakeFiles/ex2.dir/src/Driver.cpp.o.requires
+CMakeFiles/ex2.dir/requires: CMakeFiles/ex2.dir/src/Trip.cpp.o.requires
+CMakeFiles/ex2.dir/requires: CMakeFiles/ex2.dir/src/Cab.cpp.o.requires
+CMakeFiles/ex2.dir/requires: CMakeFiles/ex2.dir/src/StandardCab.cpp.o.requires
+CMakeFiles/ex2.dir/requires: CMakeFiles/ex2.dir/src/LuxuryCab.cpp.o.requires
 CMakeFiles/ex2.dir/requires: CMakeFiles/ex2.dir/Tests/TestPoint.cpp.o.requires
 CMakeFiles/ex2.dir/requires: CMakeFiles/ex2.dir/Tests/TestProgramFlow.cpp.o.requires
 CMakeFiles/ex2.dir/requires: CMakeFiles/ex2.dir/Tests/TestDriver.cpp.o.requires
@@ -670,6 +696,7 @@ CMakeFiles/ex2.dir/requires: CMakeFiles/ex2.dir/Tests/TestInputParsing.cpp.o.req
 CMakeFiles/ex2.dir/requires: CMakeFiles/ex2.dir/Tests/TestTaxiCenter.cpp.o.requires
 CMakeFiles/ex2.dir/requires: CMakeFiles/ex2.dir/Tests/TestBfsAlgorithm.cpp.o.requires
 CMakeFiles/ex2.dir/requires: CMakeFiles/ex2.dir/Tests/TestPassenger.cpp.o.requires
+CMakeFiles/ex2.dir/requires: CMakeFiles/ex2.dir/Tests/main_test.cpp.o.requires
 
 .PHONY : CMakeFiles/ex2.dir/requires
 

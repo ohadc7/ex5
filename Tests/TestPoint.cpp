@@ -1,6 +1,6 @@
 #include <gtest/gtest.h>
-#include "../Point.h"
-#include "../Graph.h"
+#include "../src/Point.h"
+#include "../src/Graph.h"
 
 class TestPoint: public ::testing::Test {
 public:
