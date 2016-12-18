@@ -1,5 +1,7 @@
 #include "TaxiCenter.h"
 
+TaxiCenter::TaxiCenter(BfsAlgorithm<Point> &bfsInstance) : bfsInstance(bfsInstance) {}
+
 void TaxiCenter::createTrip(InputParsing::parsedTripData parsedTripDataTrip) {
     Trip *trip = new Trip(parsedTripDataTrip.id, parsedTripDataTrip.start, parsedTripDataTrip.end,
                           parsedTripDataTrip.numberOfPassengers, parsedTripDataTrip.tariff);
@@ -19,7 +21,6 @@ const vector<Trip *> &TaxiCenter::getListOfTrips() const {
 }
 
 Point TaxiCenter::getDriverLocation(int driverId) {
-
     for (unsigned int i = 0; i < listOfDrivers.size(); i++) {
         if (listOfDrivers.at(i).getId() == driverId) {
             return listOfDrivers.at(i).currentPlace();
@@ -27,8 +28,6 @@ Point TaxiCenter::getDriverLocation(int driverId) {
     }
     throw "No Driver found";
 }
-
-TaxiCenter::TaxiCenter(BfsAlgorithm<Point> &bfsInstance) : bfsInstance(bfsInstance) {}
 
 void TaxiCenter::addTrip(Trip *trip) {
     listOfTrips.push_back(trip);

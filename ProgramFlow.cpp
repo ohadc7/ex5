@@ -32,15 +32,19 @@ Graph<Point> *ProgramFlow::createGrid(int width, int height, vector<Point> listO
     return g;
 }
 
+//(the default inputStream is 'cin')
 int ProgramFlow::run(istream &inputStream) {
     string inputString;
+    //get the grid dimensions
     getline(inputStream, inputString);
     InputParsing inputParsing = InputParsing();
     InputParsing::gridDimensions gd = inputParsing.parseGridDimensions(inputString);
+    //get number of obstacles
     getline(inputStream, inputString);
     int numOfObstacles;
     numOfObstacles = stoi(inputString);
     vector<Point> listOfObstacles = vector<Point>();
+    //if there are any obstacles, get their locations.
     if (numOfObstacles > 0) {
         for (int i = 0; i < numOfObstacles; i++) {
             getline(inputStream, inputString);
@@ -48,14 +52,17 @@ int ProgramFlow::run(istream &inputStream) {
             listOfObstacles.push_back(p);
         }
     }
+    //create the grid and the taxi center
     Graph<Point> *grid = createGrid(gd.gridWidth, gd.gridHeight, listOfObstacles);
     BfsAlgorithm<Point> bfs(grid);
     TaxiCenter taxiCenter = createTaxiCenter(bfs);
 
     while (true) {
+        //get number of option and do the defined operation
         getline(inputStream, inputString);
         switch (stoi(inputString)) {
             case 1: {
+                //create a driver (according to the given parameters) and add it to the taxi center
                 getline(inputStream, inputString);
                 InputParsing::parsedDriverData driver = inputParsing.parseDriverData(inputString);
                 try {
@@ -69,18 +76,21 @@ int ProgramFlow::run(istream &inputStream) {
                 break;
             }
             case 2: {
+                //create a trip (according to the given parameters) and add it to the taxi center
                 getline(inputStream, inputString);
                 InputParsing::parsedTripData trip = inputParsing.parseTripData(inputString);
                 taxiCenter.createTrip(trip);
                 break;
             }
             case 3: {
+                //create a cab (according to the given parameters) and add it to the taxi center
                 getline(inputStream, inputString);
                 InputParsing::parsedCabData cab = inputParsing.parseVehicleData(inputString);
                 taxiCenter.addCab(createCab(cab.id, cab.taxiType, cab.manufacturer, cab.color));
                 break;
             }
             case 4: {
+                //query about the location of a specific driver
                 getline(inputStream, inputString);
                 try {
                      Point point(taxiCenter.getDriverLocation(stoi(inputString)));
@@ -91,10 +101,12 @@ int ProgramFlow::run(istream &inputStream) {
                 break;
             }
             case 6: {
+                //let the drivers drive according to the trips
                 taxiCenter.startDriving();
                 break;
             }
             case 7: {
+                //terminate the program
                 delete grid;
                 return 0;
             }

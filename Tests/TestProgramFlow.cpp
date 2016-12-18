@@ -19,6 +19,8 @@ protected:
 
 
 TEST_F(TestProgramFlow, simpleMethods) {
+    //create a cab by the 'programFlow' and check whether it has the correct parameters
+    //standard cab
     Cab *cab = pFlow.createCab(2244466, STANDARD_CAB, HONDA, GREEN);
     Color_Of_Car colorOfTheCab = cab->getColor();
     ASSERT_EQ(colorOfTheCab, GREEN);
@@ -26,7 +28,7 @@ TEST_F(TestProgramFlow, simpleMethods) {
     ASSERT_EQ(modelOfTheCab, HONDA);
     ASSERT_EQ(cab->getId(), 2244466);
     ASSERT_EQ(cab->getSpeed(), SPEED_OF_STANDARD_CAB);
-
+    //luxury cab
     cab = pFlow.createCab(1133355, LUXURY_CAB, TESLA, BLUE);
     ASSERT_EQ(cab->getSpeed(), SPEED_OF_LUXURY_CAB);
 

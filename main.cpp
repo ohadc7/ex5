@@ -11,7 +11,7 @@ int main(int argc, char* argv[]) {
     //scan input string (gridWidth_gridHeight,startX_startY,endX_endY) and parse it
     string inputString;
     ProgramFlow programFlow;
-    programFlow.run(cin);
+    programFlow.run();
     //return 0;
     return RUN_ALL_TESTS();
 }

@@ -25,13 +25,14 @@ TEST(TestBfsAlgorithm,checkRoutes){
 
 
     for(int i=0; i<bfsOutput.size(); i++) {
-        EXPECT_EQ(bfsOutput.top().getValue(), bfsTest.top().getValue()) << "check with true route to compere";
+        EXPECT_EQ(bfsOutput.top().getValue(), bfsTest.top().getValue())
+                            << "compare with the correct route";
         bfsOutput.pop();
         bfsTest.pop();
     }
     for(int i=0; i<bfsOutput2.size(); i++) {
-        EXPECT_NE(bfsOutput2.top().getValue(), bfsTest2.top().getValue()) << "should fail, check with "
-                            "false route to compere";
+        EXPECT_NE(bfsOutput2.top().getValue(), bfsTest2.top().getValue()) << "compare with "
+                            "incorrect route";
         bfsOutput2.pop();
         bfsTest2.pop();
     }
