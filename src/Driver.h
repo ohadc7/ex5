@@ -4,6 +4,7 @@
 #include <vector>
 #include "Cab.h"
 #include "Trip.h"
+#include "Socket.h"
 
 typedef enum {SINGLE, MARRIED, DIVORCED, WIDOWED} Status_Of_Marriage;
 
@@ -14,13 +15,18 @@ private:
     double averageSatisfactions;
     Status_Of_Marriage status;
     int yearsOfExperience;
+    int vehicleId;
     Cab *cabOfDriver;
     int numOfTrips;
     Point currentLocation;
     vector<Passenger> listOfPassengers;
     Trip *currentTrip;
 public:
-    Driver(int id, int age, Status_Of_Marriage status, int yearsOfExperience, Cab *cab);
+    //Driver(int id, int age, Status_Of_Marriage status, int yearsOfExperience, Cab *cab);
+
+    Driver(int id, int age, Status_Of_Marriage status, int yearsOfExperience, int vehicleId);
+
+    //Driver::Driver();
 
     int getId() const;
 
@@ -40,7 +46,7 @@ public:
 
     Point currentPlace();
 
-    void setCurrentLocation();
+    void setCurrentLocation(Point point);
 
     void clientSatisfactions(int clientSatisfactions);
 
@@ -49,6 +55,10 @@ public:
     void addPassenger(Passenger passenger);
 
     void assignTrip(Trip *trip);
+
+    void moveOneStep();
+
+    void run(Socket *socket);
 };
 
 #endif

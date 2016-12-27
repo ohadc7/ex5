@@ -1,12 +1,17 @@
-#include "Point.h"
-#include "Grid.h"
-#include <vector>
-#include "Driver.h"
-#include "BfsAlgorithm.h"
-#include "TaxiCenter.h"
-
 #ifndef EX1_VERSION_1_1_PROGRAMFLOW_H
 #define EX1_VERSION_1_1_PROGRAMFLOW_H
+
+#include <vector>
+#include <string>
+#include <iostream>
+#include "Point.h"
+#include "Grid.h"
+#include "Driver.h"
+#include "StandardCab.h"
+#include "LuxuryCab.h"
+#include "BfsAlgorithm.h"
+#include "TaxiCenter.h"
+#include "Udp.h"
 
 /*
  * This class manage the flow of the program.
@@ -36,7 +41,7 @@ public:
      * 6 - start driving (no input afterwards. Meaning getting all drivers to their end point).
      * 7 - exit (cleaning up the program and exiting).
     */
-    int run(istream &inputStream = cin, ostream &outputStream = cout);
+    int run(Socket *socket, istream &inputStream = cin, ostream &outputStream = cout);
 
     /*
      * create taxi center. the taxi center has to contain "bfs" (that know the grid and the
@@ -45,8 +50,7 @@ public:
     TaxiCenter createTaxiCenter(BfsAlgorithm<Point> bfs);
 
     //create a driver according to the given parameters
-    Driver
-    createDriver(int id, int age, Status_Of_Marriage status, int yearsOfExperience, Cab *cab);
+    //Driver createDriver(int id, int age, Status_Of_Marriage status, int yearsOfExperience, Cab *cab);
 
     //create a cab according to the given parameters
     Cab *createCab(int id, int cabType, Model_Of_Car carModel, Color_Of_Car color);

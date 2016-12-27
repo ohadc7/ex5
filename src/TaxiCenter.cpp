@@ -3,8 +3,12 @@
 TaxiCenter::TaxiCenter(BfsAlgorithm<Point> &bfsInstance) : bfsInstance(bfsInstance) {}
 
 void TaxiCenter::createTrip(InputParsing::parsedTripData parsedTripDataTrip) {
+    Node<Point> startNode(parsedTripDataTrip.start);
+    Node<Point> endNode(parsedTripDataTrip.end);
+    stack <Node<Point>> nextPointsOfPath = bfsInstance.navigate(startNode, endNode);
+    nextPointsOfPath.pop();
     Trip *trip = new Trip(parsedTripDataTrip.id, parsedTripDataTrip.start, parsedTripDataTrip.end,
-                          parsedTripDataTrip.numberOfPassengers, parsedTripDataTrip.tariff);
+                          parsedTripDataTrip.numberOfPassengers, parsedTripDataTrip.tariff, nextPointsOfPath);
     listOfTrips.push_back(trip);
 }
 
@@ -43,7 +47,7 @@ void TaxiCenter::startDriving() {
             for (unsigned int j = 0; j < listOfTrips.size(); j++) {
                 if ((listOfDrivers.at(i).currentPlace() == listOfTrips.at(j)->getStartingPoint())) {
                     listOfDrivers.at(i).assignTrip(listOfTrips.at(j));
-                    listOfDrivers.at(i).setCurrentLocation();
+                    //listOfDrivers.at(i).setCurrentLocation(listOfTrips.at(j)->getEndingPoint());
                     delete listOfTrips[j];
                     listOfTrips.erase(listOfTrips.begin() + j);
                     break;

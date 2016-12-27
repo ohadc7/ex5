@@ -1,14 +1,32 @@
+#define DEBUG_DRIVER //define it if and only if you defined DEBUG_PROGRAM_FLOW on server
 
 #include "Driver.h"
+#include "InputParsing.h"
 
 
-
+/*
 Driver::Driver(int id, int age, Status_Of_Marriage status, int yearsOfExperience, Cab *cab) :
         id(id), age(age), status(status), yearsOfExperience(yearsOfExperience){
     numOfTrips =1;
     averageSatisfactions = 0;
     this->attachCabToDriver(cab);
 }
+
+*/
+Driver::Driver(int id, int age, Status_Of_Marriage status, int yearsOfExperience, int vehicleId) :
+        id(id), age(age), status(status), yearsOfExperience(yearsOfExperience),
+        vehicleId(vehicleId) {
+    numOfTrips = 1;
+    averageSatisfactions = 0;
+}
+
+/*
+Driver::Driver() : id(-1), age(-1), status(SINGLE), yearsOfExperience(-1),
+                   vehicleId(-1) {
+    numOfTrips = 1;
+    averageSatisfactions = 0;
+}
+*/
 
 int Driver::getId() const {
     return id;
@@ -68,11 +86,64 @@ void Driver::addPassenger(Passenger passenger) {
     listOfPassengers.push_back(passenger);
 }
 
-void Driver::setCurrentLocation() {
-    currentLocation = currentTrip->getEndingPoint();
+void Driver::setCurrentLocation(Point point) {
+    currentLocation = point;
 }
 
 void Driver::assignTrip(Trip *trip) {
-    currentTrip = trip;
+    //if (this->isAvailable()) {
+        currentTrip = trip;
+    //}
 }
 
+void Driver::moveOneStep() {
+    //if no current trip, return:
+    if (this->currentTrip == NULL) {
+        return;
+    }
+    //if the driver has LuxuryCab, he has to skip one point of the path:
+    if (this->cabOfDriver->getTaxiType() == LUXURY_CAB &&
+            this->currentTrip->getPath().size() > 1) {
+        this->currentTrip->removeNextPointOfPath();
+    }
+    //move to the next point (one block):
+    Node<Point> nextNodeOfPath = this->currentTrip->getPath().top();
+    this->currentTrip->removeNextPointOfPath();
+    Point locationAfterStep = nextNodeOfPath.getValue();
+    this->setCurrentLocation(locationAfterStep);
+    //if the path was terminated, set "currentTrip" member to NULL:
+    if (this->currentTrip->getPath().size() == 0) {
+        this->currentTrip = NULL;
+    }
+    return;
+}
+
+void Driver::run(Socket *socket) {
+    char buffer[1024];
+#ifdef DEBUG_DRIVER
+    socket->sendData("Driver.run(): massage from client to server");
+    socket->reciveData(buffer, sizeof(buffer));
+    cout << buffer << endl;
+#endif
+
+    /*
+    InputParsing inputParsing = InputParsing();
+    string inputString;
+    getline(cin, inputString);
+    InputParsing::parsedDriverData driver = inputParsing.parseDriverData(inputString);
+    try {
+        this->id = driver.id;
+        this->age = driver.age;
+        this->status = driver.status;
+        this->yearsOfExperience = driver.yearsOfExperience;
+        this->vehicleId = driver.vehicleId;
+    } catch (const char *msg) {
+        cerr << msg << endl;
+    }
+     */
+
+
+    stringstream ss;
+    ss << this->id;
+    socket->sendData(ss.str());
+}

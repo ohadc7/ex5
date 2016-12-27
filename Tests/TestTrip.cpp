@@ -1,3 +1,4 @@
+/*
 #include "gtest/gtest.h"
 #include "../src/Trip.h"
 
@@ -32,3 +33,4 @@ TEST_F(TestTrip, GettersCheck) {
     ASSERT_EQ(trip.getEndingPoint(), Point(3, 3));
     ASSERT_EQ(trip.getPassedMeters(), 0) << "ERROR: passed meters of constructed trip isn't 0";
 }
+*/

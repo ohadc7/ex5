@@ -1,3 +1,4 @@
+/*
 #include "gtest/gtest.h"
 #include "../src/TaxiCenter.h"
 #include "../src/StandardCab.h"
@@ -48,4 +49,4 @@ TEST_F(TestTaxiCenter, SanityChecks) {
     ASSERT_EQ(driver1PositionAccordingToTaxiCenter, driver1Position);
 
 }
-
+*/

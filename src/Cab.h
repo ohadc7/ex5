@@ -35,6 +35,8 @@ public:
 
     virtual double getRate() const = 0;
 
+    virtual Taxi_Type getTaxiType() = 0;
+
     virtual ~Cab();
 
 };

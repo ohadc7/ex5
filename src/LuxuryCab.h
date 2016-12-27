@@ -14,6 +14,8 @@ private:
 public:
     LuxuryCab(int id, Model_Of_Car carModel, Color_Of_Car color);
 
+    virtual Taxi_Type getTaxiType();
+
     double getSpeed() const;
 
     double getRate() const;

@@ -3,6 +3,7 @@
 
 
 #include <list>
+#include <stack>
 #include "Point.h"
 #include "Passenger.h"
 
@@ -13,11 +14,15 @@ private:
     int passedMeters; //total meters passed at the current point
     Point startingPoint;
     Point endingPoint;
+    stack <Node<Point>> nextPointsOfPath;
     list <Passenger> customers; //passengers
     int numOfPassengers;
     double rateOfTrip; //tariff
 public:
-    Trip(int rideId, Point startingPoint, Point endingPoint, int numOfPassengers, double taarif);
+    //Trip(int rideId, Point startingPoint, Point endingPoint, int numOfPassengers, double taarif);
+
+    Trip(int rideId, Point startingPoint, Point endingPoint, int numOfPassengers, double taarif,
+         stack <Node<Point>> pathWithoutStartingPoint);
 
     int getRideId() const;
 
@@ -32,6 +37,10 @@ public:
     const list <Passenger> &getCustomers() const;
 
     double getRateOfTrip() const;
+
+    const stack<Node<Point>> &getPath() const;
+
+    void removeNextPointOfPath();
 
     ~Trip();
 };
