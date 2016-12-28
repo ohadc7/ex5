@@ -2,6 +2,10 @@ cmake_minimum_required(VERSION 3.6)
 project(ex4)
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++0x" )
+set(BOOST_ROOT CACHE PATH "/usr/include/boost/")
+find_package(Boost 1.58.0 COMPONENTS serialization system)
+include_directories(${Boost_INCLUDE_DIR})
+
 add_subdirectory(lib/googletest-master)
 include_directories(lib/googletest-master/googletest/include)
 include_directories(lib/googletest-master/googlemock/include)
@@ -19,4 +23,4 @@ set(SOURCE_FILES src/main.cpp src/BfsAlgorithm.h
         src/Udp.cpp src/Udp.h src/Socket.cpp src/Socket.h)
 add_executable(ex2 ${SOURCE_FILES} Tests/TestProgramFlow.cpp
         Tests/TestDriver.cpp Tests/TestGrid.cpp Tests/TestBfsAlgorithm.cpp Tests/TestPassenger.cpp)
-target_link_libraries(ex2 gtest gtest_main)
+target_link_libraries(ex2 gtest gtest_main ${Boost_LIBRARIES})

@@ -690,6 +690,8 @@ ex2: CMakeFiles/ex2.dir/src/Socket.cpp.o
 ex2: CMakeFiles/ex2.dir/build.make
 ex2: lib/googletest-master/googlemock/gtest/libgtest.a
 ex2: lib/googletest-master/googlemock/gtest/libgtest_main.a
+ex2: /usr/lib/x86_64-linux-gnu/libboost_serialization.so
+ex2: /usr/lib/x86_64-linux-gnu/libboost_system.so
 ex2: lib/googletest-master/googlemock/gtest/libgtest.a
 ex2: CMakeFiles/ex2.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex4/ex4/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Linking CXX executable ex2"

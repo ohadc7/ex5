@@ -1,4 +1,4 @@
-//#define DEBUG_MAIN
+#define DEBUG_MAIN
 #include <string>
 #include "ProgramFlow.h"
 
@@ -18,6 +18,16 @@ int main(int argc, char *argv[]) {
         socket->reciveData(buffer, sizeof(buffer));
         cout << buffer << endl;
         socket->sendData("main(): massage from server to client");
+
+        Point p(5,5);
+        std::string serial_str;
+        boost::iostreams::back_insert_device<std::string> inserter(serial_str);
+        boost::iostreams::stream<boost::iostreams::back_insert_device<std::string> > s(inserter);
+        boost::archive::binary_oarchive oa(s);
+        oa << p;
+        s.flush();
+
+        socket->sendData(serial_str);
 #endif
 
         ProgramFlow programFlow;
@@ -33,6 +43,7 @@ int main(int argc, char *argv[]) {
 #ifdef DEBUG_MAIN
         char buffer[1024];
         socket->sendData("main(): massage from client to server");
+        socket->reciveData(buffer, sizeof(buffer));
         socket->reciveData(buffer, sizeof(buffer));
         cout << buffer << endl;
 #endif
