@@ -41,7 +41,7 @@ public:
      * 6 - start driving (no input afterwards. Meaning getting all drivers to their end point).
      * 7 - exit (cleaning up the program and exiting).
     */
-    int run(Socket *socket, istream &inputStream = cin, ostream &outputStream = cout);
+    int run(Socket *socket);
 
     /*
      * create taxi center. the taxi center has to contain "bfs" (that know the grid and the

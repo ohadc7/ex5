@@ -6,5 +6,5 @@ CXX_FLAGS =  -std=c++0x -g
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/lib/googletest-master/googletest/include -I/home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/lib/googletest-master/googlemock/include 
+CXX_INCLUDES = -I/home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex4/ex4/lib/googletest-master/googletest/include -I/home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex4/ex4/lib/googletest-master/googlemock/include 
 

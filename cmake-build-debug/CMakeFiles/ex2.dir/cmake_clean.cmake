@@ -21,7 +21,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/ex2.dir/Tests/TestTaxiCenter.cpp.o"
   "CMakeFiles/ex2.dir/Tests/TestBfsAlgorithm.cpp.o"
   "CMakeFiles/ex2.dir/Tests/TestPassenger.cpp.o"
-  "CMakeFiles/ex2.dir/Tests/main_test.cpp.o"
+  "CMakeFiles/ex2.dir/src/Udp.cpp.o"
+  "CMakeFiles/ex2.dir/src/Socket.cpp.o"
   "ex2.pdb"
   "ex2"
 )

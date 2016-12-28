@@ -48,10 +48,10 @@ RM = /home/ohad/Programs/clion-2016.2.3/bin/cmake/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2
+CMAKE_SOURCE_DIR = /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex4/ex4
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/cmake-build-debug
+CMAKE_BINARY_DIR = /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex4/ex4/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -124,9 +124,9 @@ install/strip/fast: install/strip
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/cmake-build-debug/CMakeFiles /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex4/ex4/cmake-build-debug/CMakeFiles /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex4/ex4/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex4/ex4/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -489,33 +489,6 @@ Tests/TestTrip.cpp.s:
 	$(MAKE) -f CMakeFiles/ex2.dir/build.make CMakeFiles/ex2.dir/Tests/TestTrip.cpp.s
 .PHONY : Tests/TestTrip.cpp.s
 
-Tests/main_test.o: Tests/main_test.cpp.o
-
-.PHONY : Tests/main_test.o
-
-# target to build an object file
-Tests/main_test.cpp.o:
-	$(MAKE) -f CMakeFiles/ex2.dir/build.make CMakeFiles/ex2.dir/Tests/main_test.cpp.o
-.PHONY : Tests/main_test.cpp.o
-
-Tests/main_test.i: Tests/main_test.cpp.i
-
-.PHONY : Tests/main_test.i
-
-# target to preprocess a source file
-Tests/main_test.cpp.i:
-	$(MAKE) -f CMakeFiles/ex2.dir/build.make CMakeFiles/ex2.dir/Tests/main_test.cpp.i
-.PHONY : Tests/main_test.cpp.i
-
-Tests/main_test.s: Tests/main_test.cpp.s
-
-.PHONY : Tests/main_test.s
-
-# target to generate assembly for a file
-Tests/main_test.cpp.s:
-	$(MAKE) -f CMakeFiles/ex2.dir/build.make CMakeFiles/ex2.dir/Tests/main_test.cpp.s
-.PHONY : Tests/main_test.cpp.s
-
 src/Cab.o: src/Cab.cpp.o
 
 .PHONY : src/Cab.o
@@ -732,6 +705,33 @@ src/ProgramFlow.cpp.s:
 	$(MAKE) -f CMakeFiles/ex2.dir/build.make CMakeFiles/ex2.dir/src/ProgramFlow.cpp.s
 .PHONY : src/ProgramFlow.cpp.s
 
+src/Socket.o: src/Socket.cpp.o
+
+.PHONY : src/Socket.o
+
+# target to build an object file
+src/Socket.cpp.o:
+	$(MAKE) -f CMakeFiles/ex2.dir/build.make CMakeFiles/ex2.dir/src/Socket.cpp.o
+.PHONY : src/Socket.cpp.o
+
+src/Socket.i: src/Socket.cpp.i
+
+.PHONY : src/Socket.i
+
+# target to preprocess a source file
+src/Socket.cpp.i:
+	$(MAKE) -f CMakeFiles/ex2.dir/build.make CMakeFiles/ex2.dir/src/Socket.cpp.i
+.PHONY : src/Socket.cpp.i
+
+src/Socket.s: src/Socket.cpp.s
+
+.PHONY : src/Socket.s
+
+# target to generate assembly for a file
+src/Socket.cpp.s:
+	$(MAKE) -f CMakeFiles/ex2.dir/build.make CMakeFiles/ex2.dir/src/Socket.cpp.s
+.PHONY : src/Socket.cpp.s
+
 src/StandardCab.o: src/StandardCab.cpp.o
 
 .PHONY : src/StandardCab.o
@@ -813,6 +813,33 @@ src/Trip.cpp.s:
 	$(MAKE) -f CMakeFiles/ex2.dir/build.make CMakeFiles/ex2.dir/src/Trip.cpp.s
 .PHONY : src/Trip.cpp.s
 
+src/Udp.o: src/Udp.cpp.o
+
+.PHONY : src/Udp.o
+
+# target to build an object file
+src/Udp.cpp.o:
+	$(MAKE) -f CMakeFiles/ex2.dir/build.make CMakeFiles/ex2.dir/src/Udp.cpp.o
+.PHONY : src/Udp.cpp.o
+
+src/Udp.i: src/Udp.cpp.i
+
+.PHONY : src/Udp.i
+
+# target to preprocess a source file
+src/Udp.cpp.i:
+	$(MAKE) -f CMakeFiles/ex2.dir/build.make CMakeFiles/ex2.dir/src/Udp.cpp.i
+.PHONY : src/Udp.cpp.i
+
+src/Udp.s: src/Udp.cpp.s
+
+.PHONY : src/Udp.s
+
+# target to generate assembly for a file
+src/Udp.cpp.s:
+	$(MAKE) -f CMakeFiles/ex2.dir/build.make CMakeFiles/ex2.dir/src/Udp.cpp.s
+.PHONY : src/Udp.cpp.s
+
 src/main.o: src/main.cpp.o
 
 .PHONY : src/main.o
@@ -887,9 +914,6 @@ help:
 	@echo "... Tests/TestTrip.o"
 	@echo "... Tests/TestTrip.i"
 	@echo "... Tests/TestTrip.s"
-	@echo "... Tests/main_test.o"
-	@echo "... Tests/main_test.i"
-	@echo "... Tests/main_test.s"
 	@echo "... src/Cab.o"
 	@echo "... src/Cab.i"
 	@echo "... src/Cab.s"
@@ -914,6 +938,9 @@ help:
 	@echo "... src/ProgramFlow.o"
 	@echo "... src/ProgramFlow.i"
 	@echo "... src/ProgramFlow.s"
+	@echo "... src/Socket.o"
+	@echo "... src/Socket.i"
+	@echo "... src/Socket.s"
 	@echo "... src/StandardCab.o"
 	@echo "... src/StandardCab.i"
 	@echo "... src/StandardCab.s"
@@ -923,6 +950,9 @@ help:
 	@echo "... src/Trip.o"
 	@echo "... src/Trip.i"
 	@echo "... src/Trip.s"
+	@echo "... src/Udp.o"
+	@echo "... src/Udp.i"
+	@echo "... src/Udp.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

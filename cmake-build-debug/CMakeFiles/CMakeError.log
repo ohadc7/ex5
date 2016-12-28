@@ -1,24 +1,24 @@
 Determining if the pthread_create exist failed with the following output:
-Change Dir: /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex4/ex4/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_ad604/fast"
-/usr/bin/make -f CMakeFiles/cmTC_ad604.dir/build.make CMakeFiles/cmTC_ad604.dir/build
-make[1]: Entering directory '/home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_ad604.dir/CheckSymbolExists.c.o
-/usr/bin/cc     -o CMakeFiles/cmTC_ad604.dir/CheckSymbolExists.c.o   -c /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c
-Linking C executable cmTC_ad604
-/home/ohad/Programs/clion-2016.2.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ad604.dir/link.txt --verbose=1
-/usr/bin/cc       CMakeFiles/cmTC_ad604.dir/CheckSymbolExists.c.o  -o cmTC_ad604 -rdynamic 
-CMakeFiles/cmTC_ad604.dir/CheckSymbolExists.c.o: In function `main':
+Run Build Command:"/usr/bin/make" "cmTC_57e2c/fast"
+/usr/bin/make -f CMakeFiles/cmTC_57e2c.dir/build.make CMakeFiles/cmTC_57e2c.dir/build
+make[1]: Entering directory '/home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex4/ex4/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_57e2c.dir/CheckSymbolExists.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_57e2c.dir/CheckSymbolExists.c.o   -c /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex4/ex4/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_57e2c
+/home/ohad/Programs/clion-2016.2.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_57e2c.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_57e2c.dir/CheckSymbolExists.c.o  -o cmTC_57e2c -rdynamic 
+CMakeFiles/cmTC_57e2c.dir/CheckSymbolExists.c.o: In function `main':
 CheckSymbolExists.c:(.text+0x16): undefined reference to `pthread_create'
 collect2: error: ld returned 1 exit status
-CMakeFiles/cmTC_ad604.dir/build.make:97: recipe for target 'cmTC_ad604' failed
-make[1]: *** [cmTC_ad604] Error 1
-make[1]: Leaving directory '/home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/cmake-build-debug/CMakeFiles/CMakeTmp'
-Makefile:126: recipe for target 'cmTC_ad604/fast' failed
-make: *** [cmTC_ad604/fast] Error 2
+CMakeFiles/cmTC_57e2c.dir/build.make:97: recipe for target 'cmTC_57e2c' failed
+make[1]: *** [cmTC_57e2c] Error 1
+make[1]: Leaving directory '/home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex4/ex4/cmake-build-debug/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_57e2c/fast' failed
+make: *** [cmTC_57e2c/fast] Error 2
 
-File /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+File /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex4/ex4/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
 /* */
 #include <pthread.h>
 
@@ -34,22 +34,22 @@ int main(int argc, char** argv)
 }
 
 Determining if the function pthread_create exists in the pthreads failed with the following output:
-Change Dir: /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex4/ex4/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_e72cc/fast"
-/usr/bin/make -f CMakeFiles/cmTC_e72cc.dir/build.make CMakeFiles/cmTC_e72cc.dir/build
-make[1]: Entering directory '/home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_e72cc.dir/CheckFunctionExists.c.o
-/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_e72cc.dir/CheckFunctionExists.c.o   -c /home/ohad/Programs/clion-2016.2.3/bin/cmake/share/cmake-3.6/Modules/CheckFunctionExists.c
-Linking C executable cmTC_e72cc
-/home/ohad/Programs/clion-2016.2.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e72cc.dir/link.txt --verbose=1
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_e72cc.dir/CheckFunctionExists.c.o  -o cmTC_e72cc -rdynamic -lpthreads 
+Run Build Command:"/usr/bin/make" "cmTC_96fec/fast"
+/usr/bin/make -f CMakeFiles/cmTC_96fec.dir/build.make CMakeFiles/cmTC_96fec.dir/build
+make[1]: Entering directory '/home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex4/ex4/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_96fec.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_96fec.dir/CheckFunctionExists.c.o   -c /home/ohad/Programs/clion-2016.2.3/bin/cmake/share/cmake-3.6/Modules/CheckFunctionExists.c
+Linking C executable cmTC_96fec
+/home/ohad/Programs/clion-2016.2.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_96fec.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_96fec.dir/CheckFunctionExists.c.o  -o cmTC_96fec -rdynamic -lpthreads 
 /usr/bin/ld: cannot find -lpthreads
 collect2: error: ld returned 1 exit status
-CMakeFiles/cmTC_e72cc.dir/build.make:97: recipe for target 'cmTC_e72cc' failed
-make[1]: *** [cmTC_e72cc] Error 1
-make[1]: Leaving directory '/home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex2/cmake-build-debug/CMakeFiles/CMakeTmp'
-Makefile:126: recipe for target 'cmTC_e72cc/fast' failed
-make: *** [cmTC_e72cc/fast] Error 2
+CMakeFiles/cmTC_96fec.dir/build.make:97: recipe for target 'cmTC_96fec' failed
+make[1]: *** [cmTC_96fec] Error 1
+make[1]: Leaving directory '/home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex4/ex4/cmake-build-debug/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_96fec/fast' failed
+make: *** [cmTC_96fec/fast] Error 2
 
 
