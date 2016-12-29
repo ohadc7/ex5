@@ -17,16 +17,21 @@ int main(int argc, char *argv[]) {
         char buffer[1024];
         socket->reciveData(buffer, sizeof(buffer));
         cout << buffer << endl;
-        socket->sendData("main(): massage from server to client");
+        socket->sendData("main(): massage1 from server to client");
 
-        Point p(5,5);
+
+        //serialization:
+        Point pointThatTheServerIsCreating = Point(1,5);
+        //string to maintain the serializied object:
         std::string serial_str;
         boost::iostreams::back_insert_device<std::string> inserter(serial_str);
         boost::iostreams::stream<boost::iostreams::back_insert_device<std::string> > s(inserter);
         boost::archive::binary_oarchive oa(s);
-        oa << p;
+        oa << pointThatTheServerIsCreating;
         s.flush();
+        cout << "the string before deserialization is " << serial_str << endl;
 
+        //pass to client
         socket->sendData(serial_str);
 #endif
 
@@ -42,10 +47,23 @@ int main(int argc, char *argv[]) {
 
 #ifdef DEBUG_MAIN
         char buffer[1024];
-        socket->sendData("main(): massage from client to server");
-        socket->reciveData(buffer, sizeof(buffer));
+        socket->sendData("main(): massage1 from client to server");
         socket->reciveData(buffer, sizeof(buffer));
         cout << buffer << endl;
+
+
+        socket->reciveData(buffer, sizeof(buffer));
+        char* serial_str_that_the_server_sended_to_us;
+        strcpy(buffer, serial_str_that_the_server_sended_to_us);
+        Point pointThatTheClientWantToReceiveFromServer;
+        string str(serial_str_that_the_server_sended_to_us);
+        boost::iostreams::basic_array_source<char> device(serial_str_that_the_server_sended_to_us, strlen(serial_str_that_the_server_sended_to_us));
+        //boost::iostreams::basic_array_source<char> device(serial_str_that_the_server_sended_to_us.c_str(), serial_str_that_the_server_sended_to_us.size());
+        boost::iostreams::stream<boost::iostreams::basic_array_source<char> > s2(device);
+        boost::archive::binary_iarchive ia(s2);
+        ia >> pointThatTheClientWantToReceiveFromServer;
+
+        cout << pointThatTheClientWantToReceiveFromServer;
 #endif
 
         InputParsing inputParsing = InputParsing();
