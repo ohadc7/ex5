@@ -21,7 +21,7 @@ int main(int argc, char *argv[]) {
 
 
         //serialization:
-        Point pointThatTheServerIsCreating = Point(1,5);
+        Point *pointThatTheServerIsCreating = new Point(1,5);
         //string to maintain the serializied object:
         std::string serial_str;
         boost::iostreams::back_insert_device<std::string> inserter(serial_str);
@@ -54,10 +54,9 @@ int main(int argc, char *argv[]) {
 
         socket->reciveData(buffer, sizeof(buffer));
         char* serial_str_that_the_server_sended_to_us;
-        strcpy(buffer, serial_str_that_the_server_sended_to_us);
         Point pointThatTheClientWantToReceiveFromServer;
-        string str(serial_str_that_the_server_sended_to_us);
-        boost::iostreams::basic_array_source<char> device(serial_str_that_the_server_sended_to_us, strlen(serial_str_that_the_server_sended_to_us));
+        string str(buffer, sizeof(buffer));
+        boost::iostreams::basic_array_source<char> device(str.c_str(), str.size());
         //boost::iostreams::basic_array_source<char> device(serial_str_that_the_server_sended_to_us.c_str(), serial_str_that_the_server_sended_to_us.size());
         boost::iostreams::stream<boost::iostreams::basic_array_source<char> > s2(device);
         boost::archive::binary_iarchive ia(s2);
