@@ -4,7 +4,8 @@
 /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex4/ex4/cmake-build-debug/CMakeFiles/install.dir
 /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex4/ex4/cmake-build-debug/CMakeFiles/install/local.dir
 /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex4/ex4/cmake-build-debug/CMakeFiles/install/strip.dir
-/home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex4/ex4/cmake-build-debug/CMakeFiles/ex2.dir
+/home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex4/ex4/cmake-build-debug/CMakeFiles/client.dir
+/home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex4/ex4/cmake-build-debug/CMakeFiles/server.dir
 /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex4/ex4/cmake-build-debug/lib/googletest-master/CMakeFiles/edit_cache.dir
 /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex4/ex4/cmake-build-debug/lib/googletest-master/CMakeFiles/rebuild_cache.dir
 /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex4/ex4/cmake-build-debug/lib/googletest-master/CMakeFiles/list_install_components.dir
