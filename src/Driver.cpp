@@ -3,30 +3,12 @@
 #include "Driver.h"
 #include "InputParsing.h"
 
-
-/*
-Driver::Driver(int id, int age, Status_Of_Marriage status, int yearsOfExperience, Cab *cab) :
-        id(id), age(age), status(status), yearsOfExperience(yearsOfExperience){
-    numOfTrips =1;
-    averageSatisfactions = 0;
-    this->attachCabToDriver(cab);
-}
-
-*/
 Driver::Driver(int id, int age, Status_Of_Marriage status, int yearsOfExperience, int vehicleId) :
         id(id), age(age), status(status), yearsOfExperience(yearsOfExperience),
         vehicleId(vehicleId) {
     numOfTrips = 1;
     averageSatisfactions = 0;
 }
-
-/*
-Driver::Driver() : id(-1), age(-1), status(SINGLE), yearsOfExperience(-1),
-                   vehicleId(-1) {
-    numOfTrips = 1;
-    averageSatisfactions = 0;
-}
-*/
 
 int Driver::getId() const {
     return id;
@@ -102,7 +84,7 @@ void Driver::moveOneStep() {
         return;
     }
     //if the driver has LuxuryCab, he has to skip one point of the path:
-    if (this->cabOfDriver->getTaxiType() == LUXURY_CAB &&
+   /* if (this->cabOfDriver->getTaxiType() == LUXURY_CAB &&
             this->currentTrip->getPath().size() > 1) {
         this->currentTrip->removeNextPointOfPath();
     }
@@ -114,7 +96,7 @@ void Driver::moveOneStep() {
     //if the path was terminated, set "currentTrip" member to NULL:
     if (this->currentTrip->getPath().size() == 0) {
         this->currentTrip = NULL;
-    }
+    }*/
     return;
 }
 
@@ -125,23 +107,6 @@ void Driver::run(Socket *socket) {
     socket->reciveData(buffer, sizeof(buffer));
     cout << buffer << endl;
 #endif
-
-    /*
-    InputParsing inputParsing = InputParsing();
-    string inputString;
-    getline(cin, inputString);
-    InputParsing::parsedDriverData driver = inputParsing.parseDriverData(inputString);
-    try {
-        this->id = driver.id;
-        this->age = driver.age;
-        this->status = driver.status;
-        this->yearsOfExperience = driver.yearsOfExperience;
-        this->vehicleId = driver.vehicleId;
-    } catch (const char *msg) {
-        cerr << msg << endl;
-    }
-     */
-
 
     stringstream ss;
     ss << this->id;

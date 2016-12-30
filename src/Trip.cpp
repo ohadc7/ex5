@@ -1,18 +1,10 @@
 #include "Trip.h"
 
-/*
-Trip::Trip(int rideId, Point startingPoint, Point endingPoint, int numOfPassengers, double taarif)
-        : rideId(rideId), startingPoint(startingPoint), endingPoint(endingPoint),
-          numOfPassengers(numOfPassengers) {
-    rateOfTrip = taarif;
-    passedMeters = 0;
-}
-*/
 
-Trip::Trip(int rideId, Point startingPoint, Point endingPoint, int numOfPassengers, double taarif,
-           stack<Node<Point>> pathWithoutStartingPoint) : rideId(rideId), startingPoint(startingPoint),
-                                      endingPoint(endingPoint), numOfPassengers(numOfPassengers),
-                                      nextPointsOfPath(pathWithoutStartingPoint) {
+Trip::Trip(int rideId, Point startingPoint, Point endingPoint, int numOfPassengers, double taarif
+         /*  stack<Node<Point>> pathWithoutStartingPoint)*/ ): rideId(rideId), startingPoint(startingPoint),
+                                      endingPoint(endingPoint), numOfPassengers(numOfPassengers){
+                                     // nextPointsOfPath(pathWithoutStartingPoint) {
     rateOfTrip = taarif;
     passedMeters = 0;
 }
@@ -44,7 +36,7 @@ double Trip::getRateOfTrip() const {
 int Trip::getPassedMeters() const {
     return passedMeters;
 }
-
+/*
 const stack<Node<Point>> &Trip::getPath() const {
     return nextPointsOfPath;
 }
@@ -54,9 +46,12 @@ void Trip::removeNextPointOfPath() {
         this->nextPointsOfPath.pop();
         passedMeters++;
     }
-}
+}*/
 
 Trip::~Trip() {
 }
 
+Trip::Trip() : rideId(0), passedMeters(0),startingPoint(0,0),
+               endingPoint(0,0), numOfPassengers(0),rateOfTrip(0.0){
+} ;
 

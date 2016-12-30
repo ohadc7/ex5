@@ -1,6 +1,7 @@
 #define DEBUG_PROGRAM_FLOW //define it if and only if you defined DEBUG_DRIVER on client
 
 #include "ProgramFlow.h"
+#include "SerializationClass.h"
 
 using namespace std;
 
@@ -84,6 +85,9 @@ int ProgramFlow::run(Socket *socket) {
                 getline(cin, inputString);
                 InputParsing::parsedTripData trip = inputParsing.parseTripData(inputString);
                 taxiCenter.createTrip(trip);
+                SerializationClass<Trip*> serializeClass;
+                string str = serializeClass.serializationObject(taxiCenter.getListOfTrips().front());
+                socket->sendData(str);
                 break;
             }
             case 3: {

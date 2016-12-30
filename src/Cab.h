@@ -1,6 +1,8 @@
 #ifndef EX2_CAB_H
 #define EX2_CAB_H
 
+#include <boost/serialization/access.hpp>
+
 enum Model_Of_Car {
     HONDA, SUBARO, TESLA, FIAT
 };
@@ -20,6 +22,18 @@ private:
     double rate;   //tariff
 
 public:
+
+    friend class boost::serialization::access;
+
+
+    template<class Archive>
+    void serialize(Archive &ar, const unsigned int version) {
+        ar & id;
+        ar & passedKilometers;
+        ar & carModel;
+        ar & color;
+        ar & rate;
+    }
 
     Cab(int id, Model_Of_Car carModel, Color_Of_Car color);
 
