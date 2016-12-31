@@ -5,10 +5,12 @@ TaxiCenter::TaxiCenter(BfsAlgorithm<Point> &bfsInstance) : bfsInstance(bfsInstan
 void TaxiCenter::createTrip(InputParsing::parsedTripData parsedTripDataTrip) {
     Node<Point> startNode(parsedTripDataTrip.start);
     Node<Point> endNode(parsedTripDataTrip.end);
-    //stack <Node<Point>> nextPointsOfPath = bfsInstance.navigate(startNode, endNode);
-    //nextPointsOfPath.pop();
+    /**/
+    stack <Node<Point>> nextPointsOfPath = bfsInstance.navigate(startNode, endNode);
+    nextPointsOfPath.pop();
+    /**/
     Trip *trip = new Trip(parsedTripDataTrip.id, parsedTripDataTrip.start, parsedTripDataTrip.end,
-                          parsedTripDataTrip.numberOfPassengers, parsedTripDataTrip.tariff);//, nextPointsOfPath);
+                          parsedTripDataTrip.numberOfPassengers, parsedTripDataTrip.tariff/*);//*/, nextPointsOfPath);
     listOfTrips.push_back(trip);
 }
 

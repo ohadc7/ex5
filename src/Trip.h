@@ -28,6 +28,8 @@ private:
     Point startingPoint;
     Point endingPoint;
     //stack <Node<Point>> nextPointsOfPath;
+    //deque <Node<Point>> nextPointsOfPath;
+    list <Point> nextPointsOfPath;
     list <Passenger> customers; //passengers
     int numOfPassengers;
     double rateOfTrip; //tariff
@@ -41,7 +43,7 @@ public:
         ar & passedMeters;
         ar & startingPoint;
         ar & endingPoint;
-       // ar & nextPointsOfPath;
+        ar & nextPointsOfPath;
         ar & customers;
         ar & numOfPassengers;
         ar & rateOfTrip;
@@ -49,8 +51,8 @@ public:
 
     Trip();
 
-    Trip(int rideId, Point startingPoint, Point endingPoint, int numOfPassengers, double taarif);
-         //stack <Node<Point>> pathWithoutStartingPoint);
+    Trip(int rideId, Point startingPoint, Point endingPoint, int numOfPassengers, double taarif //);
+        , stack <Node<Point>> pathWithoutStartingPoint);
 
     int getRideId() const;
 
@@ -66,9 +68,9 @@ public:
 
     double getRateOfTrip() const;
 
-  //  const stack<Node<Point>> &getPath() const;
+    const list<Point> &getPath() const;
 
-   // void removeNextPointOfPath();
+    void removeNextPointOfPath();
 
     ~Trip();
 

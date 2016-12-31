@@ -1,3 +1,5 @@
+#define DEBUG_CLIENT
+
 #include <string>
 #include "ProgramFlow.h"
 #include "SerializationClass.h"
@@ -31,7 +33,7 @@ int main(int argc, char *argv[]) {
         trip = serializeClass1.deSerializationObject(strTrip,trip);
 
         //for checking that trip deSerilaized works
-        cout<< "num of Points: " << trip->getNumberOfPassengers() << "," "ride Id:" << trip->getRideId() << "\n";
+        cout<< "num of Points (or maybe num of Passengers): " << trip->getNumberOfPassengers() << "," "ride Id:" << trip->getRideId() << "\n";
         //for checking that point deSerilaized works
         cout << pointThatTheClientWantToReceiveFromServer << "\n";
 
@@ -42,6 +44,9 @@ int main(int argc, char *argv[]) {
         try {
             Driver driver = Driver(driverData.id, driverData.age, driverData.status, driverData.yearsOfExperience,
                                    driverData.vehicleId);
+#ifdef DEBUG_CLIENT
+            cout << "starting to run programFlow.run: " << endl;
+#endif
             driver.run(socket);
         } catch (const char *msg) {
             cerr << msg << endl;

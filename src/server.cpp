@@ -30,8 +30,26 @@ int main(int argc, char *argv[]) {
 
         cout << "the string before deserialization is " << serial_str << endl;
 
-        //pass to client
+        //pass point to client
         socket->sendData(serial_str);
+
+
+        //serialize trip and pass trip to client
+        SerializationClass<Trip*> serializeTrip;
+        Graph<Point> *g = new Grid(9,9);
+        BfsAlgorithm<Point> bfs(g);
+        Node<Point> startNode(Point(0,0));
+        Node<Point> endNode(Point(3,3));
+        stack<Node<Point>> pathOfNodes = bfs.navigate(startNode, endNode);
+        Trip trip = Trip(12, Point(0,1), Point(5,5), 2, 200, pathOfNodes);
+        Trip* pointerToTrip = &trip;
+        std::string serial_str_for_trip;
+        serial_str_for_trip = serializeTrip.serializationObject(pointerToTrip);
+
+        socket->sendData(serial_str_for_trip);
+
+        cout << "starting to run programFlow.run: " << endl;
+
         ProgramFlow programFlow;
         programFlow.run(socket);
     }

@@ -76,7 +76,13 @@ int ProgramFlow::run(Socket *socket) {
                     socket->reciveData(buffer, sizeof(buffer));
                     string driverIdString = string(buffer);
                     int driverId = stoi(driverIdString);
+#ifdef DEBUG_PROGRAM_FLOW
                     cout << driverId << " is the driver id" << endl;
+#endif
+                    Cab* cabOfDriver = taxiCenter.getCab(driverId);
+                    SerializationClass<Cab*> serializeClass;
+                    string str = serializeClass.serializationObject(cabOfDriver);
+                    socket->sendData(str);
                 }
                 break;
             }

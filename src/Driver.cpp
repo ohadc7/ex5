@@ -2,6 +2,7 @@
 
 #include "Driver.h"
 #include "InputParsing.h"
+#include "SerializationClass.h"
 
 Driver::Driver(int id, int age, Status_Of_Marriage status, int yearsOfExperience, int vehicleId) :
         id(id), age(age), status(status), yearsOfExperience(yearsOfExperience),
@@ -84,19 +85,19 @@ void Driver::moveOneStep() {
         return;
     }
     //if the driver has LuxuryCab, he has to skip one point of the path:
-   /* if (this->cabOfDriver->getTaxiType() == LUXURY_CAB &&
+    if (this->cabOfDriver->getTaxiType() == LUXURY_CAB &&
             this->currentTrip->getPath().size() > 1) {
         this->currentTrip->removeNextPointOfPath();
     }
     //move to the next point (one block):
-    Node<Point> nextNodeOfPath = this->currentTrip->getPath().top();
+    Point locationAfterStep = this->currentTrip->getPath().front();
     this->currentTrip->removeNextPointOfPath();
-    Point locationAfterStep = nextNodeOfPath.getValue();
+    //Point locationAfterStep = nextPointOfPath.getValue();
     this->setCurrentLocation(locationAfterStep);
     //if the path was terminated, set "currentTrip" member to NULL:
     if (this->currentTrip->getPath().size() == 0) {
         this->currentTrip = NULL;
-    }*/
+    }
     return;
 }
 
@@ -111,4 +112,25 @@ void Driver::run(Socket *socket) {
     stringstream ss;
     ss << this->id;
     socket->sendData(ss.str());
+
+    //receive cab
+    socket->reciveData(buffer, sizeof(buffer));
+    string serializedCab(buffer, sizeof(buffer));
+    SerializationClass<Cab*> serializeClass;
+    cabOfDriver =
+            serializeClass.deSerializationObject(serializedCab, cabOfDriver);
+
+#ifdef DEBUG_DRIVER
+    cout << "Driver.run(): my cab has the following data: "
+         << "\n" <<
+         this->cabOfDriver->getTaxiType()
+         << "\n" <<
+         this->cabOfDriver->getId()
+         << "\n" <<
+         this->cabOfDriver->getCarModel()
+         << "\n" <<
+         endl;
+#endif
+
+
 }
