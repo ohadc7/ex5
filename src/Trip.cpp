@@ -1,3 +1,4 @@
+#define DEBUG_TRIP
 #include "Trip.h"
 
 
@@ -9,11 +10,21 @@ Trip::Trip(int rideId, Point startingPoint, Point endingPoint, int numOfPassenge
     while(!stackOfPathWithoutStartingPoint.empty()) {
         Node<Point> n = stackOfPathWithoutStartingPoint.top();
         Point p = n.getValue();
-        nextPointsOfPath.push_front(p);
+        nextPointsOfPath.push_back(p);
         stackOfPathWithoutStartingPoint.pop();
     }
     rateOfTrip = taarif;
     passedMeters = 0;
+#ifdef DEBUG_TRIP
+    cout << "Trip constructor: " << endl;
+    std::list<Point> mylist();
+    //list<Point>::iterator it = mylist().begin();
+    list<Point> l = nextPointsOfPath;
+    list<Point>::iterator it = l.begin();
+    for (list<Point>::iterator it = l.begin() ; it != l.end(); ++it) {
+        cout << "Point from path is " << *it << "." << endl;
+    }
+#endif
 }
 
 int Trip::getRideId() const {
