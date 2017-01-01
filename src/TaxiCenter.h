@@ -17,6 +17,7 @@ private:
     vector<Driver> listOfAvialbeDrivers;
     vector<Trip *> listOfTrips;
     vector<Cab *> listOfCabs;
+    map<int,string> mapOfCabStrings;
     BfsAlgorithm<Point> bfsInstance;
 public:
     //constructor
@@ -27,6 +28,8 @@ public:
 
     //add cab to the taxi center
     void addCab(Cab *cab);
+
+    void addCabString(int id, string cabString);
 
     // allocate the trips that were received in the system to the appropriate drivers
     // and command each of them to drive to the end point of its trip
@@ -52,6 +55,8 @@ public:
     //get cab that is belonging to the taxi center (according to the cab id).
     //(if no such cab in the system, throw "no cab found")
     Cab *getCab(int id);
+
+    string getCabString(int id);
 
     //destructor
     ~TaxiCenter();

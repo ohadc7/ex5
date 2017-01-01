@@ -1,4 +1,4 @@
-#define DEBUG_CLIENT
+#define DEBUG_CLIENT //define it if and only if you defined DEBUG_SERVER on server
 
 #include <string>
 #include "ProgramFlow.h"
@@ -14,12 +14,15 @@ int main(int argc, char *argv[]) {
         // port: port id that the server waits to our massages. we will send massages to there.
         socket = new Udp(0, port);
         socket->initialize();
+
+#ifdef DEBUG_CLIENT //we have to delete this part in the final version
         char buffer[1024];
         socket->sendData("main(): massage1 from client to server");
         socket->reciveData(buffer, sizeof(buffer));
         cout << buffer << endl;
+#endif
 
-
+#if 0
         socket->reciveData(buffer, sizeof(buffer));
         Point pointThatTheClientWantToReceiveFromServer;
         string str(buffer, sizeof(buffer));
@@ -37,7 +40,7 @@ int main(int argc, char *argv[]) {
         cout<< "num of Points (or maybe num of Passengers): " << trip->getNumberOfPassengers() << "," "ride Id:" << trip->getRideId() << "\n";
         //for checking that point deSerilaized works
         cout << pointThatTheClientWantToReceiveFromServer << "\n";
-
+#endif
         InputParsing inputParsing = InputParsing();
         string inputString;
         getline(cin, inputString);
@@ -46,7 +49,7 @@ int main(int argc, char *argv[]) {
             Driver driver = Driver(driverData.id, driverData.age, driverData.status, driverData.yearsOfExperience,
                                    driverData.vehicleId);
 #ifdef DEBUG_CLIENT
-            cout << "starting to run programFlow.run: " << endl;
+            cout << "starting to run driver.run: " << endl;
 #endif
             driver.run(socket);
         } catch (const char *msg) {

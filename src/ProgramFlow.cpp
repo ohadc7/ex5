@@ -2,6 +2,7 @@
 
 #include "ProgramFlow.h"
 #include "SerializationClass.h"
+#include "InputParsing.h"
 
 using namespace std;
 
@@ -79,16 +80,65 @@ int ProgramFlow::run(Socket *socket) {
 #ifdef DEBUG_PROGRAM_FLOW
                     cout << driverId << " is the driver id" << endl;
 #endif
-                    StandardCab cabOfDriver1;
-                    //Cab* cabOfDriver = taxiCenter.getCab(driverId);
+                    //send taxi type
+                    string dataOfCabOfDriver = taxiCenter.getCabString(driverId);
+                    socket->sendData(dataOfCabOfDriver);
+
+/*
+#ifdef DEBUG_PROGRAM_FLOW
+                    //send taxi type
+                    cout << "send number of taxi type: " << cabOfDriver->getTaxiType() << endl;
+#endif
+                    stringstream ss;
+                    ss << cabOfDriver->getTaxiType();
+                    socket->sendData(ss.str());
+
+                    int cabId = cabOfDriver->getId();
+                    Model_Of_Car cabModel = cabOfDriver->getCarModel();
+                    Color_Of_Car cabColor = cabOfDriver->getColor();
+
+#ifdef DEBUG_PROGRAM_FLOW
+                    cout << driverId << "send cab id" << endl;
+#endif
+                    ss << cabOfDriver->getId();
+                    socket->sendData(ss.str());
+#ifdef DEBUG_PROGRAM_FLOW
+                    cout << driverId << "send cab model number" << cabOfDriver->getTaxiType() << endl;
+#endif
+                    ss << cabOfDriver->getCarModel();
+                    socket->sendData(ss.str());
+#ifdef DEBUG_PROGRAM_FLOW
+                    cout << driverId << "send cab color number " << cabOfDriver->getTaxiType() << endl;
+#endif
+                    ss << cabOfDriver->getColor();
+                    socket->sendData(ss.str());
+*/
+
+/*
+                    if(taxiCenter.getCab(driverId)->getTaxiType() == STANDARD_CAB){
+
+                        StandardCab cabOfDriver1 = StandardCab(cabId, cabModel, cabColor);
+                        SerializationClass<StandardCab> serializeClass;
+                        string str = serializeClass.serializationObject(cabOfDriver1);
+                        socket->sendData(str);
+                    } else {
+                        LuxuryCab cabOfDriver2 = LuxuryCab(cabId, cabModel, cabColor);
+                        SerializationClass<LuxuryCab> serializeClass;
+                        string str = serializeClass.serializationObject(cabOfDriver2);
+                        socket->sendData(str);
+                    }
+*/
+                    /*
                     if(taxiCenter.getCab(driverId)->getTaxiType() == STANDARD_CAB){
                          cabOfDriver1 = StandardCab(taxiCenter.getCab(driverId)->getId(),
                                                            taxiCenter.getCab(driverId)->getCarModel()
                                 ,taxiCenter.getCab(driverId)->getColor());
                     }
+
                     SerializationClass<StandardCab> serializeClass;
                     string str = serializeClass.serializationObject(cabOfDriver1);
                     socket->sendData(str);
+                     */
                 }
                 break;
             }
@@ -97,9 +147,11 @@ int ProgramFlow::run(Socket *socket) {
                 getline(cin, inputString);
                 InputParsing::parsedTripData trip = inputParsing.parseTripData(inputString);
                 taxiCenter.createTrip(trip);
+                /*
                 SerializationClass<Trip*> serializeClass;
                 string str = serializeClass.serializationObject(taxiCenter.getListOfTrips().front());
                 socket->sendData(str);
+                 */
                 break;
             }
             case 3: {
@@ -107,6 +159,7 @@ int ProgramFlow::run(Socket *socket) {
                 getline(cin, inputString);
                 InputParsing::parsedCabData cab = inputParsing.parseVehicleData(inputString);
                 taxiCenter.addCab(createCab(cab.id, cab.taxiType, cab.manufacturer, cab.color));
+                taxiCenter.addCabString(cab.id, inputString);
                 break;
             }
             case 4: {

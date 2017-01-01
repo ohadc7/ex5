@@ -43,6 +43,11 @@ void TaxiCenter::addCab(Cab *cab) {
     listOfCabs.push_back(cab);
 }
 
+void TaxiCenter::addCabString(int id, string cabString) {
+    mapOfCabStrings[id] = cabString;
+}
+
+
 void TaxiCenter::startDriving() {
     for (unsigned int i = 0; i < listOfDrivers.size(); i++) {
         if (listOfTrips.size() > 0) {
@@ -67,6 +72,14 @@ Cab *TaxiCenter::getCab(int id) {
     }
     throw "no cab found";
 }
+
+string TaxiCenter::getCabString(int id) {
+    return mapOfCabStrings[id];
+    /*
+    throw "no cab found";
+     */
+}
+
 
 TaxiCenter::~TaxiCenter() {
     for (unsigned int i = 0; i < listOfCabs.size(); i++) {
