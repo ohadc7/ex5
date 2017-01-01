@@ -562,6 +562,36 @@ src/Cab.cpp.s:
 	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/Cab.cpp.s
 .PHONY : src/Cab.cpp.s
 
+src/CabFactory.o: src/CabFactory.cpp.o
+
+.PHONY : src/CabFactory.o
+
+# target to build an object file
+src/CabFactory.cpp.o:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/CabFactory.cpp.o
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/CabFactory.cpp.o
+.PHONY : src/CabFactory.cpp.o
+
+src/CabFactory.i: src/CabFactory.cpp.i
+
+.PHONY : src/CabFactory.i
+
+# target to preprocess a source file
+src/CabFactory.cpp.i:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/CabFactory.cpp.i
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/CabFactory.cpp.i
+.PHONY : src/CabFactory.cpp.i
+
+src/CabFactory.s: src/CabFactory.cpp.s
+
+.PHONY : src/CabFactory.s
+
+# target to generate assembly for a file
+src/CabFactory.cpp.s:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/CabFactory.cpp.s
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/CabFactory.cpp.s
+.PHONY : src/CabFactory.cpp.s
+
 src/Driver.o: src/Driver.cpp.o
 
 .PHONY : src/Driver.o
@@ -1027,6 +1057,9 @@ help:
 	@echo "... src/Cab.o"
 	@echo "... src/Cab.i"
 	@echo "... src/Cab.s"
+	@echo "... src/CabFactory.o"
+	@echo "... src/CabFactory.i"
+	@echo "... src/CabFactory.s"
 	@echo "... src/Driver.o"
 	@echo "... src/Driver.i"
 	@echo "... src/Driver.s"

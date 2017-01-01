@@ -60,6 +60,7 @@ int ProgramFlow::run(Socket *socket) {
 
     int expectedNumberOfDrivers = 0;
     int timer = -1;
+    int flagStart =0;
     while (true) {
         //get number of option and do the defined operation
         getline(cin, inputString);
@@ -215,8 +216,10 @@ int ProgramFlow::run(Socket *socket) {
 #ifdef DEBUG_PROGRAM_FLOW
                 cout << " driver.run() - case 9: sending 9 in order to advance the driver one step" << endl;
 #endif
-
-                socket->sendData("9");
+                if (flagStart>0) {
+                    socket->sendData("9");
+                }
+                flagStart=1;
                 timer++;
                 break;
             }

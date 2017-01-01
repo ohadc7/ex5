@@ -16,7 +16,7 @@ set(SOURCE_FILES src/BfsAlgorithm.h src/Grid.cpp src/Grid.h
         src/ProgramFlow.cpp src/ProgramFlow.h src/TaxiCenter.cpp src/TaxiCenter.h src/Passenger.cpp
         src/Passenger.h src/Driver.cpp src/Driver.h src/Trip.cpp src/Trip.h src/Cab.cpp src/Cab.h
         src/StandardCab.cpp src/StandardCab.h src/LuxuryCab.cpp src/LuxuryCab.h src/Udp.cpp
-        src/Udp.h src/Socket.cpp src/Socket.h src/SerializationClass.h)
+        src/Udp.h src/Socket.cpp src/Socket.h src/SerializationClass.h src/CabFactory.cpp src/CabFactory.h)
 
 set(TEST_FILES Tests/TestPoint.cpp Tests/TestProgramFlow.cpp
         Tests/TestDriver.cpp Tests/TestGrid.cpp Tests/TestTrip.cpp Tests/TestCabs.cpp
