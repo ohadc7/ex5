@@ -50,8 +50,8 @@ public:
 	***********************************************************************/
 	int reciveData(char* buffer, int size);
 
-	//my addition:
-	Udp(bool isServers, int port_num, string ipAdress);
+
+
 };
 
 #endif /* UDP_H_ */
