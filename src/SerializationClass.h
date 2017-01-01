@@ -17,7 +17,6 @@ public:
 };
 
 
-
 template<class T>
 const string SerializationClass<T>::serializationObject(T object) {
 

@@ -592,6 +592,33 @@ src/CabFactory.cpp.s:
 	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/CabFactory.cpp.s
 .PHONY : src/CabFactory.cpp.s
 
+src/Client.o: src/Client.cpp.o
+
+.PHONY : src/Client.o
+
+# target to build an object file
+src/Client.cpp.o:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/Client.cpp.o
+.PHONY : src/Client.cpp.o
+
+src/Client.i: src/Client.cpp.i
+
+.PHONY : src/Client.i
+
+# target to preprocess a source file
+src/Client.cpp.i:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/Client.cpp.i
+.PHONY : src/Client.cpp.i
+
+src/Client.s: src/Client.cpp.s
+
+.PHONY : src/Client.s
+
+# target to generate assembly for a file
+src/Client.cpp.s:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/Client.cpp.s
+.PHONY : src/Client.cpp.s
+
 src/Driver.o: src/Driver.cpp.o
 
 .PHONY : src/Driver.o
@@ -952,33 +979,6 @@ src/Udp.cpp.s:
 	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/Udp.cpp.s
 .PHONY : src/Udp.cpp.s
 
-src/client.o: src/client.cpp.o
-
-.PHONY : src/client.o
-
-# target to build an object file
-src/client.cpp.o:
-	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/client.cpp.o
-.PHONY : src/client.cpp.o
-
-src/client.i: src/client.cpp.i
-
-.PHONY : src/client.i
-
-# target to preprocess a source file
-src/client.cpp.i:
-	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/client.cpp.i
-.PHONY : src/client.cpp.i
-
-src/client.s: src/client.cpp.s
-
-.PHONY : src/client.s
-
-# target to generate assembly for a file
-src/client.cpp.s:
-	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/client.cpp.s
-.PHONY : src/client.cpp.s
-
 src/server.o: src/server.cpp.o
 
 .PHONY : src/server.o
@@ -1060,6 +1060,9 @@ help:
 	@echo "... src/CabFactory.o"
 	@echo "... src/CabFactory.i"
 	@echo "... src/CabFactory.s"
+	@echo "... src/Client.o"
+	@echo "... src/Client.i"
+	@echo "... src/Client.s"
 	@echo "... src/Driver.o"
 	@echo "... src/Driver.i"
 	@echo "... src/Driver.s"
@@ -1096,9 +1099,6 @@ help:
 	@echo "... src/Udp.o"
 	@echo "... src/Udp.i"
 	@echo "... src/Udp.s"
-	@echo "... src/client.o"
-	@echo "... src/client.i"
-	@echo "... src/client.s"
 	@echo "... src/server.o"
 	@echo "... src/server.i"
 	@echo "... src/server.s"

@@ -4,9 +4,7 @@
 
 #include "CabFactory.h"
 
-
-/*
-Cab *Driver::createCab(string inputString) {
+Cab *CabFactory::createCab(string inputString) {
     InputParsing inputParsing;
     InputParsing::parsedCabData cab = inputParsing.parseVehicleData(inputString);
     if (cab.taxiType == 1) {
@@ -17,7 +15,13 @@ Cab *Driver::createCab(string inputString) {
         return luxury;
     }
 }
-*/
-CabFactory::CabFactory() {
 
+Cab *CabFactory::createCab(int id, int cabType, Model_Of_Car carModel, Color_Of_Car color) {
+    if (cabType == 1) {
+        Cab *standard = new StandardCab(id, carModel, color);
+        return standard;
+    } else {
+        Cab *luxury = new LuxuryCab(id, carModel, color);
+        return luxury;
+    }
 }

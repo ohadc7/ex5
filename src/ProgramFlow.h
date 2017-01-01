@@ -49,12 +49,6 @@ public:
      */
     TaxiCenter createTaxiCenter(BfsAlgorithm<Point> bfs);
 
-    //create a driver according to the given parameters
-    //Driver createDriver(int id, int age, Status_Of_Marriage status, int yearsOfExperience, Cab *cab);
-
-    //create a cab according to the given parameters
-    Cab *createCab(int id, int cabType, Model_Of_Car carModel, Color_Of_Car color);
-
     //create rectangular matrix with list of impassable points
     Graph<Point> *createGrid(int width, int height, vector<Point> listOfObstacles);
 };

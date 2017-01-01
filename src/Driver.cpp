@@ -3,6 +3,7 @@
 #include "Driver.h"
 #include "InputParsing.h"
 #include "SerializationClass.h"
+#include "CabFactory.h"
 
 Driver::Driver(int id, int age, Status_Of_Marriage status, int yearsOfExperience, int vehicleId) :
         id(id), age(age), status(status), yearsOfExperience(yearsOfExperience),
@@ -126,7 +127,7 @@ void Driver::run(Socket *socket) {
 
     socket->reciveData(buffer, sizeof(buffer));
     string cabDataString = string(buffer);
-    cabOfDriver = this->createCab(cabDataString);
+    cabOfDriver = CabFactory::createCab(cabDataString);
 
 
 #if 0
@@ -237,17 +238,5 @@ void Driver::run(Socket *socket) {
                 break;
             }
         }
-    }
-}
-
-Cab *Driver::createCab(string inputString) {
-    InputParsing inputParsing;
-    InputParsing::parsedCabData cab = inputParsing.parseVehicleData(inputString);
-    if (cab.taxiType == 1) {
-        Cab *standard = new StandardCab(cab.id, cab.manufacturer, cab.color);
-        return standard;
-    } else {
-        Cab *luxury = new LuxuryCab(cab.id, cab.manufacturer, cab.color);
-        return luxury;
     }
 }

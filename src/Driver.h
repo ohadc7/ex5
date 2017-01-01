@@ -59,8 +59,6 @@ public:
     void moveOneStep();
 
     void run(Socket *socket);
-
-    Cab *createCab(string inputString);
 };
 
 #endif

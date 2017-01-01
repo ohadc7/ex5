@@ -10,10 +10,9 @@
 #include "LuxuryCab.h"
 
 class CabFactory {
-private:
 public:
-    CabFactory();
-
+    static Cab *createCab(string inputString);
+    static Cab *createCab(int id, int cabType, Model_Of_Car carModel, Color_Of_Car color);
 };
 
 
