@@ -19,6 +19,7 @@ protected:
 
 
 TEST_F(TestProgramFlow, simpleMethods) {
+    /*
     //create a cab by the 'programFlow' and check whether it has the correct parameters
     //standard cab
     Cab *cab = pFlow.createCab(2244466, STANDARD_CAB, HONDA, GREEN);
@@ -38,8 +39,10 @@ TEST_F(TestProgramFlow, simpleMethods) {
      * and "createGrid(int width, int height, vector<Point> listOfObstacles)" because this two
      * methods just create objects we specificly check's in TestDriver and TestGrid.
      * */
+    /*
     delete cab;
     delete cab2;
+    */
 }
 
 TEST_F(TestProgramFlow, runMethod) {

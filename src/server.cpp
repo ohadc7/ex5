@@ -56,3 +56,6 @@ int main(int argc, char *argv[]) {
     delete socket;
     return 0;
 }
+
+//BOOST_CLASS_EXPORT_GUID(StandardCab, "StandardCab")
+//BOOST_CLASS_EXPORT_GUID(LuxuryCab, "LuxuryCab")

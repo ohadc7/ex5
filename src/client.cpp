@@ -31,6 +31,7 @@ int main(int argc, char *argv[]) {
         SerializationClass<Trip *> serializeClass1;
         Trip *trip;
         trip = serializeClass1.deSerializationObject(strTrip,trip);
+       
 
         //for checking that trip deSerilaized works
         cout<< "num of Points (or maybe num of Passengers): " << trip->getNumberOfPassengers() << "," "ride Id:" << trip->getRideId() << "\n";

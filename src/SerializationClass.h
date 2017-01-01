@@ -20,6 +20,7 @@ public:
 
 template<class T>
 const string SerializationClass<T>::serializationObject(T object) {
+
     std::string serial_str;
     boost::iostreams::back_insert_device<std::string> inserter(serial_str);
     boost::iostreams::stream<boost::iostreams::back_insert_device<std::string> > s(inserter);

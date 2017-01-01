@@ -1,7 +1,10 @@
 #ifndef EX2_CAB_H
 #define EX2_CAB_H
 
-#include <boost/serialization/access.hpp>
+
+#include <boost/serialization/base_object.hpp>
+#include <boost/serialization/export.hpp>
+
 
 enum Model_Of_Car {
     HONDA, SUBARO, TESLA, FIAT
@@ -12,6 +15,9 @@ enum Color_Of_Car {
 typedef enum {
     STANDARD_CAB = 1, LUXURY_CAB = 2
 } Taxi_Type;
+
+
+
 
 class Cab {
 private:
@@ -33,8 +39,10 @@ public:
         ar & carModel;
         ar & color;
         ar & rate;
+
     }
 
+    Cab();
     Cab(int id, Model_Of_Car carModel, Color_Of_Car color);
 
     int getId() const;
@@ -54,6 +62,9 @@ public:
     virtual ~Cab();
 
 };
+
+
+BOOST_SERIALIZATION_ASSUME_ABSTRACT(Cab)
 
 
 #endif //EX2_CAB_H

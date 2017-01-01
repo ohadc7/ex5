@@ -79,9 +79,15 @@ int ProgramFlow::run(Socket *socket) {
 #ifdef DEBUG_PROGRAM_FLOW
                     cout << driverId << " is the driver id" << endl;
 #endif
-                    Cab* cabOfDriver = taxiCenter.getCab(driverId);
-                    SerializationClass<Cab*> serializeClass;
-                    string str = serializeClass.serializationObject(cabOfDriver);
+                    StandardCab cabOfDriver1;
+                    //Cab* cabOfDriver = taxiCenter.getCab(driverId);
+                    if(taxiCenter.getCab(driverId)->getTaxiType() == STANDARD_CAB){
+                         cabOfDriver1 = StandardCab(taxiCenter.getCab(driverId)->getId(),
+                                                           taxiCenter.getCab(driverId)->getCarModel()
+                                ,taxiCenter.getCab(driverId)->getColor());
+                    }
+                    SerializationClass<StandardCab> serializeClass;
+                    string str = serializeClass.serializationObject(cabOfDriver1);
                     socket->sendData(str);
                 }
                 break;

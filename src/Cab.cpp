@@ -23,3 +23,7 @@ Color_Of_Car Cab::getColor() const {
 
 Cab::~Cab() {
 }
+
+Cab::Cab() {
+
+}
