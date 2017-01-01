@@ -59,6 +59,7 @@ int ProgramFlow::run(Socket *socket) {
     TaxiCenter taxiCenter = createTaxiCenter(bfs);
 
     int expectedNumberOfDrivers = 0;
+    int timer = 0;
     while (true) {
         //get number of option and do the defined operation
         getline(cin, inputString);
@@ -72,7 +73,7 @@ int ProgramFlow::run(Socket *socket) {
 #ifdef DEBUG_PROGRAM_FLOW
                     socket->reciveData(buffer, sizeof(buffer));
                     cout << buffer << endl;
-                    socket->sendData("ProgramFlow.run(): massage from server to client");
+                    socket->sendData("ProgramFlow.run() - case 1: massage from server to client");
 #endif
                     socket->reciveData(buffer, sizeof(buffer));
                     string driverIdString = string(buffer);
@@ -166,8 +167,20 @@ int ProgramFlow::run(Socket *socket) {
                 //query about the location of a specific driver
                 getline(cin, inputString);
                 try {
-                     Point point(taxiCenter.getDriverLocation(stoi(inputString)));
-                    cout << point << '\n';
+                    //Point point(taxiCenter.getDriverLocation(stoi(inputString)));
+                    //here we have to add command: find the socket of the corresponding driver
+#ifdef DEBUG_PROGRAM_FLOW
+                    cout << " driver.run() - case 4: sending 4 and expecting to receive serialized point of driver location" << endl;
+#endif
+                    socket->sendData("4");
+                    char buffer[1024];
+                    socket->reciveData(buffer, sizeof(buffer));
+                    Point driverLocation;
+                    string locationStr(buffer, sizeof(buffer));
+                    SerializationClass<Point> serializeClass;
+                    driverLocation =
+                            serializeClass.deSerializationObject(locationStr, driverLocation);
+                    cout << driverLocation << '\n';
                 } catch (const char *msg) {
                     cerr << msg << endl;
                 }
@@ -182,6 +195,23 @@ int ProgramFlow::run(Socket *socket) {
                 //terminate the program
                 delete grid;
                 return 0;
+            }
+            case 9: {
+                timer++;
+#ifdef DEBUG_PROGRAM_FLOW
+                cout << " driver.run() - case 9: sending 10 and sending a trip to the driver" << endl;
+#endif
+                socket->sendData("10");
+                SerializationClass<Trip*> serializeClass;
+                string str = serializeClass.serializationObject(taxiCenter.getListOfTrips().front());
+                socket->sendData(str);
+
+#ifdef DEBUG_PROGRAM_FLOW
+                cout << " driver.run() - case 9: sending 9 in order to advance the driver one step" << endl;
+#endif
+                socket->sendData("9");
+
+                break;
             }
             default:
                 break;

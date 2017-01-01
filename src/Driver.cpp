@@ -161,7 +161,7 @@ void Driver::run(Socket *socket) {
     */
 #endif
 #ifdef DEBUG_DRIVER
-    cout << "Driver.run(): driver received string of serialized cab and desirialized it.\n the cab has the following data:"
+    cout << "Driver.run(): driver received string with data of cab and pasrsed it.\n the cab has the following data:"
          << "\n taxi type is: " <<
          this->cabOfDriver->getTaxiType()
          << "\n id of cab is: " <<

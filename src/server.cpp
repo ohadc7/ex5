@@ -53,8 +53,10 @@ int main(int argc, char *argv[]) {
 
         socket->sendData(serial_str_for_trip);
 #endif
-        cout << "starting to run programFlow.run: " << endl;
 
+#ifdef DEBUG_SERVER
+        cout << "starting to run programFlow.run: " << endl;
+#endif
         ProgramFlow programFlow;
         programFlow.run(socket);
     }
