@@ -23,6 +23,7 @@ private:
     list <Passenger> customers; //passengers
     int numOfPassengers;
     double rateOfTrip; //tariff
+    int time;
 public:
 
     friend class boost::serialization::access;
@@ -37,12 +38,13 @@ public:
         ar & customers;
         ar & numOfPassengers;
         ar & rateOfTrip;
+        ar & time;
     }
 
     Trip();
 
     Trip(int rideId, Point startingPoint, Point endingPoint, int numOfPassengers, double taarif //);
-        , stack <Node<Point>> pathWithoutStartingPoint);
+        , stack <Node<Point>> pathWithoutStartingPoint, int time);
 
     int getRideId() const;
 
@@ -61,6 +63,7 @@ public:
     const list<Point> &getPath() const;
 
     void removeNextPointOfPath();
+    int getTime();
 
     ~Trip();
 

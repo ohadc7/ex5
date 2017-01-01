@@ -60,6 +60,7 @@ public:
         Point end;
         int numberOfPassengers;
         double tariff;
+        int time;
     } parsedTripData;
 
     parsedTripData parseTripData(string tripData);

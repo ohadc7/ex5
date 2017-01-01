@@ -1,4 +1,5 @@
 #include "TaxiCenter.h"
+#include "InputParsing.h"
 
 TaxiCenter::TaxiCenter(BfsAlgorithm<Point> &bfsInstance) : bfsInstance(bfsInstance) {}
 
@@ -10,7 +11,7 @@ void TaxiCenter::createTrip(InputParsing::parsedTripData parsedTripDataTrip) {
     nextPointsOfPath.pop();
     /**/
     Trip *trip = new Trip(parsedTripDataTrip.id, parsedTripDataTrip.start, parsedTripDataTrip.end,
-                          parsedTripDataTrip.numberOfPassengers, parsedTripDataTrip.tariff/*);//*/, nextPointsOfPath);
+                          parsedTripDataTrip.numberOfPassengers, parsedTripDataTrip.tariff, nextPointsOfPath, parsedTripDataTrip.time);
     listOfTrips.push_back(trip);
 }
 

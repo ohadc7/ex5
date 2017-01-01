@@ -59,7 +59,7 @@ int ProgramFlow::run(Socket *socket) {
     TaxiCenter taxiCenter = createTaxiCenter(bfs);
 
     int expectedNumberOfDrivers = 0;
-    int timer = 0;
+    int timer = -1;
     while (true) {
         //get number of option and do the defined operation
         getline(cin, inputString);
@@ -199,20 +199,25 @@ int ProgramFlow::run(Socket *socket) {
                 return 0;
             }
             case 9: {
-                timer++;
+
 #ifdef DEBUG_PROGRAM_FLOW
                 cout << " driver.run() - case 9: sending 10 and sending a trip to the driver" << endl;
 #endif
-                socket->sendData("10");
-                SerializationClass<Trip*> serializeClass;
-                string str = serializeClass.serializationObject(taxiCenter.getListOfTrips().front());
-                socket->sendData(str);
-
+                if(taxiCenter.getListOfTrips().front() != NULL) {
+                    if (taxiCenter.getListOfTrips().front()->getTime() == timer) {
+                        socket->sendData("10");
+                        SerializationClass<Trip *> serializeClass;
+                        string str = serializeClass.serializationObject(
+                                taxiCenter.getListOfTrips().front());
+                        socket->sendData(str);
+                    }
+                }
 #ifdef DEBUG_PROGRAM_FLOW
                 cout << " driver.run() - case 9: sending 9 in order to advance the driver one step" << endl;
 #endif
-                socket->sendData("9");
 
+                socket->sendData("9");
+                timer++;
                 break;
             }
             default:

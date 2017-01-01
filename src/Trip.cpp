@@ -2,8 +2,8 @@
 
 
 Trip::Trip(int rideId, Point startingPoint, Point endingPoint, int numOfPassengers, double taarif,
-         /**/  stack<Node<Point>> stackOfPathWithoutStartingPoint /*)*/ ): rideId(rideId), startingPoint(startingPoint),
-                                      endingPoint(endingPoint), numOfPassengers(numOfPassengers){
+       stack<Node<Point>> stackOfPathWithoutStartingPoint, int time): rideId(rideId), startingPoint(startingPoint),
+                                      endingPoint(endingPoint), numOfPassengers(numOfPassengers), time(time){
 
     //nextPointsOfPath(stackOfPathWithoutStartingPoint) {
     while(stackOfPathWithoutStartingPoint.empty()) {
@@ -60,5 +60,9 @@ Trip::~Trip() {
 
 Trip::Trip() : rideId(0), passedMeters(0),startingPoint(0,0),
                endingPoint(0,0), numOfPassengers(0),rateOfTrip(0.0){
-} ;
+}
+
+int Trip::getTime() {
+    return time;
+};
 
