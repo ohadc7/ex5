@@ -82,6 +82,7 @@ void Driver::assignTrip(Trip *trip) {
 
 void Driver::moveOneStep() {
 #ifdef DEBUG_DRIVER
+    /*
     cout << "Driver.moveOneStep(): method is starting" << endl;
     std::list<Point> mylist();
     //list<Point>::iterator it = mylist().begin();
@@ -90,6 +91,7 @@ void Driver::moveOneStep() {
     for (list<Point>::iterator it = l.begin() ; it != l.end(); ++it) {
         cout << "Point from path is " << *it << "." << endl;
     }
+     */
 #endif
     //if no current trip, return:
     if (this->currentTrip == NULL) {
