@@ -111,3 +111,10 @@ int Udp::reciveData(char* buffer, int size) {
 	//return correct if there were no error
 	return bytes;
 }
+
+//my addition:
+Udp::Udp(bool isServers, int port_num, string ipAdress) {
+	this->port_number = port_num;
+	this->isServer = isServers;
+	this->ip_address = ipAdress;
+}

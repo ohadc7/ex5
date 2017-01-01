@@ -192,6 +192,8 @@ int ProgramFlow::run(Socket *socket) {
                 break;
             }
             case 7: {
+                //ask the client to shutdown itself
+                socket->sendData("7");
                 //terminate the program
                 delete grid;
                 return 0;
