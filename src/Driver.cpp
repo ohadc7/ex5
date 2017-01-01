@@ -90,6 +90,7 @@ void Driver::moveOneStep() {
         this->currentTrip->removeNextPointOfPath();
     }
     //move to the next point (one block):
+
     Point locationAfterStep = this->currentTrip->getPath().front();
     this->currentTrip->removeNextPointOfPath();
     //Point locationAfterStep = nextPointOfPath.getValue();

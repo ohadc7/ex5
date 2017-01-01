@@ -6,7 +6,7 @@ Trip::Trip(int rideId, Point startingPoint, Point endingPoint, int numOfPassenge
                                       endingPoint(endingPoint), numOfPassengers(numOfPassengers), time(time){
 
     //nextPointsOfPath(stackOfPathWithoutStartingPoint) {
-    while(stackOfPathWithoutStartingPoint.empty()) {
+    while(!stackOfPathWithoutStartingPoint.empty()) {
         Node<Point> n = stackOfPathWithoutStartingPoint.top();
         Point p = n.getValue();
         nextPointsOfPath.push_front(p);

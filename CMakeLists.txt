@@ -23,7 +23,7 @@ set(TEST_FILES Tests/TestPoint.cpp Tests/TestProgramFlow.cpp
         Tests/TestInputParsing.cpp Tests/TestTaxiCenter.cpp Tests/TestBfsAlgorithm.cpp Tests/TestPassenger.cpp)
 
 add_executable(server ${SOURCE_FILES} ${TEST_FILES} src/server.cpp)
-add_executable(client ${SOURCE_FILES} ${TEST_FILES} src/client.cpp)
+add_executable(client ${SOURCE_FILES} ${TEST_FILES} src/Client.cpp)
 
 target_link_libraries(server gtest ${Boost_LIBRARIES})
 target_link_libraries(client gtest ${Boost_LIBRARIES})
