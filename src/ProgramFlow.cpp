@@ -143,14 +143,14 @@ int ProgramFlow::run(Socket *socket) {
                 }
                 flagStart=1;
                 timer++;
-                char buffer[1024];
+               /* char buffer[1024];
                 socket->reciveData(buffer, sizeof(buffer));
                 Point driverLocation;
                 string locationStr(buffer, sizeof(buffer));
                 SerializationClass<Point> serializeClass;
                 driverLocation =
                         serializeClass.deSerializationObject(locationStr, driverLocation);
-                taxiCenter.addDriver(0,driverLocation);
+                taxiCenter.addDriver(0,driverLocation);*/
                 break;
             }
             default:
