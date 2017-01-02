@@ -1,4 +1,4 @@
-#define DEBUG_DRIVER //define it if and only if you defined DEBUG_PROGRAM_FLOW on server
+//#define DEBUG_DRIVER //define it if and only if you defined DEBUG_PROGRAM_FLOW on server
 
 #include "Driver.h"
 #include "SerializationClass.h"
@@ -6,9 +6,11 @@
 
 Driver::Driver(int id, int age, Status_Of_Marriage status, int yearsOfExperience, int vehicleId) :
         id(id), age(age), status(status), yearsOfExperience(yearsOfExperience),
-        vehicleId(vehicleId) {
+        vehicleId(vehicleId),currentLocation(0,0) {
     numOfTrips = 1;
     averageSatisfactions = 0;
+    currentTrip = nullptr;
+    
 }
 
 int Driver::getId() const {
@@ -93,7 +95,7 @@ void Driver::moveOneStep() {
      */
 #endif
     //if no current trip, return:
-    if (this->currentTrip == NULL) {
+    if (this->currentTrip == nullptr) {
         return;
     }
     //if the driver has LuxuryCab, he has to skip one point of the path:
@@ -109,7 +111,7 @@ void Driver::moveOneStep() {
     this->setCurrentLocation(locationAfterStep);
     //if the path was terminated, set "currentTrip" member to NULL:
     if (this->currentTrip->getPath().size() == 0) {
-        this->currentTrip = NULL;
+        this->currentTrip = nullptr;
     }
     return;
 }
@@ -212,10 +214,6 @@ void Driver::run(Socket *socket) {
                 cout << "calling to method moveOneStep()" << endl;
 #endif
                 moveOneStep();
-                /*SerializationClass<Point> serializeClass;
-                string serializedPointStr = serializeClass.serializationObject(this->currentPlace());
-                //pass point to server
-                socket->sendData(serializedPointStr);*/
                 break;
             }
             //option 10: assign a trip.

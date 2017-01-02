@@ -1,4 +1,4 @@
-#define DEBUG_TRIP
+//#define DEBUG_TRIP
 #include "Trip.h"
 
 

@@ -1,4 +1,4 @@
-#define DEBUG_PROGRAM_FLOW //define it if and only if you defined DEBUG_DRIVER on client
+//#define DEBUG_PROGRAM_FLOW //define it if and only if you defined DEBUG_DRIVER on client
 
 #include "ProgramFlow.h"
 #include "SerializationClass.h"
@@ -41,8 +41,7 @@ int ProgramFlow::run(Socket *socket) {
     TaxiCenter taxiCenter = createTaxiCenter(bfs);
 
     int expectedNumberOfDrivers = 0;
-    int timer = -1;
-    int flagStart =0;
+    int timer = 0;
     while (true) {
         //get number of option and do the defined operation
         getline(cin, inputString);
@@ -61,7 +60,8 @@ int ProgramFlow::run(Socket *socket) {
                     socket->reciveData(buffer, sizeof(buffer));
                     string driverIdString = string(buffer);
                     int driverId = stoi(driverIdString);
-                    taxiCenter.addDriver(driverId,Point(0,0));
+                    //int driverId = 0;
+                    //taxiCenter.addDriver(driverId,Point(0,0));
 #ifdef DEBUG_PROGRAM_FLOW
                     cout << driverId << " is the driver id" << endl;
 #endif
@@ -123,34 +123,28 @@ int ProgramFlow::run(Socket *socket) {
                 return 0;
             }
             case 9: {
-
+                timer++;
 #ifdef DEBUG_PROGRAM_FLOW
                 cout << " driver.run() - case 9: sending 10 and sending a trip to the driver" << endl;
 #endif
-                if(taxiCenter.getListOfTrips().front() != NULL) {
-                    if (taxiCenter.getListOfTrips().front()->getTime() == timer) {
+                int assignFlag = 0;
+                for (unsigned int i = 0; i < taxiCenter.getListOfTrips().size(); i++) {
+                    if (taxiCenter.getListOfTrips().at(i)->getTime() == timer) {
                         socket->sendData("10");
-                        string str = taxiCenter.startDriving();
+                        SerializationClass<Trip *> serializeClass;
+                        string str = serializeClass.serializationObject(taxiCenter.getListOfTrips().at(i));
                         socket->sendData(str);
+                        assignFlag = 1;
+                        break;
                     }
                 }
+
 #ifdef DEBUG_PROGRAM_FLOW
                 cout << " driver.run() - case 9: sending 9 in order to advance the driver one step" << endl;
 #endif
-                //TBD: find a way to zeroing the flagStart, every time new 9 sequence is starting
-                if (flagStart>0) {
-                    socket->sendData("9");
+                if (assignFlag == 0) {
+                    socket->sendData("9");    
                 }
-                flagStart=1;
-                timer++;
-               /* char buffer[1024];
-                socket->reciveData(buffer, sizeof(buffer));
-                Point driverLocation;
-                string locationStr(buffer, sizeof(buffer));
-                SerializationClass<Point> serializeClass;
-                driverLocation =
-                        serializeClass.deSerializationObject(locationStr, driverLocation);
-                taxiCenter.addDriver(0,driverLocation);*/
                 break;
             }
             default:

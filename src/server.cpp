@@ -1,8 +1,10 @@
-#define DEBUG_SERVER //define it if and only if you defined DEBUG_CLIENT on client
+//#define DEBUG_SERVER //define it if and only if you defined DEBUG_CLIENT on client
 
 #include <string>
 #include "ProgramFlow.h"
-#include "SerializationClass.h"
+
+BOOST_CLASS_EXPORT_GUID(StandardCab, "StandardCab")
+BOOST_CLASS_EXPORT_GUID(LuxuryCab, "LuxuryCab")
 
 using namespace std;
 
@@ -64,5 +66,3 @@ int main(int argc, char *argv[]) {
     return 0;
 }
 
-//BOOST_CLASS_EXPORT_GUID(StandardCab, "StandardCab")
-//BOOST_CLASS_EXPORT_GUID(LuxuryCab, "LuxuryCab")

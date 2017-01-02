@@ -1,8 +1,10 @@
-#define DEBUG_CLIENT //define it if and only if you defined DEBUG_SERVER on server
+//#define DEBUG_CLIENT //define it if and only if you defined DEBUG_SERVER on server
 
 #include <string>
 #include "ProgramFlow.h"
-#include "SerializationClass.h"
+
+BOOST_CLASS_EXPORT_GUID(StandardCab, "StandardCab")
+BOOST_CLASS_EXPORT_GUID(LuxuryCab, "LuxuryCab")
 
 using namespace std;
 
@@ -11,7 +13,7 @@ int main(int argc, char *argv[]) {
     if (argc == 3) {
         int port = atoi(argv[2]);
         // 0: isServer = false,
-        // port: port id that the server waits to our massages. we will send massages to there.
+        // port: port of the client
         socket = new Udp(0, port);
         socket->initialize();
 
