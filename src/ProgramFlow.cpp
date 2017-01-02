@@ -10,6 +10,7 @@ TaxiCenter ProgramFlow::createTaxiCenter(BfsAlgorithm<Point> bfs) {
     return TaxiCenter(bfs);
 }
 
+
 Graph<Point> *ProgramFlow::createGrid(int width, int height, vector<Point> listOfObstacles) {
     Graph<Point> *g = new Grid(width, height, listOfObstacles);
     return g;
@@ -60,6 +61,7 @@ int ProgramFlow::run(Socket *socket) {
                     socket->reciveData(buffer, sizeof(buffer));
                     string driverIdString = string(buffer);
                     int driverId = stoi(driverIdString);
+                    taxiCenter.addDriver(driverId,Point(0,0));
 #ifdef DEBUG_PROGRAM_FLOW
                     cout << driverId << " is the driver id" << endl;
 #endif
@@ -128,20 +130,27 @@ int ProgramFlow::run(Socket *socket) {
                 if(taxiCenter.getListOfTrips().front() != NULL) {
                     if (taxiCenter.getListOfTrips().front()->getTime() == timer) {
                         socket->sendData("10");
-                        SerializationClass<Trip *> serializeClass;
-                        string str = serializeClass.serializationObject(
-                                taxiCenter.getListOfTrips().front());
+                        string str = taxiCenter.startDriving();
                         socket->sendData(str);
                     }
                 }
 #ifdef DEBUG_PROGRAM_FLOW
                 cout << " driver.run() - case 9: sending 9 in order to advance the driver one step" << endl;
 #endif
+                //TBD: find a way to zeroing the flagStart, every time new 9 sequence is starting
                 if (flagStart>0) {
                     socket->sendData("9");
                 }
                 flagStart=1;
                 timer++;
+                char buffer[1024];
+                socket->reciveData(buffer, sizeof(buffer));
+                Point driverLocation;
+                string locationStr(buffer, sizeof(buffer));
+                SerializationClass<Point> serializeClass;
+                driverLocation =
+                        serializeClass.deSerializationObject(locationStr, driverLocation);
+                taxiCenter.addDriver(0,driverLocation);
                 break;
             }
             default:

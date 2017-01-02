@@ -22,11 +22,8 @@ private:
     vector<Passenger> listOfPassengers;
     Trip *currentTrip;
 public:
-    //Driver(int id, int age, Status_Of_Marriage status, int yearsOfExperience, Cab *cab);
 
     Driver(int id, int age, Status_Of_Marriage status, int yearsOfExperience, int vehicleId);
-
-    //Driver::Driver();
 
     int getId() const;
 

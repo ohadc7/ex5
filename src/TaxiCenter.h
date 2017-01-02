@@ -14,17 +14,17 @@
 class TaxiCenter {
 private:
     vector<Driver> listOfDrivers;
-    vector<Driver> listOfAvialbeDrivers;
     vector<Trip *> listOfTrips;
     vector<Cab *> listOfCabs;
     map<int,string> mapOfCabStrings;
+    map<int,Point> mapOfDriversLocations;
     BfsAlgorithm<Point> bfsInstance;
 public:
     //constructor
     TaxiCenter(BfsAlgorithm<Point> &bfsInstance);
 
     //add driver to the taxi center
-    void addDriver(Driver driver);
+    void addDriver(int id, Point location);
 
     //add cab to the taxi center
     void addCab(Cab *cab);
@@ -33,7 +33,7 @@ public:
 
     // allocate the trips that were received in the system to the appropriate drivers
     // and command each of them to drive to the end point of its trip
-    void startDriving();
+    string startDriving();
 
     //get list of the drivers
     const vector<Driver> &getListOfDrivers() const;

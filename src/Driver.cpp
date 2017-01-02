@@ -1,7 +1,6 @@
 #define DEBUG_DRIVER //define it if and only if you defined DEBUG_PROGRAM_FLOW on server
 
 #include "Driver.h"
-#include "InputParsing.h"
 #include "SerializationClass.h"
 #include "CabFactory.h"
 
@@ -126,7 +125,6 @@ void Driver::run(Socket *socket) {
     stringstream ss;
     ss << this->id;
     socket->sendData(ss.str());
-
     socket->reciveData(buffer, sizeof(buffer));
     string cabDataString = string(buffer);
     cabOfDriver = CabFactory::createCab(cabDataString);
@@ -214,6 +212,10 @@ void Driver::run(Socket *socket) {
                 cout << "calling to method moveOneStep()" << endl;
 #endif
                 moveOneStep();
+                /*SerializationClass<Point> serializeClass;
+                string serializedPointStr = serializeClass.serializationObject(this->currentPlace());
+                //pass point to server
+                socket->sendData(serializedPointStr);*/
                 break;
             }
             //option 10: assign a trip.

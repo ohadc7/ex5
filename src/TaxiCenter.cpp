@@ -1,20 +1,22 @@
 #include "TaxiCenter.h"
-#include "InputParsing.h"
+#include "SerializationClass.h"
 
 TaxiCenter::TaxiCenter(BfsAlgorithm<Point> &bfsInstance) : bfsInstance(bfsInstance) {}
 
 void TaxiCenter::createTrip(InputParsing::parsedTripData parsedTripDataTrip) {
     Node<Point> startNode(parsedTripDataTrip.start);
     Node<Point> endNode(parsedTripDataTrip.end);
+    /**/
     stack <Node<Point>> nextPointsOfPath = bfsInstance.navigate(startNode, endNode);
     nextPointsOfPath.pop();
+    /**/
     Trip *trip = new Trip(parsedTripDataTrip.id, parsedTripDataTrip.start, parsedTripDataTrip.end,
                           parsedTripDataTrip.numberOfPassengers, parsedTripDataTrip.tariff, nextPointsOfPath, parsedTripDataTrip.time);
     listOfTrips.push_back(trip);
 }
 
-void TaxiCenter::addDriver(Driver driver) {
-    listOfDrivers.push_back(driver);
+void TaxiCenter::addDriver(int id, Point location) {
+    mapOfDriversLocations[id] = location;
 }
 
 const vector<Driver> &TaxiCenter::getListOfDrivers() const {
@@ -47,15 +49,17 @@ void TaxiCenter::addCabString(int id, string cabString) {
 }
 
 
-void TaxiCenter::startDriving() {
-    for (unsigned int i = 0; i < listOfDrivers.size(); i++) {
+string TaxiCenter::startDriving() {
+    for (unsigned int i = 0; i < mapOfDriversLocations.size(); i++) {
         if (listOfTrips.size() > 0) {
             for (unsigned int j = 0; j < listOfTrips.size(); j++) {
-                if ((listOfDrivers.at(i).currentPlace() == listOfTrips.at(j)->getStartingPoint())) {
-                    listOfDrivers.at(i).assignTrip(listOfTrips.at(j));
+                if ((mapOfDriversLocations.at(i)==listOfTrips.at(j)->getStartingPoint())) {
+                    //listOfDrivers.at(i).assignTrip(listOfTrips.at(j));
+                    SerializationClass<Trip *> serializeClass;
+                    string str = serializeClass.serializationObject(listOfTrips.at(j));
                     delete listOfTrips[j];
                     listOfTrips.erase(listOfTrips.begin() + j);
-                    break;
+                    return str;
                 }
             }
         }
