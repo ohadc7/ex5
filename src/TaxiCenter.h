@@ -23,9 +23,6 @@ public:
     //constructor
     TaxiCenter(BfsAlgorithm<Point> &bfsInstance);
 
-    //add driver to the taxi center
-    void addDriver(int id, Point location);
-
     //add cab to the taxi center
     void addCab(Cab *cab);
 
@@ -57,6 +54,8 @@ public:
     Cab *getCab(int id);
 
     string getCabString(int id);
+
+    void deleteTrip(int i);
 
     //destructor
     ~TaxiCenter();

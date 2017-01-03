@@ -39,7 +39,7 @@ int ProgramFlow::run(Socket *socket) {
     Graph<Point> *grid = createGrid(gd.gridWidth, gd.gridHeight, listOfObstacles);
     BfsAlgorithm<Point> bfs(grid);
     TaxiCenter taxiCenter = createTaxiCenter(bfs);
-
+    Cab *cabForDriver = NULL;
     int expectedNumberOfDrivers = 0;
     int timer = 0;
     while (true) {
@@ -60,8 +60,6 @@ int ProgramFlow::run(Socket *socket) {
                     socket->reciveData(buffer, sizeof(buffer));
                     string driverIdString = string(buffer);
                     int driverId = stoi(driverIdString);
-                    //int driverId = 0;
-                    //taxiCenter.addDriver(driverId,Point(0,0));
 #ifdef DEBUG_PROGRAM_FLOW
                     cout << driverId << " is the driver id" << endl;
 #endif
@@ -82,9 +80,10 @@ int ProgramFlow::run(Socket *socket) {
             case 3: {
                 //create a cab (according to the given parameters) and add it to the taxi center
                 getline(cin, inputString);
-                InputParsing::parsedCabData cab = inputParsing.parseVehicleData(inputString);
-                taxiCenter.addCab(CabFactory::createCab(cab.id, cab.taxiType, cab.manufacturer, cab.color));
-                taxiCenter.addCabString(cab.id, inputString);
+                //InputParsing::parsedCabData cab = inputParsing.parseVehicleData(inputString);
+                cabForDriver = CabFactory::createCab(inputString);
+                taxiCenter.addCab(cabForDriver);
+                taxiCenter.addCabString(cabForDriver->getId(), inputString);
                 break;
             }
             case 4: {
@@ -134,6 +133,8 @@ int ProgramFlow::run(Socket *socket) {
                         SerializationClass<Trip *> serializeClass;
                         string str = serializeClass.serializationObject(taxiCenter.getListOfTrips().at(i));
                         socket->sendData(str);
+                        delete taxiCenter.getListOfTrips().at(i);
+                        taxiCenter.deleteTrip(i);
                         assignFlag = 1;
                         break;
                     }

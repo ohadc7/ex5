@@ -15,10 +15,6 @@ void TaxiCenter::createTrip(InputParsing::parsedTripData parsedTripDataTrip) {
     listOfTrips.push_back(trip);
 }
 
-void TaxiCenter::addDriver(int id, Point location) {
-    mapOfDriversLocations[id] = location;
-}
-
 const vector<Driver> &TaxiCenter::getListOfDrivers() const {
     return listOfDrivers;
 }
@@ -84,4 +80,8 @@ TaxiCenter::~TaxiCenter() {
     for (unsigned int i = 0; i < listOfCabs.size(); i++) {
         delete listOfCabs[i];
     }
+}
+
+void TaxiCenter::deleteTrip(int i) {
+    this->listOfTrips.erase(this->listOfTrips.begin() + i);
 }

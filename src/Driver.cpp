@@ -9,7 +9,7 @@ Driver::Driver(int id, int age, Status_Of_Marriage status, int yearsOfExperience
         vehicleId(vehicleId),currentLocation(0,0) {
     numOfTrips = 1;
     averageSatisfactions = 0;
-    currentTrip = nullptr;
+    currentTrip = NULL;
     
 }
 
@@ -95,7 +95,7 @@ void Driver::moveOneStep() {
      */
 #endif
     //if no current trip, return:
-    if (this->currentTrip == nullptr) {
+    if (this->currentTrip == NULL) {
         return;
     }
     //if the driver has LuxuryCab, he has to skip one point of the path:
@@ -111,7 +111,7 @@ void Driver::moveOneStep() {
     this->setCurrentLocation(locationAfterStep);
     //if the path was terminated, set "currentTrip" member to NULL:
     if (this->currentTrip->getPath().size() == 0) {
-        this->currentTrip = nullptr;
+        this->currentTrip = NULL;
     }
     return;
 }
@@ -130,6 +130,7 @@ void Driver::run(Socket *socket) {
     socket->reciveData(buffer, sizeof(buffer));
     string cabDataString = string(buffer);
     cabOfDriver = CabFactory::createCab(cabDataString);
+    Trip *trip = NULL;
 
 
 #if 0
@@ -206,6 +207,8 @@ void Driver::run(Socket *socket) {
             }
             case 7: {
                 //terminate the program
+                delete cabOfDriver;
+                delete trip;
                 return;
             }
             case 9: {
@@ -225,7 +228,6 @@ void Driver::run(Socket *socket) {
                 socket->reciveData(buffer, sizeof(buffer));
                 string strTrip(buffer, sizeof(buffer));
                 SerializationClass<Trip *> serializeTripClass;
-                Trip *trip;
                 trip = serializeTripClass.deSerializationObject(strTrip, trip);
 #ifdef DEBUG_DRIVER
                 cout<< "the Trip has been received. ride Id is:" << trip->getRideId() << endl;

@@ -8,7 +8,6 @@
 #include "Passenger.h"
 
 #include <boost/serialization/list.hpp>
-#include <boost/serialization/stack.hpp>
 
 class Trip {
 
@@ -17,8 +16,6 @@ private:
     int passedMeters; //total meters passed at the current point
     Point startingPoint;
     Point endingPoint;
-    //stack <Node<Point>> nextPointsOfPath;
-    //deque <Node<Point>> nextPointsOfPath;
     list <Point> nextPointsOfPath;
     list <Passenger> customers; //passengers
     int numOfPassengers;

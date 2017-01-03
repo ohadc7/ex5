@@ -22,5 +22,3 @@ StandardCab::~StandardCab() {
 StandardCab::StandardCab() : rate(0), speed(0){
 
 }
-
-BOOST_CLASS_EXPORT(StandardCab)

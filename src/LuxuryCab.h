@@ -21,11 +21,8 @@ public:
 
     template<class Archive>
     void serialize(Archive &ar, const unsigned int version) {
-        ar & boost::serialization::base_object<Cab>(*this);
-        ar.template register_type<LuxuryCab>();
         ar & speed;
         ar & rate;
-
     }
 
     LuxuryCab();

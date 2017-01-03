@@ -22,5 +22,3 @@ LuxuryCab::~LuxuryCab() {
 LuxuryCab::LuxuryCab() : rate(0), speed(0){
 
 }
-
-BOOST_CLASS_EXPORT(LuxuryCab)

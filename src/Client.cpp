@@ -3,13 +3,10 @@
 #include <string>
 #include "ProgramFlow.h"
 
-BOOST_CLASS_EXPORT_GUID(StandardCab, "StandardCab")
-BOOST_CLASS_EXPORT_GUID(LuxuryCab, "LuxuryCab")
-
 using namespace std;
 
 int main(int argc, char *argv[]) {
-    Socket* socket = nullptr;
+    Socket* socket = NULL;
     if (argc == 3) {
         int port = atoi(argv[2]);
         // 0: isServer = false,

@@ -15,13 +15,3 @@ Cab *CabFactory::createCab(string inputString) {
         return luxury;
     }
 }
-
-Cab *CabFactory::createCab(int id, int cabType, Model_Of_Car carModel, Color_Of_Car color) {
-    if (cabType == 1) {
-        Cab *standard = new StandardCab(id, carModel, color);
-        return standard;
-    } else {
-        Cab *luxury = new LuxuryCab(id, carModel, color);
-        return luxury;
-    }
-}
