@@ -58,6 +58,7 @@ string TaxiCenter::startDriving() {
             }
         }
     }
+    return NULL;
 }
 
 Cab *TaxiCenter::getCab(int id) {

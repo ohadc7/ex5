@@ -125,7 +125,6 @@ void Driver::run(Socket *socket) {
             case 7: {
                 //terminate the program
                 delete cabOfDriver;
-                delete trip;
                 return;
             }
             case 9: {
