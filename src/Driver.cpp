@@ -99,6 +99,7 @@ void Driver::moveOneStep() {
     return;
 }
 
+//communicate with the server
 void Driver::run(Socket *socket) {
     char buffer[1024];
     stringstream ss;
