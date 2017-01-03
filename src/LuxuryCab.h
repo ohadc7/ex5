@@ -6,8 +6,6 @@
 
 #include "Cab.h"
 
-
-
 class LuxuryCab : public Cab {
 private:
     const double speed;
@@ -15,9 +13,7 @@ private:
 
 public:
 
-
     friend class boost::serialization::access;
-
 
     template<class Archive>
     void serialize(Archive &ar, const unsigned int version) {

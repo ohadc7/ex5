@@ -1,12 +1,8 @@
-//#define DEBUG_TRIP
 #include "Trip.h"
-
 
 Trip::Trip(int rideId, Point startingPoint, Point endingPoint, int numOfPassengers, double taarif,
        stack<Node<Point>> stackOfPathWithoutStartingPoint, int time): rideId(rideId), startingPoint(startingPoint),
-                                      endingPoint(endingPoint), numOfPassengers(numOfPassengers), time(time){
-
-    //nextPointsOfPath(stackOfPathWithoutStartingPoint) {
+                                      endingPoint(endingPoint), numOfPassengers(numOfPassengers), time(time) {
     while(!stackOfPathWithoutStartingPoint.empty()) {
         Node<Point> n = stackOfPathWithoutStartingPoint.top();
         Point p = n.getValue();
@@ -15,16 +11,6 @@ Trip::Trip(int rideId, Point startingPoint, Point endingPoint, int numOfPassenge
     }
     rateOfTrip = taarif;
     passedMeters = 0;
-#ifdef DEBUG_TRIP
-    cout << "Trip constructor: " << endl;
-    std::list<Point> mylist();
-    //list<Point>::iterator it = mylist().begin();
-    list<Point> l = nextPointsOfPath;
-    list<Point>::iterator it = l.begin();
-    for (list<Point>::iterator it = l.begin() ; it != l.end(); ++it) {
-        cout << "Point from path is " << *it << "." << endl;
-    }
-#endif
 }
 
 int Trip::getRideId() const {
@@ -70,7 +56,7 @@ Trip::~Trip() {
 }
 
 Trip::Trip() : rideId(0), passedMeters(0),startingPoint(0,0),
-               endingPoint(0,0), numOfPassengers(0),rateOfTrip(0.0){
+               endingPoint(0,0), numOfPassengers(0),rateOfTrip(0.0) {
 }
 
 int Trip::getTime() {

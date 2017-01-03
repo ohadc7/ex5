@@ -55,6 +55,7 @@ public:
 
     void moveOneStep();
 
+    //activate the driver
     void run(Socket *socket);
 };
 

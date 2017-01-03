@@ -30,16 +30,17 @@ public:
      * After all the relevant input regarding the grid is given,
      * the program should expect a number which represents a command.
      * Here are all the possible inputs it can get:
-     * 1 - insert a driver in the following format: (id,age,status,exp erience,vehicle_id)
-     *                                              - (int,int,char:{S,M,D,W},int,int)
-     * 2 - insert a new ride: (id,x_start,y_start,x_end,y_end,num_passengers,tariff)
-     *                                              - (int,int,int,int,int,int,double)
+     * 1 - expect to create communication with the drivers. receive their id and send them
+     *     data about their vehicles.
+     * 2 - insert a new ride: (id,x_start,y_start,x_end,y_end,num_passengers,tariff,time_of_start)
+     *                                              - (int,int,int,int,int,int,double,int)
      * 3 - insert a vehicle: (id,taxi_typ e,manufacturer,color)
      *                  - (int,{1: NormalCab,2:LuxuryCab},char:{H,S,T,F},char:{R,B,G,P,W})
      * 4 - request for a driver location: (driver_id)
      * output: driver location in the format: '(x,y)'.
-     * 6 - start driving (no input afterwards. Meaning getting all drivers to their end point).
      * 7 - exit (cleaning up the program and exiting).
+     * 9 - advance the time and do the required operations (assigning trips to the drivers
+     *     when the starting time of these trips is arriving, advancing of the relevant drivers)
     */
     int run(Socket *socket);
 
@@ -51,8 +52,6 @@ public:
 
     //create rectangular matrix with list of impassable points
     Graph<Point> *createGrid(int width, int height, vector<Point> listOfObstacles);
-
-    void startDriving();
 };
 
 #endif //EX1_VERSION_1_1_PROGRAMFLOW_H

@@ -1,7 +1,3 @@
-//
-// Created by ohad on 01/01/17.
-//
-
 #include "CabFactory.h"
 
 Cab *CabFactory::createCab(string inputString) {

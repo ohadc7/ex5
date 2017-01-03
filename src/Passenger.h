@@ -1,10 +1,7 @@
-
 #ifndef EX1_VERSION_1_1_PASSENGER_H
 #define EX1_VERSION_1_1_PASSENGER_H
 
-
 #include "Point.h"
-
 
 class Passenger {
 private:
@@ -14,9 +11,7 @@ private:
 
 public:
 
-
     friend class boost::serialization::access;
-
 
     template<class Archive>
     void serialize(Archive &ar, const unsigned int version) {

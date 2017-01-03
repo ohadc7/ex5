@@ -1,7 +1,5 @@
 #include "Passenger.h"
 
-
-
 Passenger::Passenger(Point source, Point destination, bool isLuxury) :
         source(source), destination(destination), isLuxury(isLuxury) {}
 
@@ -21,5 +19,4 @@ int Passenger::giveFeedBack() {
 }
 
 Passenger::Passenger() : source(0,0), destination(0,0), isLuxury(true) {
-
 }

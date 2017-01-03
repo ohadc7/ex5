@@ -1,7 +1,3 @@
-//
-// Created by ohad on 01/01/17.
-//
-
 #ifndef EX4_CABFACTORY_H
 #define EX4_CABFACTORY_H
 #include "Cab.h"
@@ -13,6 +9,5 @@ class CabFactory {
 public:
     static Cab *createCab(string inputString);
 };
-
 
 #endif //EX4_CABFACTORY_H

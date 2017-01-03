@@ -51,8 +51,8 @@ public:
     parsedDriverData parseDriverData(string driverData);
 
     /*
-     * "tripData" string format: "id,xStart,yStart,xEnd,yEnd,numPassengers,tariff"
-     * (int,int,int,int,int,int,double)
+     * "tripData" string format: "id,xStart,yStart,xEnd,yEnd,numPassengers,tariff,startingTime"
+     * (int,int,int,int,int,int,double,int)
      */
     typedef struct {
         int id;

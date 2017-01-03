@@ -16,9 +16,7 @@ double StandardCab::getRate() const {
 }
 
 StandardCab::~StandardCab() {
-
 }
 
-StandardCab::StandardCab() : rate(0), speed(0){
-
+StandardCab::StandardCab() : rate(0), speed(0) {
 }

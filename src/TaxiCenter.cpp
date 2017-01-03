@@ -6,10 +6,9 @@ TaxiCenter::TaxiCenter(BfsAlgorithm<Point> &bfsInstance) : bfsInstance(bfsInstan
 void TaxiCenter::createTrip(InputParsing::parsedTripData parsedTripDataTrip) {
     Node<Point> startNode(parsedTripDataTrip.start);
     Node<Point> endNode(parsedTripDataTrip.end);
-    /**/
     stack <Node<Point>> nextPointsOfPath = bfsInstance.navigate(startNode, endNode);
+    //delete the first point (the initial location)
     nextPointsOfPath.pop();
-    /**/
     Trip *trip = new Trip(parsedTripDataTrip.id, parsedTripDataTrip.start, parsedTripDataTrip.end,
                           parsedTripDataTrip.numberOfPassengers, parsedTripDataTrip.tariff, nextPointsOfPath, parsedTripDataTrip.time);
     listOfTrips.push_back(trip);
@@ -43,7 +42,6 @@ void TaxiCenter::addCab(Cab *cab) {
 void TaxiCenter::addCabString(int id, string cabString) {
     mapOfCabStrings[id] = cabString;
 }
-
 
 string TaxiCenter::startDriving() {
     for (unsigned int i = 0; i < mapOfDriversLocations.size(); i++) {

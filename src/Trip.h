@@ -1,7 +1,6 @@
 #ifndef EX2_TRIP_H
 #define EX2_TRIP_H
 
-
 #include <list>
 #include <stack>
 #include "Point.h"
@@ -63,7 +62,6 @@ public:
     int getTime();
 
     ~Trip();
-
 };
 
 
