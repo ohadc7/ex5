@@ -93,6 +93,7 @@ void Driver::moveOneStep() {
     this->setCurrentLocation(locationAfterStep);
     //if the path was terminated, set "currentTrip" member to NULL:
     if (this->currentTrip->getPath().size() == 0) {
+        delete this->currentTrip;
         this->currentTrip = NULL;
     }
     return;
