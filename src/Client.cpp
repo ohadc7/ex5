@@ -1,5 +1,6 @@
 #include <string>
 #include "ProgramFlow.h"
+#include "Tcp.h"
 
 using namespace std;
 
@@ -9,7 +10,7 @@ int main(int argc, char *argv[]) {
         int port = atoi(argv[2]);
         // 0: isServer = false,
         // port: port of the client
-        socket = new Udp(0, port);
+        socket = new Tcp(0, port, argv[1]);
         socket->initialize();
 
         InputParsing inputParsing = InputParsing();

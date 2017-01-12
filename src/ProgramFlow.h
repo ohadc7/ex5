@@ -52,6 +52,7 @@ public:
 
     //create rectangular matrix with list of impassable points
     Graph<Point> *createGrid(int width, int height, vector<Point> listOfObstacles);
+    static void* runInCircle(void * r);
 };
 
 #endif //EX1_VERSION_1_1_PROGRAMFLOW_H

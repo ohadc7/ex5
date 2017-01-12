@@ -7,6 +7,8 @@
 #include "Socket.h"
 #include <unistd.h>
 
+
+
 #define NONE 0
 
 /***********************************************************************
@@ -22,6 +24,7 @@ Socket::Socket() {
 	this->socketDescriptor = NONE;
 	this->isServer = true;
 	this->port_number = NONE;
+
 }
 
 /***********************************************************************
@@ -33,6 +36,8 @@ Socket::Socket() {
 Socket::~Socket() {
 	close(this->socketDescriptor);
 }
+
+
 
 
 

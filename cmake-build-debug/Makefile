@@ -48,10 +48,10 @@ RM = /home/ohad/Programs/clion-2016.2.3/bin/cmake/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex4/ex4
+CMAKE_SOURCE_DIR = /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex5
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex4/ex4/cmake-build-debug
+CMAKE_BINARY_DIR = /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex5/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -124,9 +124,9 @@ install/strip/fast: install/strip
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex4/ex4/cmake-build-debug/CMakeFiles /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex4/ex4/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex5/cmake-build-debug/CMakeFiles /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex5/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex4/ex4/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ohad/Dropbox/ComputerScience/SecondYear/SemesterFall2017/AdvancdPrograming/ex5/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -946,6 +946,36 @@ src/TaxiCenter.cpp.s:
 	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/TaxiCenter.cpp.s
 .PHONY : src/TaxiCenter.cpp.s
 
+src/Tcp.o: src/Tcp.cpp.o
+
+.PHONY : src/Tcp.o
+
+# target to build an object file
+src/Tcp.cpp.o:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/Tcp.cpp.o
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/Tcp.cpp.o
+.PHONY : src/Tcp.cpp.o
+
+src/Tcp.i: src/Tcp.cpp.i
+
+.PHONY : src/Tcp.i
+
+# target to preprocess a source file
+src/Tcp.cpp.i:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/Tcp.cpp.i
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/Tcp.cpp.i
+.PHONY : src/Tcp.cpp.i
+
+src/Tcp.s: src/Tcp.cpp.s
+
+.PHONY : src/Tcp.s
+
+# target to generate assembly for a file
+src/Tcp.cpp.s:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/Tcp.cpp.s
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/Tcp.cpp.s
+.PHONY : src/Tcp.cpp.s
+
 src/Trip.o: src/Trip.cpp.o
 
 .PHONY : src/Trip.o
@@ -1096,6 +1126,9 @@ help:
 	@echo "... src/TaxiCenter.o"
 	@echo "... src/TaxiCenter.i"
 	@echo "... src/TaxiCenter.s"
+	@echo "... src/Tcp.o"
+	@echo "... src/Tcp.i"
+	@echo "... src/Tcp.s"
 	@echo "... src/Trip.o"
 	@echo "... src/Trip.i"
 	@echo "... src/Trip.s"

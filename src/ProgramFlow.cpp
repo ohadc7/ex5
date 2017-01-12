@@ -1,8 +1,12 @@
 #include "ProgramFlow.h"
 #include "SerializationClass.h"
 #include "CabFactory.h"
+#include <pthread.h>
+#include "Tcp.h"
 
 using namespace std;
+
+int globalX;
 
 TaxiCenter ProgramFlow::createTaxiCenter(BfsAlgorithm<Point> bfs) {
     return TaxiCenter(bfs);
@@ -13,8 +17,50 @@ Graph<Point> *ProgramFlow::createGrid(int width, int height, vector<Point> listO
     return g;
 }
 
-int ProgramFlow::run(Socket *socket) {
+
+void *ProgramFlow::runInCircle(void* socketIn){
+    int runOnce =0;
     string inputString;
+    Socket *socket = (Socket*) socketIn;
+    while(true) {
+        if(runOnce==0) {
+            switch (globalX) {
+
+                case 4: {
+                    getline(cin, inputString);
+                    try {
+                        // here we have to add (in ex5) the command: find the socket of the
+                        // corresponding driver
+                        socket->sendData("4");
+                        char buffer[1024];
+                        socket->reciveData(buffer, sizeof(buffer));
+                        Point driverLocation;
+                        string locationStr(buffer, sizeof(buffer));
+                        SerializationClass<Point> serializeClass;
+                        driverLocation =
+                                serializeClass.deSerializationObject(locationStr, driverLocation);
+                        //print driver location
+                        cout << driverLocation << '\n';
+                    } catch (const char *msg) {
+                        cerr << msg << endl;
+                    }
+                    runOnce = 1;
+                    break;
+                }
+                case 7: {
+                    exit(0);
+                }
+                default:
+                    break;
+
+            }
+        }
+    }
+}
+
+int ProgramFlow::run(Socket* socket) {
+    //Socket* socket = (Socket*) socket1;
+            string inputString;
     //get the grid dimensions
     getline(cin, inputString);
     InputParsing inputParsing = InputParsing();
@@ -33,9 +79,9 @@ int ProgramFlow::run(Socket *socket) {
         }
     }
     //create the grid and the taxi center
-    Graph<Point> *grid = createGrid(gd.gridWidth, gd.gridHeight, listOfObstacles);
+    Graph<Point> *grid = ProgramFlow::createGrid(gd.gridWidth, gd.gridHeight, listOfObstacles);
     BfsAlgorithm<Point> bfs(grid);
-    TaxiCenter taxiCenter = createTaxiCenter(bfs);
+    TaxiCenter taxiCenter = ProgramFlow::createTaxiCenter(bfs);
     Cab *cabForDriver = NULL;
     int expectedNumberOfDrivers = 0;
     int timer = 0;
@@ -50,6 +96,9 @@ int ProgramFlow::run(Socket *socket) {
                 //(in ex5 this condition has to be deleted)
                 if (expectedNumberOfDrivers == 1) {
                     char buffer[1024];
+
+
+                    socket->initialize();
                     socket->reciveData(buffer, sizeof(buffer));
                     string driverIdString = string(buffer);
                     int driverId = stoi(driverIdString);
@@ -77,6 +126,7 @@ int ProgramFlow::run(Socket *socket) {
                 break;
             }
             case 4: {
+                globalX = 4;
                 //query about the location of a specific driver
                 getline(cin, inputString);
                 try {
