@@ -104,13 +104,14 @@ void Driver::run(Socket *socket) {
     char buffer[1024];
     stringstream ss;
     ss << this->id;
-    socket->sendData(ss.str());
-    socket->reciveData(buffer, sizeof(buffer));
+    socket->sendData(ss.str(), 0);
+
+    socket->reciveData(buffer, sizeof(buffer), 0);
     string cabDataString = string(buffer);
     cabOfDriver = CabFactory::createCab(cabDataString);
     Trip *trip = NULL;
     while (true) {
-        socket->reciveData(buffer, sizeof(buffer));
+        socket->reciveData(buffer, sizeof(buffer), 0);
         string numberOfOption = string(buffer);
         switch (stoi(numberOfOption)) {
             case 4: {
@@ -119,7 +120,7 @@ void Driver::run(Socket *socket) {
                 string serializedPointStr =
                         serializeClass.serializationObject(this->currentPlace());
                 //pass point to server
-                socket->sendData(serializedPointStr);
+                socket->sendData(serializedPointStr, 0);
                 break;
             }
             case 7: {
@@ -133,7 +134,7 @@ void Driver::run(Socket *socket) {
             }
             //option 10: assign a trip.
             case 10: {
-                socket->reciveData(buffer, sizeof(buffer));
+                socket->reciveData(buffer, sizeof(buffer),0);
                 string strTrip(buffer, sizeof(buffer));
                 SerializationClass<Trip *> serializeTripClass;
                 trip = serializeTripClass.deSerializationObject(strTrip, trip);

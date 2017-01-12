@@ -619,6 +619,36 @@ src/Client.cpp.s:
 	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/Client.cpp.s
 .PHONY : src/Client.cpp.s
 
+src/Connection.o: src/Connection.cpp.o
+
+.PHONY : src/Connection.o
+
+# target to build an object file
+src/Connection.cpp.o:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/Connection.cpp.o
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/Connection.cpp.o
+.PHONY : src/Connection.cpp.o
+
+src/Connection.i: src/Connection.cpp.i
+
+.PHONY : src/Connection.i
+
+# target to preprocess a source file
+src/Connection.cpp.i:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/Connection.cpp.i
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/Connection.cpp.i
+.PHONY : src/Connection.cpp.i
+
+src/Connection.s: src/Connection.cpp.s
+
+.PHONY : src/Connection.s
+
+# target to generate assembly for a file
+src/Connection.cpp.s:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/Connection.cpp.s
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/Connection.cpp.s
+.PHONY : src/Connection.cpp.s
+
 src/Driver.o: src/Driver.cpp.o
 
 .PHONY : src/Driver.o
@@ -1006,36 +1036,6 @@ src/Trip.cpp.s:
 	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/Trip.cpp.s
 .PHONY : src/Trip.cpp.s
 
-src/Udp.o: src/Udp.cpp.o
-
-.PHONY : src/Udp.o
-
-# target to build an object file
-src/Udp.cpp.o:
-	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/Udp.cpp.o
-	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/Udp.cpp.o
-.PHONY : src/Udp.cpp.o
-
-src/Udp.i: src/Udp.cpp.i
-
-.PHONY : src/Udp.i
-
-# target to preprocess a source file
-src/Udp.cpp.i:
-	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/Udp.cpp.i
-	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/Udp.cpp.i
-.PHONY : src/Udp.cpp.i
-
-src/Udp.s: src/Udp.cpp.s
-
-.PHONY : src/Udp.s
-
-# target to generate assembly for a file
-src/Udp.cpp.s:
-	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/Udp.cpp.s
-	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/Udp.cpp.s
-.PHONY : src/Udp.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -1093,6 +1093,9 @@ help:
 	@echo "... src/Client.o"
 	@echo "... src/Client.i"
 	@echo "... src/Client.s"
+	@echo "... src/Connection.o"
+	@echo "... src/Connection.i"
+	@echo "... src/Connection.s"
 	@echo "... src/Driver.o"
 	@echo "... src/Driver.i"
 	@echo "... src/Driver.s"
@@ -1132,9 +1135,6 @@ help:
 	@echo "... src/Trip.o"
 	@echo "... src/Trip.i"
 	@echo "... src/Trip.s"
-	@echo "... src/Udp.o"
-	@echo "... src/Udp.i"
-	@echo "... src/Udp.s"
 .PHONY : help
 
 

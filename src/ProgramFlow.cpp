@@ -18,7 +18,7 @@ Graph<Point> *ProgramFlow::createGrid(int width, int height, vector<Point> listO
 }
 
 
-void *ProgramFlow::runInCircle(void* socketIn){
+/*void *ProgramFlow::runInCircle(void* socketIn){
     int runOnce =0;
     string inputString;
     Socket *socket = (Socket*) socketIn;
@@ -57,7 +57,7 @@ void *ProgramFlow::runInCircle(void* socketIn){
         }
     }
 }
-
+*/
 int ProgramFlow::run(Socket* socket) {
     //Socket* socket = (Socket*) socket1;
             string inputString;
@@ -94,17 +94,22 @@ int ProgramFlow::run(Socket* socket) {
                 getline(cin, inputString);
                 expectedNumberOfDrivers = stoi(inputString);
                 //(in ex5 this condition has to be deleted)
-                if (expectedNumberOfDrivers == 1) {
+                if (expectedNumberOfDrivers == 0) {
+                    break;
+                }else{
                     char buffer[1024];
+                    Connection connection = socket->getConnection();
+                    for(unsigned int i=0; i<expectedNumberOfDrivers; i++){
+                        connection.makeConnect();
+                        socket->reciveData(buffer, sizeof(buffer),
+                                           connection.getVectorOfClientsDescriptor().at(i));
+                        string driverIdString = string(buffer);
+                        int driverId = stoi(driverIdString);
+                        //send taxi data
+                        string dataOfCabOfDriver = taxiCenter.getCabString(driverId);
+                        socket->sendData(dataOfCabOfDriver, connection.getVectorOfClientsDescriptor().at(i));
+                   }
 
-
-                    socket->initialize();
-                    socket->reciveData(buffer, sizeof(buffer));
-                    string driverIdString = string(buffer);
-                    int driverId = stoi(driverIdString);
-                    //send taxi data
-                    string dataOfCabOfDriver = taxiCenter.getCabString(driverId);
-                    socket->sendData(dataOfCabOfDriver);
                 }
                 break;
             }
@@ -132,9 +137,9 @@ int ProgramFlow::run(Socket* socket) {
                 try {
                     // here we have to add (in ex5) the command: find the socket of the
                     // corresponding driver
-                    socket->sendData("4");
+                    //socket->sendData("4");
                     char buffer[1024];
-                    socket->reciveData(buffer, sizeof(buffer));
+                   // socket->reciveData(buffer, sizeof(buffer));
                     Point driverLocation;
                     string locationStr(buffer, sizeof(buffer));
                     SerializationClass<Point> serializeClass;
@@ -149,7 +154,7 @@ int ProgramFlow::run(Socket* socket) {
             }
             case 7: {
                 //ask the client to shutdown itself
-                socket->sendData("7");
+               // socket->sendData("7");
                 //deallocate memory and terminate the program
                 delete grid;
                 return 0;
@@ -163,11 +168,11 @@ int ProgramFlow::run(Socket* socket) {
                 for (unsigned int i = 0; i < taxiCenter.getListOfTrips().size(); i++) {
                     if (taxiCenter.getListOfTrips().at(i)->getTime() == timer) {
                         //option 10 (of driver): assign a trip to the driver
-                        socket->sendData("10");
+                      //  socket->sendData("10");
                         SerializationClass<Trip *> serializeClass;
                         string serializedTrip = serializeClass.serializationObject(
                                 taxiCenter.getListOfTrips().at(i));
-                        socket->sendData(serializedTrip);
+                        //socket->sendData(serializedTrip);
                         delete taxiCenter.getListOfTrips().at(i);
                         taxiCenter.deleteTrip(i);
                         assignFlag = 1;
@@ -176,7 +181,7 @@ int ProgramFlow::run(Socket* socket) {
                 }
                 if (assignFlag == 0) {
                     //sending 9 in order to advance the driver one step
-                    socket->sendData("9");    
+                   // socket->sendData("9");
                 }
                 break;
             }
