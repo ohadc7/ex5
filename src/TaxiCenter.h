@@ -68,7 +68,7 @@ public:
 
     void deleteTrip(int i);
 
-    void bfsWrapper(Node<Point> startNode, Node<Point> endNode, TaxiCenter* zxc);
+    void bfsWrapper(Node<Point> startNode, Node<Point> endNode, TaxiCenter* taxiCenter);
 
 
     //destructor
