@@ -19,6 +19,7 @@ private:
     map<int,string> mapOfCabStrings;
     map<int,Point> mapOfDriversLocations;
     BfsAlgorithm<Point> bfsInstance;
+    stack <Node<Point>> nextPointsOfPath;
 public:
 
     struct nodeOfPoints{
@@ -30,7 +31,7 @@ public:
     //constructor
     TaxiCenter(BfsAlgorithm<Point> &bfsInstance);
 
-    stack <Node<Point>> bfsNavigate(Node<Point> startNode,  Node<Point> endNode);
+    void bfsNavigate(Node<Point> startNode,  Node<Point> endNode);
 
         //add cab to the taxi center
     void addCab(Cab *cab);
