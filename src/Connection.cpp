@@ -4,12 +4,13 @@
 
 #include "Socket.h"
 #include "Connection.h"
-/*
-Connection::Connection(int socketDescriptor, struct sockaddr *client_sin, unsigned int *addr_len) {
-    this->socketDescriptor = socketDescriptor;
-    this->client_sin =  client_sin;
-    this->addr_len = addr_len;
-}*/
+#include "ProgramFlow.h"
+
+
+struct socketAndTheards{
+    Socket socket;
+
+};
 
 void Connection::makeConnect() {
     struct sockaddr_in client_sin;
@@ -23,12 +24,23 @@ void Connection::makeConnect() {
 
 }
 
+
+
+
 vector<int> Connection::getVectorOfClientsDescriptor() {
     return this->vectorOfClientsDescriptor;
 }
 
 Connection::Connection(int socketDescriptor) {
     this->socketDescriptor = socketDescriptor;
+
+}
+
+void Connection::runTheards() {
+   // pthread_t bfsTheard;
+   // pthread_create(&bfsTheard, NULL, ProgramFlow::run,(void*) socket);
+  //  pthread_t clientTheard;
+   // pthread_create(&clientTheard, NULL, ProgramFlow::run, (void*)socketAndTheards);
 
 }
 

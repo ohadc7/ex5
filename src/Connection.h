@@ -23,6 +23,8 @@ public:
     Connection(int socketDescriptor);
     void makeConnect();
 
+    void runTheards();
+
     vector<int> getVectorOfClientsDescriptor();
 };
 

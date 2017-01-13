@@ -41,17 +41,17 @@ public:
      * 9 - advance the time and do the required operations (assigning trips to the drivers
      *     when the starting time of these trips is arriving, advancing of the relevant drivers)
     */
-    int run(Socket *socket);
+    static void * run(void * socket);
 
     /*
      * create taxi center. the taxi center has to contain "bfs" (that know the grid and the
      * obstacles) in order to be able to navigate.
      */
-    TaxiCenter createTaxiCenter(BfsAlgorithm<Point> bfs);
+    static TaxiCenter createTaxiCenter(BfsAlgorithm<Point> bfs);
 
     //create rectangular matrix with list of impassable points
-    Graph<Point> *createGrid(int width, int height, vector<Point> listOfObstacles);
-    static void* runInCircle(void * r);
+    static Graph<Point> *createGrid(int width, int height, vector<Point> listOfObstacles);
+    //static void* runInCircle(void * r);
 };
 
 #endif //EX1_VERSION_1_1_PROGRAMFLOW_H

@@ -2,6 +2,7 @@
 #include "SerializationClass.h"
 #include "CabFactory.h"
 #include <pthread.h>
+#include <thread_db.h>
 #include "Tcp.h"
 
 using namespace std;
@@ -58,8 +59,12 @@ Graph<Point> *ProgramFlow::createGrid(int width, int height, vector<Point> listO
     }
 }
 */
-int ProgramFlow::run(Socket* socket) {
-    //Socket* socket = (Socket*) socket1;
+
+
+
+
+void * ProgramFlow::run(void * mainSocket) {
+    Socket* socket = (Socket*) mainSocket;
             string inputString;
     //get the grid dimensions
     getline(cin, inputString);

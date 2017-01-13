@@ -1,14 +1,14 @@
+#include <thread_db.h>
 #include "TaxiCenter.h"
 #include "SerializationClass.h"
 
 TaxiCenter::TaxiCenter(BfsAlgorithm<Point> &bfsInstance) : bfsInstance(bfsInstance) {}
 
-void TaxiCenter::createTrip(InputParsing::parsedTripData parsedTripDataTrip) {
+void * TaxiCenter::createTrip(InputParsing::parsedTripData parsedTripDataTrip) {
     Node<Point> startNode(parsedTripDataTrip.start);
     Node<Point> endNode(parsedTripDataTrip.end);
-    stack <Node<Point>> nextPointsOfPath = bfsInstance.navigate(startNode, endNode);
-    //delete the first point (the initial location)
-    nextPointsOfPath.pop();
+    this->bfsWrapper(startNode,endNode,this);
+
     Trip *trip = new Trip(parsedTripDataTrip.id, parsedTripDataTrip.start, parsedTripDataTrip.end,
                           parsedTripDataTrip.numberOfPassengers, parsedTripDataTrip.tariff, nextPointsOfPath, parsedTripDataTrip.time);
     listOfTrips.push_back(trip);
@@ -84,3 +84,24 @@ TaxiCenter::~TaxiCenter() {
 void TaxiCenter::deleteTrip(int i) {
     this->listOfTrips.erase(this->listOfTrips.begin() + i);
 }
+
+void *TaxiCenter::runBfsThread(void *t) {
+    nodeOfPoints *x =(struct nodeOfPoints*)t;
+    x->taxiCenter->bfsNavigate(x->startNode,x->endNode);
+}
+
+stack <Node<Point>> TaxiCenter::bfsNavigate(Node<Point> startNode,  Node<Point> endNode) {
+    stack <Node<Point>> nextPointsOfPath = this->bfsInstance.navigate(startNode, endNode);
+    return nextPointsOfPath;
+}
+
+void TaxiCenter::bfsWrapper(Node<Point> startNode, Node<Point> endNode, TaxiCenter* taxiCenter) {
+
+    struct newNodeOfPoints * t;
+    t->startNode = startNode;
+    t->endNode = endNode;
+    t->taxiCenter=taxiCenter;
+    thread_t bfsThread;
+    pthread_create(&bfsThread, NULL, runBfsThread, (void*)t);
+}
+

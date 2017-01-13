@@ -25,8 +25,8 @@ class BfsAlgorithm {
 private:
     //The graph that the BFS algorithm work on
     Graph<T> *graph;
-public:
     //constructor
+public:
     BfsAlgorithm(Graph<T> *graph);
 
     //return stack that maintains the nodes in the shortest path from "start" to "end".

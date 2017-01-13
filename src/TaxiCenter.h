@@ -20,14 +20,24 @@ private:
     map<int,Point> mapOfDriversLocations;
     BfsAlgorithm<Point> bfsInstance;
 public:
+
+    struct nodeOfPoints{
+        Node<Point> startNode;
+        Node<Point> endNode;
+        TaxiCenter* taxiCenter;
+    };
+
     //constructor
     TaxiCenter(BfsAlgorithm<Point> &bfsInstance);
 
-    //add cab to the taxi center
+    stack <Node<Point>> bfsNavigate(Node<Point> startNode,  Node<Point> endNode);
+
+        //add cab to the taxi center
     void addCab(Cab *cab);
 
     void addCabString(int id, string cabString);
 
+    static void* runBfsThread(void * nodeOfPoints);
     // allocate the trips that were received in the system to the appropriate drivers
     // and command each of them to drive to the end point of its trip
     string startDriving();
@@ -47,7 +57,7 @@ public:
 
     //create a trip (according to the parameters that are given in the 'parsed trip data' struct)
     //and add the trip to the taxi center
-    void createTrip(InputParsing::parsedTripData);
+    void * createTrip(InputParsing::parsedTripData);
 
     //get cab that is belonging to the taxi center (according to the cab id).
     //(if no such cab in the system, throw "no cab found")
@@ -56,6 +66,9 @@ public:
     string getCabString(int id);
 
     void deleteTrip(int i);
+
+    void bfsWrapper(Node<Point> startNode, Node<Point> endNode, TaxiCenter* zxc);
+
 
     //destructor
     ~TaxiCenter();
