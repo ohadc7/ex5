@@ -2,15 +2,13 @@
 #include "SerializationClass.h"
 #include "CabFactory.h"
 #include <pthread.h>
-#include <thread_db.h>
 #include "Tcp.h"
 
 using namespace std;
 
-int globalX;
 
-TaxiCenter ProgramFlow::createTaxiCenter(BfsAlgorithm<Point> bfs) {
-    return TaxiCenter(bfs);
+TaxiCenter *ProgramFlow::createTaxiCenter(BfsAlgorithm<Point> bfs) {
+    return new TaxiCenter(bfs);
 }
 
 Graph<Point> *ProgramFlow::createGrid(int width, int height, vector<Point> listOfObstacles) {
@@ -18,42 +16,59 @@ Graph<Point> *ProgramFlow::createGrid(int width, int height, vector<Point> listO
     return g;
 }
 
+int globalX= 0;
 
-void *ProgramFlow::threadsRun(void* socketIn){
+void *ProgramFlow::threadsRun(void* inputStruct){
     int runOnce =0;
-    string inputString;
-    Socket *socket = (Socket*) socketIn;
+    char buffer[1024];
+    socketAndDescriptor *socketAndDescriptor =(struct socketAndDescriptor*)inputStruct;
+    Socket *socket = (Socket*) socketAndDescriptor->socket;
+    int descriptor = socketAndDescriptor->socketDescriptor;
+    TaxiCenter *taxiCenter = socketAndDescriptor->taxiCenter;
     while(true) {
-        if(runOnce==0) {
-            switch (globalX) {
-                case 4: {
+        switch (globalX) {
+            case 1:{
+                socket->reciveData(buffer, sizeof(buffer),
+                                   descriptor);
+                string driverIdString = string(buffer);
+                int driverId = stoi(driverIdString);
+                //send taxi data
+                string dataOfCabOfDriver = taxiCenter->getCabString(driverId);
+                socket->sendData(dataOfCabOfDriver, descriptor);
+            }
+            case 4: {
+                if (runOnce == 0) {
+                    string inputString;
                     getline(cin, inputString);
                     try {
                         // here we have to add (in ex5) the command: find the socket of the
                         // corresponding driver
-                        socket->sendData("4",socket->getConnection().getVectorOfClientsDescriptor());
+                        socket->sendData("4", descriptor);
                         char buffer[1024];
-                        socket->reciveData(buffer, sizeof(buffer));
+                        socket->reciveData(buffer, sizeof(buffer), descriptor);
                         Point driverLocation;
                         string locationStr(buffer, sizeof(buffer));
                         SerializationClass<Point> serializeClass;
                         driverLocation =
-                                serializeClass.deSerializationObject(locationStr, driverLocation);
+                                serializeClass.deSerializationObject(locationStr,
+                                                                     driverLocation);
                         //print driver location
                         cout << driverLocation << '\n';
                     } catch (const char *msg) {
                         cerr << msg << endl;
                     }
-                    runOnce = 1;
-                    break;
                 }
-                case 7: {
-                    exit(0);
-                }
-                default:
-                    break;
-
+                runOnce = 1;
+                break;
             }
+            case 7: {
+                 //ask the client to shutdown itself
+                 socket->sendData("7", descriptor);
+                 return 0;
+            }
+            default:
+                break;
+
         }
     }
 }
@@ -85,7 +100,7 @@ void * ProgramFlow::run(void * mainSocket) {
     //create the grid and the taxi center
     Graph<Point> *grid = ProgramFlow::createGrid(gd.gridWidth, gd.gridHeight, listOfObstacles);
     BfsAlgorithm<Point> bfs(grid);
-    TaxiCenter taxiCenter = ProgramFlow::createTaxiCenter(bfs);
+    TaxiCenter *taxiCenter = ProgramFlow::createTaxiCenter(bfs);
     Cab *cabForDriver = NULL;
     int expectedNumberOfDrivers = 0;
     int timer = 0;
@@ -101,17 +116,10 @@ void * ProgramFlow::run(void * mainSocket) {
                 if (expectedNumberOfDrivers == 0) {
                     break;
                 }else{
-                    char buffer[1024];
                     Connection connection = socket->getConnection();
                     for(unsigned int i=0; i<expectedNumberOfDrivers; i++){
-                        connection.makeConnect(mainSocket);
-                        socket->reciveData(buffer, sizeof(buffer),
-                                           connection.getVectorOfClientsDescriptor().at(i));
-                        string driverIdString = string(buffer);
-                        int driverId = stoi(driverIdString);
-                        //send taxi data
-                        string dataOfCabOfDriver = taxiCenter.getCabString(driverId);
-                        socket->sendData(dataOfCabOfDriver, connection.getVectorOfClientsDescriptor().at(i));
+                        connection.makeConnect(mainSocket, taxiCenter);
+                        globalX = 1;
                    }
 
                 }
@@ -121,7 +129,7 @@ void * ProgramFlow::run(void * mainSocket) {
                 //create a trip (according to the given parameters) and add it to the taxi center
                 getline(cin, inputString);
                 InputParsing::parsedTripData trip = inputParsing.parseTripData(inputString);
-                taxiCenter.createTrip(trip);
+                taxiCenter->createTrip(trip);
                 break;
             }
             case 3: {
@@ -130,8 +138,8 @@ void * ProgramFlow::run(void * mainSocket) {
                 //corresponding driver afterwards.
                 getline(cin, inputString);
                 cabForDriver = CabFactory::createCab(inputString);
-                taxiCenter.addCab(cabForDriver);
-                taxiCenter.addCabString(cabForDriver->getId(), inputString);
+                taxiCenter->addCab(cabForDriver);
+                taxiCenter->addCabString(cabForDriver->getId(), inputString);
                 break;
             }
             case 4: {
@@ -157,12 +165,7 @@ void * ProgramFlow::run(void * mainSocket) {
                 break;
             }
             case 7: {
-                //ask the client to shutdown itself
-                //int numOfSockets = (int)socket->getConnection().getVectorOfClientsDescriptor().size();
-                //ve
-                //for (unsigned int i = 0; i < numOfSockets; i++){
-                 //   socket->sendData("7", (int)socket->getConnection().getVectorOfClientsDescriptor().at(i));
-                  //  }
+                globalX = 7;
                 //deallocate memory and terminate the program
                 delete grid;
                 return 0;
@@ -173,17 +176,17 @@ void * ProgramFlow::run(void * mainSocket) {
                 // (for preventing assigning of trip and movement in the same time)
                 int assignFlag = 0;
                 //assign trip to the driver if now is the starting time of the trip
-                for (unsigned int i = 0; i < taxiCenter.getListOfTrips().size(); i++) {
-                    if (taxiCenter.getListOfTrips().at(i)->getTime() == timer) {
+                for (unsigned int i = 0; i < taxiCenter->getListOfTrips().size(); i++) {
+                    if (taxiCenter->getListOfTrips().at(i)->getTime() == timer) {
                         //option 10 (of driver): assign a trip to the driver
 
                        // socket->sendData("10");
                         SerializationClass<Trip *> serializeClass;
                         string serializedTrip = serializeClass.serializationObject(
-                                taxiCenter.getListOfTrips().at(i));
+                                taxiCenter->getListOfTrips().at(i));
                       //  socket->sendData(serializedTrip);
-                        delete taxiCenter.getListOfTrips().at(i);
-                        taxiCenter.deleteTrip(i);
+                        delete taxiCenter->getListOfTrips().at(i);
+                        taxiCenter->deleteTrip(i);
                         assignFlag = 1;
                         break;
                     }

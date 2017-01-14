@@ -6,10 +6,8 @@
 #define EX5_CONNECTION_H
 
 #include <vector>
-#include "pthread.h"
-#include "Socket.h"
-#include "Tcp.h"
-#include "ProgramFlow.h"
+#include "TaxiCenter.h"
+
 
 using namespace std;
 class Connection {
@@ -23,9 +21,14 @@ public:
     //Connection(int socketDescriptor, struct sockaddr_in client_sin, unsigned int *addr_len);
 
     Connection(int socketDescriptor);
-    void makeConnect(void * socket);
+    void makeConnect(void * socket, TaxiCenter *taxiCenter);
 
     vector<int> getVectorOfClientsDescriptor();
+    struct socketAndDescriptor{
+        void* socket;
+        int socketDescriptor;
+        TaxiCenter *taxiCenter;
+    };
 };
 
 
