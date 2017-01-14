@@ -8,6 +8,8 @@
 #include <vector>
 #include "pthread.h"
 #include "Socket.h"
+#include "Tcp.h"
+#include "ProgramFlow.h"
 
 using namespace std;
 class Connection {
@@ -21,7 +23,7 @@ public:
     //Connection(int socketDescriptor, struct sockaddr_in client_sin, unsigned int *addr_len);
 
     Connection(int socketDescriptor);
-    void makeConnect();
+    void makeConnect(void * socket);
 
     vector<int> getVectorOfClientsDescriptor();
 };

@@ -8,6 +8,7 @@ void * TaxiCenter::createTrip(InputParsing::parsedTripData parsedTripDataTrip) {
     Node<Point> startNode(parsedTripDataTrip.start);
     Node<Point> endNode(parsedTripDataTrip.end);
     this->bfsWrapper(startNode,endNode,this);
+
     Trip *trip = new Trip(parsedTripDataTrip.id, parsedTripDataTrip.start, parsedTripDataTrip.end,
                           parsedTripDataTrip.numberOfPassengers, parsedTripDataTrip.tariff, nextPointsOfPath, parsedTripDataTrip.time);
     listOfTrips.push_back(trip);
@@ -92,7 +93,6 @@ void *TaxiCenter::runBfsThread(void *t) {
 
 void TaxiCenter::bfsNavigate(Node<Point> startNode,  Node<Point> endNode) {
     this->nextPointsOfPath = this->bfsInstance.navigate(startNode, endNode);
-
 }
 
 void TaxiCenter::bfsWrapper(Node<Point> startNode, Node<Point> endNode, TaxiCenter* taxiCenter) {
@@ -105,5 +105,6 @@ void TaxiCenter::bfsWrapper(Node<Point> startNode, Node<Point> endNode, TaxiCent
 
     thread_t bfsThread;
     pthread_create(&bfsThread, NULL, runBfsThread, (void*)t);
+    pthread_join(bfsThread, NULL);
 }
 

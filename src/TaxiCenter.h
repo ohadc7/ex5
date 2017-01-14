@@ -51,7 +51,7 @@ public:
 
     //return the current location of a specific driver (according to its id number)
     //(if no such driver in the system, throw "no driver found")
-    Point getDriverLocation(int driverId);v
+    Point getDriverLocation(int driverId);
 
     //add a trip to the taxi center
     void addTrip(Trip *trip);

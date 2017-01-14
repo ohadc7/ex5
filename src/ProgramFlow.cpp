@@ -19,20 +19,19 @@ Graph<Point> *ProgramFlow::createGrid(int width, int height, vector<Point> listO
 }
 
 
-/*void *ProgramFlow::runInCircle(void* socketIn){
+void *ProgramFlow::threadsRun(void* socketIn){
     int runOnce =0;
     string inputString;
     Socket *socket = (Socket*) socketIn;
     while(true) {
         if(runOnce==0) {
             switch (globalX) {
-
                 case 4: {
                     getline(cin, inputString);
                     try {
                         // here we have to add (in ex5) the command: find the socket of the
                         // corresponding driver
-                        socket->sendData("4");
+                        socket->sendData("4",socket->getConnection().getVectorOfClientsDescriptor());
                         char buffer[1024];
                         socket->reciveData(buffer, sizeof(buffer));
                         Point driverLocation;
@@ -58,7 +57,7 @@ Graph<Point> *ProgramFlow::createGrid(int width, int height, vector<Point> listO
         }
     }
 }
-*/
+
 
 
 
@@ -105,7 +104,7 @@ void * ProgramFlow::run(void * mainSocket) {
                     char buffer[1024];
                     Connection connection = socket->getConnection();
                     for(unsigned int i=0; i<expectedNumberOfDrivers; i++){
-                        connection.makeConnect();
+                        connection.makeConnect(mainSocket);
                         socket->reciveData(buffer, sizeof(buffer),
                                            connection.getVectorOfClientsDescriptor().at(i));
                         string driverIdString = string(buffer);
@@ -159,7 +158,11 @@ void * ProgramFlow::run(void * mainSocket) {
             }
             case 7: {
                 //ask the client to shutdown itself
-               // socket->sendData("7");
+                //int numOfSockets = (int)socket->getConnection().getVectorOfClientsDescriptor().size();
+                //ve
+                //for (unsigned int i = 0; i < numOfSockets; i++){
+                 //   socket->sendData("7", (int)socket->getConnection().getVectorOfClientsDescriptor().at(i));
+                  //  }
                 //deallocate memory and terminate the program
                 delete grid;
                 return 0;
@@ -173,11 +176,12 @@ void * ProgramFlow::run(void * mainSocket) {
                 for (unsigned int i = 0; i < taxiCenter.getListOfTrips().size(); i++) {
                     if (taxiCenter.getListOfTrips().at(i)->getTime() == timer) {
                         //option 10 (of driver): assign a trip to the driver
-                      //  socket->sendData("10");
+
+                       // socket->sendData("10");
                         SerializationClass<Trip *> serializeClass;
                         string serializedTrip = serializeClass.serializationObject(
                                 taxiCenter.getListOfTrips().at(i));
-                        //socket->sendData(serializedTrip);
+                      //  socket->sendData(serializedTrip);
                         delete taxiCenter.getListOfTrips().at(i);
                         taxiCenter.deleteTrip(i);
                         assignFlag = 1;
@@ -186,7 +190,7 @@ void * ProgramFlow::run(void * mainSocket) {
                 }
                 if (assignFlag == 0) {
                     //sending 9 in order to advance the driver one step
-                   // socket->sendData("9");
+                    //socket->sendData("9");
                 }
                 break;
             }
