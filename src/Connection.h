@@ -6,8 +6,8 @@
 #define EX5_CONNECTION_H
 
 #include <vector>
-#include "TaxiCenter.h"
-
+#include "pthread.h"
+#include "Socket.h"
 
 using namespace std;
 class Connection {
@@ -21,13 +21,12 @@ public:
     //Connection(int socketDescriptor, struct sockaddr_in client_sin, unsigned int *addr_len);
 
     Connection(int socketDescriptor);
-    void makeConnect(void * socket, TaxiCenter *taxiCenter);
+    void makeConnect(void *);
 
     vector<int> getVectorOfClientsDescriptor();
-    struct socketAndDescriptor{
+    struct threadsStruct{
         void* socket;
         int socketDescriptor;
-        TaxiCenter *taxiCenter;
     };
 };
 

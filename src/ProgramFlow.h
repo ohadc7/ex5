@@ -47,15 +47,14 @@ public:
      * create taxi center. the taxi center has to contain "bfs" (that know the grid and the
      * obstacles) in order to be able to navigate.
      */
-    static TaxiCenter* createTaxiCenter(BfsAlgorithm<Point> bfs);
+    static TaxiCenter createTaxiCenter(BfsAlgorithm<Point> bfs);
 
     //create rectangular matrix with list of impassable points
     static Graph<Point> *createGrid(int width, int height, vector<Point> listOfObstacles);
-    static void *threadsRun(void* socketIn);
-    struct socketAndDescriptor{
+    static void* threadsRun(void *r);
+    struct threadsStruct{
         void* socket;
         int socketDescriptor;
-        TaxiCenter *taxiCenter;
     };
 };
 
