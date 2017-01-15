@@ -19,7 +19,7 @@ void Connection::makeConnect(void * socket) {
     threadsStructToSend->socketDescriptor = descriptor;
     pthread_t pthread;
     pthread_create(&pthread, NULL, ProgramFlow::threadsRun, (void*)threadsStructToSend);
-    this->vectorOfClientsDescriptor.push_back(descriptor);
+//    this->vectorOfClientsDescriptor.push_back(descriptor);
     cout << "send" << endl;
 
 }

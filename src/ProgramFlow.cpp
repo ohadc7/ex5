@@ -25,17 +25,24 @@ void *ProgramFlow::threadsRun(void* threadsStructVoid){
     threadsStruct *threadsStructInput = (struct threadsStruct*)threadsStructVoid;
     int socketDescriptor = threadsStructInput->socketDescriptor;
     Socket *socket = (Socket*) threadsStructInput->socket;
+    char buffer[1024];
     while(true) {
         if(runOnce==0) {
             switch (globalX) {
-
+                case 1:{
+                    socket->reciveData(buffer, sizeof(buffer), socketDescriptor);
+                    string driverIdString = string(buffer);
+                    int driverId = stoi(driverIdString);
+                    //send taxi data
+                    //string dataOfCabOfDriver = taxiCenter.getCabString(driverId);
+                    //socket->sendData(dataOfCabOfDriver, socketDescriptor);
+                }
                 case 4: {
                     getline(cin, inputString);
                     try {
                         // here we have to add (in ex5) the command: find the socket of the
                         // corresponding driver
                         socket->sendData("4", socketDescriptor);
-                        char buffer[1024];
                         socket->reciveData(buffer, sizeof(buffer), socketDescriptor);
                         Point driverLocation;
                         string locationStr(buffer, sizeof(buffer));
@@ -108,13 +115,7 @@ void * ProgramFlow::run(void * mainSocket) {
                     Connection connection = socket->getConnection();
                     for(unsigned int i=0; i<expectedNumberOfDrivers; i++){
                         connection.makeConnect(mainSocket);
-                        /*socket->reciveData(buffer, sizeof(buffer),
-                                           connection.getVectorOfClientsDescriptor().at(i));*/
-                        string driverIdString = string(buffer);
-                        int driverId = stoi(driverIdString);
-                        //send taxi data
-                        string dataOfCabOfDriver = taxiCenter.getCabString(driverId);
-                       // socket->sendData(dataOfCabOfDriver, connection.getVectorOfClientsDescriptor().at(i));
+                        globalX =1;
                    }
 
                 }
