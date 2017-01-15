@@ -51,7 +51,11 @@ public:
 
     //create rectangular matrix with list of impassable points
     static Graph<Point> *createGrid(int width, int height, vector<Point> listOfObstacles);
-    //static void* runInCircle(void * r);
+    static void* threadsRun(void *r);
+    struct threadsStruct{
+        void* socket;
+        int socketDescriptor;
+    };
 };
 
 #endif //EX1_VERSION_1_1_PROGRAMFLOW_H

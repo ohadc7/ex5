@@ -21,9 +21,13 @@ public:
     //Connection(int socketDescriptor, struct sockaddr_in client_sin, unsigned int *addr_len);
 
     Connection(int socketDescriptor);
-    void makeConnect();
+    void makeConnect(void *);
 
     vector<int> getVectorOfClientsDescriptor();
+    struct threadsStruct{
+        void* socket;
+        int socketDescriptor;
+    };
 };
 
 

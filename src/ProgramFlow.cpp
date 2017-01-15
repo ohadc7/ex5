@@ -7,7 +7,7 @@
 
 using namespace std;
 
-int globalX;
+int globalX=0;
 
 TaxiCenter ProgramFlow::createTaxiCenter(BfsAlgorithm<Point> bfs) {
     return TaxiCenter(bfs);
@@ -19,10 +19,12 @@ Graph<Point> *ProgramFlow::createGrid(int width, int height, vector<Point> listO
 }
 
 
-/*void *ProgramFlow::runInCircle(void* socketIn){
+void *ProgramFlow::threadsRun(void* threadsStructVoid){
     int runOnce =0;
     string inputString;
-    Socket *socket = (Socket*) socketIn;
+    threadsStruct *threadsStructInput = (struct threadsStruct*)threadsStructVoid;
+    int socketDescriptor = threadsStructInput->socketDescriptor;
+    Socket *socket = (Socket*) threadsStructInput->socket;
     while(true) {
         if(runOnce==0) {
             switch (globalX) {
@@ -32,9 +34,9 @@ Graph<Point> *ProgramFlow::createGrid(int width, int height, vector<Point> listO
                     try {
                         // here we have to add (in ex5) the command: find the socket of the
                         // corresponding driver
-                        socket->sendData("4");
+                        socket->sendData("4", socketDescriptor);
                         char buffer[1024];
-                        socket->reciveData(buffer, sizeof(buffer));
+                        socket->reciveData(buffer, sizeof(buffer), socketDescriptor);
                         Point driverLocation;
                         string locationStr(buffer, sizeof(buffer));
                         SerializationClass<Point> serializeClass;
@@ -58,7 +60,7 @@ Graph<Point> *ProgramFlow::createGrid(int width, int height, vector<Point> listO
         }
     }
 }
-*/
+
 
 
 
@@ -105,14 +107,14 @@ void * ProgramFlow::run(void * mainSocket) {
                     char buffer[1024];
                     Connection connection = socket->getConnection();
                     for(unsigned int i=0; i<expectedNumberOfDrivers; i++){
-                        connection.makeConnect();
-                        socket->reciveData(buffer, sizeof(buffer),
-                                           connection.getVectorOfClientsDescriptor().at(i));
+                        connection.makeConnect(mainSocket);
+                        /*socket->reciveData(buffer, sizeof(buffer),
+                                           connection.getVectorOfClientsDescriptor().at(i));*/
                         string driverIdString = string(buffer);
                         int driverId = stoi(driverIdString);
                         //send taxi data
                         string dataOfCabOfDriver = taxiCenter.getCabString(driverId);
-                        socket->sendData(dataOfCabOfDriver, connection.getVectorOfClientsDescriptor().at(i));
+                       // socket->sendData(dataOfCabOfDriver, connection.getVectorOfClientsDescriptor().at(i));
                    }
 
                 }
